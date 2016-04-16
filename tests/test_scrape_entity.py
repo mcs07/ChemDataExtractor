@@ -24,7 +24,6 @@ from chemdataextractor.scrape.selector import Selector
 from chemdataextractor.text.processors import Chain, RAdd
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger('cde').setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 

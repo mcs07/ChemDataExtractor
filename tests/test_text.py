@@ -13,11 +13,16 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+import logging
 import unittest
 
 from chemdataextractor.text.latex import latex_to_unicode
 from chemdataextractor.text.normalize import normalize
 from chemdataextractor.text.processors import extract_emails
+
+
+logging.basicConfig(level=logging.DEBUG)
+log = logging.getLogger(__name__)
 
 
 class TestNormalization(unittest.TestCase):

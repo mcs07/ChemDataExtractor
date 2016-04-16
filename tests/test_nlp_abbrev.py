@@ -23,7 +23,6 @@ from chemdataextractor.nlp.abbrev import ChemAbbreviationDetector
 
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger('cde').setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 

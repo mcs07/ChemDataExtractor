@@ -23,7 +23,6 @@ from chemdataextractor.scrape.clean import Cleaner, clean, strip, strip_markup, 
 
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger('cde').setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 

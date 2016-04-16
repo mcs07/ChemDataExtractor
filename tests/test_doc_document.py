@@ -19,7 +19,6 @@ import unittest
 from chemdataextractor.doc.document import Document
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger('cde').setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 

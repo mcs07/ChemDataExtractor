@@ -21,7 +21,6 @@ from chemdataextractor.doc.text import Sentence
 from chemdataextractor.parse.cem import cem_phrase
 
 logging.basicConfig(level=logging.DEBUG)
-logging.getLogger('cde').setLevel(logging.DEBUG)
 log = logging.getLogger(__name__)
 
 
