@@ -199,7 +199,7 @@ class LxmlReader(six.with_metaclass(ABCMeta, BaseReader)):
 
     def parse(self, fstring):
         root = self._make_tree(fstring)
-        if not root:
+        if root is None:
             raise ReaderError
         root = self._css(self.root_css, root)[0]
         for cleaner in self.cleaners:
