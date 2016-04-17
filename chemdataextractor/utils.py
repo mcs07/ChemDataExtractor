@@ -20,8 +20,6 @@ import os
 
 import six
 
-from .scrape.base import BaseEntity
-
 
 log = logging.getLogger(__name__)
 
@@ -81,19 +79,6 @@ def flatten(x):
         else:
             result.append(el)
     return result
-
-
-def ensure_iter(value):
-    """Make sure a value is iterable. Convert None to [], wrap single values in a list."""
-    if value is None:
-        # If None, return empty list
-        return []
-    elif not isinstance(value, (dict, BaseEntity, six.text_type, bytes)) and hasattr(value, '__iter__'):
-        # Already iterable, just return
-        return value
-    else:
-        # Single value, wrap in list
-        return [value]
 
 
 def first(el):
