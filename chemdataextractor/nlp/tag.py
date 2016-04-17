@@ -336,7 +336,7 @@ class CrfTagger(BaseTagger):
     def train(self, sentences, model):
         """Train the CRF tagger using CRFSuite.
 
-        :params sentences : Annotated sentences.
+        :params sentences: Annotated sentences.
         :params model: Path to save pickled model.
         """
         trainer = pycrfsuite.Trainer(verbose=True)
