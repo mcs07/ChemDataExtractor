@@ -15,7 +15,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 import logging
 
-from ...api import Table, Caption, Document, Title, Paragraph, Footnote, Heading, Figure
 from ...text.normalize import normalize
 from ...text.processors import Chain, LStrip, RStrip, Discard
 from ..clean import Cleaner
@@ -143,56 +142,3 @@ class SpringerXmlDocument(Entity):
     process_headings = normalize
     process_paragraphs = Chain(normalize, Discard(''))
     process_license = Chain(LStrip('('), RStrip(')'))
-
-
-
-def make_document(selector):
-    """Construct a Document from an NLM XML selector."""
-    doc = Document()
-
-    def make_text(cls, sel, cleaner, processor):
-        text = processor(sel.extract(cleaner=cleaner, raw=False))
-        refs = sel.xpath('.//tblr/@tid|.//figr/@fid|.//schemer/@cid|.//abbr/@bid').extract()
-        id = sel.xpath('./@id').extract_first()
-        return cls(text=text, references=refs, id=id)
-
-    def make_figure(sel, cleaner, processor):
-        caption = make_text(Caption, sel.xpath('./caption')[0], cleaner, processor)
-        label = sel.xpath('./title').extract_first()
-        id = sel.xpath('./@id').extract_first()
-        return Figure(caption=caption, label=label, id=id)
-
-    def make_table(sel, cleaner, processor):
-        caption = make_text(Caption, sel.xpath('./caption')[0], cleaner, processor)
-        label = sel.xpath('./title').extract_first()
-        id = sel.xpath('./@id').extract_first()
-        # TODO: Table contents
-        return Table(caption=caption, label=label, id=id)
-
-    titles = selector.xpath('/art/fm/bibl/title')
-    abstracts = selector.xpath('/art/fm/abs/sec/p|/art/fm/abs')
-    headings = selector.xpath('/art/bdy//st')
-    paragraphs = selector.xpath('/art/bdy//sec/p')
-    figures = selector.xpath('/art/bdy//fig')
-    tables = selector.xpath('/art/bdy//tbl|/art/bdy//table')
-
-    for element in selector.xpath('//*'):
-        if element in titles:
-            doc.elements.append(make_text(Title, element, strip_springer_xml, normalize))
-        if element in abstracts:
-            doc.elements.append(make_text(Paragraph, element, Chain(tidy_springer_references, strip_springer_abstract_xml), normalize))
-        if element in headings:
-            doc.elements.append(make_text(Heading, element, strip_springer_xml, normalize))
-        if element in paragraphs:
-            doc.elements.append(make_text(Paragraph, element, Chain(tidy_springer_references, strip_springer_xml), normalize))
-        if element in figures:
-            doc.elements.append(make_figure(element, strip_springer_xml, normalize))
-        if element in tables:
-            doc.elements.append(make_table(element, strip_springer_xml, normalize))
-
-    # for el in doc.elements:
-    #     print(repr(el))
-    #     print(el.id)
-    #     print(el.references)
-
-    return doc
