@@ -147,11 +147,10 @@ class EntityList(Sequence):
 
 class DocumentEntity(Entity):
     """Generic document entity."""
-    #doi = StringField('meta[name="citation_doi"]::attr("content"), meta[name="dc.identifier"]::attr("content"), meta[name="DC.identifier"]::attr("content")')
-    doi = StringField('//meta[@name="citation_doi"]/@content | //meta[@name="dc.identifier"]/@content | //meta[@name="DC.identifier"]/@content', xpath=True, lower=True)
-    title = StringField('//meta[@name="citation_title"]/@content | //meta[@name="dc.title"]/@content | //meta[@name="DC.title"]/@content | //meta[@name="title"]/@content', xpath=True, strip=True)
-    authors = StringField('//meta[@name="citation_author"]/@content | //meta[@name="dc.creator"]/@content | //meta[@name="DC.creator"]/@content', xpath=True, all=True)
-    published_date = DateTimeField('//meta[@name="citation_publication_date"]/@content | //meta[@name="prism.publicationDate"]/@content | //meta[@name="citation_date"]/@content | //meta[@name="dc.date"]/@content | //meta[@name="DC.date"]/@content', xpath=True)
+    doi = StringField('//meta[@name="citation_doi"]/@content | //meta[@name="dc.identifier"]/@content | //meta[@name="DC.identifier"]/@content | //meta[@name="dc.Identifier"]/@content', xpath=True, lower=True)
+    title = StringField('//meta[@name="citation_title"]/@content | //meta[@name="dc.title"]/@content | //meta[@name="DC.title"]/@content | //meta[@name="dc.Title"]/@content | //meta[@name="title"]/@content', xpath=True, strip=True)
+    authors = StringField('//meta[@name="citation_author"]/@content | //meta[@name="dc.creator"]/@content | //meta[@name="DC.creator"]/@content | //meta[@name="dc.Creator"]/@content', xpath=True, all=True)
+    published_date = DateTimeField('//meta[@name="citation_publication_date"]/@content | //meta[@name="prism.publicationDate"]/@content | //meta[@name="citation_date"]/@content | //meta[@name="dc.date"]/@content | //meta[@name="DC.date"]/@content | //meta[@name="dc.Date"]/@content', xpath=True)
     online_date = DateTimeField('//meta[@name="citation_online_date"]/@content', xpath=True)
     journal = StringField('//meta[@name="citation_journal_title"]/@content | //meta[@name="citation_journal_abbrev"]/@content | //meta[@name="prism.publicationName"]/@content | //meta[@name="dc.source"]/@content | //meta[@name="DC.source"]/@content', xpath=True, strip=True)
     volume = StringField('//meta[@name="citation_volume"]/@content | //meta[@name="prism.volume"]/@content', xpath=True)
@@ -159,7 +158,7 @@ class DocumentEntity(Entity):
     firstpage = StringField('//meta[@name="citation_firstpage"]/@content | //meta[@name="prism.startingPage"]/@content', xpath=True)
     lastpage = StringField('//meta[@name="citation_lastpage"]/@content', xpath=True)
     abstract = StringField('//meta[@name="citation_abstract"]/@content', xpath=True, strip=True)
-    publisher = StringField('//meta[@name="citation_publisher"]/@content | //meta[@name="dc.publisher"]/@content | //meta[@name="DC.publisher"]/@content', xpath=True)
+    publisher = StringField('//meta[@name="citation_publisher"]/@content | //meta[@name="dc.publisher"]/@content | //meta[@name="DC.publisher"]/@content | //meta[@name="dc.Publisher"]/@content', xpath=True)
     issn = StringField('//meta[@name="citation_issn"]/@content | //meta[@name="prism.issn"]/@content', xpath=True)
     language = StringField('//meta[@name="citation_language"]/@content | //meta[@name="dc.language"]/@content | //meta[@name="DC.language"]/@content', xpath=True)
     copyright = StringField('//meta[@name="dc.copyright"]/@content | //meta[@name="DC.copyright"]/@content | //meta[@name="prism.copyright"]/@content', xpath=True)
@@ -167,7 +166,6 @@ class DocumentEntity(Entity):
     html_url = UrlField('//meta[@name="citation_fulltext_html_url"]/@content', xpath=True)
     pdf_url = UrlField('//meta[@name="citation_pdf_url"]/@content', xpath=True)
     landing_url = UrlField('//meta[@name="citation_abstract_html_url"]/@content', xpath=True)
-    # TODO: Switch to CSS?
 
     process_title = normalize
     process_journal = normalize

@@ -16,8 +16,7 @@ from __future__ import unicode_literals
 import logging
 import unittest
 
-from chemdataextractor.scrape.pub.rsc import rsc_substitute, parse_rsc_html, strip_rsc_html
-from chemdataextractor.scrape.selector import Selector
+from chemdataextractor.scrape.pub.rsc import rsc_substitute, strip_rsc_html
 
 
 logging.basicConfig(level=logging.DEBUG)
