@@ -112,8 +112,8 @@ extinction_heading = (extinction_title.hide() + delims.hide() + Optional(extinct
 uvvis_value = (R('^\d{3,4}(\.\d{1,2})?(sh|br)?$'))('value').add_action(split_uvvis_shape)
 peak_shape = R('^(sh(oulder)?|br(oad)?)$')('shape')
 extinction_value = (
-    R('\d+\.\d+') + Optional(W('×') + R('10\d+')) |  # Scientific notation
-    R('\d{1,3}') + R('\d\d\d') |  # RSC often inserts spaces within values instead of commas
+    R('^\d+\.\d+$') + Optional(W('±') + R('^\d+\.\d+$')) + Optional(W('×') + R('10\d+')) |  # Scientific notation
+    R('^\d{1,3}$') + R('^\d\d\d$') |  # RSC often inserts spaces within values instead of commas
     R('^\d{1,2},?\d{3,3}$')
 
 )('extinction').add_action(merge)
