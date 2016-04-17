@@ -14,11 +14,15 @@ Once installed, ChemDataExtractor provides a command-line tool that can be used 
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+
+import json
 import logging
+import sys
 
 import click
 
 from .. import __version__
+from ..doc import Document
 
 
 log = logging.getLogger(__name__)
@@ -35,6 +39,18 @@ def cli(ctx, verbose):
     logging.basicConfig(level=logging.DEBUG if verbose else logging.INFO)
     logging.getLogger('requests').setLevel(logging.WARN)
     ctx.obj = {}
+
+
+@cli.command()
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.argument('input', type=click.File('r', encoding='utf8'), required=True)
+@click.pass_obj
+def extract(ctx, input, output):
+    """Run ChemDataExtractor on a document."""
+    document = Document.from_file(input, fname=input.name)
+    records = [r.to_primitive() for r in document.records]
+    json.dump(records, output, ensure_ascii=False, indent=2, sort_keys=True)
+
 
 
 # TODO: tokenize_cli

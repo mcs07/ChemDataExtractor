@@ -45,24 +45,9 @@ def run(input):
         reader = NlmXmlReader()
     else:
         raise click.ClickException('Invalid publisher')
-
     doc = reader.read(input)
-
-    for el in doc.elements:
-        print(el.__class__.__name__)
-        # print(repr(el))
-        # if isinstance(el, Table):
-        #     print(repr(el.caption))
-        #     print(repr(el.headings))
-        #     print(repr(el.rows))
-        for record in el.records:
-            print(record.to_primitive())
-        print('----')
-
     # Serialize all records apart from those that are just chemical names or just labels
     records = [record.to_primitive() for record in doc.records]
-    for record in records:
-        print(record)
     records = [record for record in records if not record.keys() == ['names'] and not record.keys() == ['labels']]
     with open('%s-out.json' % os.path.splitext(input.name)[0], 'w') as outf:
         json.dump(records, outf, indent=2)
@@ -418,38 +403,3 @@ def compare():
         print('P: %0.2f%%\tR: %0.2f%%\tF: %0.2f%%' % (p, r, f))
         print('%s documents' % doc_count)
         print('================================')
-
-
-@evaluate.command()
-def check():
-    """"""
-
-    edir = os.path.join(os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__)))), 'data/cde-evaluation')
-    for filename in os.listdir(edir):
-        filename = os.path.join(edir, filename)
-        if filename.endswith('html'):
-            outname = '%s-out.json' % filename[:-5]
-            if not os.path.isfile(outname):
-                continue
-            with open('%s-out.json' % filename[:-5]) as outf:
-                out = json.load(outf)
-
-            pub = os.path.basename(filename).split('.', 1)[0]
-            if pub == 'rsc':
-                reader = RscHtmlReader()
-            elif pub == 'acs':
-                reader = AcsHtmlReader()
-            else:
-                raise click.ClickException('Invalid publisher')
-
-            with open(filename) as inf:
-                doc = reader.read(inf)
-            # Serialize all records apart from those that are just chemical names
-            records = [record.to_primitive() for record in doc.records]
-            # for record in records:
-            #     print(record)
-            records = [record for record in records if not record.keys() == ['names'] and not record.keys() == ['labels']]
-            if not records == out:
-                print('Changed: %s' % filename)
-                with open('%s-tmp.json' % filename[:-5], 'w') as tmpf:
-                    json.dump(records, tmpf, indent=2)
