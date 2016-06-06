@@ -22,7 +22,8 @@ from ..model import Compound, IrSpectrum, IrPeak
 from .base import BaseParser
 from ..utils import first
 from .actions import join, merge, strip_stop
-from .elements import W, I, T, R, H, Optional, ZeroOrMore, OneOrMore, Any, Not
+from .common import hyphen
+from .elements import W, I, T, R, Optional, ZeroOrMore, OneOrMore, Not
 from .cem import chemical_name
 
 
@@ -69,7 +70,9 @@ spectrum_meta = W('(').hide() + (units | solvent | nu) + ZeroOrMore(delim + (uni
 
 insolvent = T('IN') + solvent
 
-prelude = (R('^(FT-?)?IR|FT-?IS$')('type') | R('^[vνυ]max$').hide()) + Optional(I('data')) + Optional(insolvent) + ZeroOrMore(spectrum_meta) + Optional(delim) + Optional(nu) + Optional(delim) + Optional(units)
+ir_type = (Optional(W('FT') + hyphen) + R('^(FT-?)?IR|FT-?IS|IR-ATR$') + Optional(hyphen + W('ATR')))('type')
+
+prelude = (ir_type | R('^[vνυ]max$').hide()) + Optional(I('data')) + Optional(insolvent) + ZeroOrMore(spectrum_meta) + Optional(delim) + Optional(nu) + Optional(delim) + Optional(units)
 
 peak = ((value_range | value) + Optional(peak_meta))('peak')
 
