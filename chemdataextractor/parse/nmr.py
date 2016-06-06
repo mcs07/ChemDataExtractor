@@ -18,13 +18,14 @@ import copy
 import logging
 import re
 
-from ..parse.common import cc
+
 from ..model import Compound, NmrSpectrum, NmrPeak
 from ..utils import first
 from .actions import join, merge, strip_stop, rejoin_hyphens
 from .base import BaseParser
-from .elements import W, I, T, R, Optional, ZeroOrMore, SkipTo, OneOrMore, Not, Group
+from .common import cc, equals
 from .cem import chemical_name, nmr_solvent
+from .elements import W, I, T, R, Optional, ZeroOrMore, SkipTo, OneOrMore, Not, Group
 
 log = logging.getLogger(__name__)
 
@@ -97,12 +98,12 @@ note = (W('overlapped') | (W('×') + R('^\d+$')))('note').add_action(join)
 peak_meta_options = multiplicity | coupling | number | assignment | note
 peak_meta = W('(').hide() + peak_meta_options + ZeroOrMore(ZeroOrMore(delim) + peak_meta_options) + Optional(delim) + W(')').hide()
 
-delta = (R('^[δd][HCNPF]?$') + Optional('=')).hide()
+delta = (R('^[δd][HCNPF]?$') + Optional(equals)).hide()
 ppm = Optional(R('^[(\[]$')) + I('ppm') + Optional(R('^[)\]]$'))
 
 spectrum_meta = Optional(W('(').hide()) + (frequency | solvent | delta | temperature) + ZeroOrMore(Optional(delim) + (frequency | solvent | I('ppm') | delta | temperature)) + Optional(temperature) + Optional(W(')').hide())
 
-prelude_options = spectrum_meta | delta | delim | ppm.hide()
+prelude_options = spectrum_meta | delta | delim | ppm.hide() | equals.hide()
 prelude = ((nucleus + Optional(R('^[\-–−‒]$')).hide() + nmr_name | nmr_name_with_nucleus) + ZeroOrMore(prelude_options)) | (R('^δ[HC]?$')('nucleus') + spectrum_meta + ZeroOrMore(prelude_options))
 
 peak = Optional(delta) + (shift + Not(R('^M?Hz$')) + Optional(ppm).hide() + Optional(peak_meta))('peak').add_action(fix_nmr_peak_whitespace_error)
