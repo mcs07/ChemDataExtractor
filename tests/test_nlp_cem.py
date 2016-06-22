@@ -51,6 +51,24 @@ class TestCrfCemTagger(unittest.TestCase):
         )
 
 
+class TestCemDictionaryTagger(unittest.TestCase):
+
+        def test_unicode_combining_characters(self):
+            """Test the Dictionary Tagger on unicode combining characters.
+
+             These introduce space within normalized token text.
+             """
+            dt = CiDictCemTagger()
+            self.assertEqual(
+                [(u'Novel', None),
+                 (u'imidazo\xfd1,2-a\xa8pyridine', u'B-CM'),
+                 (u'and', None),
+                 (u'imidazo\xfd1,2-b\xa8pyridazine', u'B-CM'),
+                 (u'derivatives', None)],
+                dt.tag(['Novel', 'imidazo\xfd1,2-a\xa8pyridine', 'and', 'imidazo\xfd1,2-b\xa8pyridazine', 'derivatives'])
+            )
+
+
 # TODO: Test entity recognition on a sentence containing a generic abbreviation that is only picked up through its definition
 
 

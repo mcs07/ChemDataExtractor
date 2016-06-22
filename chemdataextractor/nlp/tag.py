@@ -407,12 +407,15 @@ class DictionaryTagger(BaseTagger):
         norm = self._normalize(tokens)
         length = len(norm)
         # A set of allowed indexes for matches to start or end at
-        delims = set([i for span in [m.span() for m in self.delimiters.finditer(norm)] for i in span] + [0, length])
+        delims = [0] + [i for span in [m.span() for m in self.delimiters.finditer(norm)] for i in span] + [length]
+        # Token indices
+        token_at_index = []
+        for i, t in enumerate(tokens):
+            token_at_index.extend([i] * (len(self.lexicon[t].normalized) + 1))
         start_i = 0
         end_i = 1
         matches = {}
         next_start = end_i
-        # TODO: This will give incorrect output if any tokens contain spaces. Impossible, but should probably be fixed?
         # TODO: This could be a little more efficient by skipping indexes forward to next delim points.
         while True:
             current = norm[start_i:end_i]
@@ -437,8 +440,8 @@ class DictionaryTagger(BaseTagger):
             next_start = end_i
         # Apply matches as tags to the relevant tokens
         for start_i, end_i, current in matches.values():
-            start_token = norm[:start_i].count(' ')
-            end_token = norm[start_i:end_i].count(' ') + start_token
+            start_token = token_at_index[start_i]
+            end_token = token_at_index[end_i]
             # Possible for match to start in 'I' token from prev match. Merge matches by not overwriting to 'B'.
             if not tags[start_token] == 'I-%s' % self.entity:
                 tags[start_token] = 'B-%s' % self.entity
