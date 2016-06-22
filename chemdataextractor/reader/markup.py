@@ -164,6 +164,8 @@ class LxmlReader(six.with_metaclass(ABCMeta, BaseReader)):
             return [el.get('href')[1:]]
         elif 'rid' in el.attrib:
             return [el.attrib['rid']]
+        elif 'idref' in el.attrib:
+            return [el.attrib['idref']]
         else:
             return [el.text.strip()]
 

@@ -20,12 +20,14 @@ from .pdf import PdfReader
 from .plaintext import PlainTextReader
 from .rsc import RscHtmlReader
 from .nlm import NlmXmlReader
+from .uspto import UsptoXmlReader
 
 
 DEFAULT_READERS = [
     AcsHtmlReader(),
     RscHtmlReader(),
     NlmXmlReader(),
+    UsptoXmlReader(),
     XmlReader(),
     HtmlReader(),
     PdfReader(),
