@@ -62,12 +62,12 @@ def prepare_tokens(ctx, input, annotations, tout, lout):
             # Write our tokens with POS and IOB tags
             tagged = _prep_tags(t, anns)
             for i, sentence in enumerate(tagged):
-                tout.write(' '.join(['/'.join([token, tag, label]) for token, tag, label in sentence]))
-                lout.write(' '.join(['/'.join([token, label]) for token, tag, label in sentence]))
-                tout.write('\n')
-                lout.write('\n')
-            tout.write('\n')
-            lout.write('\n')
+                tout.write(u' '.join(['/'.join([token, tag, label]) for token, tag, label in sentence]))
+                lout.write(u' '.join(['/'.join([token, label]) for token, tag, label in sentence]))
+                tout.write(u'\n')
+                lout.write(u'\n')
+            tout.write(u'\n')
+            lout.write(u'\n')
 
 
 def _prep_tags(t, annotations):
@@ -99,7 +99,7 @@ def tag(ctx, corpus, output):
         d = Document(Title(title), Paragraph(abstract))
         for t, section in [(d.elements[0], 'T'), (d.elements[1], 'A')]:
             for cem in t.cems:
-                code = '%s:%s:%s' % (section, cem.start, cem.end)
-                output.write('\t'.join([pmid, code, six.text_type(counter), '1']))
-                output.write('\n')
+                code = u'%s:%s:%s' % (section, cem.start, cem.end)
+                output.write(u'\t'.join([pmid, code, six.text_type(counter), '1']))
+                output.write(u'\n')
                 counter += 1
