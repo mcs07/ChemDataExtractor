@@ -516,7 +516,7 @@ class CemTagger(BaseTagger):
         for tagger in self.taggers:
             tag_gen = tagger.tag(tokens) if isinstance(tagger, CrfCemTagger) else tagger.tag(just_tokens)
             for i, (token, newtag) in enumerate(tag_gen):
-                if newtag == 'I-CM':
+                if newtag == 'I-CM' and not (i == 0 or tag_gen[i - 1][1] not in {'B-CM', 'I-CM'}):
                     tags[i] = 'I-CM'  # Always overwrite I-CM
                 elif newtag == 'B-CM' and tags[i] is None:
                     tags[i] = 'B-CM'  # Only overwrite B-CM over None

@@ -1,0 +1,1966 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-grant SYSTEM "us-patent-grant-v44-2013-05-16.dtd" [ ]>
+<us-patent-grant lang="EN" dtd-version="v4.4 2013-05-16" file="US08907107-20141209.XML" status="PRODUCTION" id="us-patent-grant" country="US" date-produced="20141124" date-publ="20141209">
+<us-bibliographic-data-grant>
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>08907107</doc-number>
+<kind>B2</kind>
+<date>20141209</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>13503195</doc-number>
+<date>20101022</date>
+</document-id>
+</application-reference>
+<us-application-series-code>13</us-application-series-code>
+<priority-claims>
+<priority-claim sequence="01" kind="national">
+<country>IE</country>
+<doc-number>S2009/0823</doc-number>
+<date>20091023</date>
+</priority-claim>
+</priority-claims>
+<us-term-of-grant>
+<us-term-extension>191</us-term-extension>
+</us-term-of-grant>
+<classifications-ipcr>
+<classification-ipcr>
+<ipc-version-indicator><date>20060101</date></ipc-version-indicator>
+<classification-level>A</classification-level>
+<section>C</section>
+<class>07</class>
+<subclass>F</subclass>
+<main-group>5</main-group>
+<subgroup>02</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20141209</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+</classification-ipcr>
+</classifications-ipcr>
+<classifications-cpc>
+<main-cpc>
+<classification-cpc>
+<cpc-version-indicator><date>20130101</date></cpc-version-indicator>
+<section>C</section>
+<class>07</class>
+<subclass>F</subclass>
+<main-group>5</main-group>
+<subgroup>022</subgroup>
+<symbol-position>F</symbol-position>
+<classification-value>I</classification-value>
+<action-date><date>20141209</date></action-date>
+<generating-office><country>US</country></generating-office>
+<classification-status>B</classification-status>
+<classification-data-source>H</classification-data-source>
+<scheme-origination-code>C</scheme-origination-code>
+</classification-cpc>
+</main-cpc>
+</classifications-cpc>
+<classification-national>
+<country>US</country>
+<main-classification>548405</main-classification>
+</classification-national>
+<invention-title id="d2e71">Fluorescent near infra-red (NIR) dyes</invention-title>
+<us-references-cited>
+<us-citation>
+<patcit num="00001">
+<document-id>
+<country>WO</country>
+<doc-number>WO 03/080627</doc-number>
+<kind>A1</kind>
+<date>20031000</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<patcit num="00002">
+<document-id>
+<country>WO</country>
+<doc-number>WO 2006/058448</doc-number>
+<kind>A1</kind>
+<date>20060600</date>
+</document-id>
+</patcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00003">
+<othercit>Yuan et al. &#x201c;Light Harvesting and Efficient Energy Transfer in Dendritic Systems: New Strategy for Functionalized Near-Infrared BF2-Azadipyrromethenes&#x201d; Chemistry&#x2014;An Asian Journal, 2009, vol. 4, pp. 707-713.</othercit>
+</nplcit>
+<category>cited by examiner</category>
+</us-citation>
+<us-citation>
+<nplcit num="00004">
+<othercit>International Search Report and Written Opinion of the International Searching Authority mailed Mar. 7, 2011 in connection with International Application No. PCT/EP2010/065991.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00005">
+<othercit>Tasior, M. et al. &#x201c;BF2-chelated tetraarylazadipyrromethenes as NIR fluorochromes&#x201d;, Bioconjugate Chemistry, vol. 21, No. 7, Jul. 21, 2010, pp. 1130-1133.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00006">
+<othercit>Tasior M. et al. &#x201c;Water-solubilised BF2-chelated tetraarylazadpyrromethenes&#x201d;, Organic &#x26; Biomolecular Chemistry, vol. 8, No. 3, Feb. 7, 2010, pp. 522-525.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00007">
+<othercit>Murtagh J et al. &#x201c;Azide conjugatable and pH responsive near-infrared fluorescent imaging probes&#x201d;, Organic Letters, vol. 11, No. 23, Dec. 3, 2009, pp. 5386-5389.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+<us-citation>
+<nplcit num="00008">
+<othercit>Loudet A et al. &#x201c;Functionalized BF2 chelated azadipyrromethene dyes&#x201d;, Tetrahedron, vol. 64, No. 17, Feb. 3, 2008, pp. 3642-3654.</othercit>
+</nplcit>
+<category>cited by applicant</category>
+</us-citation>
+</us-references-cited>
+<number-of-claims>34</number-of-claims>
+<us-exemplary-claim>1</us-exemplary-claim>
+<us-field-of-classification-search>
+<classification-national>
+<country>US</country>
+<main-classification>548405</main-classification>
+</classification-national>
+<classification-cpc-text>C07F 5/022</classification-cpc-text>
+</us-field-of-classification-search>
+<figures>
+<number-of-drawing-sheets>28</number-of-drawing-sheets>
+<number-of-figures>39</number-of-figures>
+</figures>
+<us-related-documents>
+<related-publication>
+<document-id>
+<country>US</country>
+<doc-number>20120232282</doc-number>
+<kind>A1</kind>
+<date>20120913</date>
+</document-id>
+</related-publication>
+</us-related-documents>
+<us-parties>
+<us-applicants>
+<us-applicant sequence="001" app-type="applicant" designation="us-only">
+<addressbook>
+<last-name>O'Shea</last-name>
+<first-name>Donal</first-name>
+<address>
+<city>Dublin</city>
+<country>IE</country>
+</address>
+</addressbook>
+<residence>
+<country>IE</country>
+</residence>
+</us-applicant>
+</us-applicants>
+<inventors>
+<inventor sequence="001" designation="us-only">
+<addressbook>
+<last-name>O'Shea</last-name>
+<first-name>Donal</first-name>
+<address>
+<city>Dublin</city>
+<country>IE</country>
+</address>
+</addressbook>
+</inventor>
+</inventors>
+<agents>
+<agent sequence="01" rep-type="attorney">
+<addressbook>
+<orgname>Cesari and McKenna, LLP</orgname>
+<address>
+<country>unknown</country>
+</address>
+</addressbook>
+</agent>
+</agents>
+</us-parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>Hae Therapeutics Limited</orgname>
+<role>03</role>
+<address>
+<city>Dublin</city>
+<country>IE</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+<examiners>
+<primary-examiner>
+<last-name>Kosack</last-name>
+<first-name>Joseph</first-name>
+<department>1626</department>
+</primary-examiner>
+</examiners>
+<pct-or-regional-filing-data>
+<document-id>
+<country>WO</country>
+<doc-number>PCT/EP2010/065991</doc-number>
+<kind>00</kind>
+<date>20101022</date>
+</document-id>
+<us-371c124-date>
+<date>20120521</date>
+</us-371c124-date>
+</pct-or-regional-filing-data>
+<pct-or-regional-publishing-data>
+<document-id>
+<country>WO</country>
+<doc-number>WO2011/048217</doc-number>
+<kind>A </kind>
+<date>20110428</date>
+</document-id>
+</pct-or-regional-publishing-data>
+</us-bibliographic-data-grant>
+<abstract id="abstract">
+<p id="p-0001" num="0000">A compound of formula (I) is described in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O&#x2014;Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety. R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, wherein L is a spacer group, and X is a conjugation group or a water-solubilizing group. At least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X and at least one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X. R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety. Also described are dye conjugates comprising a compound of the invention.</p>
+<p id="p-0002" num="0000"><chemistry id="CHEM-US-00001" num="00001">
+<img id="EMI-C00001" he="38.86mm" wi="68.41mm" file="US08907107-20141209-C00001.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+</abstract>
+<drawings id="DRAWINGS">
+<figure id="Fig-EMI-D00001" num="00001">
+<img id="EMI-D00001" he="187.79mm" wi="160.36mm" file="US08907107-20141209-D00001.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00002" num="00002">
+<img id="EMI-D00002" he="159.00mm" wi="163.58mm" file="US08907107-20141209-D00002.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00003" num="00003">
+<img id="EMI-D00003" he="245.36mm" wi="167.81mm" file="US08907107-20141209-D00003.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00004" num="00004">
+<img id="EMI-D00004" he="232.83mm" wi="175.18mm" file="US08907107-20141209-D00004.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00005" num="00005">
+<img id="EMI-D00005" he="215.39mm" wi="189.23mm" file="US08907107-20141209-D00005.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00006" num="00006">
+<img id="EMI-D00006" he="251.46mm" wi="175.18mm" file="US08907107-20141209-D00006.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00007" num="00007">
+<img id="EMI-D00007" he="247.14mm" wi="175.77mm" file="US08907107-20141209-D00007.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00008" num="00008">
+<img id="EMI-D00008" he="244.69mm" wi="167.56mm" file="US08907107-20141209-D00008.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00009" num="00009">
+<img id="EMI-D00009" he="262.13mm" wi="188.30mm" file="US08907107-20141209-D00009.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00010" num="00010">
+<img id="EMI-D00010" he="162.98mm" wi="184.91mm" file="US08907107-20141209-D00010.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00011" num="00011">
+<img id="EMI-D00011" he="144.95mm" wi="185.25mm" file="US08907107-20141209-D00011.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00012" num="00012">
+<img id="EMI-D00012" he="134.28mm" wi="188.89mm" file="US08907107-20141209-D00012.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00013" num="00013">
+<img id="EMI-D00013" he="154.69mm" wi="190.08mm" file="US08907107-20141209-D00013.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00014" num="00014">
+<img id="EMI-D00014" he="181.27mm" wi="182.46mm" file="US08907107-20141209-D00014.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00015" num="00015">
+<img id="EMI-D00015" he="249.94mm" wi="166.62mm" file="US08907107-20141209-D00015.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00016" num="00016">
+<img id="EMI-D00016" he="243.50mm" wi="170.60mm" file="US08907107-20141209-D00016.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00017" num="00017">
+<img id="EMI-D00017" he="146.13mm" wi="188.30mm" file="US08907107-20141209-D00017.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00018" num="00018">
+<img id="EMI-D00018" he="147.66mm" wi="183.73mm" file="US08907107-20141209-D00018.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00019" num="00019">
+<img id="EMI-D00019" he="145.29mm" wi="181.27mm" file="US08907107-20141209-D00019.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00020" num="00020">
+<img id="EMI-D00020" he="247.82mm" wi="182.80mm" file="US08907107-20141209-D00020.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00021" num="00021">
+<img id="EMI-D00021" he="171.45mm" wi="178.82mm" file="US08907107-20141209-D00021.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00022" num="00022">
+<img id="EMI-D00022" he="231.31mm" wi="191.01mm" file="US08907107-20141209-D00022.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00023" num="00023">
+<img id="EMI-D00023" he="187.96mm" wi="169.08mm" file="US08907107-20141209-D00023.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00024" num="00024">
+<img id="EMI-D00024" he="138.26mm" wi="184.57mm" file="US08907107-20141209-D00024.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00025" num="00025">
+<img id="EMI-D00025" he="221.23mm" wi="169.08mm" file="US08907107-20141209-D00025.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00026" num="00026">
+<img id="EMI-D00026" he="180.34mm" wi="171.45mm" file="US08907107-20141209-D00026.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00027" num="00027">
+<img id="EMI-D00027" he="215.14mm" wi="161.12mm" file="US08907107-20141209-D00027.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+<figure id="Fig-EMI-D00028" num="00028">
+<img id="EMI-D00028" he="134.87mm" wi="149.18mm" file="US08907107-20141209-D00028.TIF" alt="embedded image" img-content="drawing" img-format="tif"/>
+</figure>
+</drawings>
+<description id="description">
+<?BRFSUM description="Brief Summary" end="lead"?>
+<heading id="h-0001" level="1">CROSS REFERENCE TO RELATED APPLICATIONS</heading>
+<p id="p-0003" num="0001">This application is a National Stage of International Application No. PCT/EP2010/065991, filed on Oct. 22, 2010, which claims priority to Irish Patent Application No. S2009/0823, filed Oct. 23, 2009. The contents of the prior applications are incorporated herein by reference in their entirety.</p>
+<heading id="h-0002" level="1">TECHNICAL FIELD</heading>
+<p id="p-0004" num="0002">The invention relates to novel fluorescent near-infrared (NIR) dyes and to methods for preparing the dyes. The invention also relates to dye conjugates comprising the dyes of the invention covalently bound to molecules of interest.</p>
+<heading id="h-0003" level="1">BACKGROUND OF THE INVENTION</heading>
+<p id="p-0005" num="0003">Fluorescent dyes, also referred to herein as fluorescent compounds, fluorophores and fluorochromes, have many useful applications. For example, fluorescence can be used as a non-destructive way of tracking or analysing many diverse molecules. Such molecules are labelled with a fluorescent dye, enabling the fluorescence of the dye to be detected.</p>
+<p id="p-0006" num="0004">In recent years there has been growing interest in visible red and near-infrared (NIR) fluorescent dyes (&#x3e;700 nm) for qualitative and quantitative assays. Their simplicity of use, coupled with high sensitivity also ensures a continual expansion of their use for in vitro and in vivo imaging. In terms of commercial application, high sensitivity NIR fluorescence imaging has become an indispensable tool for probing the molecular processes of biological systems in living cells. Its application to non-invasive in vivo animal and human imaging is currently a re-emerging field with applications varying from vascular mapping to tumor diagnosis. NIR optical imaging of tissues is an inexpensive, real-time and non-invasive technique that does not require the use of radionuclides. Recently developed ultra sensitive low noise charge coupled cameras, mathematical models of photon propagation in tissue, and more target-specific molecular probes, have created exciting possibilities in this field. The inherent advantages of NIR fluorochromes over those that absorb in the shorter blue and green wavelengths lie in the dramatic reduction in background autofluorescence which leads to greatly improved sensitivity, increased light penetration of biological tissue, and minimal damaging of the cells/tissue under observation. As an example, in the case of in vivo imaging, it is strongly preferential to use fluorophores with absorption/emission profiles in the far visible red or near infrared spectral (NIR) regions (700 nm-1400 nm), as at lower wavelength, strong interference from endogenous chromophores is problematic.</p>
+<p id="p-0007" num="0005">Despite the optical benefits, there is a surprising scarcity of NIR compounds which have the desired absorption and emission properties. Among the fluorescent platforms used for the construction of visible red/NIR fluorescent probes for bioconjugation, the cyanine dyes are by far the most widely utilised. To date, of the cyanine dyes, only indocyanine green (ICG) has been approved for clinical use. Furthermore, despite their widespread use, the cyanine dyes have disadvantages, including poor photostability and lengthy synthetic routes.</p>
+<p id="p-0008" num="0006">The boron chelated tetraarylazadipyrromethene class of compounds has been found to be relatively easily synthesised and to exhibit excellent spectral properties. Their strong absorption and emissions within the NIR spectral region, together with high photostability make them promising candidates for biological imaging applications. For example, the compound 1 has an absorption &#x3bb;<sub>max </sub>at 696 nm and emission at 727 nm (&#x3c6;<sub>F</sub>=0.36) in formulated aqueous solutions, and absorption &#x3bb;<sub>max </sub>at 688 nm (&#x3b5;=85,000 dm<sup>&#x2212;3 </sup>mol<sup>&#x2212;1 </sup>cm<sup>&#x2212;1</sup>) and emission at 716 nm (&#x3c6;<sub>F</sub>=0.36) in chloroform.</p>
+<p id="p-0009" num="0007"><chemistry id="CHEM-US-00002" num="00002">
+<img id="EMI-C00002" he="47.16mm" wi="61.21mm" file="US08907107-20141209-C00002.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0010" num="0008">These promising photophysical characteristics have encouraged the adaption of this class to specific functions such as photodynamic therapy. WO 03/080627 discloses the use of these compounds 1 as photodynamic therapeutic agents. However, such compounds, although useful, also have disadvantages. For example, their commercial application has been limited to date by their inability to be bound to a molecule or particle of interest for tracking or analysing the molecule. Specifically, it is not feasible to add a conjugation group onto the carbon of the methoxy groups of the compound. For the above reasons, a distinct need exists for novel NIR fluorescent dyes.</p>
+<p id="p-0011" num="0009">It is an object of the invention to avoid or mitigate the problems associated with known NIR fluorescent dyes.</p>
+<p id="p-0012" num="0010">It is a further object of the invention to provide novel NIR fluorescent dyes that are stable and are capable of binding to a molecule or particle of interest.</p>
+<p id="p-0013" num="0011">It is a still further object of the invention to provide novel NIR fluorescent dyes that are water-soluble.</p>
+<p id="p-0014" num="0012">It is a still further object of the invention to provide novel NIR fluorescent dyes that have a predictable fluorescence intensity response to environmental changes, for example pH.</p>
+<heading id="h-0004" level="1">STATEMENTS OF THE INVENTION</heading>
+<p id="p-0015" num="0013">According to the invention, there is provided a compound of the formula (I)</p>
+<p id="p-0016" num="0014"><chemistry id="CHEM-US-00003" num="00003">
+<img id="EMI-C00003" he="38.86mm" wi="68.41mm" file="US08907107-20141209-C00003.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O&#x2014;Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;
+<ul id="ul0001" list-style="none">
+    <li id="ul0001-0001" num="0015">R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, wherein L is a spacer group, and X is a conjugation group or a water-solubilizing group; with the proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X and at least one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X; and</li>
+    <li id="ul0001-0002" num="0016">R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety.</li>
+</ul>
+</p>
+<p id="p-0017" num="0017">As used herein, the term &#x201c;cyclic&#x201d; is intended to embrace substituted or unsubstituted, saturated or unsaturated, moieties containing one or more rings. If more than one ring is present, the rings may be fused together.</p>
+<p id="p-0018" num="0018">As used herein, the term &#x201c;aryl&#x201d;, which is included within the scope of &#x201c;cyclic&#x201d;, is intended to embrace substituted or unsubstituted, unsaturated, monocyclic or polycyclic (fused or separate) aromatic hydrocarbon moieties. Preferred monocyclic aromatic moieties include phenyl, substituted phenyl moieties including, but not limited to, tolyl, xylyl, mesityl, cumenyl (isopropyl phenyl) and substituted phenylene derivatives including, but not limited to, benzyl, benzhydryl, cinnamyl, phenethyl, styryl and trityl. Preferred fused polycyclic moieties include substituted and unsubstituted naphthalene and anthracene moieties.</p>
+<p id="p-0019" num="0019">As used herein, the term &#x201c;heterocyclic&#x201d; is intended to embrace substituted or unsubstituted, saturated or unsaturated, monocyclic or polycyclic (fused or separate) heterocyclic moieties. Suitable non-aromatic moieties are substituted or unsubstituted piperidine, dioxane, piperazine and pyrrolidine moieties.</p>
+<p id="p-0020" num="0020">As used herein, the term &#x201c;heteroaryl&#x201d;, which is included within the scope of &#x201c;heterocyclic&#x201d;, is intended to embrace substituted or unsubstituted, unsaturated, monocyclic or polycyclic (fused or separate) aromatic heterocyclic moieties. Preferred are substituted or unsubstituted pyridine, pyridazine, pyrimidine, pyrazine, purine, furan, pyrrole, benzofuran, indole and thiophene moieties.</p>
+<p id="p-0021" num="0021">As used herein, the term &#x201c;aromatic&#x201d; is intended to embrace a fully unsaturated, substituted or unsubstituted, cyclic moiety.</p>
+<p id="p-0022" num="0022">As used herein, the term &#x201c;alkyl&#x201d; is intended to embrace substituted or unsubstituted, straight or branched chain, saturated or unsaturated alkyl, alkenyl or alkynyl moieties having up to 25 carbon atoms. Preferred are alkyl moieties such as methyl, ethyl, propyl, isopropyl, butyl, isobutyl, sec-butyl, pentyl, isopentyl, hexyl, methylpentyl, isohexyl, heptyl, isoheptyl, octyl, isooctyl, nonyl, isononyl, decyl, isodecyl, undecyl, dodecyl, tridecyl, tetradecyl, pentadecyl, hexadecyl, heptadecyl, octodecyl, nonadecyl, icosyl, henicosyl, docosyl, tricosyl, tetracosyl and pentacosyl, all of which may be further substituted. Preferred alkenyl and alkynyl moieties include vinyl, ethynyl, allyl, isopropenyl, propynyl, butenyl, butynyl, pentenyl, pentynyl, hexenyl, hexynyl, heptenyl, heptynyl, octenyl, octynyl, nonenyl, nonynyl, decenyl, decynyl, undecenyl, undecynyl, dodecenyl, dodecynyl, tridecenyl, tridecynyl, tetradecenyl, tetradecynyl, pentadecenyl, pentadecynyl, hexadecenyl, hexadecynyl, heptadecenyl, heptadecynyl, octadecenyl (oleic or elaidic), octadecynyl, nonadecenyl, nonadecynyl, icosenyl, icosynyl, henicosenyl, henicosynyl, docosenyl, docosynyl, tricosenyl, tricosynyl, tetracosenyl, tetracosynyl, pentacosenyl and pentacosynyl, all of which may be further substituted.</p>
+<p id="p-0023" num="0023">When A is O&#x2014;Y, Y is preferably a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety having up to 10 carbon atoms, more preferably up to 5 carbon atoms. Preferably, Y is selected from methyl, ethyl, propyl, isopropyl, butyl and isobutyl, even more preferably selected from methyl or ethyl, most preferably methyl.</p>
+<p id="p-0024" num="0024">Preferably, each A is a halide. Most preferably, each A is fluoride.</p>
+<p id="p-0025" num="0025">Each of R<sub>4 </sub>and R<sub>5 </sub>may be, independently, a heterocyclic, preferably heteroaryl, moiety. Preferably, each of R<sub>4 </sub>and R<sub>5 </sub>is, independently, a cyclic, preferably an aryl, moiety, more preferably a monocyclic aryl moiety. These moieties may be substituted or unsubstituted. Most preferably, each of R<sub>4 </sub>and R<sub>5 </sub>is phenyl (Ph).</p>
+<p id="p-0026" num="0026">In an especially preferred embodiment, each A is F, R<sub>4 </sub>is Ph and R<sub>5 </sub>is Ph.</p>
+<p id="p-0027" num="0027">Included in compounds of the formula (I) are compounds of the formula (IA).</p>
+<p id="p-0028" num="0028">In compounds of the formula (IA),</p>
+<p id="p-0029" num="0029"><chemistry id="CHEM-US-00004" num="00004">
+<img id="EMI-C00004" he="38.86mm" wi="69.26mm" file="US08907107-20141209-C00004.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+each A and R<sub>4 </sub>and R<sub>5 </sub>are as defined above for compounds of the formula (I);
+<ul id="ul0002" list-style="none">
+    <li id="ul0002-0001" num="0030">R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, wherein L and X are as defined above for compounds of the formula (I); subject to the proviso as recited for compounds of the formula (I); and with the further proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X.</li>
+</ul>
+</p>
+<p id="p-0030" num="0031">Preferably, only one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X, and the remaining groups of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>are each independently H or NO<sub>2</sub>; and/or only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X, and the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H or NO<sub>2</sub>.</p>
+<p id="p-0031" num="0032">Preferably, when one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X, the remaining groups of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>are each independently H.</p>
+<p id="p-0032" num="0033">Preferably, when one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X, the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H.</p>
+<p id="p-0033" num="0034">In one embodiment of compounds of the formula (IA), only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, wherein X is a conjugation group or a water-solubilizing group.</p>
+<p id="p-0034" num="0035">In another embodiment of compounds of the formula (IA), only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is OH and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein X is a conjugation group or a water-solubilizing group.</p>
+<p id="p-0035" num="0036">In a preferred embodiment of compounds of the formula (IA), only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein:
+<ul id="ul0003" list-style="none">
+    <li id="ul0003-0001" num="0000">
+    <ul id="ul0004" list-style="none">
+        <li id="ul0004-0001" num="0037">(a) each X is a conjugation group; or</li>
+        <li id="ul0004-0002" num="0038">(b) each X is a water-solubilizing group; or</li>
+        <li id="ul0004-0003" num="0039">(c) one X is a conjugation group and the other X is a water-solubilizing group.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0036" num="0040">In a particularly preferred embodiment, R<sub>1 </sub>is H, R<sub>2 </sub>is O-L-X, R<sub>3 </sub>is H, R<sub>6 </sub>is H, R<sub>7 </sub>is O-L-X and R<sub>8 </sub>is H, wherein one X is a conjugation group and the other X is a water-solubilizing group.</p>
+<p id="p-0037" num="0041">In an especially preferred embodiment, each A is F, R<sub>1 </sub>is H, R<sub>2 </sub>is O-L-X, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, R<sub>6 </sub>is H, R<sub>7 </sub>is O-L-X and R<sub>8 </sub>is H, wherein one X is a conjugation group and the other X is a water-solubilizing group.</p>
+<p id="p-0038" num="0042">Suitable spacer groups L include moieties selected from substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyls, methylenes, amines, amides and ethers, or derivatives thereof. Alkyl moieties include substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moieties having up to 25 carbon atoms, more preferably up to 10 carbon atoms, even more preferably up to 5 carbon atoms. Methylene moieties include &#x2014;(CH<sub>2</sub>)<sub>n</sub>, wherein n is an integer from 1 to 16, preferably from 1 to 10, more preferably from 1 to 5, even more preferably from 1 to 3. Amine moieties include &#x2014;(CH<sub>2</sub>)<sub>2</sub>NH&#x2014;. Amide moieties include &#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)&#x2014;, &#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>&#x2014; and &#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>. Ether moieties include &#x2014;CH<sub>2</sub>CH<sub>2</sub>OCH<sub>2</sub>CH<sub>2</sub>&#x2014;. It will be appreciated that any suitable spacer group not listed here may be included in the compounds of the invention. It will also be appreciated that more than one spacer group may be included, and that the length and the number of the spacer group(s) may vary in accordance with the intended use of the compound.</p>
+<p id="p-0039" num="0043">Suitable conjugation groups include moieties selected from carboxylic acids, amines, alkynes, succinimidyl esters, azides, acyl azides, maleimides, diarylphosphonyl-aryl esters and biotin, or derivatives thereof.</p>
+<p id="p-0040" num="0044">A suitable diarylphosphonyl-aryl ester is ortho-diarylphosphonyl-aryl-methyl ester.</p>
+<p id="p-0041" num="0045">Moieties selected from carboxylic acids, amines, alkynes and succinimidyl esters are preferred, more preferably selected from alkynes and succinimidyl esters, most preferably succinimidyl esters. It will be appreciated that any suitable conjugation group not listed here may be included in the compounds of the invention. Advantageously, the conjugation group is chosen according to the intended use, as discussed in more detail below.</p>
+<p id="p-0042" num="0046">Suitable water-solubilizing groups include moieties selected from carboxylic acids, amines, sulfonic acids, alcohols, ethers, polyethers, amides, sulphonamides and tetrazoles, or derivatives thereof.</p>
+<p id="p-0043" num="0047">Moieties selected from sulfonic acids, carboxylic acids, ethers and polyethers are preferred, more preferably selected from sulfonic acids and carboxylic acids, most preferably sulfonic acids. It will be appreciated that any suitable water-solubilizing group not listed here may be included in the compounds of the invention.</p>
+<p id="p-0044" num="0048">In a preferred embodiment, one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein one X is a sulfonic acid moiety and the other X is a succinimidyl ester moiety. In this embodiment, preferably, each A is F, R<sub>4 </sub>is Ph and R<sub>5 </sub>is Ph.</p>
+<p id="p-0045" num="0049">In an especially preferred embodiment, one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X, wherein O-L-X is O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>Na or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>H or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub><sup>&#x2212;</sup>, and one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein O-L-X is O&#x2014;CH<sub>2</sub>-succinimidyl ester or O&#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester or O&#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester; or one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein O-L-X is O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>Na or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>H or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>, and one R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X, wherein O-L-X is O&#x2014;CH<sub>2</sub>-succinimidyl ester or O&#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester or O&#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester. In this embodiment, preferably, each A is F, R<sub>4 </sub>is Ph and R<sub>5 </sub>is Ph.</p>
+<p id="p-0046" num="0050">It will be appreciated by the skilled person that, depending on the intended use, some of the moieties used as conjugation groups may alternatively function as water-solubilizing groups. For example, carboxylic acid and amine moieties may be used as conjugation groups or as water-solubilizing groups. Thus, when a compound of the formulae (I) or (IA) includes two carboxylic acids as X, one carboxylic acid may, if desired, function as a conjugation group and the other as a water-solubilizing group; similarly for two amines as X; also similarly for a compound comprising one carboxylic acid moiety as X and one amine moiety as X.</p>
+<p id="p-0047" num="0051">It will be further appreciated by the skilled person that depending on the intended use, ether moieties typically used as water-solubilizing groups may also function as spacer groups. For example, where more than one ether group is present, forming a polyether, one or more of the ether groups present may be providing the function of a spacer group.</p>
+<p id="p-0048" num="0052">Preferably, the compounds according to the invention have a maximum absorbance &#x3bb;<sub>max </sub>at greater than 660 nm, preferably greater than 670 nm, and a maximum emission at greater than 690 nm, preferably greater than 720 nm, as measured in aqueous solutions.</p>
+<p id="p-0049" num="0053">Table 1 contains representative compounds according to the formulae (I) and (IA), wherein each A is F, R<sub>1 </sub>is H, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph and R<sub>8 </sub>is H. The compounds provided in Table 1 are representative compounds only and are not intended to be an exhaustive list.</p>
+<p id="p-0050" num="0054">
+<tables id="TABLE-US-00001" num="00001">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="1" colwidth="56pt" align="center"/>
+<colspec colname="2" colwidth="63pt" align="center"/>
+<colspec colname="3" colwidth="21pt" align="center"/>
+<colspec colname="4" colwidth="140pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="4" rowsep="1">TABLE 1</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Reference</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>number of</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>compound in</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>Examples where</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>applicable</entry>
+<entry>R<sup>2</sup></entry>
+<entry>R<sup>6</sup></entry>
+<entry>R<sup>7</sup></entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>2 (Example 2(A))</entry>
+<entry>OH</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>9 (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NHBoc</entry>
+</row>
+<row>
+<entry>Variation of 9</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NH<sub>2</sub></entry>
+</row>
+<row>
+<entry>(Example 3(A))</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>10 (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>11a (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00005" num="00005">
+<img id="EMI-C00005" he="24.64mm" wi="31.24mm" file="US08907107-20141209-C00005.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>11b (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00006" num="00006">
+<img id="EMI-C00006" he="31.33mm" wi="31.24mm" file="US08907107-20141209-C00006.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>16 (Example 4)</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub><sup>&#x2212;</sup></entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub><sup>&#x2212;</sup></entry>
+</row>
+<row>
+<entry>Variation of 16</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry>(Example 4)</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>17 (Example 4)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub><sup>&#x2212;</sup></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub><sup>&#x2212;</sup></entry>
+</row>
+<row>
+<entry>Variation of 17</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>H</entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>H</entry>
+</row>
+<row>
+<entry>(Example 4)</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>26 (Example 6)</entry>
+<entry>OCH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NH<sub>2</sub></entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00007" num="00007">
+<img id="EMI-C00007" he="24.64mm" wi="16.93mm" file="US08907107-20141209-C00007.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>27 (Example 6)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>NO<sub>2</sub></entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry><chemistry id="CHEM-US-00008" num="00008">
+<img id="EMI-C00008" he="24.64mm" wi="16.93mm" file="US08907107-20141209-C00008.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00009" num="00009">
+<img id="EMI-C00009" he="24.64mm" wi="38.18mm" file="US08907107-20141209-C00009.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>28 (Example 6)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00010" num="00010">
+<img id="EMI-C00010" he="24.64mm" wi="31.24mm" file="US08907107-20141209-C00010.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00011" num="00011">
+<img id="EMI-C00011" he="14.82mm" wi="31.92mm" file="US08907107-20141209-C00011.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry><chemistry id="CHEM-US-00012" num="00012">
+<img id="EMI-C00012" he="24.64mm" wi="16.93mm" file="US08907107-20141209-C00012.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00013" num="00013">
+<img id="EMI-C00013" he="24.64mm" wi="16.93mm" file="US08907107-20141209-C00013.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>29 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00014" num="00014">
+<img id="EMI-C00014" he="14.90mm" wi="31.92mm" file="US08907107-20141209-C00014.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>30 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00015" num="00015">
+<img id="EMI-C00015" he="17.10mm" wi="43.52mm" file="US08907107-20141209-C00015.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>31 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00016" num="00016">
+<img id="EMI-C00016" he="29.97mm" wi="47.75mm" file="US08907107-20141209-C00016.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0051" num="0055">Included in compounds of the formula (I) are compounds of the formula (IB).</p>
+<p id="p-0052" num="0056">In compounds of the formula (IB),</p>
+<p id="p-0053" num="0057"><chemistry id="CHEM-US-00017" num="00017">
+<img id="EMI-C00017" he="38.86mm" wi="69.26mm" file="US08907107-20141209-C00017.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+each A and R<sub>4 </sub>and R<sub>5 </sub>are as defined above for compounds of the formula (I); and
+<ul id="ul0005" list-style="none">
+    <li id="ul0005-0001" num="0058">R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH or NO<sub>2</sub>; with the proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH and at least one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH.</li>
+</ul>
+</p>
+<p id="p-0054" num="0059">Preferably, only one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH, and the remaining groups of R<sub>1</sub>, R<sub>2</sub>, and R<sub>3 </sub>are each independently H or NO<sub>2</sub>; and/or only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, and the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H or NO<sub>2</sub>.</p>
+<p id="p-0055" num="0060">Preferably, when one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH, the remaining groups of R<sub>1</sub>, R<sub>2</sub>, and R<sub>3 </sub>are each independently H.</p>
+<p id="p-0056" num="0061">Preferably, when one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H.</p>
+<p id="p-0057" num="0062">In a preferred embodiment of compound (IB), R<sub>1 </sub>is H, R<sub>2 </sub>is OH, R<sub>3 </sub>is H, R<sub>6 </sub>is H, R<sub>7 </sub>is OH and R<sub>8 </sub>is H. In an especially preferred embodiment of compound (IB), each A is F, R<sub>1 </sub>is H, R<sub>2 </sub>is OH, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, R<sub>6 </sub>is H, R<sub>7 </sub>is OH and R<sub>8 </sub>is H.</p>
+<p id="p-0058" num="0063">Compounds of the formula (IB) are useful in the preparation of compounds of the formula (I), including compounds of the formula (IA).</p>
+<p id="p-0059" num="0064">The compounds of the invention may be prepared in accordance with Scheme A:</p>
+<p id="p-0060" num="0065"><chemistry id="CHEM-US-00018" num="00018">
+<img id="EMI-C00018" he="250.27mm" wi="58.25mm" file="US08907107-20141209-C00018.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+Compounds of the Formula (IV) to Compounds of the Formula (IB):
+</p>
+<p id="p-0061" num="0066">The invention further provides a method of preparing a compound of the formula (IB), wherein the method comprises reacting a compound of formula (IV), wherein R<sub>1</sub>-R<sub>8 </sub>are as defined above for compounds of the formula (IB), with boron trihalide or a derivative thereof.</p>
+<p id="p-0062" num="0067">Compounds of the formula (IB) wherein each A is O&#x2014;Y, may be formed by reacting a product formed by the above reaction with a suitable alkoxide.</p>
+<p id="p-0063" num="0068">Suitable boron trihalides include boron trifluoride, boron trichloride, boron tribromide and boron triiodide, preferably boron trifluoride. A derivative of boron trifluoride is preferred, especially boron trifluoride diethyletherate (BF<sub>3</sub>OEt<sub>2</sub>).</p>
+<p id="p-0064" num="0069">The reaction may be carried out in the presence of a suitable base. Suitable bases include diisopropylethylamine (DIEA, H&#xfc;nig's base), triethylamine and caesium carbonate, preferably diisopropylethylamine.</p>
+<p id="p-0065" num="0070">Preferably, the reaction is carried out in the presence of a suitable solvent. Suitable solvents include THF, dichloromethane (CH<sub>2</sub>Cl<sub>2</sub>), toluene and benzene, preferably dichloromethane (CH<sub>2</sub>Cl<sub>2</sub>).</p>
+<p id="p-0066" num="0071">Preferably, in the compound of the formula (IV), R<sub>1 </sub>is H, R<sub>2 </sub>is OH, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, R<sub>6 </sub>is H, R<sub>7 </sub>is OH and R<sub>8 </sub>is H, wherein the compound of the formula (IV) is [5-(4-Hydroxyphenyl)-3-phenyl-1H-pyrrol-2-yl]-[5-(4-hydroxyphenyl)-3-phenylpyrrol-2-ylidene]amine.</p>
+<p id="p-0067" num="0072">Conveniently, compounds of the formula (IV) also form part of the invention.</p>
+<p id="h-0005" num="0000">Compounds of the Formula (III) to Compounds of the Formula (IV):</p>
+<p id="p-0068" num="0073">The compound of the formula (IV) may be prepared by reacting a compound of the formula (III), wherein R<sub>1</sub>-R<sub>8 </sub>are as defined above for compounds of the formula (IB), with an ammonium source in a suitable solvent.</p>
+<p id="p-0069" num="0074">Suitable ammonium sources include ammonium chloride, ammonium acetate and ammonium formate, preferably ammonium acetate.</p>
+<p id="p-0070" num="0075">Suitable solvents include THF, dichloromethane (CH<sub>2</sub>Cl<sub>2</sub>), ethanol and isopropyl alcohol, preferably ethanol.</p>
+<p id="p-0071" num="0076">Preferably, in the compound of the formula (III), R<sub>1</sub>/R<sub>6 </sub>is H, R<sub>2</sub>/R<sub>7 </sub>is OH, R<sub>3</sub>/R<sub>8 </sub>is H, and R<sub>4</sub>/R<sub>5 </sub>is Ph, wherein the compound of the formula (III) is 1-(4-hydroxyphenyl)-4-nitro-3-phenylbutan-1-one.</p>
+<p id="p-0072" num="0077">Conveniently, compounds of the formula (III) also form part of the invention.</p>
+<p id="h-0006" num="0000">Compounds of the Formula (II) to Compounds of the Formula (III):</p>
+<p id="p-0073" num="0078">The compound of the formula (III) may be prepared by reacting a compound of the formula (II), wherein R<sub>1</sub>-R<sub>8 </sub>are as defined above for compounds of the formula (IB), with a methylene nitro source in a suitable solvent.</p>
+<p id="p-0074" num="0079">A suitable methylene nitro source is nitromethane.</p>
+<p id="p-0075" num="0080">Suitable solvents include THF, dichloromethane (CH<sub>2</sub>Cl<sub>2</sub>), methanol, ethanol, preferably ethanol.</p>
+<p id="p-0076" num="0081">Preferably, in the compound of the formula (II), R<sub>1</sub>/R<sub>6 </sub>is H, R<sub>2</sub>/R<sub>7 </sub>is OH, R<sub>3</sub>/R<sub>8 </sub>is H, and R<sub>4</sub>/R<sub>5 </sub>is Ph, wherein the compound of the formula (II) is a known chalcone, available from TCI laboratory Chemicals.</p>
+<p id="h-0007" num="0000">Compounds of the Formula (IB) to Compounds of the Formula (I):</p>
+<p id="p-0077" num="0082">The invention further provides a method of preparing a compound of the formula (I), wherein the method comprises converting at least one OH group of a compound of the formula (IB) to O-L-X, in the presence of a suitable solvent.</p>
+<p id="p-0078" num="0083">Suitable solvents include THF, dichloromethane (CH<sub>2</sub>Cl<sub>2</sub>), acetonitrile, toluene, DMF and acetone, preferably THF.</p>
+<p id="p-0079" num="0084">The reaction may be carried out in the presence of a suitable base. Suitable bases include NaH, diisopropylethylamine (DIEA, H&#xfc;nig's base), triethylamine and caesium carbonate, preferably NaH.</p>
+<p id="p-0080" num="0085">Preferably, the conversion of the at least one OH group to O-L-X is achieved by alkylation of the at least one OH group.</p>
+<p id="p-0081" num="0086">Preferably, the conversion of the at least one OH group to O-L-X involves the conversion of at least two OH groups to O-L-X. Further preferably, at least one O-L-X group is provided on one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>of the compound of the formula (I), and at least one O-L-X group is provided on one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>of the compound of the formula (I). More preferably, only one O-L-X group is provided on one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>of the compound of the formula (I), and only one O-L-X group is provided on one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>of the compound of the formula (I), wherein, further preferably, one X is a conjugation group and the other X is a water-solubilizing group.</p>
+<p id="p-0082" num="0087">Preferably, the compound of formula (I) is a compound of formula (IA).</p>
+<p id="p-0083" num="0088">The invention still further provides a dye conjugate, comprising (i) a compound of the formula (I) bearing at least one conjugation group X, and (ii) a complementary binding group; wherein the conjugation group X is capable of covalently binding the compound of the formula (I) to the complementary binding group.</p>
+<p id="p-0084" num="0089">Preferably, the compound of the formula (I) is a compound of the formula (IA).</p>
+<p id="p-0085" num="0090">Suitable binding groups include carboxylic acids, aldehydes, ketones, esters, amines, thiols, azides and avidins.</p>
+<p id="p-0086" num="0091">Suitable conjugation groups and complementary binding groups include the following:&#x2014;
+<ul id="ul0006" list-style="none">
+    <li id="ul0006-0001" num="0000">
+    <ul id="ul0007" list-style="none">
+        <li id="ul0007-0001" num="0092">(a) an amine as conjugation group and a carboxylic acid, aldehyde, ketone or ester as complementary binding group;</li>
+        <li id="ul0007-0002" num="0093">(b) a carboxylic acid as conjugation group and an amine as complementary binding group;</li>
+        <li id="ul0007-0003" num="0094">(c) a succinimidyl ester as conjugation group and an amine as complementary binding group;</li>
+        <li id="ul0007-0004" num="0095">(d) a maleimide as conjugation group and a thiol as complementary binding group;</li>
+        <li id="ul0007-0005" num="0096">(e) an alkyne as conjugation group and an azide as complementary binding group;</li>
+        <li id="ul0007-0006" num="0097">(f) an ortho-diarylphosphonyl-aryl-methyl ester as conjugation group and an azide as complementary binding group; and</li>
+        <li id="ul0007-0007" num="0098">(g) biotin as conjugation group and avidin as complementary binding group.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0087" num="0099">Some of these conjugation groups and complementary binding groups are indicated in Table 2 below, wherein the complementary binding group is referred to as a reacting moiety:</p>
+<p id="p-0088" num="0100">
+<tables id="TABLE-US-00002" num="00002">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="1" colwidth="147pt" align="center"/>
+<colspec colname="2" colwidth="133pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="2" rowsep="1">TABLE 2</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Conjugatable Group</entry>
+<entry>Reacting Moiety</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry><chemistry id="CHEM-US-00019" num="00019">
+<img id="EMI-C00019" he="5.08mm" wi="32.09mm" file="US08907107-20141209-C00019.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry><chemistry id="CHEM-US-00020" num="00020">
+<img id="EMI-C00020" he="17.19mm" wi="43.69mm" file="US08907107-20141209-C00020.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00021" num="00021">
+<img id="EMI-C00021" he="11.26mm" wi="31.24mm" file="US08907107-20141209-C00021.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;NH<sub>2</sub></entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00022" num="00022">
+<img id="EMI-C00022" he="16.51mm" wi="41.91mm" file="US08907107-20141209-C00022.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;NH<sub>2</sub></entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00023" num="00023">
+<img id="EMI-C00023" he="17.10mm" wi="48.18mm" file="US08907107-20141209-C00023.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;NH<sub>2</sub></entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00024" num="00024">
+<img id="EMI-C00024" he="14.90mm" wi="37.93mm" file="US08907107-20141209-C00024.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;SH</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00025" num="00025">
+<img id="EMI-C00025" he="28.70mm" wi="50.04mm" file="US08907107-20141209-C00025.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;N<sub>3</sub></entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry><chemistry id="CHEM-US-00026" num="00026">
+<img id="EMI-C00026" he="5.00mm" wi="34.21mm" file="US08907107-20141209-C00026.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>R&#x2014;N<sub>3</sub></entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0089" num="0101">The binding group may form part of a larger molecule including, but not limited to, nucleic acids, nucleotides, carbohydrates, drugs, polymers, peptides, proteins, antibodies, lipids including nanoparticle forms thereof; and other biologically derived or synthetic chemical materials including nanoparticle forms thereof.</p>
+<p id="p-0090" num="0102">Such a molecule may, if desired, be in the form of or attached to synthetic particles. Such particles may be in the form of nano-beads, preferably having a diameter from about 0.5 nm to about 500 nm, more preferably from about 5 nm to about 500 nm, more preferably from about 50 nm to about 200 nm, most preferably about 100 nm.</p>
+<p id="p-0091" num="0103">Suitable nano-beads include polystyrene, gold or silver. It will be appreciated that other metallic and/or inorganic nano-beads may be used.</p>
+<p id="p-0092" num="0104">The invention still further provides the use of a compound of the formula (I) in the fluorescent labelling of a molecule to produce a dye conjugate. Preferably, the compound of the formula (I) is a compound of the formula (IA).</p>
+<p id="p-0093" num="0105">The invention even further provides the use of a compound of the formula (I) as a water-soluble fluorescent dye. Preferably, the compound of the formula (I) is a compound of the formula (IA).</p>
+<p id="p-0094" num="0106">Advantages of the invention:
+<ul id="ul0008" list-style="none">
+    <li id="ul0008-0001" num="0000">
+    <ul id="ul0009" list-style="none">
+        <li id="ul0009-0001" num="0107">The compounds have strong absorption and emissions within the NIR spectral region.</li>
+        <li id="ul0009-0002" num="0108">The compounds have high photostability.</li>
+        <li id="ul0009-0003" num="0109">The compounds are versatile and have many commercial uses:
+        <ul id="ul0010" list-style="none">
+            <li id="ul0010-0001" num="0110">For example, in some embodiments, when OH is present, the compounds may be pH responsive, wherein the fluorescence can be switched on and off as desired.</li>
+            <li id="ul0010-0002" num="0111">In other embodiments, the water-solubilizing groups advantageously enhance the solubility of the compounds of the invention in aqueous solution.</li>
+            <li id="ul0010-0003" num="0112">In still other embodiments, the conjugation groups enable the compound to be covalently bound to a complementary binding group, forming a dye conjugate. When two X groups are present, and one X is a conjugation group and the other X is a water-solubilizing group, preferably facilitated by a desymmetrization step during manufacture, the compound may be bound to one complementary binding group, with the water-solubilizing group conveniently enhancing the solubility of the compounds in aqueous solution. When two X groups are present, and both X are COOH, the compound may conveniently be bound to two separate complementary binding groups on small molecules, for example, two amine groups on two small peptides.</li>
+            <li id="ul0010-0004" num="0113">The compounds may be bound to particles such as nano-beads.</li>
+            <li id="ul0010-0005" num="0114">Polymeric nanoparticle conjugate dyes of the invention have been found to exhibit a dramatic increase in fluorescent intensity upon entry into a cell, typically at least a 2-fold, 3-fold, 4-fold, 5-fold, 6-fold, 7-fold, 8-fold, 9-fold, or 10-fold increase in fluorescent intensity when compared with the fluorescent intensity when the conjugate dye is outside the cell.</li>
+        </ul>
+        </li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="p-0095" num="0115">The invention will now be further described, with reference to the following non-limiting examples:&#x2014;</p>
+<?BRFSUM description="Brief Summary" end="tail"?>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="lead"?>
+<description-of-drawings>
+<heading id="h-0008" level="1">BRIEF DESCRIPTION OF THE DRAWINGS</heading>
+<p id="p-0096" num="0116">The invention will be more clearly understood from the following description of an embodiment thereof, given by way of example only, with reference to the accompanying drawings, in which:&#x2014;</p>
+<p id="p-0097" num="0117"><figref idref="DRAWINGS">FIG. 1</figref>. pH responsive fluorescence spectra of 2. A trace pH=6.0, B trace pH=9.0. Excitation at 640 nm, slit widths 10 nm, 5&#xd7;10<sup>&#x2212;7 </sup>M in water/CrEL. I<sub>NaCl</sub>=150 mmol/L. Insert; sigmoidal plot predicting a pKa value of 6.9.</p>
+<p id="p-0098" num="0118"><figref idref="DRAWINGS">FIG. 2</figref>. UV-Visible Spectral of 2 in Various Solvents. Solvents CHCl<sub>3 </sub>(A); toluene (B), ethanol (C), H<sub>2</sub>O/CrEl (D).</p>
+<p id="p-0099" num="0119"><figref idref="DRAWINGS">FIG. 3</figref>. Fluorescence Spectral of 2 in Various Solvents. Solvents CHCl<sub>3 </sub>(A); toluene (B), ethanol (C), H<sub>2</sub>O/CrEl (D).</p>
+<p id="p-0100" num="0120"><figref idref="DRAWINGS">FIG. 4</figref>. UV-Visible pH profile of conversion of 2 to 2-H<sup>+</sup> at 5&#xd7;10<sup>&#x2212;6 </sup>M in water/CrEL, I<sub>NaCl</sub>=150 mmol/L. Inset: Colormetric response of 2; LHS pH=6.8, RHS pH=8.8.</p>
+<p id="p-0101" num="0121"><figref idref="DRAWINGS">FIG. 5</figref>. Normalized UV-visible (5&#xd7;10<sup>&#x2212;6 </sup>M) and fluorescence (5&#xd7;10<sup>&#x2212;7 </sup>M) spectra of 8a (&#x3bb;<sub>max </sub>687/716 nm; A), 8b (&#x3bb;<sub>max </sub>687/716 nm; B) and 8c (&#x3bb;<sub>max </sub>687/716 nm; C) in MeOH.</p>
+<p id="p-0102" num="0122"><figref idref="DRAWINGS">FIG. 6</figref>. Relative fluorescence intensity at 730 nm of 8a at pH 6.1, 6.6, 7.2, 7.6 and 8.0. Excitation at 640 nm, slit widths 20 nm, 5&#xd7;10<sup>&#x2212;7 </sup>M in water/CrEL. I<sub>NaCl</sub>=150 mmol/L.</p>
+<p id="p-0103" num="0123"><figref idref="DRAWINGS">FIG. 7</figref>. Confocal fluorescence image of MDA-MB-231 cells following treatment with pH 8.0 and 6.5 buffers. 8a (red color) and nuclear DAPI stain (blue color).</p>
+<p id="p-0104" num="0124"><figref idref="DRAWINGS">FIG. 8</figref>. Confocal Laser Scanning Microscopy Z-Stack Imaging of 8a in CAKI-1 cells.</p>
+<p id="p-0105" num="0125"><figref idref="DRAWINGS">FIG. 9</figref>. UV-Visible pH Spectral Profile of 8a: pH=6.0=A trace; pH=9.0=B trace.</p>
+<p id="p-0106" num="0126"><figref idref="DRAWINGS">FIG. 10</figref>. Fluorescence pH Spectral Profile of 8a: pH=6.0=A trace; pH=9.0=B trace.</p>
+<p id="p-0107" num="0127"><figref idref="DRAWINGS">FIG. 11</figref>. Fluorescence pH Sigmoidal Plot for 8a.</p>
+<p id="p-0108" num="0128"><figref idref="DRAWINGS">FIG. 12</figref>. Normalised absorption (5&#xd7;10<sup>&#x2212;6 </sup>M) and emission (5&#xd7;10<sup>&#x2212;7 </sup>M) spectra of 9 (A), 10 (B) and 12 (C) in EtOH.</p>
+<p id="p-0109" num="0129"><figref idref="DRAWINGS">FIG. 13</figref>. UV-Visible and fluorescence spectra of 9 in different solvents.</p>
+<p id="p-0110" num="0130"><figref idref="DRAWINGS">FIG. 14</figref>. Conjugation of 11a with lysosyme in DMSO/water.</p>
+<p id="p-0111" num="0131"><figref idref="DRAWINGS">FIG. 15</figref>. Conjugation of 11a with lysosyme in THF/water.</p>
+<p id="p-0112" num="0132"><figref idref="DRAWINGS">FIG. 16</figref>. Conjugation of 10 equiv. of 11b with lysosyme in 0.1 M NaHCO<sub>3 </sub>at pH=8.3.</p>
+<p id="p-0113" num="0133"><figref idref="DRAWINGS">FIG. 17</figref>. Conjugation of 20 equiv. of 11b with lysosyme in 0.1 M NaHCO<sub>3 </sub>at pH=8.3.</p>
+<p id="p-0114" num="0134"><figref idref="DRAWINGS">FIG. 18</figref>. Conjugation of 10 equiv. of 11b with trypsin in PBS at pH=7.5.</p>
+<p id="p-0115" num="0135"><figref idref="DRAWINGS">FIG. 19</figref>. MALDI-MS of lysosyme conjugated with five equiv. of 6b. Di-conjugate 15,904; tri-conjugate 16,704; tetra-conjugate 17,503; penta-conjugate 18,305.</p>
+<p id="p-0116" num="0136"><figref idref="DRAWINGS">FIG. 20</figref>. Normalised absorption (left) and emission (right) spectra of lysozyme (A), and trypsin (B) in aqueous PBS.</p>
+<p id="p-0117" num="0137"><figref idref="DRAWINGS">FIG. 21</figref>. Normalised absorption (left) and emission (right) spectra of 16 (A), 17 (B), and 21 (C) in CHCl<sub>3</sub>.</p>
+<p id="p-0118" num="0138"><figref idref="DRAWINGS">FIG. 22</figref>. The absorption (left) and fluorescence (right) of 16 (A), 17 (B), and 21 (C) in methanol. Fluorescence spectra were taken after excitation at 640 nm.</p>
+<p id="p-0119" num="0139"><figref idref="DRAWINGS">FIG. 23</figref>. The stability of 16 in PBS (pH=7.0) containing 3% of BSA. Spectra were taken after 24 hr (A) and 48 hr (B) exposure to the sun light. Solid and dashed lines represent relative absorption and fluorescence respectively.</p>
+<p id="p-0120" num="0140"><figref idref="DRAWINGS">FIG. 24</figref>. The stability of 17 in PBS (pH=7.0) containing 3% of BSA. Spectra were taken after 24 hr (A) and 48 hr (B) exposure to the sun light. Solid and dashed lines represent relative absorption and fluorescence respectively.</p>
+<p id="p-0121" num="0141"><figref idref="DRAWINGS">FIG. 25</figref>. The stability of 21 in PBS (pH=7.0) containing 3% of BSA. Spectra were taken after 24 hr (A) and 48 hr (B) exposure to the sun light. Solid and dashed lines represent relative absorption and fluorescence respectively.</p>
+<p id="p-0122" num="0142"><figref idref="DRAWINGS">FIG. 26</figref>. Normalised absorption (left) and emission (right) spectra of 16 (A), 17 (B), and 21 (C) in DMEM. Absorption spectrum below 600 nm is not shown due to masking by phenol red dye contained in DMEM.</p>
+<p id="p-0123" num="0143"><figref idref="DRAWINGS">FIG. 27</figref>. CLSM images of MDA-MB-231 cells after 1 hr incubation with 5 &#x3bc;M solution of (a) 16 and (b) 17. Scale bars, 10 &#x3bc;m.</p>
+<p id="p-0124" num="0144"><figref idref="DRAWINGS">FIG. 28</figref>. CLSM images of (a) <i>E. coli </i>and (b) <i>S. aureus </i>cells after 10 min. incubation with 4 &#x3bc;M solution of 21. Scale bars, 1 &#x3bc;m.</p>
+<p id="p-0125" num="0145"><figref idref="DRAWINGS">FIG. 29</figref>. Individual MDA-MB-231 cell following incubation with 16. Scale bar 10 &#x3bc;m.</p>
+<p id="p-0126" num="0146"><figref idref="DRAWINGS">FIG. 30</figref>. CLSM Z-Stack Analysis of 16 in MDA-MB-231 cells.</p>
+<p id="p-0127" num="0147"><figref idref="DRAWINGS">FIG. 31</figref>. CLSM Z-Stack Analysis of 17 in MDA cells and nuclear co-staining with DAPI (blue colour). scale bar 5 &#x3bc;m.</p>
+<p id="p-0128" num="0148"><figref idref="DRAWINGS">FIG. 32</figref>. Absorbance (solid line) and fluorescence (dashed line) spectra of 16 (A), 17 (B) and 21 (C) in PBS/BSA solutions.</p>
+<p id="p-0129" num="0149"><figref idref="DRAWINGS">FIG. 33</figref>. Emission Spectrum of 200 nm functionalized beads in H<sub>2</sub>O, Nano-bead fluorescence &#x3bb; max of 727 nm.</p>
+<p id="p-0130" num="0150"><figref idref="DRAWINGS">FIG. 34</figref>. Confocal Image of 200 nm functionalized beads. Image acquired using a 633 nm excitation and a 650 nm long-pass collection filter. Scale Bar, 1 &#x3bc;m.</p>
+<p id="p-0131" num="0151"><figref idref="DRAWINGS">FIG. 35</figref>. Confocal Image of MDA cells with internalised 200 nm functionalized beads. Image acquired using a 633 nm excitation and a 650 nm long-pass collection filter.</p>
+<p id="p-0132" num="0152"><figref idref="DRAWINGS">FIG. 36</figref>. Confocal Image of a single MDA cell with internalised 200 nm functionalized beads. Image acquired using a 633 nm excitation and a 650 nm long-pass collection filter.</p>
+<p id="p-0133" num="0153"><figref idref="DRAWINGS">FIG. 37</figref>. Time course of confocal fluorescence real time images of HEK293T cells with conjugated nanoparticles.</p>
+<p id="p-0134" num="0154"><figref idref="DRAWINGS">FIG. 38</figref>. Time course of confocal fluorescence real time images of CAKI-1 cells with conjugated nanoparticles.</p>
+<p id="p-0135" num="0155"><figref idref="DRAWINGS">FIG. 39</figref>. In vivo fluorescence lymph node imaging taken 30 seconds after intra-dermal injection of dye conjugated particles in the left foot of the mouse.</p>
+</description-of-drawings>
+<?brief-description-of-drawings description="Brief Description of Drawings" end="tail"?>
+<?DETDESC description="Detailed Description" end="lead"?>
+<heading id="h-0009" level="1">DETAILED DESCRIPTION OF THE INVENTION</heading>
+<heading id="h-0010" level="1">EXAMPLE 1</heading>
+<heading id="h-0011" level="1">Compound 6</heading>
+<p id="p-0136" num="0156">Compound 6, which is a compound of the formula (IB), was prepared as follows. With reference to Scheme 1, the synthetic route commenced with an addition of nitromethane to chalcone 3, which is compound of the formula (II), which gave 1-(4-hydroxyphenyl)-4-nitro-3-phenylbutan-1-one 4, which is a compound of the formula (III), in 73% yield.</p>
+<p id="p-0137" num="0157"><chemistry id="CHEM-US-00027" num="00027">
+<img id="EMI-C00027" he="165.69mm" wi="75.86mm" file="US08907107-20141209-C00027.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0138" num="0158">Subsequent generation of the bis-phenol substituted azadipyrromethene 5, which is a compound of the formula (IV), was achieved by the reflux of 4 with ammonium acetate in ethanol for 24 h. Filtration of the precipitate from the crude reaction mixture gave the pure product in 51% yield. Compound 5 was converted to its BF<sub>2 </sub>chelated analogue 6 with BF<sub>3 </sub>diethyletherate and diisopropylethylamine (DIEA) in dichloromethane for 24 h. An isolated yield of 69% of 6 was obtained following chromatography on silica gel. Compound 6 can advantageously be used to prepare a wide variety of compounds (I) according to the invention, as described in Examples 2(A), 3(A), 4 and 6, and also a wide variety of dye conjugates according to the invention, as described in Examples 2(B), 3(B) and 5.</p>
+<p id="p-0139" num="0159">Further details of the products 4, 5 and 6 and synthesis thereof are provided below.</p>
+<heading id="h-0012" level="1">1-(4-Hydroxyphenyl)-4-nitro-3-phenylbutan-1-one (4)</heading>
+<p id="p-0140" num="0160">A solution of 1-(4-hydroxyphenyl)-3-phenylpropenone 3 (9 mmol) in EtOH (15 mL) was treated with diethylamine (4.6 mL, 45 mmol) and nitromethane (4.8 mL, 90 mmol) and heated under reflux for 16 h. The solution was cooled and acidified with 4 M HCl, partitioned between EtOAc (50 mL) and H<sub>2</sub>O (50 mL). The organic layer was separated, dried over sodium sulfate and evaporated under reduced pressure. The residue was stirred in cold Et<sub>2</sub>O (30 mL) for 10 min and filtered to give the product 4 as a colorless solid (1.84 g, 73%), m.p. 112-113&#xb0; C. (MeOH). <sup>1</sup>H NMR (300 MHz, CDCl<sub>3</sub>): &#x3b4; 7.86 (d, J=8.5 Hz, 2H), 7.35-7.26 (m, 5H), 6.85 (d, J=8.5, 2H), 5.44 (s, 1H), 4.86-4.80 (m, 1H), 4.64-4.71 (m, 1H), 4.25-4.16 (m, 1H), 3.46-3.31 (m, 2H). <sup>13</sup>C NMR (125 MHz, CDCl<sub>3</sub>): &#x3b4; 195.3, 160.3, 139.2, 130.6, 129.6, 129.0, 127.8, 127.4, 115.4, 79.6, 41.1, 39.4. IR (KBr disc): 3427, 1646 cm<sup>&#x2212;1</sup>. ES-MS: m/z 284.1 [M&#x2212;H]<sup>&#x2212;</sup> HRMS [M+Na]<sup>+</sup>: 308.0887, C<sub>16</sub>H<sub>15</sub>NNaO<sub>4</sub><sup>+</sup> requires 308.0899.</p>
+<heading id="h-0013" level="1">[5-(4-Hydroxyphenyl)-3-phenyl-1H-pyrrol-2-yl]-[5-(4-hydroxyphenyl)-3-phenylpyrrol-2-ylidene]amine (5)</heading>
+<p id="p-0141" num="0161">Compound 4 (2.0 g, 7.0 mmol) and ammonium acetate (18.9 g, 245 mmol) in EtOH (50 mL) were heated under reflux for 24 h. The reaction was cooled to rt, the precipitate filtered and the isolated solid washed with cold ethanol (20 mL) to yield the product 5 as a blue-black solid (0.86 g, 51%), mp 245-246&#xb0; C. (MeOH). <sup>1</sup>H NMR (300 MHz, MeOD): &#x3b4; 7.99 (d, J=6.6 Hz, 4H), 7.79 (d, J=8.7 Hz, 4H), 7.36-7.29 (m, 6H), 7.20 (s, 2H), 6.92 (d, J=8.7 Hz, 4H), (NH, OH not observed). <sup>13</sup>C NMR (125 MHz, MeOD): &#x3b4; 159.9, 154.5, 148.8, 141.5, 133.9, 128.6, 128.0, 127.7, 127.3, 123.4, 115.8, 113.8. IR (KBr disc): 3054, 1603, 1265 cm<sup>&#x2212;1</sup>. ES-MS: m/z 482.3 [M+H]<sup>+</sup>. HRMS [M+H]<sup>+</sup>: 482.1851, C<sub>32</sub>H<sub>24</sub>N<sub>3</sub>O<sub>2 </sub>requires 482.1869.</p>
+<heading id="h-0014" level="1">BF<sub>2 </sub>Chelate of [5-(4-hydroxyphenyl)-3-phenyl-1H-pyrrol-2-yl]-[5-(4-hydroxyphenyl)-3-phenylpyrrol-2-ylidene]amine (6).</heading>
+<p id="p-0142" num="0162">Compound 5 (0.15 g, 0.31 mmol) was dissolved in dry CH<sub>2</sub>Cl<sub>2 </sub>(15 mL), treated with diisopropylethylamine (0.54 mL, 3.11 mmol) and BF<sub>3 </sub>diethyletherate (0.55 mL, 4.35 mmol), and stirred under N<sub>2 </sub>for 24 h. The reaction mixture was diluted with EtOAc (30 mL), washed with water (30 mL) and the organic layer evaporated to dryness. Purification by column chromatography on silica eluting with CH<sub>2</sub>Cl<sub>2</sub>/EtOAc (4:1) gave the product 6 as a red metallic solid (113 mg, 69%), mp 253-254&#xb0; C. (MeOH). <sup>1</sup>H NMR (300 MHz, MeOD): &#x3b4; 8.08-8.05 (m, 8H), 7.40-7.30 (m, 6H), 7.20 (s, 2H), 6.91-6.88 (m, 4H), (OH not observed). <sup>13</sup>C NMR (125 MHz, MeOD): &#x3b4; 160.5, 157.9, 144.8, 142.3, 132.3, 131.7, 128.9, 128.7, 128.0, 122.7, 118.3, 115.2. IR (KBr disc): 3351, 1605 cm<sup>&#x2212;1</sup>. ES-MS: m/z 530.3 [M+H]<sup>+</sup>. HRMS [M+H]<sup>+</sup>: 530.1876, C<sub>32</sub>H<sub>23</sub>BF<sub>2</sub>N<sub>3</sub>O<sub>2 </sub>requires 530.1851.</p>
+<heading id="h-0015" level="1">EXAMPLE 2(A)</heading>
+<heading id="h-0016" level="1">Compound 2: pH Responsive Compound Comprising a Conjugation Group</heading>
+<p id="p-0143" num="0163">With reference to Scheme 1, the synthesis of compound 2, which is a compound of formula (I), specifically, a compound of the formula (IA), required a desymmetrization step involving alkylation of one of the two phenol groups of 6. This alkylation was carried out using 2.2 equiv. of propargyltosylate and NaH in THF for 4 h under reflux. It was found that these specific conditions biased the distribution of mono-2 and bis-alkylated 7 products toward the mono substituted derivative (Scheme 1). Exploiting the large polarity difference between 2 and 7 allowed for facile separation on silica gel chromatography and gave products in isolated yields of 30 and 25% respectively.</p>
+<p id="p-0144" num="0164">Further details of the products 2 and 7 and synthesis thereof are provided below.</p>
+<heading id="h-0017" level="1">BF<sub>2 </sub>Chelate of 4-{4-phenyl-5-[3-phenyl-5-(4-prop-2-ynyloxyphenyl)-pyrrol-2-ylideneamino]-1H-pyrrol-2-yl}phenol (2)</heading>
+<p id="p-0145" num="0165">Compound 6 (75 mg, 0.14 mmol) and NaH (60% oil dispersion) (12 mg, 0.52 mmol) were stirred in dry THF (8 mL) and treated with propargyltoluolsulfonate (12 mg, 0.31 mmol) at 0&#xb0; C. under N<sub>2</sub>. The reaction was warmed to rt and then heated under reflux for 3 h. The reaction mixture was cooled and partitioned between EtOAc (10 mL) and brine (20 mL). The organic layer was separated, dried over sodium sulfate and the solvent removed under reduced pressure. Purification by column chromatography on silica eluting with C<sub>6</sub>H<sub>12</sub>/EtOAc (4:1) first eluted compound 7 (21 mg, 25%) 166-169&#xb0; C. followed by the desired product eluted with C<sub>6</sub>H<sub>12</sub>/EtOAc (3:2) 2 as a red metallic solid (25 mg, 30%, m.p. 82-84&#xb0; C.).</p>
+<p id="p-0146" num="0166">Analysis for 2</p>
+<p id="p-0147" num="0167"><sup>1</sup>H NMR (300 MHz, CDCl<sub>3</sub>): &#x3b4; 8.09-7.99 (m, 8H), 7.47-7.38 (m, 6H), 7.07 (d, J=8.7 Hz, 2H), 7.02 (s, 2H), 6.88 (d, J=8.6 Hz, 2H), 5.6 (bs, 1H), 4.75 (s, 2H), 2.55 (s, 1H). <sup>13</sup>C NMR (125 MHz, CDCl<sub>3</sub>): &#x3b4; 159.8, 158.7, 158.4, 157.7, 145.5, 145.2, 143.5, 143.1, 132.4, 132.3, 131.8, 131.5, 131.4, 131.3, 129.3, 129.3, 129.2, 128.5, 125.0, 124.1, 118.8, 118.5, 115.8, 115.0, 78.0, 76.0, 55.9. IR (KBr disc): 3502, 1603 cm<sup>&#x2212;1</sup>. ES-MS: m/z 568.4, [M+H]<sup>+</sup>. HRMS [M+H]<sup>+</sup>: 568.2034, C<sub>35</sub>H<sub>25</sub>BF<sub>2</sub>N<sub>3</sub>O<sub>2 </sub>requires 568.2008.</p>
+<p id="p-0148" num="0168">Analysis for 7</p>
+<p id="p-0149" num="0169"><sup>1</sup>H NMR (300 MHz, CDCl<sub>3</sub>): &#x3b4; 8.12-8.07 (m, 8H), 7.49-7.42 (m, 6H), 7.06 (d, J=9.1 Hz, 2H), 7.02 (s, 2H), 4.79 (s, 4H), 2.58 (s, 2H). <sup>13</sup>C NMR (125 MHz, CDCl<sub>3</sub>): &#x3b4; 159.8, 158.1, 145.4, 143.4, 132.4, 131.6, 131.5, 129.2, 128.5, 124.9, 118.7, 115.0, 78.0, 76.0, 55.8. IR (KBr disc): 1601, 1504 cm<sup>&#x2212;1</sup>. ES-MS: m/z 606.2, [M+H]<sup>+</sup>. HRMS [M+H]<sup>+</sup>: 606.2135, C<sub>38</sub>H<sub>27</sub>BF<sub>2</sub>N<sub>3</sub>O<sub>2 </sub>requires 606.2164.</p>
+<p id="p-0150" num="0170">Spectral properties of 2 in organic solvents were very similar to the prior art compound 1 with the absorption and emission maxima of 2 in CHCl<sub>3 </sub>at 680 and 708 nm respectively with a high fluorescence quantum yield (&#x3a6;<sub>f</sub>) of 0.37 (Table 3).</p>
+<p id="p-0151" num="0171">
+<tables id="TABLE-US-00003" num="00003">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Absorption/Emission Properties of 2</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="1" colwidth="42pt" align="center"/>
+<colspec colname="2" colwidth="49pt" align="left"/>
+<colspec colname="3" colwidth="56pt" align="center"/>
+<colspec colname="4" colwidth="70pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>entry</entry>
+<entry>solvent</entry>
+<entry>&#x3bb;<sub>max </sub>abs (nm)<sup>a</sup></entry>
+<entry>&#x3bb;<sub>max </sub>flu (nm)<sup>b</sup></entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>1</entry>
+<entry>CHCl<sub>3</sub></entry>
+<entry>680</entry>
+<entry>&#x2009;708<sup>c</sup></entry>
+</row>
+<row>
+<entry>2</entry>
+<entry>C<sub>7</sub>H<sub>8</sub></entry>
+<entry>685</entry>
+<entry>711</entry>
+</row>
+<row>
+<entry>3</entry>
+<entry>CH<sub>3</sub>OH</entry>
+<entry>688</entry>
+<entry>716</entry>
+</row>
+<row>
+<entry>4</entry>
+<entry>H<sub>2</sub>O/CrEL</entry>
+<entry>700</entry>
+<entry>729</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+<row>
+<entry namest="1" nameend="4" align="left" id="FOO-00001"><sup>a</sup>(5 &#xd7; 10<sup>&#x2212;6 </sup>M).</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="left" id="FOO-00002"><sup>b</sup>(5 &#xd7; 10<sup>&#x2212;7 </sup>M).</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="left" id="FOO-00003"><sup>c</sup>&#x3a6;<sub>f </sub>= 0.37 (1 as standard).</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0152" num="0172">Spectral characteristics showed a slight dependence upon solvent dipolarity with a bathochromatic shifts of 8 nm for absorbance and emission maxima in methanol. Additionally an aqueous solution generated by formulation using Cremophor EL (CrEL) showed further small bathochromic shifts (700/729 nm) when compared to organic solvents.</p>
+<p id="p-0153" num="0173">In contrast to 1, the spectral properties of 2 displayed a striking response across the physiological pH range (<figref idref="DRAWINGS">FIG. 1</figref>). The excited state response of 2 at the &#x3bb; max of 729 nm in aqueous solutions showed a greater than 15 fold fluorescence intensity differential between pH 6 and 8 with virtually complete suppression of fluorescence signal at pH 9 (<figref idref="DRAWINGS">FIG. 1</figref>). A sigmoidal plot of pH versus fluorescence intensity predicted an apparent pKa of 6.9 (<figref idref="DRAWINGS">FIG. 1</figref>, inset). Further spectral properties are illustrated in <figref idref="DRAWINGS">FIGS. 2</figref>, <b>3</b> and <b>4</b>. As would be expected for an ICT process, the UV-visible spectrum of 2 was strongly influenced by pH (<figref idref="DRAWINGS">FIG. 4</figref>). The absorption band at 700 nm was progressively reduced in intensity with increasing pH and a new band appeared at 775 nm with an isosbestic point at 740 nm indicative of the formation of a mono-deprotonated species.</p>
+<p id="p-0154" num="0174">Compound 2 provides the advantage of being both pH responsive via the OH group, and conjugatable via the alkyne group, as illustrated below.</p>
+<p id="p-0155" num="0175"><chemistry id="CHEM-US-00028" num="00028">
+<img id="EMI-C00028" he="71.63mm" wi="73.24mm" file="US08907107-20141209-C00028.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<heading id="h-0018" level="1">EXAMPLE 2(B)</heading>
+<heading id="h-0019" level="1">Compounds 8a, 8b, 8c: pH Responsive Dye Conjugates</heading>
+<p id="p-0156" num="0176">In the prior art, in conjunction with optimal photophysical characteristics, two complementary approaches have often been adopted to enhance differentiation of the imaging target from background fluorophore. The first, and more common, is the use of conjugated fluorophores generated by the covalent attachment of a targeting (bio)-molecule to the fluorescent probe which facilitates a target selective accumulation of fluorophore. An alternative approach is the modulation of the fluorescence signal intensity (from low to high) in response to a specific molecular recognition at the endogenous target. In spite of the success of both strategies a combination of both processes are rarely investigated. Here, a strategy is outlined to achieve a prototype azide-conjugatable and pH responsive NIR fluorescent platform. It was proposed that the on/off fluorescence switching operation would be governed by a straight-forward phenol/phenolate interconversion on the fluorophore, with conjugation to a molecular targeting motif via an alkyne-azide cycloaddition. To date, there are few literature reports of NIR pH responsive fluorophores in spite of their potential imaging applications for disease states that can induce localized intra- and extracellular pH changes such as cancers, renal failure and ischemia.</p>
+<p id="p-0157" num="0177">It was investigated as to whether 2 would be capable of conjugation via azide cycloaddition and pH modulation of the intensity of fluorescence output would be controlled by a phenol/phenolate interconversion. The mild aqueous conditions required for azide-alkyne cycloadditions offer distinct advantages when utilized for bioconjugation reactions.</p>
+<p id="p-0158" num="0178">With reference to Scheme 2, in order to demonstrate functional group tolerance of azide reactions with 2, three azides containing amino, carboxy and carbohydrate substitutents were tested. The optimized reaction conditions with 1-azido-1-deoxy-&#x3b2;-D-galactopyranoside, 4-azidobutyric acid and (2-azidoethyl)carbamic acid t-butyl ester were identified as CuSO<sub>4</sub>/Cu/sodium ascorbate in THF/H<sub>2</sub>O (3:1) under reflux for 3 h (Scheme 2). The copper salts were removed by aqueous extraction and cycloadducts 8a-c were isolated in good yields of 68 to 88% following either recrystallization from methanol or column chromatography.</p>
+<p id="p-0159" num="0179"><chemistry id="CHEM-US-00029" num="00029">
+<img id="EMI-C00029" he="240.11mm" wi="106.34mm" file="US08907107-20141209-C00029.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0160" num="0180">Further details of the products 8a, 8b and 8c, and synthesis thereof are provided below.</p>
+<heading id="h-0020" level="1">2-Hydroxymethyl-6-[4-(4-[5-[5-(4-hydroxyphenyl)-3-phenyl-1H-pyrrol-2-ylimino]-4-phenyl-5H-pyrrol-2-yl]-phenoxymethyl)-[1,2,3]triazol-1-yl]-tetrahydropyran-3,4,5-triol (8a)</heading>
+<p id="p-0161" num="0181">A solution of 2 (0.14 g, 0.24 mmol) and 1-azido-1-deoxy-&#x3b2;-D-galactopyranoside (0.12 g, 0.64 mmol) in THF:H<sub>2</sub>O (20 mL, 3:1) was treated with a THF:H<sub>2</sub>O (15 mL, 3:1) solution of Cu(0) (15 mg, 0.24 mmol), CuSO<sub>4</sub>.5H<sub>2</sub>O (8 mg, 0.049 mmol) and Na-ascorbate (24 mg, 0.12 mmol). The reaction mixture was heated for 3 h under N<sub>2</sub>, cooled and partitioned between EtOAc (30 mL) and water (30 mL). The aqueous layer was re-extracted with EtOAc (2&#xd7;30 mL) and the combined organic layers were dried and evaporated to dryness under reduced pressure. Recrystallization from MeOH gave the product 8a as a dark green solid (142 mg, 79%, m.p. 180-182&#xb0; C.). <sup>1</sup>H NMR (300 MHz, MeOD): &#x3b4; 8.36 (s, 1H), 8.14-8.10 (m, 8H), 7.48-7.35 (m, 6H), 7.34 (s, 1H), 7.21 (s, 1H), 7.17 (d, J=9.1 Hz, 2H), 6.91 (d, J=8.8 Hz, 2H), 5.60 (d, J=4.5 Hz, 1H), 5.32 (s, 2H), 4.52 (bs, 1H), 4.18 (t, J=9.5 Hz, 1H), 4.08 (m, 1H), 3.87-3.70 (m, 5H). <sup>13</sup>C NMR (125 MHz, THF-d8): &#x3b4; 161.1, 160.9, 159.1, 156.9, 145.4, 144.7, 143.0, 142.9, 141.8, 132.8, 132.6, 132.2 (t, J=5 Hz), 131.5 (t, J=5 Hz), 129.1, 129.0, 128.8, 128.6, 128.2, 124.5, 122.5, 122.0, 119.0, 118.2, 115.4, 114.5, 88.8, 78.8, 74.5, 70.4, 69.0, 61.9, 61.4. IR (KBr disc): 1596, 1455 cm<sup>&#x2212;1</sup>. ES-MS: m/z 771.6 [M&#x2212;H]<sup>&#x2212;</sup>. HRMS [M+H]<sup>+</sup>: 773.2717, C<sub>41</sub>H<sub>36</sub>BF<sub>2</sub>N<sub>6</sub>O<sub>7 </sub>requires 773.2707.</p>
+<heading id="h-0021" level="1">4-[4-(4-[5-[5-(4-Hydroxyphenyl)-3-phenyl-1H-pyrrol-2-ylimino]-4-phenyl-5H-pyrrol-2-yl]-phenoxymethyl)-[1,2,3]triazol-1-yl]butyric acid (8b)</heading>
+<p id="p-0162" num="0182">A solution of 2 (0.12 g, 0.21 mmol) and 4-azidobutyric acid (68 mg, 0.53 mmol) in THF:H<sub>2</sub>O (15 mL, 3:1) was treated with a THF:H<sub>2</sub>O (15 mL, 3:1) solution of Cu(0) (13 mg, 0.21 mmol), CuSO<sub>4</sub>.5H<sub>2</sub>O (7 mg, 0.042 mmol) and Na-ascorbate (21 mg, 0.1 mmol). The reaction mixture was heated at reflux for 3 h under N<sub>2</sub>, cooled to rt and partitioned between EtOAc (25 mL) and water (25 mL). The aqueous layer was re-extracted with EtOAc (2&#xd7;30 mL) and the combined organic layers were dried and evaporated to dryness under reduced pressure. Recrystallization from MeOH gave the product 8b as a red metallic solid (99 mg, 68%), m.p. 194-200&#xb0; C. <sup>1</sup>H NMR (300 MHz, MeOD): &#x3b4; 8.16-8.12 (m, 8H), 7.9 (bs, 1H) 7.47-7.38 (m, 6H), 7.35 (s, 1H), 7.29 (s, 1H), 7.17 (d, J=8.8 Hz, 2H), 6.93 (d, J=8.2 Hz, 2H), 5.30 (s, 2H), 4.43 (t, 7 Hz, 2H), 2.47 (bs, 1H), 2.30 (m, 2H), 2.17 (m, 2H). <sup>13</sup>C NMR (125 MHz, THF-d8): &#x3b4; 172.7, 161.0, 160.9, 159.0, 157.0, 145.4, 144.7, 142.8, 141.9, 132.8, 132.6, 132.2 (t, J=5 Hz), 131.5 (t, J=5 Hz), 129.1, 129.0, 128.8, 128.6, 128.2, 128.2, 124.5, 122.6, 118.9, 118.2, 115.4, 114.5, 62.1, 48.8, 29.8, 25.5. IR (KBr disc): 3404, 3055, 1725, 1593 cm<sup>&#x2212;1</sup>. ES-MS: m/z 695.6 [M&#x2212;H]<sup>&#x2212;</sup>. HRMS [M+Na]<sup>+</sup>: 719.2382, C<sub>39</sub>H<sub>31</sub>BF<sub>2</sub>N<sub>6</sub>O<sub>4</sub>Na requires 719.2366.</p>
+<heading id="h-0022" level="1">{2-[4-(4-{5-[5-(4-Hydroxyphenyl)-3-phenyl-1H-pyrrol-2-ylimino]-4-phenyl-5H-pyrrol-2-yl}-phenoxymethyl)-[1,2,3]triazol-1-yl]ethyl}carbamic acid t-butyl ester (8c)</heading>
+<p id="p-0163" num="0183">A solution of 2 (0.33 g, 0.59 mmol) and (2-azidoethyl)carbamic acid t-butyl ester (0.19 g, 1.47 mmol) in THF:H<sub>2</sub>O (40 mL, 3:1) was treated with a THF:H<sub>2</sub>O (20 mL, 3:1) solution of Cu(0) (37 mg, 0.59 mmol), CuSO<sub>4</sub>.5H<sub>2</sub>O (18 mg, 0.18 mmol) and Na-ascorbate (58 mg, 0.3 mmol) at rt under N<sub>2</sub>. The reaction mixture was heated under reflux for 3 h, cooled and partitioned between EtOAc (30 mL) and water (30 mL). The organic layer was dried and evaporated to dryness. Column chromatography on silica gel eluting with acetone:EtOAc (1:1) gave the product 8c as an dark green solid. (73.4 mg, 88%, m.p. 128-130&#xb0; C.). <sup>1</sup>H NMR (600 MHz, acetone-d6): &#x3b4; 8.22-8.20 (m, 8H), 8.19 (bs, 1H), 7.54-7.45 (m, 7H), 7.42 (s, 1H), 7.22 (d, J=8.8 Hz, 2H), 7.02 (d, J=8.8 Hz, 2H), 6.20 (bs, 1H), 5.32 (s, 2H), 4.56 (t, J=5.9 Hz, 2H), 3.60 (t, J=5.9 Hz, 2H), 1.40 (s, 9H), (OH not observed). <sup>13</sup>C NMR (125 MHz, THF-d8): &#x3b4; 161.0, 160.8, 159.0, 157.3, 145.3, 144.7, 143.1, 142.2, 132.5, 132.3 (t, J=5 Hz), 131.7 (t, J=5 Hz), 129.3, 129.4, 129.3, 129.2, 129.1, 128.6, 128.5, 124.4, 122.7, 119.5, 118.8, 115.7, 114.9, 49.5, 40.4, 31.7, 27.6. IR (KBr disc): 3054, 1661, 1601 cm<sup>&#x2212;1</sup>. ES-MS: m/z [752.5]<sup>&#x2212;</sup> [M&#x2212;H]<sup>&#x2212;</sup>. HRMS [M+H]<sup>+</sup>: 754.3160, C<sub>42</sub>H<sub>39</sub>BF<sub>2</sub>N<sub>7</sub>O<sub>4 </sub>requires 754.3125.</p>
+<p id="p-0164" num="0184">With reference to <figref idref="DRAWINGS">FIG. 5</figref>, it was observed that the UV-Vis/fluorescence spectra of 8a-c in methanol conveniently showed little difference from each other or from the alkyne derivative 2 demonstrating that the cycloaddition reaction had negligible effect on these spectral characteristics. As a representative example (<figref idref="DRAWINGS">FIGS. 9-11</figref>), the pH responsive nature of the galactose conjugated derivative 8a was examined and shown to have similar ground and excited state responses as that of 2 with pKa of 6.9. Analysis of the fluorescence intensity of 8a at five different pH values illustrated how a significant bias towards higher fluorescence intensity at low physiological pH regions was accomplished. For example, comparison of the measured fluorescence intensity difference from pH 6.1 to 7.2 was greater than 2 fold and the difference between 6.6 and 8 was 6 fold (<figref idref="DRAWINGS">FIG. 6</figref>).</p>
+<p id="p-0165" num="0185">Demonstration of cell internalization of 8a was achieved by incubation with MDA-MB-231 cells for 1 h followed by blue nuclear co-staining with 4,6-diamidino-2-phenylindole (DAPI). Dual-color imaging with confocal laser scanning microscopy showed a distinct red emission from 8a localised to the cytosol (<figref idref="DRAWINGS">FIG. 8</figref>). Illustrative reversible on/off switching of intracellular 8a could be achieved by treating a population of dual-stained cells with aqueous carbonate buffer of pH 8.0 or acidic buffer of pH 6.6 (<figref idref="DRAWINGS">FIG. 7</figref>), and as illustrated below.</p>
+<p id="p-0166" num="0186"><chemistry id="CHEM-US-00030" num="00030">
+<img id="EMI-C00030" he="57.15mm" wi="73.91mm" file="US08907107-20141209-C00030.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0167" num="0187">Imaging of the same cell population following addition of basic buffer showed almost complete quenching of the red emission of 8a with the blue nuclear DAPI emission still clearly visible. In contrast following the addition of pH 6.6 buffer to the cells the emission from 8a was re-established. The difference in averaged whole cell red fluorescence taken from off-cells to on-cells was six-fold (<figref idref="DRAWINGS">FIG. 7</figref>).</p>
+<p id="p-0168" num="0188">In summary, an efficient synthesis and photophysical characteristics of a new pH responsive fluorochrome platform with emission at 730 nm has been demonstrated.</p>
+<heading id="h-0023" level="1">EXAMPLE 3(A)</heading>
+<heading id="h-0024" level="1">Compounds 9, 10, 11a and 11b: Compounds Comprising a Water-solubilizing Group and a Conjugation Group</heading>
+<p id="p-0169" num="0189">In this example, the synthesis and spectral properties of the first fluorochromes based on the prior art fluorophore scaffold 1, and capable of amine conjugations, are presented. The strategy was to exploit compound 6 as a key synthetic starting point to produce compounds of the formula (I), specifically of the formula (IA).</p>
+<p id="p-0170" num="0190">Synthetic manipulation via alkylation of phenolic rings by oxygen alkylation was utilized to introduce to water-solublizing group on one ring of compound 6 and a conjugation group on the other, as indicated below. It will be appreciated that the positions of the water-solubilizing group and conjugation group may be reversed.</p>
+<p id="p-0171" num="0191"><chemistry id="CHEM-US-00031" num="00031">
+<img id="EMI-C00031" he="57.32mm" wi="73.74mm" file="US08907107-20141209-C00031.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0172" num="0192">For this example, the approach was to impart partial aqueous solubility to the fluorophore by introducing a polyether on one phenol ring. It was anticipated that a single polyether alone would not be sufficient to impart complete water solubility but perhaps sufficient to facilitate the conjugation reaction. While other charged solubilizing groups are currently under investigation this approach offers the potential to produce an overall charge neutral fluorochrome which may limit the complications of non-covalent charge interactions of fluorophore and the conjugating bio-molecule. The other phenol ring would be substituted with a spacer unit and a conjugatable activated ester group. Two different activated esters, N-hydroxysuccinimide and a sulfonated N-hydroxysulfosuccinimide sodium salt were investigated, the latter providing enhanced aqueous solubility without introducing charge directly onto the fluorophore.</p>
+<p id="p-0173" num="0193">The synthetic challenge of functionalising the equivalent phenols of 6 with differing substituents was achieved utilizing simultaneous Mitsunobu coupling of 6 with two different alcohols. It was found that rather than reacting the phenols in successive steps conditions were optimised to achieve this in a single operation. With reference to</p>
+<p id="p-0174" num="0194"><chemistry id="CHEM-US-00032" num="00032">
+<img id="EMI-C00032" he="221.23mm" wi="72.14mm" file="US08907107-20141209-C00032.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<chemistry id="CHEM-US-00033" num="00033">
+<img id="EMI-C00033" he="104.73mm" wi="72.39mm" file="US08907107-20141209-C00033.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0175" num="0195">Chromatographic separation of 9 from unwanted symmetrical coupling products was achievable due to the large differences in retention factors on silica. This approach proved superior to a stepwise introduction of phenolic substituents due to poorer overall conversions and more difficult purifications. The introduction of a four-carbon spacer unit was achieved by the Boc-deprotection of 9 with TFA in CH<sub>2</sub>Cl<sub>2 </sub>and subsequent reaction with by reaction with succinic acid anhydride yielding the carboxylic acid 10. Subsequently, 10 was transformed into the activated ester 11a or 11b by coupling with N-hydroxysuccinimide or N-hydroxysulfosuccinimide respectively (Scheme 3). Fluorochrome 11a was a bench stable solid and due to the higher reactivity of 11b it was directly used upon generation.</p>
+<p id="p-0176" num="0196">Further details of the products 9, 10, 11a and 11b and synthesis thereof are provided below.</p>
+<p id="p-0177" num="0197">Synthesis of 9. Compound 6 (630 mg, 1.2 mmol), triethylene glycol monomethyl ether (294 &#x3bc;L, 1.8 mmol), N-Boc ethanolamine (285 &#x3bc;L, 1.8 mmol) and PPh<sub>3 </sub>(1.257 g, 4 mmol) were dissolved in dry THF (100 ml). DIAD (969 &#x3bc;L, 4 mmol) in dry THF (5 mL) was slowly (20 min) added to the solution and the reaction mixture stirred at r.t. for 16 hr. Solvent was removed under reduced pressure and dark green residue was chromatographed (silica, AcOEt/cyclohexane gradient of 1:1, to 4:1). Middle green fraction was isolated (R<sub>f</sub>=0.35, silica, AcOEt/cyclohexane, 4:1), evaporated and rechromatographed (silica, AcOEt/CH<sub>2</sub>Cl<sub>2</sub>, 1:4) to give 9 (380 mg, 39%) as a dark green solid. M.p.=51-53&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz, CDCl<sub>3</sub>): 1.47 (s, 9H), 3.38 (s, 3H), 3.54-3.58 (m, 4H), 3.67 (t, J=4.6 Hz, 2H), 3.70 (t, J=4.6 Hz, 2H), 3.76 (t, J=4.6 Hz, 2H), 3.90 (t, J=4.6 Hz, 2H), 4.11 (t, J=4.6 Hz, 2H), 4.22 (t, J=4.6 Hz, 2H), 4.99 (br s, 1H), 6.97-7.06 (m, 6H), 7.39-7.48 (m, 6H), 8.04-8.10 (m, 8H). &#x3b4;<sub>C </sub>(125 MHz, CDCl<sub>3</sub>): &#x3b4; 161.2, 160.8, 158.3, 157.8, 155.8, 145.4, 143.2, 132.4, 131.6, 129.2, 128.5, 124.5, 124.2, 118.7, 118.5, 114.8, 114.6, 79.6, 71.9, 70.9, 70.7, 70.6, 69.6, 67.6, 67.3, 59.0, 40.0, 28.4. HRMS (ESI) calcd for C<sub>46</sub>H<sub>49</sub>N<sub>4</sub>O<sub>7</sub>NaBF<sub>2 </sub>[M+Na<sup>+</sup>]<sup>+</sup>: 841.3560. found 841.3571. IR (KBr disc) cm<sup>&#x2212;1</sup>: 1504, 1603, 1710. &#x3bb;<sub>abs </sub>(CHCl<sub>3</sub>, &#x3b5;&#xd7;10<sup>&#x2212;3</sup>) 689 (87.1), 450 (17.3), 367 (11.9), 318 (26.0) nm. &#x3bb;<sub>emiss </sub>(CHCl<sub>3</sub>): 717 nm, &#x3a6; 0.36 (1 used as standard &#x3a6;=0.36).</p>
+<p id="p-0178" num="0198">Synthesis of 10. Compound 9 (164 mg, 200 &#x3bc;mol) was dissolved in CH<sub>2</sub>Cl<sub>2 </sub>(10 mL), TFA (1 mL) was slowly added and the reaction mixture was stirred at r.t. for 2 hr. Saturated aqueous NaHCO<sub>3 </sub>was added and the resulting suspension extracted with CH<sub>2</sub>Cl<sub>2 </sub>(2&#xd7;30 mL) The combined organic phases were washed with water, dried over Na<sub>2</sub>SO<sub>4 </sub>and evaporated to dryness. The resulting green residue was dissolved in dry THF (10 mL), treated with succinic anhydride (24 mg, 240 &#x3bc;mol) and DIPEA (70 &#x3bc;L, 400 mmol) and stirred at r.t. for 3 hr. Solvent was removed under reduced pressure and the residue chromatographed (silica, MeOH/CH<sub>2</sub>Cl<sub>2</sub>, 2:8) to give 10 (93 mg, 57%) as a dark green solid. M.p.=72-74&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz, CDCl<sub>3</sub>): 2.45 (t, J=6.2 Hz, 2H), 2.65 (t, J=6.2 Hz, 2H), 3.36 (s, 3H), 3.52-3.55 (m, 2H), 3.56-3.61 (m, 2H), 3.62-3.68 (m, 4H), 3.70-3.74 (m, 2H), 3.85 (t, J=4.7 Hz, 2H), 4.01 (t, J=4.7 Hz, 2H), 4.16 (t, J=4.7 Hz, 2H), 6.45 (s, 1H), 6.87-7.01 (m, 6H), 7.34-7.44 (m, 6H), 7.92-8.08 (m, 8H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 26.9, 58.9, 66.5 (br), 67.5, 69.4, 70.4, 70.5, 70.7, 71.8, 114.5, 114.7, 118.4, 118.6, 124.1, 124.2, 128.3, 128.4, 129.0, 129.14, 129.17, 131.5 (br), 131.6 (br), 132.1, 132.4, 142.56, 142.59, 142.7, 145.0, 145.2, 157.5, 157.8, 160.7, 161.0. HRMS (ESI) calcd for C<sub>45</sub>H<sub>45</sub>N<sub>4</sub>O<sub>8</sub>NaBF2 [M+Na<sup>+</sup>]<sup>+</sup>: 841.3196. found 841.3215. IR (KBr disc) cm<sup>&#x2212;1</sup>: 1509, 1602, 1655. &#x3bb;<sub>abs </sub>(CHCl<sub>3</sub>) 689 nm. &#x3bb;<sub>emiss </sub>(CHCl<sub>3</sub>): 717 nm.</p>
+<p id="p-0179" num="0199">Synthesis of 11a. Compound 10 (27 mg, 33 &#x3bc;mol), N-hydroxysuccinimide (5.2 mg, 45 &#x3bc;mol) and DMAP (cat.) were dissolved in dry DCM (5 mL). 1-Ethyl-3-(3&#x2032;-dimethylaminopropyl)carbodiimide (EDCI) (8.8 mg, 45 &#x3bc;mol) was added at 0&#xb0; C. and the resulting mixture stirred at r.t. for 16 hr. The organic phase was washed with HCl (1 M, 1 mL), water (2 mL) and dried over Na<sub>2</sub>SO<sub>4</sub>. Solvent was removed under reduced pressure to give 11a (28 mg, 99%) as a dark green solid. &#x3b4;<sub>H </sub>(500 MHz, CDCl<sub>3</sub>): 2.54 (t, J=7 Hz, 2H), 2.57 (s, 4H), 2.91 (t, J=7 Hz, 2H), 3.30 (s, 3H), 3.46-3.49 (m, 2H), 3.56-3.64 (m, 6H), 3.65-3.69 (m, 2H), 3.81 (t, J=5 Hz, 2H), 4.01 (t, J=5 Hz, 2H), 4.13 (t, J=5 Hz, 2H), 6.18 (t, J=5.6 Hz, 1H), 6.87-6.97 (m, 6H), 7.31-7.39 (m, 6H), 7.95-8.00 (m, 8H). HRMS (ESI) calcd for C<sub>49</sub>H<sub>48</sub>BF<sub>2</sub>N<sub>5</sub>O<sub>10</sub>Na [M+Na<sup>+</sup>]<sup>+</sup>: 938.3360. found 938.3886. IR (KBr disc) cm<sup>&#x2212;1</sup>: 1603, 3054.</p>
+<p id="p-0180" num="0200">Synthesis of 11b. Compound 10 (5 mg, 6.11 &#x3bc;mol), N-hydroxysulfosuccinimide sodium salt (1.4 mg, 6.4 &#x3bc;mol), 1-ethyl-3-(3&#x2032;-dimethylaminopropyl)carbodiimide hydrochloride (1.2 mg, 6.2 &#x3bc;mol) and DMAP (cat.) were dissolved in dry in DMSO (200 &#x3bc;L) were stirred at r.t. for 16 hr, under nitrogen. Monitoring the reaction by reverse phase HPLC (C-18 column eluting with acetonitrile water 7:3) complete consumption of starting material. The solution was used directly for conjugation experiments.</p>
+<p id="p-0181" num="0201">Spectroscopic analysis of 9 and 10 as representative constituent building blocks of the fluorescent probes showed very little variance in their properties with absorbance maxima at 688 and 691 nm respectively and fluorescence maxima at 714 nm for both (Table 4, <figref idref="DRAWINGS">FIG. 12</figref>). Both had extinction coefficient in excess of 80,000 and good fluorescence quantum yields (Table 4).</p>
+<p id="p-0182" num="0202">
+<tables id="TABLE-US-00004" num="00004">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Spectroscopic properties<sup>a</sup></entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="1" colwidth="21pt" align="center"/>
+<colspec colname="2" colwidth="49pt" align="center"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<colspec colname="4" colwidth="49pt" align="center"/>
+<colspec colname="5" colwidth="35pt" align="center"/>
+<colspec colname="6" colwidth="35pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry/>
+<entry>&#x3bb;<sub>max</sub>abs</entry>
+<entry>&#x3b5;</entry>
+<entry>&#x3bb;<sub>max</sub>emiss</entry>
+<entry/>
+</row>
+<row>
+<entry>Entry</entry>
+<entry>Comp.</entry>
+<entry>nm<sup>b</sup></entry>
+<entry>M<sup>&#x2212;1 </sup>cm<sup>&#x2212;1</sup></entry>
+<entry>nm<sup>c,d,e</sup></entry>
+<entry>&#x3a6;<sub>f</sub><sup>f</sup></entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="1" colwidth="21pt" align="char" char="."/>
+<colspec colname="2" colwidth="49pt" align="char" char="."/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<colspec colname="4" colwidth="49pt" align="char" char="."/>
+<colspec colname="5" colwidth="35pt" align="char" char="."/>
+<colspec colname="6" colwidth="35pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>1</entry>
+<entry>9</entry>
+<entry>688</entry>
+<entry>95000</entry>
+<entry>714</entry>
+<entry>0.23</entry>
+</row>
+<row>
+<entry>2</entry>
+<entry>10</entry>
+<entry>691</entry>
+<entry>85500</entry>
+<entry>714</entry>
+<entry>0.20</entry>
+</row>
+<row>
+<entry>3</entry>
+<entry>12</entry>
+<entry>691</entry>
+<entry>74500</entry>
+<entry>714</entry>
+<entry>0.22</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="center" rowsep="1"/>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00004"><sup>a</sup>In ethanol.</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00005"><sup>b</sup>Conc 5 &#xd7; 10<sup>&#x2212;6 </sup>M.</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00006"><sup>c</sup>Conc 5 &#xd7; 10<sup>&#x2212;7 </sup>M.</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00007"><sup>d</sup>Excitation at 640 nm.</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00008"><sup>e</sup>Slit widths 5 nm.</entry>
+</row>
+<row>
+<entry namest="1" nameend="6" align="left" id="FOO-00009"><sup>f</sup>1 used as standard.<sup>6a</sup></entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0183" num="0203">Their spectral features were also relatively insensitive to solvent polarity (<figref idref="DRAWINGS">FIG. 13</figref>).</p>
+<heading id="h-0025" level="1">EXAMPLE 3(B)</heading>
+<heading id="h-0026" level="1">Dye Conjugates from Compounds 11a and 11b</heading>
+<heading id="h-0027" level="1">EXAMPLE 3(B)(I)</heading>
+<p id="p-0184" num="0204">Activated succinimide esters typically react with the N-terminus &#x3b1;-amino group and the amine of lysine constituent amino acids. With reference to Scheme 3(A), and as described further below, illustrative coupling of 11a in organic and 11b in aqueous solutions with N<sub>c</sub>-Boc-L-lysine rapidly gave amino acid substituted derivative 12 in good yields in both organic and aqueous solutions.</p>
+<p id="p-0185" num="0205"><chemistry id="CHEM-US-00034" num="00034">
+<img id="EMI-C00034" he="148.17mm" wi="75.86mm" file="US08907107-20141209-C00034.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+Conjugation with N<sub>&#x3b5;</sub>-Boc-L-lysine, Synthesis of Compound 12
+</p>
+<p id="p-0186" num="0206">With reference to Scheme 3(A), starting from 11a: Activated ester 11a (11 mg, 12 &#x3bc;mol), Boc-lysine (6 mg, 24 &#x3bc;mol) and DIEA (6.4 &#x3bc;L, 36 &#x3bc;mol) were suspended in dry acetonitrile (5 mL) and stirred for 2 h under the nitrogen atmosphere. Solvent was removed and the residue was chromatographed (silica, CH<sub>2</sub>Cl<sub>2</sub>/MeOH, 9:1 then 8:2, 7:3) affording 12 (2 mg, 16%) as green solid.</p>
+<p id="p-0187" num="0207">Starting from 11b: Carboxylic acid 10 (5 mg) was activated according to the procedure described for 11b. Resulting solution was added to Boc-lysine (15 mg, 30.5 &#x3bc;mol) solution in 0.1M NaHCO<sub>3 </sub>(1 mL, pH=8.3). After 15 min the resulting mixture was acidified with 2N HCl and extracted with AcOEt. Subsequent chromatography (silica, CH<sub>2</sub>Cl<sub>2</sub>/MeOH, 7:3) afforded 12 as green solid (4 mg, 63%). <sup>1</sup>H NMR (500 MHz, CDCl<sub>3</sub>) 1.26-1.46 (br m, 4H), 1.39 (s, 9H), 1.55-1.65 (br m, 2H), 1.70-1.80 (br m, 2H), 2.25-240 (br m, 2H), 2.46-2.54 (br m, 2H), 3.12-3.18 (br m, 2H), 3.34 (s, 3H), 3.52-3.55 (m, 2H), 3.50-3.53 (m, 2H), 3.60-3.66 (m, 4H), 3.68-3.71 (m, 2H), 3.82 (br t, 2H), 3.95-4.02 (br m, 3H), 4.10-4.16 (br m, 2H), 5.83 (s, 1H), 6.83-6.97 (m, 6H), 7.05 (br s, 1H), 7.22 (br s, 1H), 7.29-7.40 (m, 6H), 7.90-8.05 (m, 8H). <sup>13</sup>C NMR (100 MHz, CDCl<sub>3</sub>) &#x3b4;: 173.2, 172.8, 161.1, 160.8, 157.8, 156.1, 145.2, 145.1, 142.9, 118.6, 114.7, 114.6, 71.8, 70.8, 70.5, 70.4, 69.5, 67.5, 66.6, 59.0, 28.5. HRMS (ESI) found: 1069.5371, exact calcd mass: 1069.4670 (C<sub>56</sub>H<sub>65</sub>BF<sub>2</sub>N<sub>6</sub>O<sub>11</sub>Na<sup>+</sup>). IR (KBr disc) cm<sup>&#x2212;1</sup>: 740, 1265, 1475, 1506, 1603, 1657, 3055.</p>
+<p id="p-0188" num="0208">The spectroscopic properties of 12 differed very little from 10 (Table 4, <figref idref="DRAWINGS">FIG. 12</figref>).</p>
+<heading id="h-0028" level="1">EXAMPLE 3(B)(II)</heading>
+<p id="p-0189" num="0209">Next the conjugation of 11a and b with the 14.4 kDa protein lysosyme was examined. Lysosyme was chosen as a substrate as it has six potentially reactive lysine residues in addition to the N-terminal amine. Conjugation of lysosyme with five equivalents of 11a was carried out in 1:1 water/DMSO and 4:1 water/THF mixtures and 11b was coupled in pH 8.3 NaHCO<sub>3 </sub>buffered water, as described below (for 11b).</p>
+<p id="h-0029" num="0000">Conjugation of 11b with Lysozyme</p>
+<p id="p-0190" num="0210">1 eq: Lysozyme (18 mg, 1.2 &#x3bc;mol) was dissolved in 0.1 M NaHCO<sub>3 </sub>(1.8 mL, pH=8.3). Dye solution (40 &#x3bc;L) was added, resulting in formation of green precipitate. After 1 h incubation in darkness, the precipitate was centrifuged and supernatant was removed. Distilled water (400 &#x3bc;L) was added, the resulting suspension was vortexed and centrifuged again. Precipitate was washed that way additional 2 times and it was used for the analysis without any further purification.</p>
+<p id="p-0191" num="0211">5 eq: Lysozyme (18 mg, 1.2 &#x3bc;mol) was dissolved in 0.1 M NaHCO<sub>3 </sub>(1.8 mL, pH=8.3). Dye solution (200 &#x3bc;L) was added, resulting in formation of green precipitate. After 1 h incubation in darkness, the precipitate was washed as it was described for coupling with 1 eq of the dye.</p>
+<p id="p-0192" num="0212">10 eq: Lysozyme (3.6 mg, 0.25 &#x3bc;mol) was dissolved in 0.1 M NaHCO<sub>3 </sub>(1 mL, pH=8.3). Dye solution was added (80 &#x3bc;L), resulting in formation of green precipitate. After 1 h incubation in darkness, the precipitate was purified as it was described above.</p>
+<p id="p-0193" num="0213">20 eq: Lysozyme (3.6 mg, 0.25 &#x3bc;mol) was dissolved in 0.1 M NaHCO<sub>3 </sub>(1 mL, pH=8.3). Dye solution was added (160 &#x3bc;L), resulting in formation of green precipitate. After 1 h incubation in darkness, the precipitate was purified as it was described above.</p>
+<p id="p-0194" num="0214">Coupling was effectively achieved in all cases and confirmed by MALDI-TOF mass spectrometry and HPLC analysis (<figref idref="DRAWINGS">FIGS. 14</figref>, <b>15</b>, <b>16</b> and <b>17</b>). For the MALDI-TOF data, sample preparation was as follows: lysozyme conjugates were dissolved directly in matrix solution (saturated solution of sinapic acid in acetonitrile/water 1:1 mixture containing 0.1% TFA).</p>
+<p id="p-0195" num="0215">Encouragingly the MALDI analysis of the conjugates identified a distribution of mono to penta conjugates from both 11a and 11b illustrating the highly reactive nature of the fluorochromes. As might be expected the coupling of 11b was superior to that of 11a with a the tri-conjugates being the most abundant, with each conjugate separated by an approximate mass of 800 amu (<figref idref="DRAWINGS">FIG. 19</figref>). This high loading achievable illustrates the effectiveness of the coupling reaction. The use of greater ratios of fluorochrome 11b (20 equiv.) to protein increased the loading levels with the tetra to hexa-conjugates being the most abundant.</p>
+<p id="p-0196" num="0216">A further confirmatory coupling of 11b with the 23.3 kDa protein trypsin in PBS at pH 7.5 was carried out, as described below.</p>
+<p id="h-0030" num="0000">Conjugation of 11b with Trypsin</p>
+<p id="p-0197" num="0217">1 mL of trypsin-EDTA solution 10&#xd7; (containing 0.5% trypsin, 0.2% EDTA, without phenol red, in saline) was diluted with PBS (1 mL, pH=7.0) and pH was adjusted to 7.5. Dye solution (35 &#x3bc;L) was slowly added and the protein was incubated for 1 h in darkness. Resulting solution was loaded on BIO-GEL column (P-2, 1 cm diameter, 15 cm long, eluted with distilled water) affording desalted protein solution, that was used directly for the analysis.</p>
+<p id="p-0198" num="0218">This coupling of 11b with the 23.3 kDa protein trypsin in PBS at pH 7.5 gave a distribution of mono and di functionalised enzyme (<figref idref="DRAWINGS">FIG. 18</figref>). For the MALDI-TOF data, sample preparation was as follows: fractions obtained after BIO-GEL filtration were diluted with matrix solution (saturated solution of sinapic acid in acetonitrile/water 1:1 mixture containing 0.1% TFA).</p>
+<p id="p-0199" num="0219">Spectral analysis of the lysosyme and trypsin conjugates show that the attractive spectral features of this chromophore such as sharp absorption and emission bands are retained (<figref idref="DRAWINGS">FIG. 20</figref>). Importantly the emission maxima of both were above 720 nm.</p>
+<p id="p-0200" num="0220">In summary, in Example 3, a short synthesis to a new NIR fluorchrome has been described, and its potential for effective amine conjugations with amino acids and proteins has been illustrated.</p>
+<heading id="h-0031" level="1">EXAMPLE 4</heading>
+<heading id="h-0032" level="1">Compounds Comprising Two Water-solubilizing Groups or Two Conjugation Groups</heading>
+<p id="p-0201" num="0221">Water soluble BF<sub>2</sub>-chelated tetraarylazadipyrromethanes are prepared in this Example, and their spectroscopic properties and in vitro delivery are demonstrated. It has previously been reported that inclusion of an electron donating para-alkoxy group on the aryl rings a to the pyrrole nitrogen the prior art compound results in significant emission bathochromic shift of &#x2dc;40 nm when compared to the unsubstituted derivative. As such, this substitution pattern was included in the structural core of the sensitisers with additional carboxylic acid, sulfonic acid and ammonium salt functional groups introduced to provide aqueous solubility.</p>
+<p id="p-0202" num="0222">The synthesis of bis-carboxylic acid and bis-sulfonic acid derivatives, 16 and 17 respectively, which are both compounds of the formula (I), specifically of the formula (IA), had a common starting point of the bis-phenol substituted azadipyrromethene 13, which is readily accessible from 1-(4-hydroxyphenyl)-3-phenylpropenone in two synthetic steps. With reference to Scheme 4, alkylation of both phenols of 13 with methyl bromoacetate gave the corresponding diester 14 in high yields, following purification by silica gel chromatography (Scheme 4).</p>
+<p id="p-0203" num="0223">Saponification of 15 with potassium trimethylsilanolate (TMSOK) in THF at room temperature afforded the bis-carboxylic acid derivative 16. It will be appreciated, however, that 16 may alternatively be synthesised from compound 6. The optimised conditions to the bis-sulfonic acid analogue required BF<sub>2 </sub>chelation of 3 to generate 6 and subsequent reaction with propane-1,3-sultone in presence of K<sub>2</sub>CO<sub>3 </sub>providing 17, in moderate yield, as a dark green powder following chromatographic purification.</p>
+<p id="p-0204" num="0224"><chemistry id="CHEM-US-00035" num="00035">
+<img id="EMI-C00035" he="207.26mm" wi="118.70mm" file="US08907107-20141209-C00035.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0205" num="0225">Further details of the products 14, 15, 16 and 17 and synthesis thereof are provided below.</p>
+<p id="h-0033" num="0000">Compound 14:</p>
+<p id="p-0206" num="0226">Compound 13 (481 mg, 1 mmol), methyl bromoacetate (368 &#x3bc;L, 4 mmol), NaI (300 mg, 2 mmol) and K<sub>2</sub>CO<sub>3 </sub>(550 mg, 4 mmol) were placed in round bottom flask. Acetone (100 mL) was added and the reaction mixture heated under reflux for 16 hr. The solvent was removed, the residue was dissolved in CH<sub>2</sub>Cl<sub>2</sub>, washed with water, dried over Na<sub>2</sub>SO<sub>4 </sub>and evaporated to dryness. Crystallization from ethyl acetate/cyclohexane gave 14 as dark solid (554 mg, 89%), m.p. 194-196&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz, CDCl<sub>3</sub>): 8.03 (d, J=7.4, 4H), 7.85 (d, J=8.3, 4H), 7.40 (t, J=7.4, 4H), 7.34 (t, J=7.1, 2H), 7.09 (s, 2H), 7.03 (d, J=8.3, 4H), 4.72 (s, 4H), 3.85 (s, 6H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 169.0, 159.3, 154.1, 149.4, 142.3, 133.8, 129.0, 128.20, 128.15, 127.9, 126.1, 115.3, 114.4, 65.3, 52.4. HRMS (ESI) calcd for C<sub>38</sub>H<sub>32</sub>N<sub>3</sub>O<sub>6 </sub>[M+H<sup>+</sup>]<sup>+</sup>: 626.2291. found 626.2304. IR (KBr disc) cm<sup>&#x2212;1</sup>: 1767, 3055 cm<sup>&#x2212;1</sup>.</p>
+<p id="h-0034" num="0000">Compound 15:</p>
+<p id="p-0207" num="0227">Compound 14 (275 mg, 0.44 mmol) was dissolved in dry CH<sub>2</sub>Cl<sub>2 </sub>(80 mL) DIEA was added (0.8 mL, 4.6 mmol) followed by BF<sub>3</sub>.OEt<sub>2 </sub>(1 mL, 8.12 mmol) and the reaction mixture was stirred at r.t. for 24 hr under N<sub>2 </sub>atmosphere. The reaction mixture was washed twice with water, the organic phase separated, dried and evaporated. The residue was purified by silica gel column chromatography (eluent, CH<sub>2</sub>Cl<sub>2</sub>/AcOEt 95:5) affording 15 as red solid (215 mg, 73%), m.p. 206-208&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz, CDCl<sub>3</sub>): 8.04-8.09 (m, 8H), 7.54-7.36 (m, 6H), 7.07-6.94 (m, 6H), 4.71 (s, 4H), 3.84 (s, 6H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 168.9, 160.0, 158.1, 145.4, 143.5, 132.4, 131.7, 129.33, 129.30, 128.6, 125.2, 118.7, 114.9, 65.2, 52.4. HRMS (ESI) calcd for C<sub>38</sub>H<sub>31</sub>BN<sub>3</sub>O<sub>6</sub>F<sub>2 </sub>[M+H<sup>+</sup>]<sup>+</sup>: 674.2274. found 674.2277. IR (KBr disc): 1602, 1732, 1763 cm<sup>&#x2212;1</sup>.</p>
+<p id="h-0035" num="0000">Compound 16:</p>
+<p id="p-0208" num="0228">Compound 15 (248 mg, 400 mmol) and potassium trimethylsilanolate (600 mg, 4.8 mol) were stirred in dry THF for 3 h. 2N HCl (12.5 mL) was added, THF was removed under the reduced pressure and the resulting mixture was extracted with 25% isopropanol in CH<sub>2</sub>Cl<sub>2</sub>. Organic phase was washed with water, dried and evaporated. Subsequent preparative RP-HPLC (C-18; acetonitrile-water, 90:10; retention time: 8 min) afforded 16 as dark powder (86 mg, 34%), m. p. 214-216&#xb0; C. &#x3b4;<sub>H </sub>(500 mHz, acetone-d<sub>6</sub>): 8.04-8.09 (m, 8H), 7.54-7.36 (m, 6H), 7.07-6.94 (m, 6H), 4.71 (s, 4H), 3.84 (s, 6H). <sup>13</sup>C NMR (100 mHz, acetone-d<sub>6</sub>): 168.9, 160.71, 158.2, 145.2, 143.0, 132.4, 131.8, 129.4, 129.3, 128.6, 124.5, 119.4, 114.8, 64.5. HRMS (ESI) calcd for C<sub>36</sub>H<sub>25</sub>BN<sub>3</sub>O<sub>6</sub>F<sub>2 </sub>[M&#x2212;H<sup>+</sup>]<sup>+</sup>: 644.1804. found 644.1824. IR (KBr disc): 1023, 1035, 1266, 1472, 1503, 1604 cm<sup>&#x2212;1</sup>.</p>
+<p id="h-0036" num="0000">Compound 17:</p>
+<p id="p-0209" num="0229">Compound 16 (168 mg, 320 mmol), propane-1,3-sultone (97 mg, 800 mmol) and K<sub>2</sub>CO<sub>3 </sub>(110 mg, 800 mmol) were heated under reflux in acetone (60 mL) for 6 hr, under a N<sub>2 </sub>atmosphere. The resulting precipitate was filtered, washed with acetone and cold methanol. Preparative RP-HPLC (C-18; acetonitrile-water, 60:40; retention time: 3 min) afforded 16 (102 mg, 41%) as a green solid m.p.&#x3e;300&#xb0; C. For NMR analysis the compound was transformed into tetrabutylammonium salt by extraction of aqueous solution of 17 with CHCl<sub>3 </sub>in presence of tetrabutylammonium chloride. The organic phase was washed with water twice, dried and evaporated. &#x3b4;<sub>H </sub>of 17.(NBu<sub>4</sub>)<sub>2 </sub>(500 MHz, CDCl<sub>3</sub>): 8.11-8.00 (m, 8H), 7.51-7.35 (m, 6H), 7.04 (s, 2H), 6.99 (d, J=9.0, 4H), 4.25 (t, J=6.4, 4H), 3.32-3.17 (m, 16H), 2.98 (t, J=7.3, 4H), 2.42-2.28 (m, 4H), 1.61 (dt, J=12.0, 7.8, 16H), 1.51-1.31 (m, 16H), 0.98 (t, J=7.3, 24H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 161.7, 158.0, 145.2, 142.9, 132.5, 131.6, 129.21, 129.18, 128.5, 123.7, 118.6, 114.8, 67.4, 58.7, 48.2, 25.6, 23.9, 19.7, 13.7. HRMS (ESI) calcd for C<sub>38</sub>H<sub>33</sub>BN<sub>3</sub>O<sub>8</sub>F<sub>2</sub>S<sub>2 </sub>[&#x2212;H<sup>+</sup>]<sup>&#x2212;</sup>: 772.1770. found 772.1757. IR (KBr disc) cm<sup>&#x2212;1</sup>: 1468, 1505, 1603 cm<sup>&#x2212;1</sup>.</p>
+<p id="p-0210" num="0230">The synthetic approach adopted for the bis-cationic derivative is outlined in Scheme 5.</p>
+<p id="p-0211" num="0231"><chemistry id="CHEM-US-00036" num="00036">
+<img id="EMI-C00036" he="168.99mm" wi="140.46mm" file="US08907107-20141209-C00036.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0212" num="0232">Heating of the 1,3-diaryl-4-nitrobutan-1-one 18 with ammonium acetate gave the azadipyrromethene 19, and subsequent BF<sub>2 </sub>chelation under standard conditions generated 20 in a 72% yield. Reaction of 20 with methyliodide at room temperature in dichloromethane proved an effective means to ensure complete alkylation with purified 21 obtained following recrystallisation from CH<sub>2</sub>Cl<sub>2</sub>/diethylether.</p>
+<p id="p-0213" num="0233">Further details of the products 19, 20 and 21 and synthesis thereof are provided below</p>
+<p id="h-0037" num="0000">Compound 19:</p>
+<p id="p-0214" num="0234">3-(4-Diethylaminomethylphenyl)-1-(4-methoxyphenyl)-4-nitrobutan-1-one 18 (7.88 g, 20.5 mmol), ammonium acetate (55.22 g, 0.72 mol) and ethanol (200 mL) were heated under reflux for 48 hr. The reaction was allowed to cool to room temperature, the solvent was removed and the residue partitioned between CH<sub>2</sub>Cl<sub>2 </sub>(200 mL) and H<sub>2</sub>O (150 mL). The aqueous layer was basified with 1 M NaOH and extracted with CH<sub>2</sub>Cl<sub>2 </sub>(3&#xd7;100 mL). The organic fractions were combined and the solvent evaporated. Column chromatography on alumina with CH<sub>2</sub>Cl<sub>2</sub>/ethyl acetate (7:1) as eluent gave 19 as a red metallic solid (2.50 g, 36%), m.p. 172-173&#xb0; C. &#x3b4;<sub>H </sub>(300 MHz, CDCl<sub>3</sub>): 8.01 (d, J=8.2 Hz, 4H), 7.87 (d, J=8.8 Hz, 4H), 7.38 (d, J=8.2 Hz, 4H), 7.10 (s, 2H), 7.03 (d, J=8.8 Hz, 4H), 3.90 (s, 6H), 3.64 (s, 4H), 2.58 (q, J=7.2 Hz, 8H), 1.10 (t, J=7.2 Hz, 12H), NH not observed. &#x3b4;<sub>C </sub>(100 MHz, 50 CDCl<sub>3</sub>): 161.4, 154.4, 149.6, 142.3, 139.8, 132.7, 129.2, 129.0, 128.3, 125.3, 114.8, 114.1, 57.7, 55.7, 47.0, 12.1. ES-MS: m/z 680 [M+H<sup>+</sup>]<sup>+</sup>. HRMS (ESI) calcd for C<sub>44</sub>H<sub>50</sub>N<sub>5</sub>O<sub>2 </sub>[M+H<sup>+</sup>]<sup>+</sup>: 680.3965. found 680.3967. IR (KBr disk): 3455, 3421, 1606 cm<sup>&#x2212;1</sup>.</p>
+<p id="h-0038" num="0000">Compound 20:</p>
+<p id="p-0215" num="0235">Compound 19 (0.45 g, 0.66 mmol) was dissolved in dry CH<sub>2</sub>Cl<sub>2 </sub>(80 mL) under N<sub>2</sub>, treated with diisopropylethylamine (0.86 g, 6.6 mmol) and BF<sub>3</sub>.Et<sub>2</sub>O (1.32 g, 9.3 mmol) and stirred at room temperature for 24 hr. The resultant green solution was washed with water (3&#xd7;50 mL), dried over Na<sub>2</sub>SO<sub>4 </sub>and evaporated to dryness. The crude material was recrystallised from toluene or was columned on alumina eluting with CH<sub>2</sub>Cl<sub>2</sub>/ethylacetate (8:1) to give 20 as a metallic red solid (0.35 g, 72%), m.p. 198-200&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz CDCl<sub>3</sub>): 8.09-8.11 (m, 4H), 8.05 (d, J=8.1 Hz, 4H), 7.46 (d, J=8.1 Hz, 4H), 7.01-7.04 (m, 6H), 3.90 (s, 6H), 3.68 (s, 4H), 2.61 (q, J=7.2 Hz, 8H), 1.12 (t, J=7.2 Hz, 12H). &#x3b4;<sub>C </sub>(125 MHz CDCl<sub>3</sub>): 162.1, 158.3, 145.6, 143.4, 141.6, 131.8, 131.3, 129.3, 129.3, 124.5, 118.5, 114.5, 57.6, 55.7, 47.1, 12.0. ESI-MS: m/z 728 [M+H]<sup>+</sup>. HRMS calcd for C<sub>44</sub>H<sub>49</sub>BF<sub>2</sub>N<sub>5</sub>O<sub>2 </sub>[M+H]<sup>+</sup>: 728.3947. found: 728.3936. IR (KBr disk): 3419, 2966, 1602 cm<sup>&#x2212;1</sup>. &#x3bb;<sub>max </sub>abs (CHCl<sub>3</sub>): 691 nm (&#x3b5;=76,000 Lmol<sup>&#x2212;1 </sup>cm<sup>&#x2212;1</sup>).</p>
+<p id="h-0039" num="0000">Compound 21:</p>
+<p id="p-0216" num="0236">Compound 20 (300 mg, 0.41 mmol) was dissolved in dry CH<sub>2</sub>Cl<sub>2 </sub>(60 mL), treated with methyliodide (260 &#x3bc;L, 4.1 mmol) and stirred under N<sub>2 </sub>for 24 hr at rt. The solvent was removed under reduced pressure and recrystallisation from CH<sub>2</sub>Cl<sub>2</sub>/Et<sub>2</sub>O (8:1) gave the product 21 (330 mg, 80%) as a dark green solid mp&#x3e;300&#xb0; C. &#x3b4;<sub>H </sub>(500 MHz, DMSO-d<sub>6</sub>): 8.30 (d, J=8.0 Hz, 4H), 8.20 (d, J=9.0 Hz, 4H), 7.77 (d, J=8.0 Hz, 4H), 7.74 (s, 2H), 7.17 (d, J=9.0 Hz, 4H), 4.62 (s, 4H), 3.90 (s, 6H), 3.43-3.39 (m, 4H), 3.31-3.26 (m, 4H), 2.95 (s, 6H), 1.35 (t, J=7.0 Hz, 12H). &#x3b4;<sub>C </sub>(125 MHz, DMSO-d<sub>6</sub>): 162.7, 158.1, 145.1, 141.2, 133.8, 132.4, 129.7, 129.4, 123.4, 121.0, 115.0, 63.5, 56.1, 55.8, 46.6, 8.30. IR (KBr disc) cm<sup>&#x2212;1</sup>: 3434, 1603. ES-MS: m/z 884.7 [M&#x2212;I<sup>&#x2212;</sup>]<sup>+</sup>. HRMS (ESI) calcd for C<sub>46</sub>H<sub>54</sub>BF<sub>2</sub>N<sub>5</sub>O<sub>2 </sub>[M&#x2212;I<sup>&#x2212;</sup>]<sup>+ </sup>884.3383. found 884.3381.</p>
+<p id="p-0217" num="0237">Spectroscopic properties of 16, 17 and 21 in organic solvents correspond very closely to those previously reported for this class of compound. For example, in chloroform the absorption maxima range from 681 nm for 16, 694 nm for 17 to 702 nm for 12 with very minor shifts from these values recorded in methanol (Table 5, <figref idref="DRAWINGS">FIGS. 21 and 22</figref>).</p>
+<p id="p-0218" num="0238">
+<tables id="TABLE-US-00005" num="00005">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="308pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Spectroscopic Characteristics of 16, 17 and 21.</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="offset" colwidth="49pt" align="left"/>
+<colspec colname="1" colwidth="119pt" align="center"/>
+<colspec colname="2" colwidth="119pt" align="center"/>
+<colspec colname="3" colwidth="21pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>&#x3bb;<sub>max</sub>abs. [nm]<sup>a</sup></entry>
+<entry>&#x3bb;<sub>max</sub>emiss. [nm]<sup>b,c,d</sup></entry>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="11">
+<colspec colname="1" colwidth="21pt" align="center"/>
+<colspec colname="2" colwidth="28pt" align="center"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<colspec colname="4" colwidth="28pt" align="center"/>
+<colspec colname="5" colwidth="28pt" align="center"/>
+<colspec colname="6" colwidth="35pt" align="center"/>
+<colspec colname="7" colwidth="28pt" align="center"/>
+<colspec colname="8" colwidth="28pt" align="center"/>
+<colspec colname="9" colwidth="28pt" align="center"/>
+<colspec colname="10" colwidth="35pt" align="center"/>
+<colspec colname="11" colwidth="21pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Entry</entry>
+<entry>Comp.</entry>
+<entry>CHCl<sub>3</sub></entry>
+<entry>MeOH</entry>
+<entry>DMEM</entry>
+<entry>PBS/BSA</entry>
+<entry>CHCl<sub>3</sub></entry>
+<entry>MeOH</entry>
+<entry>DMEM</entry>
+<entry>PBS/BSA</entry>
+<entry>&#x3a6;<sub>f</sub><sup>f</sup></entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>1</entry>
+<entry>16</entry>
+<entry>681</entry>
+<entry>681</entry>
+<entry>694</entry>
+<entry>692</entry>
+<entry>711</entry>
+<entry>715</entry>
+<entry>722</entry>
+<entry>718</entry>
+<entry>0.30</entry>
+</row>
+<row>
+<entry>2</entry>
+<entry>17</entry>
+<entry>&#x2009;694<sup>e</sup></entry>
+<entry>687</entry>
+<entry>694</entry>
+<entry>692</entry>
+<entry>726</entry>
+<entry>716</entry>
+<entry>728</entry>
+<entry>718</entry>
+<entry>0.31</entry>
+</row>
+<row>
+<entry>3</entry>
+<entry>21</entry>
+<entry>702</entry>
+<entry>702</entry>
+<entry>709</entry>
+<entry>706</entry>
+<entry>735</entry>
+<entry>732</entry>
+<entry>737</entry>
+<entry>730</entry>
+<entry>0.22</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="center" rowsep="1"/>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00010"><sup>a</sup>Conc. 1 &#xd7; 10<sup>&#x2212;6 </sup>M.</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00011"><sup>b</sup>Conc 5 &#xd7; 10<sup>&#x2212;7 </sup>M.</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00012"><sup>c</sup>Excitation at 640 nm.</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00013"><sup>d</sup>Slit widths 5 nm.</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00014"><sup>e</sup>As tetra-butylammonium salt.</entry>
+</row>
+<row>
+<entry namest="1" nameend="11" align="left" id="FOO-00015"><sup>f</sup>CHCl<sub>3</sub>.</entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="p-0219" num="0239">Each fluorophore exhibited a strong fluorescence emission with quantum yields between &#x3a6;=0.22-0.31 and maxima at 711, 726 and 735 nm for 16, 17 and 21 respectively (Table 5, <figref idref="DRAWINGS">FIGS. 21 and 22</figref>). Comparison of the three fluorophores showed only minor bathochromic shifts for the derivatives 16 and 17 when compared to 21 (Table 5).</p>
+<p id="p-0220" num="0240">It will be appreciated that when 17 is used, the COO<sup>&#x2212;</sup> moieties may be used as conjugation groups, for attaching to small molecules, or as water-solubilizing groups, or one as a conjugation group and the other as a water-solubilizing group, depending on the preferred use.</p>
+<p id="p-0221" num="0241">As a representative biological aqueous solution, spectra of 16, 17, and 21 were taken in Dulbecco's modified Eagle's medium (DMEM) which is a commonly used medium for cellular manipulations. Each fluorophore showed small bathochromic shift in their &#x3bb; max of emission (5-12 nm) when compared to organic solvents, with emission bands extending from 700 to 800 nm (<figref idref="DRAWINGS">FIG. 26</figref>).</p>
+<p id="p-0222" num="0242">These spectroscopic properties correlate perfectly to the optical requirements of commercially available confocal laser scanning microscopy (CLSM) instruments and small animal optical imaging instruments. Cellular uptake of DMEM solutions of 16 and 17 were utilised to illustrate their potential for in vitro imaging. Compounds 16 and 17 were incubated with MDA-MB-231 cells for 1 hour at 5 &#x3bc;M concentration and the excess dye was removed by washing with PBS before visualisation.</p>
+<p id="p-0223" num="0243">Further details of the procedure are provided below.</p>
+<p id="h-0040" num="0000">MDA-MB-231 Cell and Bacteria Incubation Conditions</p>
+<p id="p-0224" num="0244">MDA-MB-231 cells were seeded into a 8 well chambered microscopy slide and they were grown overnight in DMEM media at 37&#xb0; C. in the presence of 5% CO<sub>2</sub>. The media was then removed and 16 and 17 (5 &#x3bc;M) was added, followed by an incubation period of 1 hour in the dark. Cells were then washed with PBS to remove excess compound. Prior to visualization, cells were fixed in 3.7% formaldehyde solution, co-stained with DAPI and a coverslip was mounted onto the microscopy slide. In a similar way, <i>E. coli </i>cells were incubated with 21 (4 &#x3bc;M) in the dark for 10 minutes. The bacterial cells were washed with PBS and An aliquot of this solution was suspended onto a microscopy slide and allowed to dry. Before imaging, a coverslip was mounted onto the microscopy slide. Images were obtained using an LSM510 META confocal laser scanning microscope equipped with 63&#xd7; numerical aperture 1.4 objective. DAPI was excited at 364 nm and detected with a band-pass filter 385-470 nm, whilst 16, 17 and 21 were excited at 633 nm and their fluorescence was detected through a 650 nm long-pass filter.</p>
+<p id="p-0225" num="0245">The obtained images showed that 16 and 17 were efficiently taken up by cells, after a relatively short incubation period, and were readily imaged by CSLM (<figref idref="DRAWINGS">FIGS. 27</figref><i>a</i>, <b>27</b><i>b</i>). 3-D reconstruction of cellular distribution determined by the combination of 10 focal plane sections and nuclear co-staining with 4,6-diamidino-2-phenylindole (DAPI) showed that the subcellular localisation of 16 and 17 were primarily to the cytoplasm (<figref idref="DRAWINGS">FIG. 31</figref>).</p>
+<p id="p-0226" num="0246">It was envisaged that the bis-cationic nature of sensitizer 21 would be optimal for uptake into prokaryotic cells thereby broadening their utility. Incubation of aqueous solutions of 21 with both gram-positive (<i>Staphylococcus aureus</i>) or gram-negative (<i>Escherichia coli</i>) bacterial cells for only 10 minutes was sufficient for cellular uptake. Confocal imaging confirmed the binding of 21 to both gram-positive and negative bacterial cells (<figref idref="DRAWINGS">FIGS. 28</figref><i>a</i>, <b>28</b><i>b</i>). Additional images are shown in <figref idref="DRAWINGS">FIGS. 29 and 30</figref>.</p>
+<p id="p-0227" num="0247">To establish the spectral characteristics of these fluorophores for potential in vivo imaging applications, their properties in the presence of serum proteins were examined. Serum albumin is the most abundant protein in blood plasma at a typical concentrations of &#x2dc;50 g/L. As one of its principal functions is to act as a binding and carrier protein within the vasculature it would be expected that strong interactions between it and our fluorophores could occur. This is known for ICG and the spectroscopic effects of plasma on ICG have been thoroughly documented. As a preliminary examination to test if the spectral properties are adversely effected by such proteins their spectra in aqueous BSA (bovine serum albumin) solutions was recorded. Sharp absorbance and emission bands were observed in each case with emission maxima at 718 nm for 16 and 17 and 730 nm for 21 in a phosphate buffered saline (PBS) solution containing 4&#xd7;10<sup>&#x2212;4 </sup>M BSA. These solutions remained stable for prolonged periods exposed to ambient light with less than 10% variance in absorbance and fluoresence intensity after 24 hours (<figref idref="DRAWINGS">FIGS. 23</figref>, <b>24</b>, <b>25</b> and <b>32</b>). Collectively these properties are positive indicators for use as in vivo NIR fluorophores.</p>
+<p id="p-0228" num="0248">In summary, anionic and cationic substituted BF<sub>2</sub>-chelated tetraarylazadipyrromethene derivatives, bearing sulfonic acid, carboxylic acid or quaternary amine moieties have been synthesised. These fluorophores show excellent photophysical characteristics in both organic and aqueous solutions. Delivery to and confocal imaging within eukaryotic and prokaryotic cells can be readily achieved.</p>
+<heading id="h-0041" level="1">EXAMPLE 5</heading>
+<heading id="h-0042" level="1">Fluorescent Nano-Beads</heading>
+<p id="p-0229" num="0249">This example demonstrates the preparation of fluorescent particles, specifically fluorescent nano-beads of the order of 100 nm. It is proposed that these fluorescent particles can be used for a wide range of commercial applications including in vivo imaging and as calibrants for fluorescence based analytical instrumentation such as flow cytometry.</p>
+<heading id="h-0043" level="1">Synthesis of Activated Ester PL-Latex Super Carbonyl White 200 nm</heading>
+<p id="p-0230" num="0250">A water suspension of PL-Latex Super Carbonyl white 200 nm (2 mL), available from Varian Inc, was centrifuged and the resulting solid was dried over night under reduced pressure. The solid (75 mg, 0.014 mmol) was dispersed in dry DMSO (1.5 ml) and treated with EDCI (27 mg, 0.14 mmol) and N-hydroxysuccinimide (16 mg, 0.14 mmol). The reaction was agitated at room temperature for 16 hours. The solution was then diluted with water (3 mL) and centrifuged. The solid obtained was washed and centrifuged three times with water/DMSO (3:1) and dried under high vacuum. The full conversion of the acids residue into activated esters was confirmed by comparing the IR of the PL-Latex Super Carbonyl white 200 nm (IR 1698.50, 1739.48 cm<sup>&#x2212;1</sup>) with the IR of the product obtained (IR 1602.50, 1640.65 cm<sup>&#x2212;1</sup>). The resultant activated ester bead 22 is shown in Scheme 7.</p>
+<heading id="h-0044" level="1">Synthesis of Azadipyrromethene BF<sub>2 </sub>Chelated-PL-Latex 200 nm Beads</heading>
+<p id="p-0231" num="0251"><chemistry id="CHEM-US-00037" num="00037">
+<img id="EMI-C00037" he="213.70mm" wi="75.86mm" file="US08907107-20141209-C00037.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0232" num="0252">With reference to Scheme 6, the azadipyrromethene BF<sub>2 </sub>chelated 23 (6 mg, 0.0075 mmol) was dissolved in DCM (10 mL) and treated with TFA (1 mL) at room temperature. The reaction was monitored by TLC and stopped when 23 was completely consumed. The reaction was extracted with NaHCO<sub>3 </sub>(&#xd7;2) and with water (&#xd7;1) and dried over sodium sulfate yielding 24 in quantitative amounts.</p>
+<p id="p-0233" num="0253"><chemistry id="CHEM-US-00038" num="00038">
+<img id="EMI-C00038" he="125.22mm" wi="75.86mm" file="US08907107-20141209-C00038.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0234" num="0254">With reference to Scheme 7, a round bottom flask was charged with activated ester beads 22 (30 mg, 0.0058 mmol), azadipyrromethene BF<sub>2 </sub>chelated 24 (5 mg, 0.0075 mmol) and dry THF (5 mL). The reaction was agitated at room temperature for 24 h. Deionized water (5 mL) was then added to the reaction mixture and the THF was removed under reduced pressure. The water solution was filtered under vacuum through a C18 filter to yield the purified functionalized beads 25.</p>
+<p id="p-0235" num="0255">Images obtained using the functionalized beads are shown in <figref idref="DRAWINGS">FIGS. 33-36</figref>.</p>
+<heading id="h-0045" level="1">EXAMPLE 6</heading>
+<heading id="h-0046" level="1">Additional Compounds</heading>
+<p id="p-0236" num="0256">In this example, the preparation of compounds according to the invention is described. All of the compounds described herein are produced downstream of compound 6, which is a compound of the formula (IB).</p>
+<p id="p-0237" num="0257"><chemistry id="CHEM-US-00039" num="00039">
+<img id="EMI-C00039" he="60.03mm" wi="58.08mm" file="US08907107-20141209-C00039.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0238" num="0258">Compound 2 (75 mg, 125 mmol), propane-1,3-sultone (31 mg, 250 mmol) and K<sub>2</sub>CO<sub>3 </sub>(35 mg, 250 mmol) were heated under reflux in acetone (30 mL) for 6 hr, under a N<sub>2 </sub>atmosphere. Solvent was removed and the residue was suspended in 2N HCl. Resulting solid was filtered, washed with water and dried affording product 26 (64 mg, 74%) as a dark green solid. For NMR analysis the compound was transformed into tetrabutylammonium salt by extraction of aqueous solution of acids with CHCl<sub>3 </sub>in presence of tetrabutylammonium chloride. The organic phase was washed with water twice, dried and evaporated. &#x3b4;<sub>H </sub>of sulfonic acid.NBu<sub>4 </sub>(500 MHz, CDCl<sub>3</sub>): 8.10-8.04 (m, 8H), 7.48-7.38 (m, 6H), 7.10-7.06 (m, 3H), 7.02-6.99 (m, 3H), 4.77 (d, J=2.5 Hz, 2H), 4.25 (t, J=5 Hz, 2H), 3.32-3.25 (m, 8H), 3.01 (t, J=7.5 Hz, 2H), 2.58 (t, J=2.5 Hz, 1H), 2.40-2.32 (m, 2H), 1.68-1.60 (m, 8H), 1.48-1.40 (m, 8H), 1.00 (t, J=7.5 Hz, 12H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 162.0, 159.1, 145.7, 144.9, 143.6, 142.6, 132.6, 132.4, 131.7 (m), 131.4 (m), 129.3, 129.2, 129.1, 128.53, 128.52, 125.2, 123.4, 119.0 (m), 118.3 (m), 114.97, 114.91, 78.1, 76.1, 67.4, 58.8, 55.9, 48.2, 25.6, 25.0, 19.7, 13.6. HRMS (ESI) calcd for C<sub>38</sub>H<sub>29</sub>BN<sub>3</sub>O<sub>5</sub>F<sub>2</sub>S [M&#x2212;H<sup>+</sup>]<sup>&#x2212;</sup> 688.1889. found 688.1877.</p>
+<p id="p-0239" num="0259"><chemistry id="CHEM-US-00040" num="00040">
+<img id="EMI-C00040" he="58.42mm" wi="65.36mm" file="US08907107-20141209-C00040.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0240" num="0260">Compound 6 (168 mg, 320 mmol), propane-1,3-sultone (97 mg, 800 mmol) and K<sub>2</sub>CO<sub>3 </sub>(110 mg, 800 mmol) were heated under reflux in acetone (60 mL) for 6 hr, under a N<sub>2 </sub>atmosphere. The resulting precipitate was filtered, washed with acetone and cold methanol. Preparative RP-HPLC (C-18; acetonitrile-water, 60:40) afforded bissulfonic acid (102 mg, 41%) and monosulfonic acid 27 (34 mg, 18%) as a green solids m.p.&#x3e;300&#xb0; C. For NMR analysis the compound was transformed into tetrabutylammonium salt by extraction of aqueous solution of acids with CHCl<sub>3 </sub>in presence of tetrabutylammonium chloride. The organic phase was washed with water twice, dried and evaporated. &#x3b4;<sub>H </sub>of monosulfonic acid. (NBu<sub>4</sub>)<sub>2 </sub>(400 MHz, CDCl<sub>3</sub>): 8.06-7.96 (m, 8H), 7.45-7.32 (m, 6H), 7.11-7.05 (m, 3H), 6.97-6.93 (m, 3H), 4.26 (t, J=6 Hz, 2H), 3.19-3.12 (m, 16H), 3.02 (t, J=6 Hz, 2H), 2.40-2.29 (m, 2H), 1.60-1.49 (m, 16H), 1.42-1.30 (m, 16H), 0.95 (t, J=8 Hz, 24H). &#x3b4;<sub>C </sub>(100 MHz, CDCl<sub>3</sub>): 160.9, 159.3, 145.9, 144.1, 143.1, 142.5, 140.6, 132.9, 132.5 (m), 132.3, 131.2 (m), 129.2, 129.0, 128.6, 128.5, 128.4, 124.4, 120.9, 117.4, 117.2, 114.6, 67.1, 58.7, 48.1, 25.5, 23.9, 19.7, 13.6. HRMS (ESI) calcd for C<sub>35</sub>H<sub>27</sub>BN<sub>3</sub>O<sub>5</sub>F<sub>2</sub>S [M&#x2212;H<sup>+</sup>]<sup>&#x2212;</sup> 650.1733. found 650.1750.</p>
+<p id="p-0241" num="0261"><chemistry id="CHEM-US-00041" num="00041">
+<img id="EMI-C00041" he="54.36mm" wi="76.12mm" file="US08907107-20141209-C00041.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0242" num="0262"><sup>1</sup>H NMR (as Bu<sub>4</sub>N salt): (400 MHz, CDCl<sub>3</sub>): 0.95 (t, J=8 Hz, 24H), 1.42-1.30 (m, 16H), 1.60-1.49 (m, 16H), 2.48 (t, J=7 Hz, 2H), 2.61 (s, 4H), 2.97 (t, J=7 Hz, 2H), 3.44-3.51 (m, 2H), 3.52-3.75 (m, 6H), 4.01 (t, J=5 Hz, 2H), 4.13 (t, J=5 Hz, 2H), 6.87-6.97 (m, 6H), 7.31-7.39 (m, 6H), 7.95-8.00 (m, 8H). HRMS (ESI) calcd for C<sub>49</sub>H<sub>39</sub>BN<sub>5</sub>O<sub>10</sub>F<sub>2</sub>S [M&#x2212;Na<sup>+</sup>]<sup>&#x2212;</sup> 890.2479. found 890.2470.</p>
+<p id="p-0243" num="0263"><chemistry id="CHEM-US-00042" num="00042">
+<img id="EMI-C00042" he="62.40mm" wi="105.83mm" file="US08907107-20141209-C00042.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0244" num="0264">Boc-protected amine 9 (164 mg, 200 &#x3bc;mol) was dissolved in CH<sub>2</sub>Cl<sub>2 </sub>(10 mL), TFA (1 mL) was slowly added and the whole reaction mixture was stirred at r.t. for 2 h. Acid was neutralized by addition of sat. aqueous NaHCO<sub>3</sub>, the resulting suspension was extracted with CH<sub>2</sub>Cl<sub>2 </sub>(2&#xd7;30 mL), organic phases were washed with water and dried (Na<sub>2</sub>SO<sub>4</sub>). After evaporation, the resulting green residue was dissolved in dry THF (10 mL) and activated ester (succinimide-maleimide) (64 mg, 240 &#x3bc;mol) was added, followed by DIPEA (70 &#x3bc;L, 400 mmol). After stirring at r.t. for 3 h solvent was removed under reduced pressure and the residue was chromatographed (silica, EtOH/AcOEt, 4:96). Fractions containing desired product (R<sub>f</sub>=0.35, silica, EtOH/AcOEt, 4:96) were collected and evaporated to afford 88 mg (51%) of product 29 as dark green crystals. M.p.=50-52&#xb0; C. <sup>1</sup>H NMR (500 MHz, CDCl<sub>3</sub>) 2.54 (t, J=6.9 Hz, 2H, CH<sub>2</sub>CO), 3.38 (s, 3H, OCH<sub>3</sub>), 3.53-3.57 (m, 2H, ether), 3.61-3.70 (m, 6H, ether), 3.72-3.76 (m, 2H, ether), 3.83 (t, J=6.9 Hz, 2H, CH<sub>2</sub>N(CO)<sub>2</sub>), 3.87 (br t, J=4.8 Hz, 2H, ether), 4.05 (br t, J=4.8 Hz, 2H, ether), 4.20 (br t, J=4.8 Hz, 2H, ether), 6.12 (br m, 1H, NH), 6.54 (s, 2H, maleimide), 6.93-7.05 (m, 6H, Ar+pyrrole), 7.39-7.47 (m, 6H, Ar), 8.01-8.08 (m, 8H, Ar); <sup>13</sup>C NMR (100 MHz, CDCl<sub>3</sub>) &#x3b4; 26.9, 29.7, 34.3, 34.9, 38.9, 59.0, 66.8, 67.6, 69.6, 70.56, 70.64, 70.9, 71.9, 114.6, 114.8, 118.38, 118.42, 118.77, 118.80, 124.1, 124.7, 128.5, 129.19, 129.23, 129.27, 131.53, 131.58, 131.64, 131.68, 132.4, 132.5, 134.1, 143.0, 143.4, 145.1, 145.5, 157.6, 158.5, 160.6, 161.3, 169.9, 170.5. ESI-HR obsd 892.3345 [M+Na<sup>+</sup>], calcd exact mass 892.3305 (C<sub>48</sub>H<sub>46</sub>N<sub>5</sub>O<sub>8</sub>NaBF<sub>2</sub>). (KBr disc): 1037, 1110, 1129, 1260, 1474, 1505, 1602, 1708, 2880, 2927. &#x3bb;<sub>abs </sub>(CHCl<sub>3</sub>) 689, nm. Fluorescence (CHCl<sub>3</sub>): &#x3bb;<sub>max </sub>(I)=717 nm (1.00).</p>
+<p id="p-0245" num="0265"><chemistry id="CHEM-US-00043" num="00043">
+<img id="EMI-C00043" he="58.42mm" wi="113.96mm" file="US08907107-20141209-C00043.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0246" num="0266">To a solution of 2-diphenilphosphonylterephthalic acid 1-methyl ester (96 mg, 0.26), DMAP (cat.) and EDO (60.5 mg, 0.32 mmol) in dry DCM (15 mL), azabodipy-amine (189 mg, 0.26 mmol) dissolved in dichloromethane mL) was added. The solution was degassed by freezing it in liquid nitrogen, after that the flask was put under high vacuum and the solution was allowed to thaw, finally the flask was back-filled with nitrogen. The mixture was stirred under nitrogen at room temperature overnight. Diethyl ether (100 mL) was added, and the organic layer was washed with 10% hydrochloric acid (2&#xd7;50 mL), water (1&#xd7;50 mL), saturated aqueous NaHCO3 (2&#xd7;50 mL), water (1&#xd7;50 mL) and brine (1&#xd7;50 dried with Na<sub>2</sub>SO<sub>4 </sub>and concentrated in vacuo. It was recrystallized with dichloromethane/cyclohexane 1/6. The resulting solid was collected by filtration as a black solid (270 mg, 96%).</p>
+<p id="p-0247" num="0267"><sup>1</sup>H NMR (400 MHz, CDCl<sub>3</sub>) &#x3b4;: 7.95-8.01 (m, 10H), 7.72 (d, J=8.0, 1H), 7.30-7.36 (m, 6H), 7.16-7.22 (m, 8H), 6.82-6.95 (m, 8H), 6.22 (broad s, 1H, NH), 4.06 (t, J=5.0 Hz, 2H, CH<sub>2</sub>), 3.97 (t, J=5.0 Hz, 2H, CH<sub>2</sub>), 3.76 (t, J=5.0 Hz, 2H, CH<sub>2</sub>), 3.63-3.70 (m, 7H, 2&#xd7;CH<sub>2</sub>+CH<sub>3</sub>OCO), 3.55-3.60 (m, 4H, 2&#xd7;CH<sub>2</sub>), 3.44-3.47 (m, 2H, CH<sub>2</sub>), 3.28 (s, 3H, CH<sub>3</sub>OCH<sub>2</sub>); <sup>13</sup>C NMR (400 MHz, CDCl<sub>3</sub>) &#x3b4;: 165.5, 160.3, 159.4, 157.6, 156.5, 144.5, 144.1, 142.5, 141.9, 140.8, 140.5, 136.0, 135.9, 132.9, 132.7, 131.5, 131.3, 130.7, 130.6, 128.3, 128.2, 128.1, 127.7, 127.6, 127.5, 126.0, 123.9, 123.0, 113.8, 113.6, 70.9, 69.9, 69.6, 69.5, 68.5, 66.6, 58.0, 51.2, 38.4. <sup>31</sup>P-NMR (162 MHz, CDCl<sub>3</sub>) &#x3b4;: &#x2212;3.68 (P:). IR (KBr disk) cm<sup>&#x2212;1</sup>: 3055, 2929, 1720, 1668, 1604, 1476, 1265, 740. EI-MS: m/z 1065. HRMS Calcd for C<sub>62</sub>H<sub>57</sub>BF<sub>2</sub>N<sub>4</sub>O<sub>8</sub>P [M+H]<sup>+</sup>: 1065.3975. Found: 1065.3990. &#x3bb;<sub>maz </sub>(CHCl<sub>3</sub>)=686 nm, extinction coefficient 75,500 M<sup>&#x2212;1 </sup>cm<sup>&#x2212;1</sup>.</p>
+<p id="p-0248" num="0268"><chemistry id="CHEM-US-00044" num="00044">
+<img id="EMI-C00044" he="62.40mm" wi="120.23mm" file="US08907107-20141209-C00044.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</p>
+<p id="p-0249" num="0269">Boc-Amine 9 (10 mg, 12.2 &#x3bc;mol) was dissolved in CH<sub>2</sub>Cl<sub>2 </sub>(1 mL), TFA (0.15 mL) was slowly added and the whole reaction mixture was stirred at r.t. for 1 h. Acid was neutralized by addition of sat. aqueous NaHCO<sub>3</sub>, the resulting suspension was extracted with CH<sub>2</sub>Cl<sub>2 </sub>(2&#xd7;10 mL), organic phases were washed with water and dried (Na<sub>2</sub>SO<sub>4</sub>). After evaporation, the resulting green residue was dissolved in dry THF (1 mL) and DIPEA (10 &#x3bc;L) was added, followed by biotin-NHS (4 mg, 12.2 &#x3bc;mol). After stirring at r.t. for 10 min there was still some starting material left so more biotin-NHS (4 mg, 12.2 &#x3bc;mol) was added, leading to complete conversion after 10 min. Solvent was removed under reduced pressure and the residue was chromatographed (silica, MeOH/DCM, 5:95). Fractions containing desired product were collected and evaporated to afford 8 mg (69%) of product as dark green solid. <sup>1</sup>H NMR (500 MHz, CDCl<sub>3</sub>) &#x3b4; 1.37-1.45 (m, 2H), 1.60-1.72 (m, 4H), 2.17-2.30 (m, 2H), 2.56-2.60 (m, 1H), 2.76-2.82 (m, 1H), 3.02-3.07 (m, 1H), 3.38 (s, 3H), 3.54-3.57 (m, 2H), 3.64-3.70 (m, 6H), 3.73-3.77 (m, 2H), 3.88 (t, J=5 Hz, 2H), 4.11 (br t, J=5 Hz, 2H), 4.15-4.19 (m, 1H), 4.21 (br t, J=5 Hz, 2H), 4.30-4.34 (m, 1H), 4.99 (br s, 1H), 5.95 (br s, 1H), 6.54 (br s, 1H), 6.97-7.04 (m, 6H), 7.38-7.47 (m, 6H), 8.02-8.07 (m, 8H). <sup>13</sup>C NMR (400 MHz, CDCl<sub>3</sub>) &#x3b4;: 173.4, 161.3, 160.8, 158.4, 157.7, 145.4, 145.2, 143.4, 143.2, 132.45, 132.40, 131.6 (m), 129.3, 128.6, 124.6, 124.2, 118.8, 118.5, 114.9, 114.7, 72.0, 70.9, 70.7, 70.6, 69.6, 67.7, 67.2, 61.7, 60.1, 59.0, 55.4, 40.5, 38.9, 35.8, 28.0, 25.6, 25.4. ESI-HR obsd 945.4031 [M+H<sup>+</sup>], calcd exact mass 945.3992 (C<sub>51</sub>H<sub>56</sub>N<sub>6</sub>O<sub>7</sub>SBF<sub>2</sub>). (KBr disc): 1036, 1474, 1504, 1602, 1701.</p>
+<p id="p-0250" num="0270">An additional feature of fluorophore conjugated to nanoparticles is that the particles can be constructed such that the fluorescence intensity from the particle can be made responsive to micro-environmental changes. For example, in one embodiment the particles are virtually fluorescent-silent in aqueous media (due to self-aggregation on the particle surface and quenching by water molecules), including cell growth media. In contrast, following particle endocytosis and internalization within cells they become highly fluorescent (due to individual fluorophore molecules relaxing away from the surface of the particle and being shielded from the surrounding water molecules thereby giving rise to a large enhancement of their fluorescence intensity). This off-to-on fluorescence switching property facilitates real-time imaging of the cellular uptake processes, as conjugated particles and cells can be co-incubated together without a masking or interfering fluorescent signal from the extracellular particles.</p>
+<p id="p-0251" num="0271">In <figref idref="DRAWINGS">FIGS. 37 and 38</figref> six static frames of the particle uptake obtained by real time imaging of HEK297T and CAKI-1 cells co-incubated with fluorophore conjugated particles are shown. It is clear that the intracellular fluorescence intensity increases over time as the particles are taken up by the cells but also that the extracellular particles are relatively non-fluorescent (dark background).</p>
+<p id="p-0252" num="0272">In <figref idref="DRAWINGS">FIG. 39</figref>, an example of in vivo nano particle imaging is illustrated. It was possible to image the lymphatic node of a mouse following intra-dermal injection of dye conjugated particles in the left foot of the mouse. The closest lymph node from the injection site was successfully imaged immediately after the injection was performed.</p>
+<p id="p-0253" num="0273">In the specification the terms &#x201c;comprise, comprises, comprised and comprising&#x201d; or any variation thereof and the terms &#x201c;include, includes, included and including&#x201d; or any variation thereof are considered to be totally interchangeable and they should all be afforded the widest possible interpretation and vice versa.</p>
+<p id="p-0254" num="0274">The invention is not limited to the embodiments hereinbefore described which may be varied in construction and detail without departing from the spirit of the invention.</p>
+<?DETDESC description="Detailed Description" end="tail"?>
+</description>
+<us-chemistry idref="CHEM-US-00001" cdx-file="US08907107-20141209-C00001.CDX" mol-file="US08907107-20141209-C00001.MOL"/>
+<us-chemistry idref="CHEM-US-00002" cdx-file="US08907107-20141209-C00002.CDX" mol-file="US08907107-20141209-C00002.MOL"/>
+<us-chemistry idref="CHEM-US-00003" cdx-file="US08907107-20141209-C00003.CDX" mol-file="US08907107-20141209-C00003.MOL"/>
+<us-chemistry idref="CHEM-US-00004" cdx-file="US08907107-20141209-C00004.CDX" mol-file="US08907107-20141209-C00004.MOL"/>
+<us-chemistry idref="CHEM-US-00005" cdx-file="US08907107-20141209-C00005.CDX" mol-file="US08907107-20141209-C00005.MOL"/>
+<us-chemistry idref="CHEM-US-00006" cdx-file="US08907107-20141209-C00006.CDX" mol-file="US08907107-20141209-C00006.MOL"/>
+<us-chemistry idref="CHEM-US-00007" cdx-file="US08907107-20141209-C00007.CDX" mol-file="US08907107-20141209-C00007.MOL"/>
+<us-chemistry idref="CHEM-US-00008" cdx-file="US08907107-20141209-C00008.CDX" mol-file="US08907107-20141209-C00008.MOL"/>
+<us-chemistry idref="CHEM-US-00009" cdx-file="US08907107-20141209-C00009.CDX" mol-file="US08907107-20141209-C00009.MOL"/>
+<us-chemistry idref="CHEM-US-00010" cdx-file="US08907107-20141209-C00010.CDX" mol-file="US08907107-20141209-C00010.MOL"/>
+<us-chemistry idref="CHEM-US-00011" cdx-file="US08907107-20141209-C00011.CDX" mol-file="US08907107-20141209-C00011.MOL"/>
+<us-chemistry idref="CHEM-US-00012" cdx-file="US08907107-20141209-C00012.CDX" mol-file="US08907107-20141209-C00012.MOL"/>
+<us-chemistry idref="CHEM-US-00013" cdx-file="US08907107-20141209-C00013.CDX" mol-file="US08907107-20141209-C00013.MOL"/>
+<us-chemistry idref="CHEM-US-00014" cdx-file="US08907107-20141209-C00014.CDX" mol-file="US08907107-20141209-C00014.MOL"/>
+<us-chemistry idref="CHEM-US-00015" cdx-file="US08907107-20141209-C00015.CDX" mol-file="US08907107-20141209-C00015.MOL"/>
+<us-chemistry idref="CHEM-US-00016" cdx-file="US08907107-20141209-C00016.CDX" mol-file="US08907107-20141209-C00016.MOL"/>
+<us-chemistry idref="CHEM-US-00017" cdx-file="US08907107-20141209-C00017.CDX" mol-file="US08907107-20141209-C00017.MOL"/>
+<us-chemistry idref="CHEM-US-00018" cdx-file="US08907107-20141209-C00018.CDX" mol-file="US08907107-20141209-C00018.MOL"/>
+<us-chemistry idref="CHEM-US-00019" cdx-file="US08907107-20141209-C00019.CDX" mol-file="US08907107-20141209-C00019.MOL"/>
+<us-chemistry idref="CHEM-US-00020" cdx-file="US08907107-20141209-C00020.CDX" mol-file="US08907107-20141209-C00020.MOL"/>
+<us-chemistry idref="CHEM-US-00021" cdx-file="US08907107-20141209-C00021.CDX" mol-file="US08907107-20141209-C00021.MOL"/>
+<us-chemistry idref="CHEM-US-00022" cdx-file="US08907107-20141209-C00022.CDX" mol-file="US08907107-20141209-C00022.MOL"/>
+<us-chemistry idref="CHEM-US-00023" cdx-file="US08907107-20141209-C00023.CDX" mol-file="US08907107-20141209-C00023.MOL"/>
+<us-chemistry idref="CHEM-US-00024" cdx-file="US08907107-20141209-C00024.CDX" mol-file="US08907107-20141209-C00024.MOL"/>
+<us-chemistry idref="CHEM-US-00025" cdx-file="US08907107-20141209-C00025.CDX" mol-file="US08907107-20141209-C00025.MOL"/>
+<us-chemistry idref="CHEM-US-00026" cdx-file="US08907107-20141209-C00026.CDX" mol-file="US08907107-20141209-C00026.MOL"/>
+<us-chemistry idref="CHEM-US-00027" cdx-file="US08907107-20141209-C00027.CDX" mol-file="US08907107-20141209-C00027.MOL"/>
+<us-chemistry idref="CHEM-US-00028" cdx-file="US08907107-20141209-C00028.CDX" mol-file="US08907107-20141209-C00028.MOL"/>
+<us-chemistry idref="CHEM-US-00029" cdx-file="US08907107-20141209-C00029.CDX" mol-file="US08907107-20141209-C00029.MOL"/>
+<us-chemistry idref="CHEM-US-00030" cdx-file="US08907107-20141209-C00030.CDX" mol-file="US08907107-20141209-C00030.MOL"/>
+<us-chemistry idref="CHEM-US-00031" cdx-file="US08907107-20141209-C00031.CDX" mol-file="US08907107-20141209-C00031.MOL"/>
+<us-chemistry idref="CHEM-US-00032" cdx-file="US08907107-20141209-C00032.CDX" mol-file="US08907107-20141209-C00032.MOL"/>
+<us-chemistry idref="CHEM-US-00033" cdx-file="US08907107-20141209-C00033.CDX" mol-file="US08907107-20141209-C00033.MOL"/>
+<us-chemistry idref="CHEM-US-00034" cdx-file="US08907107-20141209-C00034.CDX" mol-file="US08907107-20141209-C00034.MOL"/>
+<us-chemistry idref="CHEM-US-00035" cdx-file="US08907107-20141209-C00035.CDX" mol-file="US08907107-20141209-C00035.MOL"/>
+<us-chemistry idref="CHEM-US-00036" cdx-file="US08907107-20141209-C00036.CDX" mol-file="US08907107-20141209-C00036.MOL"/>
+<us-chemistry idref="CHEM-US-00037" cdx-file="US08907107-20141209-C00037.CDX" mol-file="US08907107-20141209-C00037.MOL"/>
+<us-chemistry idref="CHEM-US-00038" cdx-file="US08907107-20141209-C00038.CDX" mol-file="US08907107-20141209-C00038.MOL"/>
+<us-chemistry idref="CHEM-US-00039" cdx-file="US08907107-20141209-C00039.CDX" mol-file="US08907107-20141209-C00039.MOL"/>
+<us-chemistry idref="CHEM-US-00040" cdx-file="US08907107-20141209-C00040.CDX" mol-file="US08907107-20141209-C00040.MOL"/>
+<us-chemistry idref="CHEM-US-00041" cdx-file="US08907107-20141209-C00041.CDX" mol-file="US08907107-20141209-C00041.MOL"/>
+<us-chemistry idref="CHEM-US-00042" cdx-file="US08907107-20141209-C00042.CDX" mol-file="US08907107-20141209-C00042.MOL"/>
+<us-chemistry idref="CHEM-US-00043" cdx-file="US08907107-20141209-C00043.CDX" mol-file="US08907107-20141209-C00043.MOL"/>
+<us-chemistry idref="CHEM-US-00044" cdx-file="US08907107-20141209-C00044.CDX" mol-file="US08907107-20141209-C00044.MOL"/>
+<us-chemistry idref="CHEM-US-00045" cdx-file="US08907107-20141209-C00045.CDX" mol-file="US08907107-20141209-C00045.MOL"/>
+<us-chemistry idref="CHEM-US-00046" cdx-file="US08907107-20141209-C00046.CDX" mol-file="US08907107-20141209-C00046.MOL"/>
+<us-chemistry idref="CHEM-US-00047" cdx-file="US08907107-20141209-C00047.CDX" mol-file="US08907107-20141209-C00047.MOL"/>
+<us-chemistry idref="CHEM-US-00048" cdx-file="US08907107-20141209-C00048.CDX" mol-file="US08907107-20141209-C00048.MOL"/>
+<us-chemistry idref="CHEM-US-00049" cdx-file="US08907107-20141209-C00049.CDX" mol-file="US08907107-20141209-C00049.MOL"/>
+<us-chemistry idref="CHEM-US-00050" cdx-file="US08907107-20141209-C00050.CDX" mol-file="US08907107-20141209-C00050.MOL"/>
+<us-chemistry idref="CHEM-US-00051" cdx-file="US08907107-20141209-C00051.CDX" mol-file="US08907107-20141209-C00051.MOL"/>
+<us-chemistry idref="CHEM-US-00052" cdx-file="US08907107-20141209-C00052.CDX" mol-file="US08907107-20141209-C00052.MOL"/>
+<us-chemistry idref="CHEM-US-00053" cdx-file="US08907107-20141209-C00053.CDX" mol-file="US08907107-20141209-C00053.MOL"/>
+<us-chemistry idref="CHEM-US-00054" cdx-file="US08907107-20141209-C00054.CDX" mol-file="US08907107-20141209-C00054.MOL"/>
+<us-chemistry idref="CHEM-US-00055" cdx-file="US08907107-20141209-C00055.CDX" mol-file="US08907107-20141209-C00055.MOL"/>
+<us-chemistry idref="CHEM-US-00056" cdx-file="US08907107-20141209-C00056.CDX" mol-file="US08907107-20141209-C00056.MOL"/>
+<us-chemistry idref="CHEM-US-00057" cdx-file="US08907107-20141209-C00057.CDX" mol-file="US08907107-20141209-C00057.MOL"/>
+<us-chemistry idref="CHEM-US-00058" cdx-file="US08907107-20141209-C00058.CDX" mol-file="US08907107-20141209-C00058.MOL"/>
+<us-chemistry idref="CHEM-US-00059" cdx-file="US08907107-20141209-C00059.CDX" mol-file="US08907107-20141209-C00059.MOL"/>
+<us-chemistry idref="CHEM-US-00060" cdx-file="US08907107-20141209-C00060.CDX" mol-file="US08907107-20141209-C00060.MOL"/>
+<us-chemistry idref="CHEM-US-00061" cdx-file="US08907107-20141209-C00061.CDX" mol-file="US08907107-20141209-C00061.MOL"/>
+<us-chemistry idref="CHEM-US-00062" cdx-file="US08907107-20141209-C00062.CDX" mol-file="US08907107-20141209-C00062.MOL"/>
+<us-chemistry idref="CHEM-US-00063" cdx-file="US08907107-20141209-C00063.CDX" mol-file="US08907107-20141209-C00063.MOL"/>
+<us-claim-statement>The invention claimed is:</us-claim-statement>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text>1. A compound of formula (I)</claim-text>
+<claim-text><chemistry id="CHEM-US-00045" num="00045">
+<img id="EMI-C00045" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00045.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<claim-text>in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O-Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;</claim-text>
+<claim-text>R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, wherein L is a spacer group, and X is a conjugation group or a water-solubilizing group; with the proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X and at least one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X; and</claim-text>
+<claim-text>each of R<sub>4 </sub>and R<sub>5 </sub>is phenyl.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text>2. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein A is a halide.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text>3. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref> and having a formula (IA),</claim-text>
+<claim-text><chemistry id="CHEM-US-00046" num="00046">
+<img id="EMI-C00046" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00046.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</claim-text>
+<claim-text>wherein R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, with the further proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text>4. A compound according to <claim-ref idref="CLM-00003">claim 3</claim-ref>, wherein only one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X, and the remaining groups of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>are each independently H or NO<sub>2</sub>.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text>5. A compound according to <claim-ref idref="CLM-00003">claim 3</claim-ref>, wherein only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X, and the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H or NO<sub>2</sub>.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text>6. A compound according to <claim-ref idref="CLM-00004">claim 4</claim-ref>, wherein when one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH or O-L-X, the remaining groups of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>are each independently H.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text>7. A compound according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, wherein when one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH or O-L-X, the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text>8. A compound having a formula (IA),</claim-text>
+<claim-text><chemistry id="CHEM-US-00047" num="00047">
+<img id="EMI-C00047" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00047.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<claim-text>in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O-Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;</claim-text>
+<claim-text>R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7 </sub>and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, with the proviso that only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, wherein L is a spacer group and X is a conjugation group or a water-solubilizing group, and</claim-text>
+<claim-text>R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text>9. A compound having a formula (IA),</claim-text>
+<claim-text><chemistry id="CHEM-US-00048" num="00048">
+<img id="EMI-C00048" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00048.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<claim-text>in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O-Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;</claim-text>
+<claim-text>R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7 </sub>and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, with the proviso that only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is OH and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein L is a spacer group and X is a conjugation group or a water-solubilizing group, and</claim-text>
+<claim-text>R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text>10. A compound according to <claim-ref idref="CLM-00003">claim 3</claim-ref>, wherein when only one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein:
+<claim-text>(a) each X is a conjugation group; or</claim-text>
+<claim-text>(b) each X is a water-solubilizing group; or</claim-text>
+<claim-text>(c) one X is a conjugation group and the other X is a water-solubilizing group.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00011" num="00011">
+<claim-text>11. A compound having a formula (IA),</claim-text>
+<claim-text><chemistry id="CHEM-US-00049" num="00049">
+<img id="EMI-C00049" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00049.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<claim-text>in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O-Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;</claim-text>
+<claim-text>R<sub>l </sub>is H, R<sub>2 </sub>is O-L-X, R<sub>3 </sub>is H, R<sub>6 </sub>is H, R<sub>7 </sub>is O-L-X and R<sub>8 </sub>is H, wherein one X is a conjugation group and the other X is a water-solubilizing group, and</claim-text>
+<claim-text>R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00012" num="00012">
+<claim-text>12. A compound according to <claim-ref idref="CLM-00011">claim 11</claim-ref>, wherein each A is F, R<sub>l </sub>is H, R<sub>2 </sub>is O-L-X, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, R<sub>6 </sub>is H, R<sub>7 </sub>is O-L-X and R<sub>8 </sub>is H, wherein one X is a conjugation group and the other X is a water-solubilizing group.</claim-text>
+</claim>
+<claim id="CLM-00013" num="00013">
+<claim-text>13. A compound according <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein L is a moiety selected from substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyls, methylenes, amines, amides and ethers, or derivatives thereof.</claim-text>
+</claim>
+<claim id="CLM-00014" num="00014">
+<claim-text>14. A compound according to <claim-ref idref="CLM-00013">claim 13</claim-ref>, wherein the amine moiety is &#x2014;(CH<sub>2</sub>)<sub>2</sub>NH&#x2014;.</claim-text>
+</claim>
+<claim id="CLM-00015" num="00015">
+<claim-text>15. A compound according to <claim-ref idref="CLM-00013">claim 13</claim-ref>, wherein the amide moiety is selected from (CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)&#x2014;, &#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>&#x2014; and &#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>.</claim-text>
+</claim>
+<claim id="CLM-00016" num="00016">
+<claim-text>16. A compound according to <claim-ref idref="CLM-00013">claim 13</claim-ref>, wherein ether moiety is CH<sub>2</sub>CH<sub>2</sub>OCH<sub>2</sub>CH<sub>2</sub>&#x2014;.</claim-text>
+</claim>
+<claim id="CLM-00017" num="00017">
+<claim-text>17. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein a conjugation group is a moiety selected from a carboxylic acid, an amine, an alkyne, a succinimidyl ester, an azide, an acyl azide, a maleimide, a diarylphosphonyl-aryl ester and biotin, or derivatives thereof.</claim-text>
+</claim>
+<claim id="CLM-00018" num="00018">
+<claim-text>18. A compound according to <claim-ref idref="CLM-00017">claim 17</claim-ref>, wherein a diarylphosphonyl-aryl ester is ortho-diarylphosphonyl-aryl-methyl ester.</claim-text>
+</claim>
+<claim id="CLM-00019" num="00019">
+<claim-text>19. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein a water-solubilizing group is a moiety selected from a carboxylic acid, an amine, a sulfonic acid, an alcohol, an ether, a polyether, an amide, a sulphonamide and a tetrazole, or derivatives thereof.</claim-text>
+</claim>
+<claim id="CLM-00020" num="00020">
+<claim-text>20. A compound of formula (I),</claim-text>
+<claim-text><chemistry id="CHEM-US-00050" num="00050">
+<img id="EMI-C00050" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00050.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<claim-text>in which each A, which may be the same or different, is a halide selected from fluoride, chloride, bromide and iodide, or is O-Y, wherein Y is a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety;</claim-text>
+<claim-text>R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7 </sub>and R<sub>8 </sub>are each independently H, OH, NO<sub>2 </sub>or O-L-X, with the proviso that one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X and one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, wherein L is a spacer group, one X is a sulfonic acid moiety and the other X is a succinimidyl ester moiety, and</claim-text>
+<claim-text>R<sub>4 </sub>and R<sub>5</sub>, which may be the same or different, are each independently H; or are a substituted or unsubstituted, saturated or unsaturated, cyclic moiety; a substituted or unsubstituted, saturated or unsaturated heterocyclic moiety; or a substituted or unsubstituted, saturated or unsaturated, straight or branched chain alkyl moiety.</claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00021" num="00021">
+<claim-text>21. A compound according to <claim-ref idref="CLM-00020">claim 20</claim-ref>, wherein one of R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X, and O-L-X is O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>Na or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>H or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3 </sub><sup>&#x2212;</sup>, and one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, and O-L-X is O&#x2014;CH<sub>2</sub>-succinimidyl ester or O&#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester or O&#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester.</claim-text>
+</claim>
+<claim id="CLM-00022" num="00022">
+<claim-text>22. A compound according to <claim-ref idref="CLM-00020">claim 20</claim-ref>, wherein one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is O-L-X, and O-L-X is O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub>Na or O&#x2014;(CH<sub>2</sub>)<sub>3</sub>&#x2014;SO<sub>3</sub><sup>&#x2212;</sup>, and one R<sub>1</sub>, R<sub>2 </sub>and R<sub>3 </sub>is O-L-X, and O-L-X is O&#x2014;CH<sub>2</sub>-succinimidyl ester or O&#x2014;(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester or O&#x2014;CONH(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>-succinimidyl ester.</claim-text>
+</claim>
+<claim id="CLM-00023" num="00023">
+<claim-text>23. A compound according to <claim-ref idref="CLM-00020">claim 20</claim-ref>, wherein each A is F, R<sub>4 </sub>is Ph and R<sub>5 </sub>is Ph.</claim-text>
+</claim>
+<claim id="CLM-00024" num="00024">
+<claim-text>24. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein when two carboxylic acids or two amines or one carboxylic acid moiety and amine moiety are X, one of the two functions as a conjugation group and the other as a water-solubilizing group.</claim-text>
+</claim>
+<claim id="CLM-00025" num="00025">
+<claim-text>25. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein where more than one ether group is present, one or more of the ether groups present provide the function of a spacer group.</claim-text>
+</claim>
+<claim id="CLM-00026" num="00026">
+<claim-text>26. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, wherein the compounds have a maximum absorbance &#x3bb;<sub>max </sub>at greater than 660 nm, preferably greater than 670 nm, and a maximum emission at greater than 690 nm, preferably greater than 720 nm.</claim-text>
+</claim>
+<claim id="CLM-00027" num="00027">
+<claim-text>27. A compound of <claim-ref idref="CLM-00001">claim 1</claim-ref> selected from the compounds shown in the table below; wherin each A is fluoride, R<sub>1 </sub>is H, R<sub>3 is H, R</sub><sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, and R<sub>8 </sub>is H:</claim-text>
+<claim-text>
+<tables id="TABLE-US-00006" num="00006">
+<table frame="none" colsep="0" rowsep="0" pgwide="1">
+<tgroup align="left" colsep="0" rowsep="0" cols="4">
+<colspec colname="1" colwidth="91pt" align="left"/>
+<colspec colname="2" colwidth="70pt" align="left"/>
+<colspec colname="3" colwidth="21pt" align="left"/>
+<colspec colname="4" colwidth="147pt" align="left"/>
+<thead>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Reference number of</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>compound in Examples</entry>
+<entry/>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>where applicable</entry>
+<entry>R<sup>2</sup></entry>
+<entry>R<sup>6</sup></entry>
+<entry>R<sup>7</sup></entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>2 (Example 2(A))</entry>
+<entry>OH</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>9 (Example 3(B))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NHBoc</entry>
+</row>
+<row>
+<entry>Variation of 9 (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NH<sub>2</sub></entry>
+</row>
+<row>
+<entry>10 (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NHCO(CH<sub>2</sub>)<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>11a (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00051" num="00051">
+<img id="EMI-C00051" he="25.15mm" wi="31.58mm" file="US08907107-20141209-C00051.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>11b (Example 3(A))</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00052" num="00052">
+<img id="EMI-C00052" he="32.00mm" wi="31.67mm" file="US08907107-20141209-C00052.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>16 (Example 4)</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub><sup>&#x2212;</sup></entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub><sup>&#x2212;</sup></entry>
+</row>
+<row>
+<entry>Variation of 16 (Example 4)</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry>17 (Example 4)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub><sup>&#x2212;</sup></entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub><sup>&#x2212;</sup></entry>
+</row>
+<row>
+<entry>Variation of 17 (Example 4)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>H</entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>H</entry>
+</row>
+<row>
+<entry>26 (Example 6)</entry>
+<entry>OCH<sub>2</sub>CH<sub>2</sub>CH<sub>2</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>&#x2014;C&#x2261;CH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>O(CH<sub>2</sub>)<sub>2</sub>NH<sub>2</sub></entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00053" num="00053">
+<img id="EMI-C00053" he="25.06mm" wi="17.02mm" file="US08907107-20141209-C00053.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>27 (Example 6)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>OCH<sub>2</sub>CO<sub>2</sub>H</entry>
+<entry>NO<sub>2</sub></entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry><chemistry id="CHEM-US-00054" num="00054">
+<img id="EMI-C00054" he="25.06mm" wi="17.02mm" file="US08907107-20141209-C00054.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>H</entry>
+<entry>OH</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00055" num="00055">
+<img id="EMI-C00055" he="25.57mm" wi="38.78mm" file="US08907107-20141209-C00055.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>28 (Example 6)</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00056" num="00056">
+<img id="EMI-C00056" he="25.99mm" wi="32.09mm" file="US08907107-20141209-C00056.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry>O(CH<sub>2</sub>)<sub>3</sub>SO<sub>3</sub>Na</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00057" num="00057">
+<img id="EMI-C00057" he="15.58mm" wi="31.75mm" file="US08907107-20141209-C00057.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>&#x2014;</entry>
+<entry><chemistry id="CHEM-US-00058" num="00058">
+<img id="EMI-C00058" he="25.15mm" wi="17.02mm" file="US08907107-20141209-C00058.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00059" num="00059">
+<img id="EMI-C00059" he="25.15mm" wi="17.02mm" file="US08907107-20141209-C00059.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>29 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00060" num="00060">
+<img id="EMI-C00060" he="15.58mm" wi="31.75mm" file="US08907107-20141209-C00060.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>30 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00061" num="00061">
+<img id="EMI-C00061" he="17.10mm" wi="43.52mm" file="US08907107-20141209-C00061.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry> </entry>
+</row>
+<row>
+<entry>31 (Example 6)</entry>
+<entry>O((CH<sub>2</sub>)<sub>2</sub>O)<sub>3</sub>CH<sub>3</sub></entry>
+<entry>H</entry>
+<entry><chemistry id="CHEM-US-00062" num="00062">
+<img id="EMI-C00062" he="29.89mm" wi="47.84mm" file="US08907107-20141209-C00062.TIF" alt="embedded image" img-content="table" img-format="tif"/>
+</chemistry>
+</entry>
+</row>
+<row>
+<entry namest="1" nameend="4" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</claim-text>
+</claim>
+<claim id="CLM-00028" num="00028">
+<claim-text>28. A compound according to <claim-ref idref="CLM-00001">claim 1</claim-ref> and having a formula (IB),</claim-text>
+<claim-text><chemistry id="CHEM-US-00063" num="00063">
+<img id="EMI-C00063" he="35.98mm" wi="58.25mm" file="US08907107-20141209-C00063.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</claim-text>
+<claim-text>wherein R<sub>1</sub>, R<sub>2</sub>, R<sub>3</sub>, R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H, OH or NO<sub>2</sub>; with the proviso that at least one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH and at least one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH.</claim-text>
+</claim>
+<claim id="CLM-00029" num="00029">
+<claim-text>29. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein only one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH, and the remaining groups of R<sub>1</sub>, R<sub>2</sub>, and R<sub>3 </sub>are each independently H or NO<sub>2</sub>.</claim-text>
+</claim>
+<claim id="CLM-00030" num="00030">
+<claim-text>30. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein only one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, and the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H or NO<sub>2</sub>.</claim-text>
+</claim>
+<claim id="CLM-00031" num="00031">
+<claim-text>31. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein when one of R<sub>1</sub>, R<sub>2</sub>, R<sub>3 </sub>is OH, the remaining groups of R<sub>1</sub>, R<sub>2</sub>, and R<sub>3 </sub>are each independently H.</claim-text>
+</claim>
+<claim id="CLM-00032" num="00032">
+<claim-text>32. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein when one of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>is OH, the remaining groups of R<sub>6</sub>, R<sub>7</sub>, and R<sub>8 </sub>are each independently H.</claim-text>
+</claim>
+<claim id="CLM-00033" num="00033">
+<claim-text>33. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein R<sub>1 </sub>is H, R<sub>2 </sub>is OH, R<sub>3 </sub>is H, R<sub>6 </sub>is H, R<sub>7 </sub>is OH and R<sub>8 </sub>is H.</claim-text>
+</claim>
+<claim id="CLM-00034" num="00034">
+<claim-text>34. A compound according to <claim-ref idref="CLM-00028">claim 28</claim-ref>, wherein each A is F, R<sub>l </sub>is H, R<sub>2 </sub>is OH, R<sub>3 </sub>is H, R<sub>4 </sub>is Ph, R<sub>5 </sub>is Ph, R<sub>6 </sub>is H, R<sub>7 </sub>is OH and R<sub>8 </sub>is H.</claim-text>
+</claim>
+</claims>
+</us-patent-grant>
