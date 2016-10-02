@@ -477,11 +477,20 @@ class Sentence(BaseText):
     def records(self):
         """Return a list of records for this sentence."""
         compounds = []
+        seen_labels = set()
         for parser in self.parsers:
             for record in parser.parse(self.tagged_tokens):
-                if record.to_primitive():
-                    compounds.append(record)
-            # compounds.extend(list(parser.parse(self.tagged_tokens)))
+                p = record.to_primitive()
+                if not p:  # TODO: Potential performance issues?
+                    continue
+                # Skip duplicate records
+                if record in compounds:
+                    continue
+                # Skip just labels that have already been seen (bit of a hack)
+                if all(k in {'labels', 'roles'} for k in p.keys()) and set(record.labels).issubset(seen_labels):
+                    continue
+                seen_labels.update(record.labels)
+                compounds.append(record)
         return compounds
 
     def __add__(self, other):
