@@ -14,6 +14,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 import logging
+import re
 
 from ..text import bracket_level
 
@@ -28,16 +29,13 @@ class AbbreviationDetector(object):
     """
 
     # TODO: Extend to Greek characters (custom method instead of .isalnum())
-    # TODO: Refactor out the chem stuff into a subclass
-    # Move to a separate abbreviations module
 
     #: Minimum abbreviation length
     abbr_min = 3
     #: Maximum abbreviation length
     abbr_max = 10
     #: String equivalents to use when detecting abbreviations.
-    abbr_equivs = [
-    ]
+    abbr_equivs = []
 
     def __init__(self, abbr_min=None, abbr_max=None, abbr_equivs=None):
         self.abbr_min = abbr_min if abbr_min is not None else self.abbr_min
@@ -50,6 +48,9 @@ class AbbreviationDetector(object):
             abbr_text = ''.join(tokens)
             if self.abbr_min <= len(abbr_text) <= self.abbr_max and bracket_level(abbr_text) == 0:
                 if abbr_text[0].isalnum() and any(c.isalpha() for c in abbr_text):
+                    # Disallow property values
+                    if re.match('^\d+(\.\d+)?(g|m[lL]|cm)$', abbr_text):
+                        return False
                     return True
         return False
 
@@ -132,6 +133,9 @@ class AbbreviationDetector(object):
         """"""
 
         def _is_valid(abbr, long):
+            # Disallowed characters - @ typically in emails
+            if '@' in long:
+                return False
             l_i = len(long) - 1
             for a_i in range(len(abbr) - 1, -1, -1):
                 current = abbr[a_i].lower()
@@ -224,5 +228,10 @@ class ChemAbbreviationDetector(AbbreviationDetector):
         ('ammonia', 'NH3'),
         ('ammonium', 'NH4'),
         ('methyl', 'CH3'),
-        ('nitro', 'NO2')
+        ('nitro', 'NO2'),
+        ('potassium carbonate', 'K2CO3'),
+        ('carbonate', 'CO3'),
+        ('borohydride', 'BH4'),
+        ('triethylamine', 'NEt3'),
+        ('triethylamine', 'Et3N'),
     ]
