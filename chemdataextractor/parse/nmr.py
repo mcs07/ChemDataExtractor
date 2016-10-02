@@ -21,7 +21,7 @@ import re
 
 from ..model import Compound, NmrSpectrum, NmrPeak
 from ..utils import first
-from .actions import join, merge, strip_stop, rejoin_hyphens
+from .actions import join, merge, strip_stop, fix_whitespace
 from .base import BaseParser
 from .common import cc, equals
 from .cem import chemical_name, nmr_solvent
@@ -46,7 +46,7 @@ frequency = (number('value') + R('^M?Hz$')('units'))('frequency')
 
 delim = R('^[;:,\./]$').hide()
 
-solvent = ((nmr_solvent | chemical_name) + Optional((R('^(\+|&|and)$') | cc) + (nmr_solvent | chemical_name)) + Optional(SkipTo(R('^([;:,\.\)]|at)$'))) + Optional(Optional(delim) + I('solvent').hide()))('solvent').add_action(join).add_action(rejoin_hyphens)
+solvent = ((nmr_solvent | chemical_name) + Optional((R('^(\+|&|and)$') | cc) + (nmr_solvent | chemical_name)) + Optional(SkipTo(R('^([;:,\.\)]|at)$'))) + Optional(Optional(delim) + I('solvent').hide()))('solvent').add_action(join).add_action(fix_whitespace)
 
 temp_value = (Optional(R('^[~∼\<\>]$')) + Optional(R('^[\-–−]$')) + R('^[\+\-–−]?\d+(\.\d+)?$'))('value').add_action(merge)
 temp_word = (I('room') + R('^temp(erature)?$') | R('^r\.?t\.?$', re.I))('value').add_action(join)
@@ -82,7 +82,7 @@ shift_value = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d
 shift_error = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d+)?,\d+(\.+\d+)?\.?$'))('shift').add_action(merge)
 shift = (shift_range | shift_value | shift_error).add_action(strip_stop).add_action(strip_delta)
 
-split = R('^(br?)?(s|S|d|D|t|T|q|Q|quint|sept|m|M|dd|ddd|dt|td|tt|br|bs|sb|h|ABq|broad|singlet|doublet|triplet|qua(rtet)?|septet|multiplet|multiple|peaks)$')
+split = R('^(br?)?(s|S|d|D|t|T|q|Q|quint|sept|m|M|dd|ddd|dt|td|tt|br|bs|sb|h|ABq|broad|singlet|doublet|triplet|qua(rtet)?|quintet|septet|multiplet|multiple|peaks)$')
 multiplicity = (OneOrMore(split) + Optional(W('of') + split))('multiplicity').add_action(join)
 
 coupling_value = (number + ZeroOrMore(R('^[,;&]$') + number + Not(W('H'))))('value').add_action(join)
@@ -99,7 +99,7 @@ peak_meta_options = multiplicity | coupling | number | assignment | note
 peak_meta = W('(').hide() + peak_meta_options + ZeroOrMore(ZeroOrMore(delim) + peak_meta_options) + Optional(delim) + W(')').hide()
 
 delta = (R('^[δd][HCNPF]?$') + Optional(equals)).hide()
-ppm = Optional(R('^[(\[]$')) + I('ppm') + Optional(R('^[)\]]$'))
+ppm = Optional(R('^[(\[]$')) + Optional(I('in')) + I('ppm') + Optional(R('^[)\]]$'))
 
 spectrum_meta = Optional(W('(').hide()) + (frequency | solvent | delta | temperature) + ZeroOrMore(Optional(delim) + (frequency | solvent | I('ppm') | delta | temperature)) + Optional(temperature) + Optional(W(')').hide())
 

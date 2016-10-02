@@ -14,6 +14,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 import logging
+import re
 
 from .elements import W, T, R, Optional
 
@@ -74,7 +75,7 @@ bcm = T('B-CM')
 icm = T('I-CM')
 
 # Roman numerals 1-9
-roman_numeral = R('^(I|II|III|IV|V|VI|VII|VIII|IX)$')
+roman_numeral = R('^(I|II|III|IV|V|VI|VII|VIII|IX|XI|XII|XIII|XIV)$', re.I)
 
 # Punctuation delimiter that is hidden
 delim = R('^[,:;\.\[\]\(\)\{\}/]$').hide()

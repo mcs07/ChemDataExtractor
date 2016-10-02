@@ -70,7 +70,7 @@ spectrum_meta = W('(').hide() + (units | solvent | nu) + ZeroOrMore(delim + (uni
 
 insolvent = T('IN') + solvent
 
-ir_type = (Optional(W('FT') + hyphen) + R('^(FT-?)?IR|FT-?IS|IR-ATR$') + Optional(hyphen + W('ATR')))('type')
+ir_type = (Optional(W('FT') + hyphen) + R('^(FT-?)?IR|FT-?IS|IR-ATR$') + Optional(hyphen + W('ATR')))('type').add_action(merge)
 
 prelude = (ir_type | R('^[vνυ]max$').hide()) + Optional(I('data')) + Optional(insolvent) + ZeroOrMore(spectrum_meta) + Optional(delim) + Optional(nu) + Optional(delim) + Optional(units)
 

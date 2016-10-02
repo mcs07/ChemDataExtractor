@@ -20,7 +20,7 @@ from .common import optdelim, hyphen, slash
 from ..utils import first
 from ..parse.base import BaseParser
 from ..model import Compound, QuantumYield, NmrSpectrum, UvvisSpectrum, IrSpectrum, MeltingPoint, FluorescenceLifetime
-from .actions import join, merge, rejoin_hyphens
+from .actions import join, merge, fix_whitespace
 from .cem import chemical_name
 from .elements import I, T, R, W, ZeroOrMore, Optional, Group, OneOrMore, Any, Not
 
@@ -30,7 +30,7 @@ dt = T('DT')
 
 quantum_yield = (W('PLQY') | Optional(I('fluorescence') | I('luminescence') | I('photoluminescence') | I('emission')) + I('quantum') + I('yield') + Optional(optdelim + W('PLQY') + optdelim))('quantum_yield').add_action(join)
 nmr = (W('NMR') | (I('nuclear') + I('magnetic') + I('resonance')) | W('1H') | W('13C'))('nmr').add_action(join)
-uvvis = (I('UV') + (hyphen | slash) + R('^vis(ible)?$', re.I) + Optional(R('^abs(or[bp]tion)?$')))('uvvis').add_action(join).add_action(rejoin_hyphens)
+uvvis = (I('UV') + (hyphen | slash) + R('^vis(ible)?$', re.I) + Optional(R('^abs(or[bp]tion)?$')))('uvvis').add_action(join).add_action(fix_whitespace)
 ir = (R('^(FT-?)?IR|FT-?IS$'))('ir').add_action(join)
 mp = (I('melting') + I('points'))('melting_point').add_action(join)
 pp = (I('photophysical') + (I('measurements') | I('properties')))('photophysical_properties').add_action(join)
@@ -44,7 +44,7 @@ apparatus_type = R('^\d{2,}$') + W('MHz')
 brands = I('HORIBA') + I('Jobin') + I('Yvon') | I('Hitachi') | I('Bruker') | I('Cary') | I('Jeol') | I('PerkinElmer') | I('Agilent') | I('Shimadzu') | I('Varian')
 models = I('FluoroMax-4') | I('F-7000') | I('AVANCE') | I('Digital') | R('\d\d\d+') | I('UV–vis-NIR') | I('Mercury') | I('Avatar') | I('thermonicolet') | I('pulsed') | I('Fourier') | I('transform')
 instrument = I('spectrofluorimeter') | I('spectrophotometer') | Optional(I('fluorescence')) + I('spectrometer') | Optional(I('nmr')) + I('workstation') | W('NMR') | I('instrument') | I('spectrometer')
-apparatus = (ZeroOrMore(T('JJ')) + Optional(apparatus_type) + OneOrMore(T('NNP') | T('NN') | brands) + ZeroOrMore(T('NNP') | T('NN') | T('HYPH') | T('CD') | brands | models) + Optional(instrument))('apparatus').add_action(join).add_action(rejoin_hyphens)
+apparatus = (ZeroOrMore(T('JJ')) + Optional(apparatus_type) + OneOrMore(T('NNP') | T('NN') | brands) + ZeroOrMore(T('NNP') | T('NN') | T('HYPH') | T('CD') | brands | models) + Optional(instrument))('apparatus').add_action(join).add_action(fix_whitespace)
 apparatus_blacklist = R('^(following|usual|equation|standard|accepted|method)$', re.I)
 apparatus_phrase = (W('with') | W('using') | W('on')).hide() + Optional(dt).hide() + Not(apparatus_blacklist) + apparatus
 
@@ -57,7 +57,7 @@ temperature_phrase = Optional(I('at').hide()) + Group((temp + temp_units) | temp
 
 solvent_phrase = (I('in').hide() + chemical_name)('solvent')
 
-standard = (ZeroOrMore(T('JJ')) + OneOrMore(T('NNP') | T('NN') | T('HYPH') | T('CD') | T('B-CM') | T('I-CM')))('standard').add_action(join).add_action(rejoin_hyphens)
+standard = (ZeroOrMore(T('JJ')) + OneOrMore(T('NNP') | T('NN') | T('HYPH') | T('CD') | T('B-CM') | T('I-CM')))('standard').add_action(join).add_action(fix_whitespace)
 standard_phrase = (W('with') | W('using')).hide() + Optional(dt).hide() + standard + (ZeroOrMore(W('as') | dt) + Optional(T('JJ')) + I('standard')).hide()
 
 context_phrase = Group(measurement + optdelim + Optional(result_noun).hide() + Optional(T('VBD')).hide() + ZeroOrMore(Not(verb) + Any()).hide() + verb.hide() + OneOrMore(standard_phrase | apparatus_phrase | temperature_phrase | solvent_phrase | Any().hide()))('context_phrase')

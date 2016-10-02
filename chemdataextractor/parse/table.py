@@ -21,9 +21,9 @@ from .common import delim
 from ..utils import first
 from ..model import Compound, UvvisSpectrum, UvvisPeak, QuantumYield, FluorescenceLifetime, MeltingPoint
 from ..model import ElectrochemicalPotential, IrSpectrum, IrPeak
-from .actions import join, merge, rejoin_hyphens
+from .actions import join, merge, fix_whitespace
 from .base import BaseParser
-from .cem import chemical_label, label_before_name, chemical_name, chemical_label_phrase, solvent_name
+from .cem import chemical_label, label_before_name, chemical_name, chemical_label_phrase, solvent_name, lenient_chemical_label
 from .elements import R, I, W, Optional, ZeroOrMore, Any, OneOrMore, Start, End, Group, Not
 
 log = logging.getLogger(__name__)
@@ -42,8 +42,9 @@ solvent_in_heading = Group(solvent_name)('cem')
 solvent_cell = Group(solvent_name | chemical_name)('cem')
 compound_cell = Group(
     (Start() + chemical_label + End())('cem') |
+    (Start() + lenient_chemical_label + End())('cem') |
     chemical_label_phrase('cem') |
-    (Not(Start() + OneOrMore(name_blacklist) + End()) + OneOrMore(Any())('name').add_action(join).add_action(rejoin_hyphens) + Optional(W('(').hide() + chemical_label + W(')').hide()))('cem') |
+    (Not(Start() + OneOrMore(name_blacklist) + End()) + OneOrMore(Any())('name').add_action(join).add_action(fix_whitespace) + Optional(W('(').hide() + chemical_label + W(')').hide()))('cem') |
     label_before_name
 )('cem_phrase')
 

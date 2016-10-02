@@ -63,10 +63,11 @@ def strip_stop(tokens, start, result):
     return result
 
 
-def rejoin_hyphens(tokens, start, result):
-    """Remove whitespace around hyphens. Can be used to remove whitespace tokenization artefacts."""
+def fix_whitespace(tokens, start, result):
+    """Fix whitespace around hyphens and commas. Can be used to remove whitespace tokenization artefacts."""
     for e in result:
         for child in e.iter():
+            child.text = child.text.replace(' , ', ', ')
             for hyphen in HYPHENS:
                 child.text = child.text.replace(' %s ' % hyphen, '%s' % hyphen)
             child.text = re.sub(r'- (.) -', r'-\1-', child.text)
