@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-chemdataextractor.cli.punkt
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+chemdataextractor.cli.tokenize
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Punkt sentence tokenizer command line interface.
+Tokenizer command line interface.
 
 :copyright: Copyright 2016 by Matt Swain.
 :license: MIT, see LICENSE file for more details.
@@ -12,26 +12,33 @@ Punkt sentence tokenizer command line interface.
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+import logging
+import sys
 
 import click
 
+from ..doc import Document, Text
 
-@click.group(name='punkt')
+
+log = logging.getLogger(__name__)
+
+
+@click.group(name='tokenize')
 @click.pass_context
-def punkt_cli(ctx):
-    """Sentence tokenizer commands."""
+def tokenize_cli(ctx):
+    """Tokenizer commands."""
     pass
 
 
-@punkt_cli.command()
+@tokenize_cli.command()
 @click.option('--output', '-o', type=click.File('wb'), help='Output model file.', required=True)
 @click.option('--abbr', '-a', type=click.File('r', encoding='utf8'), help='Force abbreviations.', required=False)
 @click.option('--colloc', '-c', type=click.File('r', encoding='utf8'), help='Force collocations.', required=False)
 @click.argument('input', type=click.File('r', encoding='utf8'), required=True, nargs=-1)
 @click.pass_obj
-def train(ctx, input, output, abbr, colloc):
+def train_punkt(ctx, input, output, abbr, colloc):
     """Train Punkt sentence splitter using sentences in input."""
-    click.echo('chemdataextractor.punkt.train')
+    click.echo('chemdataextractor.tokenize.train_punkt')
     import pickle
     from nltk.tokenize.punkt import PunktSentenceTokenizer, PunktTrainer
     punkt = PunktTrainer()
@@ -57,4 +64,33 @@ def train(ctx, input, output, abbr, colloc):
     pickle.dump(model, output, protocol=pickle.HIGHEST_PROTOCOL)
 
 
-# TODO: tokenize command
+@tokenize_cli.command()
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.pass_obj
+def sentences(ctx, input, output):
+    """Read input document, and output sentences."""
+    log.info('chemdataextractor.read.elements')
+    log.info('Reading %s' % input.name)
+    doc = Document.from_file(input)
+    for element in doc.elements:
+        if isinstance(element, Text):
+            for raw_sentence in element.raw_sentences:
+                output.write(raw_sentence.strip())
+                output.write('\n')
+
+
+@tokenize_cli.command()
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.pass_obj
+def words(ctx, input, output):
+    """Read input document, and output words."""
+    log.info('chemdataextractor.read.elements')
+    log.info('Reading %s' % input.name)
+    doc = Document.from_file(input)
+    for element in doc.elements:
+        if isinstance(element, Text):
+            for sentence in element.sentences:
+                output.write(' '.join(sentence.raw_tokens))
+                output.write('\n')
