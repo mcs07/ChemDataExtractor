@@ -316,6 +316,7 @@ class Sentence(BaseText):
     @memoized_property
     def pos_tagged_tokens(self):
         """Return a list of part of speech tags for the tokens in this sentence."""
+        # log.debug('Getting pos tags')
         return self.pos_tagger.tag(self.raw_tokens)
 
     @property
@@ -327,8 +328,9 @@ class Sentence(BaseText):
     def unprocessed_ner_tagged_tokens(self):
         """Return a list of unprocessed named entity recognition tags for the tokens in this sentence.
 
-        Output from ner_taggers is combined. No corrections from abbreviation detection are performed.
+        No corrections from abbreviation detection are performed.
         """
+        # log.debug('Getting unprocessed_ner_tags')
         return self.ner_tagger.tag(self.pos_tagged_tokens)
 
     @memoized_property
@@ -337,7 +339,6 @@ class Sentence(BaseText):
 
         No corrections from abbreviation detection are performed.
         """
-        log.debug('Getting unprocessed_ner_tags')
         return [tag for token, tag in self.unprocessed_ner_tagged_tokens]
 
     @memoized_property
@@ -345,7 +346,7 @@ class Sentence(BaseText):
         """Return a list of (abbreviation, long, ner_tag) tuples."""
         abbreviations = []
         if self.abbreviation_detector:
-            log.debug('Detecting abbreviations')
+            # log.debug('Detecting abbreviations')
             ners = self.unprocessed_ner_tags
             for abbr_span, long_span in self.abbreviation_detector.detect_spans(self.raw_tokens):
                 abbr = self.raw_tokens[abbr_span[0]:abbr_span[1]]
@@ -365,10 +366,11 @@ class Sentence(BaseText):
     @memoized_property
     def ner_tags(self):
         """"""
-        log.debug('Getting ner_tags')
+        # log.debug('Getting ner_tags')
         ner_tags = self.unprocessed_ner_tags
         abbrev_defs = self.document.abbreviation_definitions if self.document else self.abbreviation_definitions
         # Ensure abbreviation entity matches long entity
+        # TODO: This is potentially a performance bottleneck?
         for i in range(0, len(ner_tags)):
             for abbr, long, ner_tag in abbrev_defs:
                 if abbr == self.raw_tokens[i:i+len(abbr)]:
@@ -391,7 +393,7 @@ class Sentence(BaseText):
 
     @memoized_property
     def cems(self):
-        log.debug('Getting cems')
+        # log.debug('Getting cems')
         spans = []
         # print(self.text.encode('utf8'))
         for result in chemical_name.scan(self.tagged_tokens):
