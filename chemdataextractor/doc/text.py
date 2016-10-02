@@ -175,6 +175,22 @@ class Text(BaseText):
         """Return a list of part of speech tags for each sentence in this text passage."""
         return [sent.pos_tags for sent in self.sentences]
 
+    @memoized_property
+    def unprocessed_ner_tagged_tokens(self):
+        """Return a list of unprocessed named entity recognition tags for the tokens in this sentence.
+
+        No corrections from abbreviation detection are performed.
+        """
+        return [sent.unprocessed_ner_tagged_tokens for sent in self.sentences]
+
+    @memoized_property
+    def unprocessed_ner_tags(self):
+        """Return a list of unprocessed named entity tags for the tokens in this sentence.
+
+        No corrections from abbreviation detection are performed.
+        """
+        return [sent.unprocessed_ner_tags for sent in self.sentences]
+
     @property
     def ner_tagged_tokens(self):
         """Return a list of (token, tag) tuples for each sentence in this text passage."""
