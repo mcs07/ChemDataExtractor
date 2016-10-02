@@ -16,7 +16,7 @@ from __future__ import unicode_literals
 import logging
 
 from schematics.models import Model as SchematicsModel
-from schematics.types import StringType
+from schematics.types import StringType, BooleanType
 from schematics.types.compound import ListType, ModelType
 
 
@@ -150,6 +150,7 @@ class ElectrochemicalPotential(BaseModel):
 class Compound(BaseModel):
     names = ListType(StringType(), default=[])
     labels = ListType(StringType(), default=[])
+    roles = ListType(StringType(), default=[])
     nmr_spectra = ListType(ModelType(NmrSpectrum), default=[])
     ir_spectra = ListType(ModelType(IrSpectrum), default=[])
     uvvis_spectra = ListType(ModelType(UvvisSpectrum), default=[])
@@ -211,3 +212,13 @@ class Compound(BaseModel):
                 if item.get('value') or (item.get('peaks') and any(p.get('value') or p.get('extinction') or p.get('shift') for p in item.get('peaks'))):
                     return False
         return True
+
+    @property
+    def is_id_only(self):
+        """Return True if identifier information only."""
+        for key, value in self.items():
+            if key not in {'names', 'labels', 'roles'} and value:
+                return False
+        if self.names or self.labels:
+            return True
+        return False
