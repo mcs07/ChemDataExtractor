@@ -77,6 +77,10 @@ class LxmlReader(six.with_metaclass(ABCMeta, BaseReader)):
         elif references:
             elements.append(element_cls('', id=id, references=references))
         for child in el:
+            # br is a special case - technically inline, but we want to split
+            if child.tag not in {etree.Comment, etree.ProcessingInstruction} and child.tag.lower() == 'br':
+                elements.append(element_cls(''))
+
             child_elements = self._parse_element_r(child, specials=specials, refs=refs, id=id, element_cls=element_cls)
             if (self._is_inline(child) and len(elements) > 0 and len(child_elements) > 0 and
                     isinstance(elements[-1], (Text, Sentence)) and isinstance(child_elements[0], (Text, Sentence)) and
