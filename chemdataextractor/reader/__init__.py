@@ -15,6 +15,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 from .acs import AcsHtmlReader
+from .cssp import CsspHtmlReader
 from .markup import HtmlReader, XmlReader
 from .pdf import PdfReader
 from .plaintext import PlainTextReader
@@ -28,6 +29,7 @@ DEFAULT_READERS = [
     RscHtmlReader(),
     NlmXmlReader(),
     UsptoXmlReader(),
+    CsspHtmlReader(),
     XmlReader(),
     HtmlReader(),
     PdfReader(),
