@@ -179,59 +179,62 @@ class Table(CaptionedElement):
         #                 # print('Footnote records: %s' % [c.to_primitive() for c in footnote.records])
         #                 header_compounds[i].extend(footnote.records)
 
-        # If no CompoundCellParser() in value_parsers and value_parsers[0] == [] then set CompoundCellParser()
-        if not seen_compound_col and 0 not in value_parsers:
-            log.debug('No compound column found in table, assuming first column')
-            value_parsers[0] = CompoundCellParser()
+        # If no parsers, skip processing table
+        if value_parsers:
 
-        for row in self.rows:
-            row_compound = Compound()
-            # Keep cell records that are contextual to merge at the end
-            contextual_cell_compounds = []
-            for i, cell in enumerate(row):
-                log.debug(cell.tagged_tokens)
-                if i in value_parsers:
-                    results = list(value_parsers[i].parse(cell.tagged_tokens))
-                    if results:
-                        log.debug('Cell column %s: Match %s: %s' % (i, value_parsers[i].__class__.__name__, [c.to_primitive() for c in results]))
-                    # For each result, merge in values from elsewhere
-                    for result in results:
-                        # Merge each header_compounds[i]
-                        for header_compound in header_compounds[i]:
-                            if header_compound.is_contextual:
-                                result.merge_contextual(header_compound)
-                        # Merge footnote compounds
-                        for footnote in self.footnotes:
-                            if footnote.id in cell.references:
-                                for footnote_compound in footnote.records:
-                                    result.merge_contextual(footnote_compound)
-                        if result.is_contextual:
-                            # Don't merge cell as a value compound if there are no values
-                            contextual_cell_compounds.append(result)
-                        else:
-                            row_compound.merge(result)
-            # Merge contextual information from cells
-            for contextual_cell_compound in contextual_cell_compounds:
-                row_compound.merge_contextual(contextual_cell_compound)
-            # If no compound name/label, try take from previous row
-            if not row_compound.names and not row_compound.labels and table_records:
-                prev = table_records[-1]
-                row_compound.names = prev.names
-                row_compound.labels = prev.labels
-            # Merge contextual information from caption into the full row
-            for caption_compound in caption_records:
-                if caption_compound.is_contextual:
-                    row_compound.merge_contextual(caption_compound)
-            # And also merge from any footnotes that are referenced from the caption
-            for footnote in self.footnotes:
-                if footnote.id in self.caption.references:
-                    # print('Footnote records: %s' % [c.to_primitive() for c in footnote.records])
-                    for fn_compound in footnote.records:
-                        row_compound.merge_contextual(fn_compound)
+            # If no CompoundCellParser() in value_parsers and value_parsers[0] == [] then set CompoundCellParser()
+            if not seen_compound_col and 0 not in value_parsers:
+                log.debug('No compound column found in table, assuming first column')
+                value_parsers[0] = CompoundCellParser()
 
-            log.debug(row_compound.to_primitive())
-            if row_compound.to_primitive():
-                table_records.append(row_compound)
+            for row in self.rows:
+                row_compound = Compound()
+                # Keep cell records that are contextual to merge at the end
+                contextual_cell_compounds = []
+                for i, cell in enumerate(row):
+                    log.debug(cell.tagged_tokens)
+                    if i in value_parsers:
+                        results = list(value_parsers[i].parse(cell.tagged_tokens))
+                        if results:
+                            log.debug('Cell column %s: Match %s: %s' % (i, value_parsers[i].__class__.__name__, [c.to_primitive() for c in results]))
+                        # For each result, merge in values from elsewhere
+                        for result in results:
+                            # Merge each header_compounds[i]
+                            for header_compound in header_compounds[i]:
+                                if header_compound.is_contextual:
+                                    result.merge_contextual(header_compound)
+                            # Merge footnote compounds
+                            for footnote in self.footnotes:
+                                if footnote.id in cell.references:
+                                    for footnote_compound in footnote.records:
+                                        result.merge_contextual(footnote_compound)
+                            if result.is_contextual:
+                                # Don't merge cell as a value compound if there are no values
+                                contextual_cell_compounds.append(result)
+                            else:
+                                row_compound.merge(result)
+                # Merge contextual information from cells
+                for contextual_cell_compound in contextual_cell_compounds:
+                    row_compound.merge_contextual(contextual_cell_compound)
+                # If no compound name/label, try take from previous row
+                if not row_compound.names and not row_compound.labels and table_records:
+                    prev = table_records[-1]
+                    row_compound.names = prev.names
+                    row_compound.labels = prev.labels
+                # Merge contextual information from caption into the full row
+                for caption_compound in caption_records:
+                    if caption_compound.is_contextual:
+                        row_compound.merge_contextual(caption_compound)
+                # And also merge from any footnotes that are referenced from the caption
+                for footnote in self.footnotes:
+                    if footnote.id in self.caption.references:
+                        # print('Footnote records: %s' % [c.to_primitive() for c in footnote.records])
+                        for fn_compound in footnote.records:
+                            row_compound.merge_contextual(fn_compound)
+
+                log.debug(row_compound.to_primitive())
+                if row_compound.to_primitive():
+                    table_records.append(row_compound)
 
         # TODO: If no rows have name or label, see if one is in the caption
 
