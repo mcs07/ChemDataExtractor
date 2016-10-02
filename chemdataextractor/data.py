@@ -91,6 +91,7 @@ class Package(object):
 #: Current active data packages
 PACKAGES = [
     Package('models/cem_crf-1.0.pickle'),
+    Package('models/cem_crf_chemdner_cemp-1.0.pickle'),
     Package('models/cem_dict_cs-1.0.pickle'),
     Package('models/cem_dict-1.0.pickle'),
     Package('models/clusters_chem1500-1.0.pickle'),

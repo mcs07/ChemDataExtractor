@@ -91,7 +91,7 @@ STRIP_END = [
     'derivatives', 'derivative', 'analog', 'salts', 'salt', 'minerals', 'mineral', 'anesthetic', 'tablet', 'tablets',
     'preparation', 'atoms', 'atom', 'monomers', 'monomer', 'nanoparticles', 'nanoparticle', 'radicals', 'radical',
     'dendrimers', 'dendrimer', 'ions', 'ion', 'particles', 'particle', 'anion', 'cation', 'foam', 'cellulose',
-    'dextran', '(', 'dust', 'herbicide', 'disease', 'diseases', 'and', 'or'
+    'dextran', '(', 'dust', 'herbicide', 'disease', 'diseases', 'and', 'or', ';', ',', '.'
 ]
 
 #: First tokens to remove from entity matches
@@ -113,7 +113,19 @@ STOP_TOKENS = {
     'july', 'august', 'september', 'october', 'november', 'december', 'esi', '†', '§', 'london', 'paris', 'tokyo',
     'york', 'angeles', 'francisco', 'berlin', 'bristol', 'southampton', 'edinburgh', 'chicago', 'cambridge', 'oxford',
     'parameters', 'volume', 'dielectric', 'cm–1', 'measurements', 'studies', 'imaging', 'ccdc', 'sigma-aldrich',
-    'scientifique', 'china',
+    'scientifique', 'china', 'fig.', 'approach', 'colored', 'isbn', 'having', 'background', 'method', 'methods',
+    'results', 'discussion', 'introduction', 'conclusion', 'conclusions', 'prior', 'technical', 'nano-beads',
+    'nanobeads', 'test', 'production', 'priority', 'claim', 'claims', 'journal', 'journals', 'letters', 'phenomena',
+    'article', 'articles', 'ethical', 'guidelines', 'editor', 'editors', 'profile', 'editorial', 'masthead', 'citing',
+    'download', 'citation', 'members', 'privacy', 'policy', 'help', 'chemworx', 'biochemistry', 'energy', 'more',
+    'syntheticpage', 'contact', 'fluorochem', '.cdx', '.sk2', 'email', 'affiliation', 'affiliations', 'bibtex',
+    'medline', 'marinlit', 'chemspider', 'permissions', 'ekins', 'edit', 'links', 'link', 'english', 'italiano',
+    'esperanto', 'español', 'wikimedia', 'upload', 'file', 'account', 'personal', 'navigation', 'menu', 'external',
+    'references', 'safety', 'pharmacology', 'coffee', 'research', 'bibliography', 'tobacco', 'palestine', 'doctrine',
+    'napoleon', 'azərbaycanca', 'euskara', 'latviešu', 'nordfriisk', 'नेपाल भाषा', 'children', 'overdose', 'chocolate',
+    'systematic', 'google', 'literature', 'books', 'docking', 'chromatography', 'libraries', 'retention', 'index',
+    'danielle', 'claire', 'rachel', 'zhang', 'linkedin', 'magazine', 'america', 'ireland',
+
 }
 
 #: Disallowed substrings in chemical entity mentions (only used when filtering to construct the dictionary?)
@@ -267,7 +279,9 @@ STOPLIST = {
     'test mixture', 'prothrombinase', 'terpolymer', 'methods', 'section', 'reactivity', 'safety', 'method',
     'experimental', 'discussion', 'synthesis', 'experimental procedures', 'general experimental', 'introduction',
     'results', 'reactions', 'stability', 'multiple', 'crystallography', 'compound', 'syntheses', 'crystal',
-    'conclusion', 'references', 'charged',
+    'conclusion', 'references', 'charged', 'nucleotide', 'candidate molecules', 'heteroatoms', 'solvent', 'preparation',
+    'formulation', 'omega', 'mol', 'res', 'log in', 'heterocyclic', 'organometallic', 'organometallics', 'nucleobase',
+    'organometalloidal', 'acs nano', 'acs omega', 'acs mobile', 'mobile site', 'new titles', 'x close', 'press',
 
     # Removed: 'gaba', 'gaba(a)', 'alcohol', 'oxide', 'ccl4', 'sugar',
 }
@@ -282,10 +296,19 @@ STOP_RES = [
     '\d{3,} , \d{3,}',  # numbers
     '(\d\d+\.\d+|\d\.\d\d+)',  # numbers
     '\d and \d',  # numbers
+    '^(\[\d+\]\s*)+$',  # numbers
+    '^\d+$',  # numbers
     '= \d',  # numbers
+    '^\+?\d[ \d-]$',  # phone numbers
     'cm-1',  # units
+    '^(compound|ligand|chemical|dye|derivative|complex|example|intermediate|product|formulae?)s? [a-z\d]{1,3}',  # labels
     '(b3lyp|31g\(d,p\)|td-dft)',
-    'et al\.?$'
+    'et al\.?$',
+    '^(ep|wo|us)\s*\d\s*\d\d[\d\s]*([AB]\d)?($|\s*and)',  # patent numbers
+    '^(pre|post)-\d\d\d\d',  # common mistake
+    '\d ml$',  # properties
+    '\.(png|gif|jpg|txt|html|docx?|xlsx?)$',  # File extensions
+    '^(tel|fax)\s*:?\s*\+?\s*\d',  # phone numbers
 ]
 
 #: Regular expressions defining collections of words that should be split if joined by hyphens or -to-
@@ -303,7 +326,7 @@ SPLITS = [
     '^(ester|amide)$'
 ]
 
-# Special case boundary adjustments
+# Special case boundary adjustments (only used for cems output)
 SPECIALS = [
     '(?:^|-)([CONS])-\w+ases?$',
     '(?:^|-)(S)-(sulfonates?)$',
@@ -345,7 +368,7 @@ class CsDictCemTagger(DictionaryTagger):
 
 class CrfCemTagger(CrfTagger):
     """"""
-    model = 'models/cem_crf-1.0.pickle'
+    model = 'models/cem_crf_chemdner_cemp-1.0.pickle'
     lexicon = ChemLexicon()
     clusters = True
 
@@ -502,7 +525,7 @@ class CemTagger(BaseTagger):
                 entity = entity[len(prefix):]
         if entity in STOPLIST:
             return True
-        log.debug('Entity: %s', entity)
+        # log.debug('Entity: %s', entity)
         for stop_re in STOP_RES:
             if re.search(stop_re, entity):
                 log.debug('Killed: %s', entity)
@@ -545,6 +568,13 @@ class CemTagger(BaseTagger):
                         entity_tokens.append(self.lexicon[tokens[i+j+1][0]].lower)
                     else:
                         break
+
+                # Fix combined '1H NMR' on end  # TODO: Also 13C, etc.?
+                if len(entity_tokens) > 2 and entity_tokens[-1] == 'nmr' and entity_tokens[-2] == '1h':
+                    tags[end_i-2] = 'B-CM'
+                    tags[end_i-1] = None
+                    entity_tokens = entity_tokens[:-2]
+
                 entity = ' '.join(entity_tokens)
                 if any(e in STOP_TOKENS for e in entity_tokens) or self._in_stoplist(entity):
                     tags[i:end_i] = [None] * (end_i - i)
