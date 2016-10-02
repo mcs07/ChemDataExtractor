@@ -47,14 +47,14 @@ class UsptoXmlReader(XmlReader):
         '{http://www.w3.org/1998/math/mathml}math', '{http://www.w3.org/1998/math/mathml}msubsup',
         '{http://www.w3.org/1998/math/mathml}mrow', '{http://www.w3.org/1998/math/mathml}mo',
         '{http://www.w3.org/1998/math/mathml}mi', '{http://www.w3.org/1998/math/mathml}mn',
-        'claim-ref'
+        'claim-ref', 'figref'
     }
 
     def detect(self, fstring, fname=None):
         """"""
         if fname and not fname.lower().endswith('.xml'):
             return False
-        if b'us-patent-grant-v42-2006-08-23.dtd' in fstring:
+        if b'us-patent-grant' in fstring:
             return True
         # TODO: Other DTDs
         return False
@@ -117,6 +117,8 @@ class UsptoXmlReader(XmlReader):
                 footnotes.append(Footnote(r[0].text))
                 continue
             rows.append(r)
+        for r in hrows:
+            r.extend([Cell('')] * (len(max(hrows, key=len)) - len(r)))
         for r in rows:
             r.extend([Cell('')] * (len(max(rows, key=len)) - len(r)))
         rows = [r for r in rows if any(r)]
