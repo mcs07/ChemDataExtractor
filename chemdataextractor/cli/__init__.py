@@ -20,6 +20,7 @@ import logging
 import sys
 
 import click
+import six
 
 from .. import __version__
 from ..doc import Document
@@ -55,7 +56,20 @@ def extract(ctx, input, output):
     output.write(jsonstring)
 
 
-from . import cluster, config, data, tokenize, pos, chemdner, cem, dict, evaluate, read
+@cli.command()
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.pass_obj
+def read(ctx, input, output):
+    """Output processed document elements."""
+    log.info('chemdataextractor.read')
+    log.info('Reading %s' % input.name)
+    doc = Document.from_file(input)
+    for element in doc.elements:
+        output.write('%s : %s\n=====\n' % (element.__class__.__name__, six.text_type(element)))
+
+
+from . import cluster, config, data, tokenize, pos, chemdner, cem, dict, evaluate
 
 
 cli.add_command(cluster.cluster_cli)
@@ -67,4 +81,3 @@ cli.add_command(chemdner.chemdner_cli)
 cli.add_command(cem.cem)
 cli.add_command(dict.dict_cli)
 cli.add_command(evaluate.evaluate)
-cli.add_command(read.read_cli)
