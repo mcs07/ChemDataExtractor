@@ -12,11 +12,17 @@ Part of speech tagging commands.
 from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
+import logging
+import sys
 
 import click
 
+from ..doc import Document, Text
 from ..nlp.corpus import genia_training, wsj_training, wsj_evaluation, genia_evaluation
 from ..nlp.pos import TAGS, ChemApPosTagger, ChemCrfPosTagger
+
+
+log = logging.getLogger(__name__)
 
 
 @click.group(name='pos')
@@ -246,17 +252,17 @@ def evaluate_perceptron(ctx, model, corpus):
     click.echo('%s on %s: %s' % (model, evaluation, accuracy))
 
 
-# @pos_cli.command()
-# @click.argument('model', required=True)
-# @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-# @click.pass_obj
-# def tag(ctx, model, output):
-#     """Tag text using Averaged Perceptron POS Tagger."""
-#     click.echo('chemdataextractor.pos.tag')
-#     from ..nlp.corpus import cde_tokensc
-#     from ..nlp.tag import PerceptronTagger
-#     tagger = PerceptronTagger(model=model)
-#     for sent in cde_tokensc.sents():
-#         #click.echo(' '.join('/'.join(tt) for tt in tagger.tag(sent)))
-#         output.write(' '.join('/'.join(tt) for tt in tagger.tag(sent)))
-#         output.write('\n')
+@pos_cli.command()
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.pass_obj
+def tag(ctx, input, output):
+    """Output POS-tagged tokens."""
+    log.info('chemdataextractor.pos.tag')
+    log.info('Reading %s' % input.name)
+    doc = Document.from_file(input)
+    for element in doc.elements:
+        if isinstance(element, Text):
+            for sentence in element.sentences:
+                output.write(' '.join('/'.join([token, tag]) for token, tag in sentence.pos_tagged_tokens))
+                output.write('\n')
