@@ -88,7 +88,7 @@ class Document(BaseDocument):
                 continue
             try:
                 d = reader.readstring(fstring)
-                log.info('Parsed document with %s' % reader.__class__.__name__)
+                log.debug('Parsed document with %s' % reader.__class__.__name__)
                 return d
             except ReaderError:
                 pass
