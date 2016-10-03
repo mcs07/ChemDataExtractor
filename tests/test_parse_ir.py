@@ -55,6 +55,11 @@ class TestParseIr(unittest.TestCase):
         expected = '<ir><type>FTIR</type><solvent>KBr</solvent><units>cm\u20121</units><peaks><peak><value>3315</value></peak><peak><value>3002</value></peak><peak><value>1630</value></peak><peak><value>1593</value><bond>\u03bdCH = N</bond></peak><peak><value>1251</value></peak></peaks></ir>'
         self.do_parse(s, expected)
 
+    def test_ir4(self):
+        s = 'IR-ATR:  3380, 3190,  2973, 2873, 1669, 1646, 1602, 1495, 1178, 828 cm-1.'
+        expected = '<ir><type>IR-ATR</type><peaks><peak><value>3380</value></peak><peak><value>3190</value></peak><peak><value>2973</value></peak><peak><value>2873</value></peak><peak><value>1669</value></peak><peak><value>1646</value></peak><peak><value>1602</value></peak><peak><value>1495</value></peak><peak><value>1178</value></peak><peak><value>828</value></peak></peaks><units>cm-1</units></ir>'
+        self.do_parse(s, expected)
+
 
 if __name__ == '__main__':
     unittest.main()

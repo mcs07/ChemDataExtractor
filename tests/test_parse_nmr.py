@@ -113,6 +113,18 @@ class TestParseNmr(unittest.TestCase):
         expected = '<nmr><nucleus>13C</nucleus><frequency><value>75</value><units>MHz</units></frequency><solvent>CDCl3</solvent><peaks><peak><shift>37.8</shift><assignment>CH3</assignment></peak><peak><shift>103.4</shift><assignment>CH</assignment></peak><peak><shift>126.0</shift><assignment>CH</assignment></peak><peak><shift>127.1</shift><assignment>CH</assignment></peak><peak><shift>127.4</shift><assignment>CH</assignment></peak><peak><shift>127.5</shift><assignment>CH</assignment></peak><peak><shift>128.7</shift><assignment>CH</assignment></peak><peak><shift>128.87</shift><assignment>CH</assignment></peak><peak><shift>128.90</shift><number>4</number><assignment>CH</assignment></peak><peak><shift>130.8</shift><assignment>Cquat</assignment></peak><peak><shift>132.6</shift><assignment>Cquat</assignment></peak><peak><shift>140.4</shift><assignment>Cquat</assignment></peak><peak><shift>141.0</shift><assignment>Cquat</assignment></peak><peak><shift>145.3</shift><assignment>Cquat</assignment></peak><peak><shift>150.3</shift><assignment>Cquat</assignment></peak></peaks></nmr>'
         self.do_parse(s, expected)
 
+    def test_nmr12(self):
+        """"""
+        s = '1H NMR (400 MHz, DMSO-d6): ppm = 2.07 (s, 6H, CH3), 5.40 (s, 2H, CH) 6.90 (d, 4H, J= 8.9 Hz,  CHAr), 7.25-7.38 (m, 10H, CHAr), 7.5 (d, 4H, J= 8.9 Hz, CHAr), 9.42 (s, 2H, NH), 9.73 (s, 2H, NH), 9.98 (s, 2H, NH).'
+        expected = '<nmr><nucleus>1H</nucleus><frequency><value>400</value><units>MHz</units></frequency><solvent>DMSO-d6</solvent><peaks><peak><shift>2.07</shift><multiplicity>s</multiplicity><number>6H</number><assignment>CH3</assignment></peak><peak><shift>5.40</shift><multiplicity>s</multiplicity><number>2H</number><assignment>CH</assignment></peak><peak><shift>6.90</shift><multiplicity>d</multiplicity><number>4H</number><coupling><value>8.9</value><units>Hz</units></coupling><assignment>CHAr</assignment></peak><peak><shift>7.25-7.38</shift><multiplicity>m</multiplicity><number>10H</number><assignment>CHAr</assignment></peak><peak><shift>7.5</shift><multiplicity>d</multiplicity><number>4H</number><coupling><value>8.9</value><units>Hz</units></coupling><assignment>CHAr</assignment></peak><peak><shift>9.42</shift><multiplicity>s</multiplicity><number>2H</number><assignment>NH</assignment></peak><peak><shift>9.73</shift><multiplicity>s</multiplicity><number>2H</number><assignment>NH</assignment></peak><peak><shift>9.98</shift><multiplicity>s</multiplicity><number>2H</number><assignment>NH</assignment></peak></peaks></nmr>'
+        self.do_parse(s, expected)
+
+    def test_nmr13(self):
+        """"""
+        s = '1H NMR (CDCl3; δ in ppm): 0.16-0.51 (t, 12H), 1.75-2.21 (m, 8H), 5.16 (s, 2H), 7.00-8.21 (m, 25 Ar—H).'
+        expected = '<nmr><nucleus>1H</nucleus><solvent>CDCl3</solvent><peaks><peak><shift>0.16-0.51</shift><multiplicity>t</multiplicity><number>12H</number></peak><peak><shift>1.75-2.21</shift><multiplicity>m</multiplicity><number>8H</number></peak><peak><shift>5.16</shift><multiplicity>s</multiplicity><number>2H</number></peak><peak><shift>7.00-8.21</shift></peak></peaks></nmr>'
+        self.do_parse(s, expected)
+
 
 if __name__ == '__main__':
     unittest.main()
