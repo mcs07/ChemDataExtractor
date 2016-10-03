@@ -30,17 +30,15 @@ from ..errors import ReaderError
 log = logging.getLogger(__name__)
 
 
+@six.python_2_unicode_compatible
 class BaseDocument(six.with_metaclass(ABCMeta, collections.Sequence)):
     """Abstract base class for a Document."""
 
     def __repr__(self):
-        return '%s(%r)' % (self.__class__.__name__, self.elements)
-
-    def __unicode__(self):
-        return '%s()' % self.__class__.__name__
+        return '<%s: %s elements>' % (self.__class__.__name__, len(self))
 
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return '<%s: %s elements>' % (self.__class__.__name__, len(self))
 
     def __getitem__(self, index):
         return self.elements[index]

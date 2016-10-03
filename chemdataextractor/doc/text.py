@@ -58,11 +58,8 @@ class BaseText(BaseElement):
     def __repr__(self):
         return '%s(id=%r, references=%r, text=%r)' % (self.__class__.__name__, self.id, self.references, self._text.encode('utf8'))
 
-    def __unicode__(self):
-        return self._text
-
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return self._text
 
     @property
     def text(self):
@@ -530,6 +527,7 @@ class Sentence(BaseText):
         return NotImplemented
 
 
+@six.python_2_unicode_compatible
 class Span(object):
     """A text span within a sentence."""
 
@@ -544,11 +542,8 @@ class Span(object):
     def __repr__(self):
         return '%s(%r, %r, %r)' % (self.__class__.__name__, self.text.encode('utf8'), self.start, self.end)
 
-    def __unicode__(self):
-        return self.text
-
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return self.text
 
     @property
     def length(self):

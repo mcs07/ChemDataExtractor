@@ -19,6 +19,7 @@ import json
 import six
 
 
+@six.python_2_unicode_compatible
 class BaseElement(six.with_metaclass(ABCMeta)):
     """Abstract base class for a Document Element."""
 
@@ -30,7 +31,10 @@ class BaseElement(six.with_metaclass(ABCMeta)):
         self.references = references if references is not None else []
 
     def __repr__(self):
-        return '%s(%r)' % (self.__class__.__name__, self.id.encode('utf8'))
+        return '<%s: %r>' % (self.__class__.__name__, self.id.encode('utf8'))
+
+    def __str__(self):
+        return '<%s: %r>' % (self.__class__.__name__, self.id.encode('utf8'))
 
     @property
     def document(self):
@@ -73,11 +77,8 @@ class CaptionedElement(BaseElement):
     def __repr__(self):
         return '%s(id=%r, references=%r, caption=%r)' % (self.__class__.__name__, self.id, self.references, self.caption.text.encode('utf8'))
 
-    def __unicode__(self):
-        return self.caption.text
-
     def __str__(self):
-        return unicode(self).encode('utf-8')
+        return self.caption.text
 
     @property
     def document(self):
@@ -102,6 +103,7 @@ class CaptionedElement(BaseElement):
     @property
     def ner_tags(self):
         """Return a list of part of speech tags for each sentence in this text passage."""
+        # TODO: Delete this method?
         return self.caption.ner_tags
 
     @property
