@@ -40,15 +40,15 @@ class TestApPosTagger(unittest.TestCase):
         )
 
 
-class TestChemPerceptronPosTagger(unittest.TestCase):
-    """Test ChemPerceptronPosTagger."""
+class TestChemApPosTagger(unittest.TestCase):
+    """Test ChemApPosTagger."""
 
     @classmethod
     def setUpClass(cls):
         cls.t = ChemApPosTagger()
 
     def test_tag_simple(self):
-        """Test the ChemPerceptronPosTagger on a simple sentence."""
+        """Test the ChemApPosTagger  on a simple sentence."""
         self.assertEqual(
             [('And', 'CC'), ('now', 'RB'), ('for', 'IN'), ('something', 'NN'), ('completely', 'RB'), ('different', 'JJ')],
             self.t.tag(['And', 'now', 'for', 'something', 'completely', 'different'])
