@@ -43,13 +43,16 @@ def cli(ctx, verbose):
 
 @cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), required=True)
+@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
 @click.pass_obj
 def extract(ctx, input, output):
     """Run ChemDataExtractor on a document."""
-    document = Document.from_file(input, fname=input.name)
-    records = [r.to_primitive() for r in document.records]
-    json.dump(records, output, ensure_ascii=False, indent=2, sort_keys=True)
+    log.info('chemdataextractor.extract')
+    log.info('Reading %s' % input.name)
+    doc = Document.from_file(input, fname=input.name)
+    records = [record.to_primitive() for record in doc.records]
+    jsonstring = json.dumps(records, indent=2, ensure_ascii=False).decode('utf-8')
+    output.write(jsonstring)
 
 
 from . import cluster, config, data, tokenize, pos, chemdner, cem, dict, evaluate, read
