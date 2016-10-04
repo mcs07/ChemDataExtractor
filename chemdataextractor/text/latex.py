@@ -17,6 +17,8 @@ from __future__ import unicode_literals
 import re
 import string
 
+import six
+
 from . import NAME_SMALL, SMALL
 
 
@@ -66,16 +68,16 @@ def latex_to_unicode(text, capitalize=False):
                 res.append(c.lower())
         text = ''.join(res)
     if any(i in text for i in ['\\', '{', '}', '$', '&', '%', '#', '_']):
-        for k, v in LATEX_MAPPINGS.iteritems():
+        for k, v in six.iteritems(LATEX_MAPPINGS):
             text = text.replace(k, v)
-        for k, v in LATEX_SUB_MAPPINGS.iteritems():
+        for k, v in six.iteritems(LATEX_SUB_MAPPINGS):
             text = text.replace(k, v)
         for mod in ['mathbb', 'mathbf', 'mathbit', 'mathfrak', 'mathrm', 'mathscr', 'mathsf', 'mathsfbf', 'mathsfbfsl', 
                     'mathsfsl', 'mathsl', 'mathslbb', 'mathtt']:
             text = re.sub(r'\\%s\{([\\\w]+)\}' % mod, r'\1', text)
-        for k, v in LATEX_SUB_SUB_MAPPINGS.iteritems():
+        for k, v in six.iteritems(LATEX_SUB_SUB_MAPPINGS):
             text = text.replace(k, v)
-        for k, v in LATEX_COMBINING_CHARS.iteritems():
+        for k, v in six.iteritems(LATEX_COMBINING_CHARS):
             text = re.sub(r'%s\{?(\w)\}?' % k, r'\1%s' % v, text)
         text = re.sub(r'\\noopsort\{.*?\}', r'', text)
         text = re.sub(r'\\path\|(.*?)\|', r'\1', text)

@@ -15,7 +15,6 @@ from __future__ import print_function
 from __future__ import unicode_literals
 import logging
 import re
-import urllib
 
 from bs4 import UnicodeDammit
 from lxml.etree import fromstring
@@ -266,7 +265,7 @@ def parse_rsc_html(htmlstring):
 
 def replace_rsc_img_chars(document):
     """Replace image characters with unicode equivalents."""
-    image_re = re.compile(ur'http://www.rsc.org/images/entities/(?:h[23]+_)?(?:[ib]+_)?char_([0-9a-f]{4})(?:_([0-9a-f]{4}))?\.gif')
+    image_re = re.compile('http://www.rsc.org/images/entities/(?:h[23]+_)?(?:[ib]+_)?char_([0-9a-f]{4})(?:_([0-9a-f]{4}))?\.gif')
     for img in document.xpath('.//img[starts-with(@src, "http://www.rsc.org/images/entities/")]'):
         m = image_re.match(img.get('src'))
         if m:
@@ -378,7 +377,7 @@ class RscChemicalMention(Entity):
 
     process_text = normalize
     process_chemspider_id = Chain(LStrip('http://www.chemspider.com/Chemical-Structure.'), RStrip('.html'), Discard(''))
-    process_inchi = Chain(LStrip('http://www.chemspider.com/Search.aspx?q='), urllib.unquote, six.text_type.strip)
+    process_inchi = Chain(LStrip('http://www.chemspider.com/Search.aspx?q='), six.moves.urllib.parse.unquote, six.text_type.strip)
 
 
 class RscImage(Entity):

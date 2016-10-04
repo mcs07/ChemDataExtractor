@@ -66,7 +66,7 @@ class BibtexParser(object):
 
     def _next_token(self, skipws=True):
         """Increment _token to the next token and return it."""
-        self._token = self._tokens.next().group(0)
+        self._token = next(self._tokens).group(0)
         return self._next_token() if skipws and self._token.isspace() else self._token
 
     def parse(self):
@@ -184,13 +184,14 @@ class BibtexParser(object):
     @property
     def records_list(self):
         """Return the records as a list of dictionaries."""
-        return self.records.values()
+        return list(self.records.values())
 
     @property
     def metadata(self):
         """Return metadata for the parsed collection of records."""
         auto = {u'records': self.size}
-        return dict(auto.items() + self.meta.items())
+        auto.update(self.meta)
+        return auto
 
     @property
     def json(self):

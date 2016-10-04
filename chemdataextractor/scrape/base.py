@@ -140,7 +140,7 @@ class EntityMeta(ABCMeta):
         for attr_name, attr_value in six.iteritems(attrs):
             if isinstance(attr_value, BaseField):
                 # Set the name attribute on the field to the attribute name on the Entity
-                attr_value.name = unicode(attr_name)
+                attr_value.name = six.text_type(attr_name)
                 fields[attr_name] = attr_value
         #attrs['fields'] = fields
         # Set default _meta values, then update with any custom definitions from meta

@@ -446,5 +446,5 @@ class DictionaryTagger(BaseTagger):
             if not tags[start_token] == 'I-%s' % self.entity:
                 tags[start_token] = 'B-%s' % self.entity
             tags[start_token+1:end_token+1] = ['I-%s' % self.entity] * (end_token - start_token)
-        tokentags = zip(tokens, tags)
+        tokentags = list(zip(tokens, tags))
         return tokentags

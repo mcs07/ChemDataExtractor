@@ -129,7 +129,7 @@ class Cleaner(object):
                 if parent is None:
                     continue
                 # Append the text to previous tail (or parent text if no previous), ensuring newline if block level
-                if el.text and isinstance(el.tag, basestring):
+                if el.text and isinstance(el.tag, six.string_types):
                     if previous is None:
                         parent.text = (parent.text or '') + el.text
                     else:

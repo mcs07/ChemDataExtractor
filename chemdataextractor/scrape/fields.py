@@ -149,4 +149,4 @@ class DateTimeField(BaseField):
             return None
 
     def serialize(self, value):
-        return unicode(value.isoformat())
+        return six.text_type(value.isoformat())

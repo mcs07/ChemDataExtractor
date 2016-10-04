@@ -374,7 +374,7 @@ class Sentence(BaseText):
     @memoized_property
     def ner_tagged_tokens(self):
         """"""
-        return zip(self.raw_tokens, self.ner_tags)
+        return list(zip(self.raw_tokens, self.ner_tags))
 
     @memoized_property
     def ner_tags(self):
@@ -486,7 +486,7 @@ class Sentence(BaseText):
 
     @property
     def tagged_tokens(self):
-        return zip(self.raw_tokens, self.tags)
+        return list(zip(self.raw_tokens, self.tags))
 
     @property
     def records(self):

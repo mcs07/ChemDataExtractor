@@ -25,8 +25,8 @@ setup(
     entry_points={'console_scripts': ['cde = chemdataextractor.cli:cli']},
     tests_require=['pytest'],
     install_requires=[
-        'appdirs', 'beautifulsoup4', 'click', 'cssselect', 'lxml', 'nltk', 'pdfminer', 'python-dateutil', 'requests',
-        'schematics', 'six', 'python-crfsuite', 'DAWG'
+        'appdirs', 'beautifulsoup4', 'click', 'cssselect', 'lxml', 'nltk', 'pdfminer.six', 'python-dateutil',
+        'requests', 'schematics', 'six', 'python-crfsuite', 'DAWG'
     ],
     classifiers=[
         'Intended Audience :: Developers',

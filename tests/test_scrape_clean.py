@@ -72,34 +72,34 @@ class TestCleaner(unittest.TestCase):
         """Test applying the default strip to HTML document."""
         tree = html.fromstring(HTML1)
         strip(tree)
-        self.assertEqual(STRIP1, tostring(tree))
+        self.assertEqual(STRIP1, tostring(tree).decode())
 
     def test_strip2(self):
         """Test applying the default strip to HTML document."""
         tree = html.fromstring(HTML2)
         strip(tree)
-        self.assertEqual(STRIP2, tostring(tree))
+        self.assertEqual(STRIP2, tostring(tree).decode())
 
     def test_strip3(self):
         """Test applying the default strip to HTML document."""
         tree = html.fromstring(HTML3)
         strip(tree)
-        self.assertEqual(STRIP3, tostring(tree))
+        self.assertEqual(STRIP3, tostring(tree).decode())
 
     def test_strip4(self):
         """Test applying the default strip to HTML document."""
         tree = html.fromstring(HTML4)
         strip(tree)
-        self.assertEqual(STRIP4, tostring(tree))
+        self.assertEqual(STRIP4, tostring(tree).decode())
 
     def test_strip_markup_doc(self):
         """Test applying the default strip_markup to HTML document."""
         original_tree = html.fromstring(HTML1)
-        original_string = tostring(original_tree)
+        original_string = tostring(original_tree).decode()
         stripped_tree = strip_markup(original_tree)
-        stripped_string = tostring(stripped_tree)
+        stripped_string = tostring(stripped_tree).decode()
         self.assertEqual(STRIP1, stripped_string)
-        self.assertEqual(original_string, tostring(original_tree))  # tree shouldn't change as strip_markup copies
+        self.assertEqual(original_string, tostring(original_tree).decode())  # tree shouldn't change as strip_markup copies
 
     def test_strip_html1(self):
         """Test applying the default strip_markup to HTML string."""
@@ -118,80 +118,80 @@ class TestCleaner(unittest.TestCase):
         cleaner = Cleaner(fix_whitespace=False, strip_xpath='.//*')
         tree = html.fromstring(HTML1)
         cleaner(tree)
-        self.assertEqual(STRIPWS1, tostring(tree))
+        self.assertEqual(STRIPWS1, tostring(tree).decode())
 
     def test_strip_leave_whitespace2(self):
         """Test applying a ``Cleaner`` instance with ``fix_whitespace=False``."""
         cleaner = Cleaner(fix_whitespace=False, strip_xpath='.//*')
         tree = html.fromstring(HTML2)
         cleaner(tree)
-        self.assertEqual(STRIPWS2, tostring(tree))
+        self.assertEqual(STRIPWS2, tostring(tree).decode())
 
     def test_strip_leave_whitespace3(self):
         """Test applying a ``Cleaner`` instance with ``fix_whitespace=False``."""
         cleaner = Cleaner(fix_whitespace=False, strip_xpath='.//*')
         tree = html.fromstring(HTML3)
         cleaner(tree)
-        self.assertEqual(STRIPWS3, tostring(tree))
+        self.assertEqual(STRIPWS3, tostring(tree).decode())
 
     def test_strip_leave_whitespace4(self):
         """Test applying a ``Cleaner`` instance with ``fix_whitespace=False``."""
         cleaner = Cleaner(fix_whitespace=False, strip_xpath='.//*')
         tree = html.fromstring(HTML4)
         cleaner(tree)
-        self.assertEqual(STRIPWS4, tostring(tree))
+        self.assertEqual(STRIPWS4, tostring(tree).decode())
 
     def test_clean1(self):
         """Test apply the default clean to HTML document."""
         tree = html.fromstring(HTML1)
         clean(tree)
-        self.assertEqual(CLEAN1, tostring(tree))
+        self.assertEqual(CLEAN1, tostring(tree).decode())
 
     def test_clean2(self):
         """Test apply the default clean to HTML document."""
         tree = html.fromstring(HTML2)
         clean(tree)
-        self.assertEqual(CLEAN2, tostring(tree))
+        self.assertEqual(CLEAN2, tostring(tree).decode())
 
     def test_clean3(self):
         """Test apply the default clean to HTML document."""
         tree = html.fromstring(HTML3)
         clean(tree)
-        self.assertEqual(CLEAN3, tostring(tree, method='html'))
+        self.assertEqual(CLEAN3, tostring(tree, method='html').decode())
 
     def test_clean4(self):
         """Test apply the default clean to HTML document."""
         tree = html.fromstring(HTML4)
         clean(tree)
-        self.assertEqual(CLEAN4, tostring(tree, method='html'))
+        self.assertEqual(CLEAN4, tostring(tree, method='html').decode())
 
     def test_strip_kill_strong1(self):
         """Test applying a ``Cleaner`` instance that kills strong tags."""
         cleaner = Cleaner(strip_xpath='.//*', kill_xpath='.//script | .//style | .//comment() | .//processing-instruction() | .//strong')
         tree = html.fromstring(HTML1)
         cleaner(tree)
-        self.assertEqual(STRIPKS1, tostring(tree))
+        self.assertEqual(STRIPKS1, tostring(tree).decode())
 
     def test_strip_kill_strong2(self):
         """Test applying a ``Cleaner`` instance that kills strong tags."""
         cleaner = Cleaner(strip_xpath='.//*', kill_xpath='.//script | .//style | .//comment() | .//processing-instruction() | .//strong')
         tree = html.fromstring(HTML2)
         cleaner(tree)
-        self.assertEqual(STRIPKS2, tostring(tree))
+        self.assertEqual(STRIPKS2, tostring(tree).decode())
 
     def test_strip_kill_strong3(self):
         """Test applying a ``Cleaner`` instance that kills strong tags."""
         cleaner = Cleaner(strip_xpath='.//*', kill_xpath='.//script | .//style | .//comment() | .//processing-instruction() | .//strong')
         tree = html.fromstring(HTML3)
         cleaner(tree)
-        self.assertEqual(STRIPKS3, tostring(tree))
+        self.assertEqual(STRIPKS3, tostring(tree).decode())
 
     def test_strip_kill_strong4(self):
         """Test applying a ``Cleaner`` instance that kills strong tags."""
         cleaner = Cleaner(strip_xpath='.//*', kill_xpath='.//script | .//style | .//comment() | .//processing-instruction() | .//strong')
         tree = html.fromstring(HTML4)
         cleaner(tree)
-        self.assertEqual(STRIPKS4, tostring(tree))
+        self.assertEqual(STRIPKS4, tostring(tree).decode())
 
 
 if __name__ == '__main__':
