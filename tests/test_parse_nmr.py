@@ -15,6 +15,7 @@ from __future__ import print_function
 from __future__ import unicode_literals
 import logging
 import unittest
+
 from lxml import etree
 
 from chemdataextractor.doc.text import Sentence
@@ -32,7 +33,7 @@ class TestParseNmr(unittest.TestCase):
         s = Sentence(input)
         log.debug(s)
         log.debug(s.tagged_tokens)
-        result = nmr.scan(s.tagged_tokens).next()[0]
+        result = next(nmr.scan(s.tagged_tokens))[0]
         log.debug(etree.tostring(result, pretty_print=True, encoding='unicode'))
         self.assertEqual(expected, etree.tostring(result, encoding='unicode'))
 

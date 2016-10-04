@@ -16,7 +16,6 @@ from __future__ import unicode_literals
 from abc import ABCMeta, abstractmethod
 import logging
 import re
-from urlparse import urlparse
 
 import six
 from . import EMAIL_RE, APOSTROPHES
@@ -128,7 +127,7 @@ def floats(s):
 
 def strip_querystring(url):
     """Remove the querystring from the end of a URL."""
-    p = urlparse(url)
+    p = six.moves.urllib.parse.urlparse(url)
     return p.scheme + "://" + p.netloc + p.path
 
 
