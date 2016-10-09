@@ -37,6 +37,18 @@ class TestDocument(unittest.TestCase):
         self.assertEqual(d.elements[0].sentences[1].text, 'With two sentences.')
         self.assertEqual(d.elements[1].document, d)
 
+    def test_bytestring_elements(self):
+        """Test Document can be instantiated with a list of bytestrings."""
+        els = [
+            'A first paragraph. With two sentences.'.encode('ascii'),
+            'A second paragraph. \u00a9'.encode('utf-8'),
+            'A third paragraph (\u00b6).'.encode('windows-1252'),
+        ]
+        d = Document(*els)
+        self.assertEqual(d.elements[0].text, 'A first paragraph. With two sentences.')
+        self.assertEqual(d.elements[0].sentences[1].text, 'With two sentences.')
+        self.assertEqual(d.elements[1].document, d)
+
     def test_document_iter(self):
         """Test Document can be iterated like a list to access its elements."""
         els = [

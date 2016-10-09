@@ -25,6 +25,7 @@ from .text import Paragraph, Citation, Footnote, Heading, Title
 from .table import Table
 from .figure import Figure
 from ..errors import ReaderError
+from ..text import get_encoding
 
 
 log = logging.getLogger(__name__)
@@ -67,6 +68,11 @@ class Document(BaseDocument):
             # Convert raw text to Paragraph elements
             if isinstance(element, six.text_type):
                 element = Paragraph(element)
+            elif isinstance(element, six.string_types):
+                # Try guess encoding if byte string
+                encoding = get_encoding(element)
+                log.warn('Guessed bytestring encoding as %s. Use unicode strings to avoid this warning.', encoding)
+                element = Paragraph(element.decode(encoding))
             element.document = self
             self._elements.append(element)
         log.debug('%s: Initializing with %s elements' % (self.__class__.__name__, len(self.elements)))
