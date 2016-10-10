@@ -47,7 +47,7 @@ def run(input):
         raise click.ClickException('Invalid publisher')
     doc = reader.read(input)
     # Serialize all records apart from those that are just chemical names or just labels
-    records = [record.to_primitive() for record in doc.records]
+    records = [record.serialize(primitive=True) for record in doc.records]
     records = [record for record in records if not record.keys() == ['names'] and not record.keys() == ['labels']]
     with open('%s-out.json' % os.path.splitext(input.name)[0], 'w') as outf:
         json.dump(records, outf, indent=2)

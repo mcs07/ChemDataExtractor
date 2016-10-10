@@ -37,7 +37,7 @@ class TestParseIr(unittest.TestCase):
         log.debug(etree.tostring(result, pretty_print=True, encoding='unicode'))
         self.assertEqual(expected, etree.tostring(result, encoding='unicode'))
         for c in IrParser().parse(s.tagged_tokens):
-            print(c.to_primitive())
+            print(c.serialize())
 
     def test_ir1(self):
         s = 'IR (ATR): ṽ [cm−1] 3024 (w), 2980 (w), 2918 (w), 1601 (w), 1485 (m), 1460 (m), 1438 (w), 1358 (w), ' \

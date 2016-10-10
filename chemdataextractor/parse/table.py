@@ -246,7 +246,7 @@ class SolventInHeadingParser(BaseParser):
             c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
             c.electrochemical_potentials = [ElectrochemicalPotential(context)]
             c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+        if c.serialize():
             yield c
 
 
@@ -283,7 +283,7 @@ class SolventCellParser(BaseParser):
             c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
             c.electrochemical_potentials = [ElectrochemicalPotential(context)]
             c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+        if c.serialize():
             yield c
 
 
@@ -660,6 +660,6 @@ class CaptionContextParser(BaseParser):
             c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
             c.electrochemical_potentials = [ElectrochemicalPotential(context)]
             c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+        if c.serialize():
             # print(c.to_primitive())
             yield c

@@ -58,13 +58,13 @@ class TestParseApparatus(unittest.TestCase):
         """"""
         p = Paragraph('The photoluminescence quantum yield (PLQY) was measured using a HORIBA Jobin Yvon FluoroMax-4 spectrofluorimeter.')
         expected = [{'quantum_yields': [{'apparatus': u'HORIBA Jobin Yvon FluoroMax-4 spectrofluorimeter'}]}]
-        self.assertEqual(expected, [r.to_primitive() for r in p.records])
+        self.assertEqual(expected, [r.serialize() for r in p.records])
 
     def test_apparatus_record2(self):
         """"""
         p = Paragraph('NMR was run on a 400 MHz Varian NMR.')
         expected = [{'nmr_spectra': [{'apparatus': '400 MHz Varian NMR'}]}]
-        self.assertEqual(expected, [r.to_primitive() for r in p.records])
+        self.assertEqual(expected, [r.serialize() for r in p.records])
 
 
 if __name__ == '__main__':

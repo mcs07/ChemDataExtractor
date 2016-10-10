@@ -495,7 +495,7 @@ class Sentence(BaseText):
         seen_labels = set()
         for parser in self.parsers:
             for record in parser.parse(self.tagged_tokens):
-                p = record.to_primitive()
+                p = record.serialize()
                 if not p:  # TODO: Potential performance issues?
                     continue
                 # Skip duplicate records
