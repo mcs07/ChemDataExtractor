@@ -13,7 +13,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import re
-import HTMLParser
 import sys
 
 import click
@@ -23,7 +22,14 @@ from ..nlp.tokenize import ChemWordTokenizer
 from ..nlp.tag import DictionaryTagger
 from ..nlp.cem import CsDictCemTagger, CiDictCemTagger, STOPLIST, STOP_SUB, STOP_TOKENS
 
-pars = HTMLParser.HTMLParser()
+
+try:
+    from html import unescape
+except ImportError:
+    from six.moves.html_parser import HTMLParser
+    unescape = HTMLParser().unescape
+
+
 NG_RE = re.compile('([\[\(](\d\d?CI|USAN|r?INN|BAN|JAN|USP)(\d\d?CI|USAN|r?INN|BAN|JAN|USP|[:\-,]|spanish|latin)*[\)\]])+$', re.I | re.U)
 START_RE = re.compile('^(anhydrous|elemental|amorphous|conjugated|colloidal|activated) ', re.I | re.U)
 END_RE = re.compile('[\[\(]((crude )?product|substance|solution|anhydrous|derivative|analog|salt|modified|discontinued|injectable|anesthetic|pharmaceutical|natural|nonionic|european|ester|dye|tablets?|mineral|VAN|hydrolyzed)[\)\]]$', re.I | re.U)
@@ -122,7 +128,7 @@ def _process_name(name):
     """Fix issues with Jochem names."""
 
     # Unescape HTML entities
-    name = pars.unescape(name)
+    name = unescape(name)
 
     # Remove bracketed stuff on the end
     name = NG_RE.sub('', name).strip()  # Nomenclature groups
