@@ -13,8 +13,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import re
-import HTMLParser
 import sys
+
+#HTMLParser is called html.parser in Python 3.X
+if (sys.version_info[0]<3):
+    import HTMLParser
+else:
+    import hmtl.parser as HTMLParser
 
 import click
 from ..nlp.lexicon import ChemLexicon
