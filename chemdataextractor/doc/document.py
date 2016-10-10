@@ -68,7 +68,7 @@ class Document(BaseDocument):
             # Convert raw text to Paragraph elements
             if isinstance(element, six.text_type):
                 element = Paragraph(element)
-            elif isinstance(element, six.string_types):
+            elif isinstance(element, six.binary_type):
                 # Try guess encoding if byte string
                 encoding = get_encoding(element)
                 log.warn('Guessed bytestring encoding as %s. Use unicode strings to avoid this warning.', encoding)
