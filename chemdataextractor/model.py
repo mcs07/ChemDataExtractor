@@ -13,8 +13,10 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+
+import copy
 from abc import ABCMeta
-from collections import Sequence
+from collections import Sequence, MutableSequence
 import json
 import logging
 
@@ -50,8 +52,8 @@ class BaseType(six.with_metaclass(ABCMeta)):
         # Get value from Model instance if available
         value = instance._values.get(self.name)
         # If value is None or empty string then return the default value, if set
-        if value in [None, '', []] and self.default is not None:
-            return self.default
+        # if value in [None, ''] and self.default is not None:
+        #     return self.default
         return value
 
     def __set__(self, instance, value):
@@ -98,9 +100,22 @@ class ModelType(BaseType):
 
 class ListType(BaseType):
 
-    def __init__(self, field, **kwargs):
-        self.field = field
+    def __init__(self, field, default=None, **kwargs):
         super(ListType, self).__init__(**kwargs)
+        self.field = field
+        self.default = default if default is not None else []
+
+    # def __get__(self, instance, owner):
+    #     """Descriptor for retrieving a value from a field in a Model."""
+    #     # Check if Model class is being called, rather than Model instance
+    #     if instance is None:
+    #         return self
+    #     # Get value from Model instance if available
+    #     value = instance._values.get(self.name)
+    #     # If value is None or empty string then return the default value, if set
+    #     if value in [None, '', []]:
+    #         return self.default if self.default is not None else []
+    #     return value
 
     def serialize(self, value, primitive=False):
         """Serialize this field."""
@@ -134,15 +149,18 @@ class BaseModel(six.with_metaclass(ModelMeta)):
 
     fields = {}
 
-    def __init__(self, raw_data):
+    def __init__(self, **raw_data):
         """"""
         self._values = {}
-        # TODO: Switch to kwargs
         for key, value in six.iteritems(raw_data):
             setattr(self, key, value)
+        # Set defaults
+        for key, field in six.iteritems(self.fields):
+            if key not in raw_data:
+                setattr(self, key, copy.copy(field.default))
 
     def __eq__(self, other):
-        # TODO: This is dangerous - doesn't account for default values. Iterate fields and test equality of each instead
+        # TODO: Check this actually works as expected (what about default values?)
         if isinstance(other, self.__class__):
             return self._values == other._values
         return False
@@ -197,6 +215,31 @@ class BaseModel(six.with_metaclass(ModelMeta)):
     #     for field_name in self:
     #         self.fields[field_name].validate()
 
+    @property
+    def is_contextual(self):
+        for k in self:
+            value = getattr(self, k)
+            field = self.fields.get(k)
+            # Not contextual if any contextual=False field has a value
+            if value not in [None, '', []]:
+                # If a ListType, it depends on the contained type
+                if isinstance(field, ListType):
+                    # If a list of Models, not contextual if any of them isn't
+                    if isinstance(field.field, ModelType):
+                        for model_value in value:
+                            if not model_value.is_contextual:
+                                return False
+                    elif not field.field.contextual:
+                        return False
+                else:
+                    # If a single Model type, not contextual if it isn't
+                    if isinstance(field, ModelType):
+                        if not value.is_contextual:
+                            return False
+                    elif not field.contextual:
+                        return False
+        return True
+
     def serialize(self, primitive=False):
         """Convert Model to python dictionary."""
         # Serialize fields to a dict
@@ -217,7 +260,7 @@ class BaseModel(six.with_metaclass(ModelMeta)):
         return json.dumps(self.serialize(primitive=True), *args, **kwargs)
 
 
-class ModelList(Sequence):
+class ModelList(MutableSequence):
     """Wrapper around a list of Models objects to facilitate operations on all at once."""
 
     def __init__(self, *models):
@@ -226,8 +269,17 @@ class ModelList(Sequence):
     def __getitem__(self, index):
         return self.models[index]
 
+    def __setitem__(self, index, value):
+        self.models[index] = value
+
+    def __delitem__(self, index):
+        del self.models[index]
+
     def __len__(self):
         return len(self.models)
+
+    def insert(self, index, value):
+        self.models.insert(index, value)
 
     def serialize(self):
         """Serialize to a list of python dictionaries."""
@@ -242,40 +294,40 @@ class UvvisPeak(BaseModel):
     #: Peak value, i.e. wavelength
     value = StringType()
     #: Peak value units
-    units = StringType()
+    units = StringType(contextual=True)
     # Extinction value
     extinction = StringType()
     # Extinction units
-    extinction_units = StringType()
+    extinction_units = StringType(contextual=True)
     # Peak shape information (e.g. shoulder, broad)
     shape = StringType()
 
 
 class UvvisSpectrum(BaseModel):
-    solvent = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    apparatus = StringType()
-    peaks = ListType(ModelType(UvvisPeak), default=[])
+    solvent = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
+    peaks = ListType(ModelType(UvvisPeak))
 
 
 class IrPeak(BaseModel):
     value = StringType()
-    units = StringType()
+    units = StringType(contextual=True)
     strength = StringType()
     bond = StringType()
 
 
 class IrSpectrum(BaseModel):
-    solvent = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    apparatus = StringType()
-    peaks = ListType(ModelType(IrPeak), default=[])
+    solvent = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
+    peaks = ListType(ModelType(IrPeak))
 
 
 class NmrPeak(BaseModel):
@@ -283,87 +335,87 @@ class NmrPeak(BaseModel):
     intensity = StringType()
     multiplicity = StringType()
     coupling = StringType()
-    coupling_units = StringType()
+    coupling_units = StringType(contextual=True)
     number = StringType()
     assignment = StringType()
 
 
 class NmrSpectrum(BaseModel):
-    nucleus = StringType()
-    solvent = StringType()
-    frequency = StringType()
-    frequency_units = StringType()
-    standard = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    apparatus = StringType()
-    peaks = ListType(ModelType(NmrPeak), default=[])
+    nucleus = StringType(contextual=True)
+    solvent = StringType(contextual=True)
+    frequency = StringType(contextual=True)
+    frequency_units = StringType(contextual=True)
+    standard = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
+    peaks = ListType(ModelType(NmrPeak))
 
 
 class MeltingPoint(BaseModel):
     """A melting point measurement."""
     value = StringType()
-    units = StringType()
-    solvent = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    apparatus = StringType()
+    units = StringType(contextual=True)
+    solvent = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
 
 
 class QuantumYield(BaseModel):
     """A quantum yield measurement."""
     value = StringType()
-    units = StringType()
-    solvent = StringType()
-    type = StringType()
-    standard = StringType()
-    standard_value = StringType()
-    standard_solvent = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    apparatus = StringType()
+    units = StringType(contextual=True)
+    solvent = StringType(contextual=True)
+    type = StringType(contextual=True)
+    standard = StringType(contextual=True)
+    standard_value = StringType(contextual=True)
+    standard_solvent = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
 
 
 class FluorescenceLifetime(BaseModel):
     """A fluorescence lifetime measurement."""
     value = StringType()
-    units = StringType()
-    solvent = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    apparatus = StringType()
+    units = StringType(contextual=True)
+    solvent = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
 
 
 class ElectrochemicalPotential(BaseModel):
     """An oxidation or reduction potential, from cyclic voltammetry."""
     value = StringType()
-    units = StringType()
-    type = StringType()
-    solvent = StringType()
-    concentration = StringType()
-    concentration_units = StringType()
-    temperature = StringType()
-    temperature_units = StringType()
-    apparatus = StringType()
+    units = StringType(contextual=True)
+    type = StringType(contextual=True)
+    solvent = StringType(contextual=True)
+    concentration = StringType(contextual=True)
+    concentration_units = StringType(contextual=True)
+    temperature = StringType(contextual=True)
+    temperature_units = StringType(contextual=True)
+    apparatus = StringType(contextual=True)
 
 
 class Compound(BaseModel):
-    names = ListType(StringType(), default=[])
-    labels = ListType(StringType(), default=[])
-    roles = ListType(StringType(), default=[])
-    nmr_spectra = ListType(ModelType(NmrSpectrum), default=[])
-    ir_spectra = ListType(ModelType(IrSpectrum), default=[])
-    uvvis_spectra = ListType(ModelType(UvvisSpectrum), default=[])
-    melting_points = ListType(ModelType(MeltingPoint), default=[])
-    quantum_yields = ListType(ModelType(QuantumYield), default=[])
-    fluorescence_lifetimes = ListType(ModelType(FluorescenceLifetime), default=[])
-    electrochemical_potentials = ListType(ModelType(ElectrochemicalPotential), default=[])
+    names = ListType(StringType())
+    labels = ListType(StringType())
+    roles = ListType(StringType())
+    nmr_spectra = ListType(ModelType(NmrSpectrum))
+    ir_spectra = ListType(ModelType(IrSpectrum))
+    uvvis_spectra = ListType(ModelType(UvvisSpectrum))
+    melting_points = ListType(ModelType(MeltingPoint))
+    quantum_yields = ListType(ModelType(QuantumYield))
+    fluorescence_lifetimes = ListType(ModelType(FluorescenceLifetime))
+    electrochemical_potentials = ListType(ModelType(ElectrochemicalPotential))
 
     def merge(self, other):
         """Merge data from another Compound into this Compound."""
@@ -407,17 +459,14 @@ class Compound(BaseModel):
             return True
         return False
 
-    @property
-    def is_contextual(self):
-        for k in self.keys():
-            for item in self[k]:
-                # Not contextual if we have any names or labels
-                if k in {'names', 'labels'}:
-                    return False
-                # Not contextual if we have any values or peaks values
-                if item.get('value') or (item.get('peaks') and any(p.get('value') or p.get('extinction') or p.get('shift') for p in item.get('peaks'))):
-                    return False
-        return True
+    # @property
+    # def is_contextual(self):
+    #     for k in self:
+    #         # Not contextual if we have any names or labels
+    #         if k in {'names', 'labels'}:
+    #             return False
+    #     return super(Compound, self).is_contextual
+
 
     @property
     def is_id_only(self):
