@@ -19,7 +19,7 @@ import sys
 if (sys.version_info[0]<3):
     import HTMLParser
 else:
-    import hmtl.parser as HTMLParser
+    import html.parser as HTMLParser
 
 import click
 from ..nlp.lexicon import ChemLexicon
