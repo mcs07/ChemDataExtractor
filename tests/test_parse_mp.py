@@ -211,8 +211,8 @@ class TestParseMpCompound(unittest.TestCase):
     def do_parse(self, input, expected):
         p = Paragraph(input)
         log.debug(p)
-        log.debug([r.to_primitive() for r in p.records])
-        self.assertEqual(expected, [r.to_primitive() for r in p.records])
+        log.debug([r.serialize() for r in p.records])
+        self.assertEqual(expected, [r.serialize() for r in p.records])
 
     def test_mpc1(self):
         s = '4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid (Compound 67): mp 163-164° C.'

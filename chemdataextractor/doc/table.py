@@ -129,14 +129,14 @@ class Table(CaptionedElement):
                     results = list(heading_parser.parse(cell.tagged_tokens))
                     if results:
                         allowed = True
-                        log.debug('Heading column %s: Match %s: %s' % (i, heading_parser.__class__.__name__, [c.to_primitive() for c in results]))
+                        log.debug('Heading column %s: Match %s: %s' % (i, heading_parser.__class__.__name__, [c.serialize() for c in results]))
                     # Results from every parser are stored as header compounds
                     header_compounds[i].extend(results)
                     # Referenced footnote records are also stored
                     for footnote in self.footnotes:
                         # print('%s - %s - %s' % (footnote.id, cell.references, footnote.id in cell.references))
                         if footnote.id in cell.references:
-                            log.debug('Adding footnote %s to column %s: %s' % (footnote.id, i, [c.to_primitive() for c in footnote.records]))
+                            log.debug('Adding footnote %s to column %s: %s' % (footnote.id, i, [c.serialize() for c in footnote.records]))
                             # print('Footnote records: %s' % [c.to_primitive() for c in footnote.records])
                             header_compounds[i].extend(footnote.records)
                     # Check if the disallowed parser matches this cell
@@ -196,7 +196,7 @@ class Table(CaptionedElement):
                     if i in value_parsers:
                         results = list(value_parsers[i].parse(cell.tagged_tokens))
                         if results:
-                            log.debug('Cell column %s: Match %s: %s' % (i, value_parsers[i].__class__.__name__, [c.to_primitive() for c in results]))
+                            log.debug('Cell column %s: Match %s: %s' % (i, value_parsers[i].__class__.__name__, [c.serialize() for c in results]))
                         # For each result, merge in values from elsewhere
                         for result in results:
                             # Merge each header_compounds[i]
@@ -232,8 +232,8 @@ class Table(CaptionedElement):
                         for fn_compound in footnote.records:
                             row_compound.merge_contextual(fn_compound)
 
-                log.debug(row_compound.to_primitive())
-                if row_compound.to_primitive():
+                log.debug(row_compound.serialize())
+                if row_compound.serialize():
                     table_records.append(row_compound)
 
         # TODO: If no rows have name or label, see if one is in the caption

@@ -56,16 +56,16 @@ class UvvisParser(BaseParser):
 
     def interpret(self, result, start, end):
         c = Compound()
-        u = UvvisSpectrum({
-            'solvent': first(result.xpath('./solvent/text()'))
-        })
+        u = UvvisSpectrum(
+            solvent=first(result.xpath('./solvent/text()'))
+        )
         units = first(result.xpath('./units/text()'))
         for peak_result in result.xpath('./peaks/peak'):
-            uvvis_peak = UvvisPeak({
-                'value': first(peak_result.xpath('./value/text()')),
-                'units': units,
-                'shape': first(peak_result.xpath('./shape/text()'))
-            })
+            uvvis_peak = UvvisPeak(
+                value=first(peak_result.xpath('./value/text()')),
+                units=units,
+                shape=first(peak_result.xpath('./shape/text()'))
+            )
             u.peaks.append(uvvis_peak)
         c.uvvis_spectra.append(u)
         yield c

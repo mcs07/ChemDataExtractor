@@ -57,14 +57,14 @@ class MpParser(BaseParser):
     root = mp_phrase
 
     def interpret(self, result, start, end):
-        compound = Compound({
-            'melting_points': [
-                MeltingPoint({
-                    'value': first(result.xpath('./mp/value/text()')),
-                    'units': first(result.xpath('./mp/units/text()')),
-                })
+        compound = Compound(
+            melting_points=[
+                MeltingPoint(
+                    value=first(result.xpath('./mp/value/text()')),
+                    units=first(result.xpath('./mp/units/text()'))
+                )
             ]
-        })
+        )
         cem_el = first(result.xpath('./cem'))
         if cem_el is not None:
             compound.names = cem_el.xpath('./name/text()')

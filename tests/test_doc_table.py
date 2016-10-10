@@ -90,9 +90,9 @@ class TestTable(unittest.TestCase):
         ]
 
         for record in t.records:
-            print(record.to_primitive())
+            print(record.serialize())
 
-        self.assertEqual(gold, [record.to_primitive() for record in t.records])
+        self.assertEqual(gold, [record.serialize() for record in t.records])
 
     def test_spectroscopic_table(self):
         """"""
@@ -127,7 +127,7 @@ class TestTable(unittest.TestCase):
         # for record in t.records:
         #     print(record.to_primitive())
 
-        self.assertEqual(gold, [record.to_primitive() for record in t.records])
+        self.assertEqual(gold, [record.serialize() for record in t.records])
 
 if __name__ == '__main__':
     unittest.main()

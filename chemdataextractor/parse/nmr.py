@@ -122,31 +122,27 @@ class NmrParser(BaseParser):
 
     def interpret(self, result, start, end):
 
-        c = Compound({
-            'nmr_spectra': []
-        })
+        c = Compound()
 
-        n = NmrSpectrum({
-            'nucleus': first(result.xpath('./nucleus/text()')),
-            'solvent': first(result.xpath('./solvent/text()')),
-            'frequency': first(result.xpath('./frequency/value/text()')),
-            'frequency_units': first(result.xpath('./frequency/units/text()')),
-            'temperature': first(result.xpath('./temperature/value/text()')),
-            'temperature_units': first(result.xpath('./temperature/units/text()')),
-            'peaks': [],
-        })
+        n = NmrSpectrum(
+            nucleus=first(result.xpath('./nucleus/text()')),
+            solvent=first(result.xpath('./solvent/text()')),
+            frequency=first(result.xpath('./frequency/value/text()')),
+            frequency_units=first(result.xpath('./frequency/units/text()')),
+            temperature=first(result.xpath('./temperature/value/text()')),
+            temperature_units=first(result.xpath('./temperature/units/text()'))
+        )
 
         for peak_result in result.xpath('./peaks/peak'):
-            nmr_peak = NmrPeak({
-                'shift': first(peak_result.xpath('./shift/text()')),
-                'multiplicity': first(peak_result.xpath('./multiplicity/text()')),
-                'coupling': first(peak_result.xpath('./coupling/value/text()')),
-                'coupling_units': first(peak_result.xpath('./coupling/units/text()')),
-                'number': first(peak_result.xpath('./number/text()')),
-                'assignment': first(peak_result.xpath('./assignment/text()')),
-            })
+            nmr_peak = NmrPeak(
+                shift=first(peak_result.xpath('./shift/text()')),
+                multiplicity=first(peak_result.xpath('./multiplicity/text()')),
+                coupling=first(peak_result.xpath('./coupling/value/text()')),
+                coupling_units=first(peak_result.xpath('./coupling/units/text()')),
+                number=first(peak_result.xpath('./number/text()')),
+                assignment=first(peak_result.xpath('./assignment/text()'))
+            )
             n.peaks.append(nmr_peak)
 
         c.nmr_spectra.append(n)
-
         yield c

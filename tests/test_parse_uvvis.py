@@ -38,7 +38,7 @@ class TestParseUvvis(unittest.TestCase):
         log.debug(etree.tostring(result, pretty_print=True, encoding='unicode'))
         self.assertEqual(expected, etree.tostring(result, encoding='unicode'))
         for c in UvvisParser().parse(s.tagged_tokens):
-            print(c.to_primitive())
+            print(c.serialize())
 
     def test_uvvis1(self):
         s = 'λabs/nm 320, 380, 475, 529;'

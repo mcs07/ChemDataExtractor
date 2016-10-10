@@ -294,11 +294,11 @@ class CompoundParser(BaseParser):
     def interpret(self, result, start, end):
         # TODO: Parse label_type into label model object
         for cem_el in result.xpath('./cem'):
-            c = Compound({
-                'names': cem_el.xpath('./name/text()'),
-                'labels': cem_el.xpath('./label/text()'),
-                'roles': [standardize_role(r) for r in cem_el.xpath('./role/text()')],
-            })
+            c = Compound(
+                names=cem_el.xpath('./name/text()'),
+                labels=cem_el.xpath('./label/text()'),
+                roles=[standardize_role(r) for r in cem_el.xpath('./role/text()')]
+            )
             yield c
 
 
@@ -310,8 +310,7 @@ class ChemicalLabelParser(BaseParser):
     def interpret(self, result, start, end):
         roles = [standardize_role(r) for r in result.xpath('./role/text()')]
         for label in result.xpath('./label/text()'):
-            # TODO: Should label be in a list? Maybe schematics is fixing this for us?
-            yield Compound({'labels': label, 'roles': roles})
+            yield Compound(labels=[label], roles=roles)
 
 
 class CompoundHeadingParser(BaseParser):
@@ -324,12 +323,12 @@ class CompoundHeadingParser(BaseParser):
         labels = result.xpath('./label/text()')
         if len(labels) > 1:
             for label in labels:
-                yield Compound({'labels': [label], 'roles': roles})
+                yield Compound(labels=[label], roles=roles)
             for name in result.xpath('./name/text()'):
-                yield Compound({'names': [name], 'roles': roles})
+                yield Compound(names=[name], roles=roles)
         else:
-            yield Compound({
-                'names': result.xpath('./name/text()'),
-                'labels': labels,
-                'roles': roles
-            })
+            yield Compound(
+                names=result.xpath('./name/text()'),
+                labels=labels,
+                roles=roles
+            )

@@ -51,7 +51,7 @@ def extract(ctx, input, output):
     log.info('chemdataextractor.extract')
     log.info('Reading %s' % input.name)
     doc = Document.from_file(input, fname=input.name)
-    records = [record.to_primitive() for record in doc.records]
+    records = [record.serialize(primitive=True) for record in doc.records]
     jsonstring = json.dumps(records, indent=2, ensure_ascii=False).decode('utf-8')
     output.write(jsonstring)
 

@@ -88,17 +88,17 @@ class IrParser(BaseParser):
 
     def interpret(self, result, start, end):
         c = Compound()
-        i = IrSpectrum({
-            'solvent': first(result.xpath('./solvent/text()'))
-        })
+        i = IrSpectrum(
+            solvent=first(result.xpath('./solvent/text()'))
+        )
         units = first(result.xpath('./units/text()'))
         for peak_result in result.xpath('./peaks/peak'):
-            ir_peak = IrPeak({
-                'value': first(peak_result.xpath('./value/text()')),
-                'units': units,
-                'strength': first(peak_result.xpath('./strength/text()')),
-                'bond': first(peak_result.xpath('./bond/text()'))
-            })
+            ir_peak = IrPeak(
+                value=first(peak_result.xpath('./value/text()')),
+                units=units,
+                strength=first(peak_result.xpath('./strength/text()')),
+                bond=first(peak_result.xpath('./bond/text()'))
+            )
             i.peaks.append(ir_peak)
         c.ir_spectra.append(i)
         yield c

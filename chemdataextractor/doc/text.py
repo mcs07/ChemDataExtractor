@@ -19,6 +19,7 @@ import re
 
 import six
 
+from ..model import ModelList
 from ..parse.context import ContextParser
 from ..parse.cem import ChemicalLabelParser, CompoundHeadingParser, CompoundParser, chemical_name
 from ..parse.table import CaptionContextParser
@@ -491,11 +492,11 @@ class Sentence(BaseText):
     @property
     def records(self):
         """Return a list of records for this sentence."""
-        compounds = []
+        compounds = ModelList()
         seen_labels = set()
         for parser in self.parsers:
             for record in parser.parse(self.tagged_tokens):
-                p = record.to_primitive()
+                p = record.serialize()
                 if not p:  # TODO: Potential performance issues?
                     continue
                 # Skip duplicate records

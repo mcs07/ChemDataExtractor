@@ -25,6 +25,7 @@ from .text import Paragraph, Citation, Footnote, Heading, Title
 from .table import Table
 from .figure import Figure
 from ..errors import ReaderError
+from ..model import ModelList
 from ..text import get_encoding
 
 
@@ -108,7 +109,7 @@ class Document(BaseDocument):
     # TODO: memoized_property?
     @property
     def records(self):
-        records = []
+        records = ModelList()
         contextual_records = []
         head_def_record = None
         head_def_record_i = None

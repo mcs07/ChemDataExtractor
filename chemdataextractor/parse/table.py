@@ -246,7 +246,7 @@ class SolventInHeadingParser(BaseParser):
             c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
             c.electrochemical_potentials = [ElectrochemicalPotential(context)]
             c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+        if c.serialize():
             yield c
 
 
@@ -283,7 +283,7 @@ class SolventCellParser(BaseParser):
             c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
             c.electrochemical_potentials = [ElectrochemicalPotential(context)]
             c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+        if c.serialize():
             yield c
 
 
@@ -293,12 +293,11 @@ class CompoundCellParser(BaseParser):
 
     def interpret(self, result, start, end):
         for cem_el in result.xpath('./cem'):
-            c = Compound({
-                'names': cem_el.xpath('./name/text()'),
-                'labels': cem_el.xpath('./label/text()'),
-            })
+            c = Compound(
+                names=cem_el.xpath('./name/text()'),
+                labels=cem_el.xpath('./label/text()')
+            )
             yield c
-
 
 
 class UvvisEmiHeadingParser(BaseParser):
@@ -324,7 +323,7 @@ class UvvisAbsHeadingParser(BaseParser):
         c = Compound()
         if uvvis_units or extinction_units:
             c.uvvis_spectra.append(
-                UvvisSpectrum({'peaks': [UvvisPeak({'units': uvvis_units, 'extinction_units': extinction_units})]})
+                UvvisSpectrum(peaks=[UvvisPeak(units=uvvis_units, extinction_units=extinction_units)])
             )
         yield c
 
@@ -339,7 +338,7 @@ class ExtinctionHeadingParser(BaseParser):
         c = Compound()
         if extinction_units:
             c.uvvis_spectra.append(
-                UvvisSpectrum({'peaks': [UvvisPeak({'extinction_units': extinction_units})]})
+                UvvisSpectrum(peaks=[UvvisPeak(extinction_units=extinction_units)])
             )
         yield c
 
@@ -354,7 +353,7 @@ class IrHeadingParser(BaseParser):
         c = Compound()
         if ir_units:
             c.ir_spectra.append(
-                IrSpectrum({'peaks': [IrPeak({'units': ir_units})]})
+                IrSpectrum(peaks=[IrPeak(units=ir_units)])
             )
         yield c
 
@@ -369,10 +368,10 @@ class IrCellParser(BaseParser):
         ir = IrSpectrum()
         for peak in result.xpath('./ir_peak'):
             ir.peaks.append(
-                IrPeak({
-                    'value': first(peak.xpath('./value/text()')),
-                    'strength': first(peak.xpath('./strength/text()'))
-                })
+                IrPeak(
+                    value=first(peak.xpath('./value/text()')),
+                    strength=first(peak.xpath('./strength/text()'))
+                )
             )
         if ir.peaks:
             c.ir_spectra.append(ir)
@@ -385,14 +384,14 @@ class QuantumYieldHeadingParser(BaseParser):
 
     def interpret(self, result, start, end):
         """"""
-        c = Compound({
-            'quantum_yields': [
-                QuantumYield({
-                    'type': first(result.xpath('./quantum_yield_type/text()')),
-                    'units': first(result.xpath('./quantum_yield_units/text()'))
-                })
+        c = Compound(
+            quantum_yields=[
+                QuantumYield(
+                    type=first(result.xpath('./quantum_yield_type/text()')),
+                    units=first(result.xpath('./quantum_yield_units/text()'))
+                )
             ]
-        })
+        )
         yield c
 
 
@@ -403,10 +402,10 @@ class QuantumYieldCellParser(BaseParser):
     def interpret(self, result, start, end):
         """"""
         c = Compound()
-        qy = QuantumYield({
-            'value': first(result.xpath('./quantum_yield_value/text()')),
-            'units': first(result.xpath('./quantum_yield_units/text()'))
-        })
+        qy = QuantumYield(
+            value=first(result.xpath('./quantum_yield_value/text()')),
+            units=first(result.xpath('./quantum_yield_units/text()'))
+        )
         if qy.value:
             c.quantum_yields.append(qy)
             yield c
@@ -433,11 +432,11 @@ class UvvisAbsCellParser(BaseParser):
         uvvis = UvvisSpectrum()
         for peak in result.xpath('./uvvis_abs_peak'):
             uvvis.peaks.append(
-                UvvisPeak({
-                    'value': first(peak.xpath('./value/text()')),
-                    'extinction': first(peak.xpath('./extinction/text()')),
-                    'shape': first(peak.xpath('./shape/text()'))
-                })
+                UvvisPeak(
+                    value=first(peak.xpath('./value/text()')),
+                    extinction=first(peak.xpath('./extinction/text()')),
+                    shape=first(peak.xpath('./shape/text()'))
+                )
             )
         if uvvis.peaks:
             c.uvvis_spectra.append(uvvis)
@@ -454,9 +453,9 @@ class ExtinctionCellParser(BaseParser):
         uvvis = UvvisSpectrum()
         for value in result.xpath('./extinction/text()'):
             uvvis.peaks.append(
-                UvvisPeak({
-                    'extinction': value,
-                })
+                UvvisPeak(
+                    extinction=value,
+                )
             )
         if uvvis.peaks:
             c.uvvis_spectra.append(uvvis)
@@ -473,12 +472,12 @@ class UvvisAbsEmiQuantumYieldHeadingParser(BaseParser):
         abs_units = first(result.xpath('./uvvis_abs_units/text()'))
         if abs_units:
             c.uvvis_spectra.append(
-                UvvisSpectrum({'peaks': [UvvisPeak({'units': abs_units})]})
+                UvvisSpectrum(peaks=[UvvisPeak(units=abs_units)])
             )
         qy_units = first(result.xpath('./quantum_yield_units/text()'))
         if qy_units:
             c.quantum_yields.append(
-                QuantumYield({'units': qy_units})
+                QuantumYield(units=qy_units)
             )
 
         yield c
@@ -494,15 +493,15 @@ class UvvisAbsEmiQuantumYieldCellParser(BaseParser):
         uvvis = UvvisSpectrum()
         for value in result.xpath('./uvvis_abs_value/text()'):
             uvvis.peaks.append(
-                UvvisPeak({
-                    'value': value,
-                })
+                UvvisPeak(
+                    value=value,
+                )
             )
         if uvvis.peaks:
             c.uvvis_spectra.append(uvvis)
-        qy = QuantumYield({
-            'value': first(result.xpath('./quantum_yield_value/text()')),
-        })
+        qy = QuantumYield(
+            value=first(result.xpath('./quantum_yield_value/text()'))
+        )
         if qy.value:
             c.quantum_yields.append(qy)
 
@@ -527,9 +526,9 @@ class UvvisEmiQuantumYieldCellParser(BaseParser):
     def interpret(self, result, start, end):
         """"""
         c = Compound()
-        qy = QuantumYield({
-            'value': first(result.xpath('./quantum_yield_value/text()')),
-        })
+        qy = QuantumYield(
+            value=first(result.xpath('./quantum_yield_value/text()'))
+        )
         if qy.value:
             c.quantum_yields.append(qy)
             yield c
@@ -545,7 +544,7 @@ class FluorescenceLifetimeHeadingParser(BaseParser):
         c = Compound()
         if fluorescence_lifetime_units:
             c.fluorescence_lifetimes.append(
-                FluorescenceLifetime({'units': fluorescence_lifetime_units})
+                FluorescenceLifetime(units=fluorescence_lifetime_units)
             )
         yield c
 
@@ -557,9 +556,9 @@ class FluorescenceLifetimeCellParser(BaseParser):
     def interpret(self, result, start, end):
         """"""
         c = Compound()
-        fl = FluorescenceLifetime({
-            'value': first(result.xpath('./fluorescence_lifetime_value/text()')),
-        })
+        fl = FluorescenceLifetime(
+            value=first(result.xpath('./fluorescence_lifetime_value/text()'))
+        )
         if fl.value:
             c.fluorescence_lifetimes.append(fl)
             yield c
@@ -575,7 +574,7 @@ class MeltingPointHeadingParser(BaseParser):
         c = Compound()
         if melting_point_units:
             c.melting_points.append(
-                MeltingPoint({'units': melting_point_units})
+                MeltingPoint(units=melting_point_units)
             )
         yield c
 
@@ -589,10 +588,10 @@ class MeltingPointCellParser(BaseParser):
         c = Compound()
         for mp in result.xpath('./temp'):
             c.melting_points.append(
-                MeltingPoint({
-                    'value': first(mp.xpath('./value/text()')),
-                    'units': first(mp.xpath('./units/text()'))
-                })
+                MeltingPoint(
+                    value=first(mp.xpath('./value/text()')),
+                    units=first(mp.xpath('./units/text()'))
+                )
             )
         if c.melting_points:
             yield c
@@ -604,14 +603,14 @@ class ElectrochemicalPotentialHeadingParser(BaseParser):
 
     def interpret(self, result, start, end):
         """"""
-        c = Compound({
-            'electrochemical_potentials': [
-                ElectrochemicalPotential({
-                    'type': first(result.xpath('./electrochemical_potential_type/text()')),
-                    'units': first(result.xpath('./electrochemical_potential_units/text()'))
-                })
+        c = Compound(
+            electrochemical_potentials=[
+                ElectrochemicalPotential(
+                    type=first(result.xpath('./electrochemical_potential_type/text()')),
+                    units=first(result.xpath('./electrochemical_potential_units/text()'))
+                )
             ]
-        })
+        )
         yield c
 
 
@@ -624,9 +623,9 @@ class ElectrochemicalPotentialCellParser(BaseParser):
         c = Compound()
         for value in result.xpath('./electrochemical_potential_value/text()'):
             c.electrochemical_potentials.append(
-                ElectrochemicalPotential({
-                    'value': value,
-                })
+                ElectrochemicalPotential(
+                    value=value
+                )
             )
         if c.electrochemical_potentials:
             yield c
@@ -640,9 +639,8 @@ class CaptionContextParser(BaseParser):
         pass
 
     def interpret(self, result, start, end):
-        c = Compound({
-            'names': first(result.xpath('./subject_phrase/name/text()')),
-        })
+        name = first(result.xpath('./subject_phrase/name/text()'))
+        c = Compound(names=[name]) if name else Compound()
         context = {}
         # print(etree.tostring(result[0]))
         solvent = first(result.xpath('./solvent_phrase/name/text()'))
@@ -650,16 +648,16 @@ class CaptionContextParser(BaseParser):
             context['solvent'] = solvent
         # Melting point shouldn't have contextual temperature
         if context:
-            c.melting_points = [MeltingPoint(context)]
+            c.melting_points = [MeltingPoint(**context)]
         temp = first(result.xpath('./temp_phrase'))
         if temp is not None:
             context['temperature'] = first(temp.xpath('./temp/value/text()'))
             context['temperature_units'] = first(temp.xpath('./temp/units/text()'))
         if context:
-            c.quantum_yields = [QuantumYield(context)]
-            c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
-            c.electrochemical_potentials = [ElectrochemicalPotential(context)]
-            c.uvvis_spectra = [UvvisSpectrum(context)]
-        if c.to_primitive():
+            c.quantum_yields = [QuantumYield(**context)]
+            c.fluorescence_lifetimes = [FluorescenceLifetime(**context)]
+            c.electrochemical_potentials = [ElectrochemicalPotential(**context)]
+            c.uvvis_spectra = [UvvisSpectrum(**context)]
+        if c.serialize():
             # print(c.to_primitive())
             yield c

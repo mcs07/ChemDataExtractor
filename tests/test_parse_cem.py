@@ -232,7 +232,7 @@ class TestParseHeading(unittest.TestCase):
         s = Heading(input)
         log.debug(s)
         log.debug(s.tagged_tokens)
-        results = [r.to_primitive() for r in s.records]
+        results = [r.serialize() for r in s.records]
         self.assertEqual(expected, results)
 
     def test_preparation_of(self):
@@ -395,7 +395,7 @@ class TestParseDocument(unittest.TestCase):
             Heading('Example 3'),
             Paragraph('The solid is suspended in hexanes, stirred and filtered to give the product as a bright yellow solid. (MP 93-94\xc2\xb0 C.).')
         )
-        results = [r.to_primitive() for r in d.records]
+        results = [r.serialize() for r in d.records]
         self.assertEqual(results, [{'names': [u'hexanes']}, {'labels': [u'3'], 'names': [u'2-Amino-3-methoxy-5-chloropyridine'], 'roles': ['product', 'example']}])
 
     def test_consecutive_headings2(self):
@@ -404,7 +404,7 @@ class TestParseDocument(unittest.TestCase):
             Heading('Preparation of 5-Bromo-6-pentadecyl-2-hydroxybenzoic acid (DBAA)'),
             Paragraph('The product had a melting point of 70-75° C. and has structural formula VII.')
         )
-        results = [r.to_primitive() for r in d.records]
+        results = [r.serialize() for r in d.records]
         self.assertEqual(results, [
             {'labels': [u'VII'], 'roles': [u'formula']},
             {'melting_points': [{'units': u'\xb0C.', 'value': u'70-75'}],

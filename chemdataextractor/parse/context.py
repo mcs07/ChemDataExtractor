@@ -84,19 +84,21 @@ class ContextParser(BaseParser):
         if not measurement.tag == 'melting_point':
             context['temperature'] = first(result.xpath('./temperature/value/text()'))
             context['temperature_units'] = first(result.xpath('./temperature/units/text()'))
+        print(context)
 
         if measurement.tag == 'photophysical_properties':
-            c.quantum_yields.append(QuantumYield(context))
-            c.fluorescence_lifetimes.append(FluorescenceLifetime(context))
-            c.uvvis_spectra.append(UvvisSpectrum(context))
+            c.quantum_yields.append(QuantumYield(**context))
+            c.fluorescence_lifetimes.append(FluorescenceLifetime(**context))
+            c.uvvis_spectra.append(UvvisSpectrum(**context))
         if measurement.tag == 'quantum_yield':
-            c.quantum_yields.append(QuantumYield(context))
+            c.quantum_yields.append(QuantumYield(**context))
         if measurement.tag == 'melting_point':
-            c.melting_points.append(MeltingPoint(context))
+            c.melting_points.append(MeltingPoint(**context))
         if measurement.tag == 'nmr':
-            c.nmr_spectra.append(NmrSpectrum(context))
+            c.nmr_spectra.append(NmrSpectrum(**context))
         if measurement.tag == 'uvvis':
-            c.uvvis_spectra.append(UvvisSpectrum(context))
+            c.uvvis_spectra.append(UvvisSpectrum(**context))
         if measurement.tag == 'ir':
-            c.ir_spectra.append(IrSpectrum(context))
+            c.ir_spectra.append(IrSpectrum(**context))
+        print(c.serialize())
         yield c
