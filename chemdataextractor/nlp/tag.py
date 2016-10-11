@@ -14,6 +14,7 @@ from __future__ import unicode_literals
 from __future__ import division
 from abc import ABCMeta, abstractmethod
 from collections import defaultdict
+import io
 import logging
 import pickle
 import random
@@ -184,12 +185,12 @@ class AveragedPerceptron(object):
 
     def save(self, path):
         """Save the pickled model weights."""
-        with open(path, 'wb') as fout:
+        with io.open(path, 'wb') as fout:
             return pickle.dump(dict(self.weights), fout)
 
     def load(self, path):
         """Load the pickled model weights."""
-        with open(path, 'rb') as fin:
+        with io.open(path, 'rb') as fin:
             self.weights = pickle.load(fin)
 
 

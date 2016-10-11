@@ -13,6 +13,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
+import io
 import logging
 import os
 
@@ -75,7 +76,7 @@ class Package(object):
             else:
                 log.debug('File size mismatch for %s', self.local_path)
         log.info('Downloading %s to %s', self.remote_path, self.local_path)
-        with open(self.local_path, 'wb') as f:
+        with io.open(self.local_path, 'wb') as f:
             for chunk in r.iter_content(chunk_size=1024*1024):  # Large 10MB chunks
                 if chunk:
                     f.write(chunk)
@@ -141,7 +142,7 @@ def load_model(path):
         return cached
     log.debug('Loading model %s' % path)
     try:
-        with open(abspath, 'rb') as f:
+        with io.open(abspath, 'rb') as f:
             model = six.moves.cPickle.load(f)
     except IOError:
         raise ModelNotFoundError('Could not load %s. Have you run `cde data download`?' % path)

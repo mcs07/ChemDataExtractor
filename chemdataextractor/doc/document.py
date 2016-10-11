@@ -16,6 +16,7 @@ from __future__ import unicode_literals
 
 from abc import ABCMeta, abstractproperty
 import collections
+import io
 import json
 import logging
 
@@ -80,6 +81,8 @@ class Document(BaseDocument):
 
     @classmethod
     def from_file(cls, f, fname=None, readers=None):
+        if isinstance(f, six.string_types):
+            f = io.open(f, 'rb')
         if not fname and hasattr(f, 'name'):
             fname = f.name
         return cls.from_string(f.read(), fname=fname, readers=readers)

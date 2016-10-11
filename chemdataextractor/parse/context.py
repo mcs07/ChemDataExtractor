@@ -84,7 +84,6 @@ class ContextParser(BaseParser):
         if not measurement.tag == 'melting_point':
             context['temperature'] = first(result.xpath('./temperature/value/text()'))
             context['temperature_units'] = first(result.xpath('./temperature/units/text()'))
-        print(context)
 
         if measurement.tag == 'photophysical_properties':
             c.quantum_yields.append(QuantumYield(**context))
@@ -100,5 +99,4 @@ class ContextParser(BaseParser):
             c.uvvis_spectra.append(UvvisSpectrum(**context))
         if measurement.tag == 'ir':
             c.ir_spectra.append(IrSpectrum(**context))
-        print(c.serialize())
         yield c
