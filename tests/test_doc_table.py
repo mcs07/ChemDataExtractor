@@ -117,11 +117,11 @@ class TestTable(unittest.TestCase):
         #     print(record.to_primitive())
         #     print(record.is_contextual)
         gold = [
-            {'names': ['Coumarins']},
-            {'names': ['acetonitrile']},
             {'names': ['Coumarin 343'], 'quantum_yields': [{'type': '\u03d5', 'solvent': 'acetonitrile', 'value': '0.52', 'temperature': '298', 'temperature_units': 'K'}], 'uvvis_spectra': [{'temperature': '298', 'temperature_units': 'K', 'solvent': 'acetonitrile', 'peaks': [{'units': 'nm', 'value': '398'}]}, {'temperature': '298', 'temperature_units': 'K', 'solvent': 'acetonitrile', 'peaks': [{'extinction': '40800', 'extinction_units': 'M \u2013 1 cm \u2013 1'}]} ]},
             {'labels': ['C144'], 'uvvis_spectra': [{'temperature': '298', 'temperature_units': 'K', 'solvent': 'acetonitrile', 'peaks': [{'units': 'nm', 'value': '429'}]}, {'temperature': '298', 'temperature_units': 'K', 'solvent': 'acetonitrile', 'peaks': [{'extinction': '9500', 'extinction_units': 'M \u2013 1 cm \u2013 1'}]}]},
             {'names': ['Coumarin 34'], 'quantum_yields': [{'type': '\u03d5', 'solvent': 'acetonitrile', 'value': '<0.01', 'temperature': '298', 'temperature_units': 'K'}], 'uvvis_spectra': [{'temperature': '298', 'temperature_units': 'K', 'solvent': 'acetonitrile', 'peaks': [{'units': 'nm', 'value': '269'}]}]},
+            {'names': ['Coumarins']},
+            {'names': ['acetonitrile']}
         ]
 
         # for record in t.records:

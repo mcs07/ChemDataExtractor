@@ -223,7 +223,7 @@ class Text(BaseText):
     @property
     def records(self):
         """Return a list of records for this text passage."""
-        return [r for sent in self.sentences for r in sent.records]
+        return ModelList(*[r for sent in self.sentences for r in sent.records])
 
     def __add__(self, other):
         if type(self) == type(other):

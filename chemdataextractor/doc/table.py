@@ -16,7 +16,7 @@ from __future__ import unicode_literals
 import logging
 from collections import defaultdict
 
-from ..model import Compound
+from ..model import Compound, ModelList
 from ..parse.table import CompoundHeadingParser, CompoundCellParser, UvvisAbsHeadingParser, UvvisAbsCellParser, \
     QuantumYieldHeadingParser, QuantumYieldCellParser, UvvisEmiHeadingParser, UvvisEmiCellParser, ExtinctionCellParser, \
     ExtinctionHeadingParser, FluorescenceLifetimeHeadingParser, FluorescenceLifetimeCellParser, \
@@ -111,7 +111,7 @@ class Table(CaptionedElement):
         # Parse headers to extract contextual data and determine value parser for the column
         value_parsers = {}
         header_compounds = defaultdict(list)
-        table_records = []
+        table_records = ModelList()
         seen_compound_col = False
         log.debug('Parsing table headers')
 
@@ -240,7 +240,8 @@ class Table(CaptionedElement):
 
         # Include non-contextual caption records in the final output
         caption_records = [c for c in caption_records if not c.is_contextual]
-        return caption_records + table_records
+        table_records += caption_records
+        return table_records
 
     # TODO: extend abbreviations property to include footnotes
     # TODO: Resolve footnote records into headers
