@@ -12,7 +12,7 @@ else:
 
 setup(
     name='ChemDataExtractor',
-    version='1.1.1',
+    version='1.2.0',
     author='Matt Swain',
     author_email='m.swain@me.com',
     license='MIT',
