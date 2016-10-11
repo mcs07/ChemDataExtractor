@@ -144,6 +144,7 @@ class ModelMeta(ABCMeta):
         return super(ModelMeta, cls).__setattr__(key, value)
 
 
+@six.python_2_unicode_compatible
 class BaseModel(six.with_metaclass(ModelMeta)):
     """"""
 
@@ -158,6 +159,12 @@ class BaseModel(six.with_metaclass(ModelMeta)):
         for key, field in six.iteritems(self.fields):
             if key not in raw_data:
                 setattr(self, key, copy.copy(field.default))
+
+    def __repr__(self):
+        return '<%s>' % (self.__class__.__name__,)
+
+    def __str__(self):
+        return '<%s>' % (self.__class__.__name__,)
 
     def __eq__(self, other):
         # TODO: Check this actually works as expected (what about default values?)
@@ -260,6 +267,7 @@ class BaseModel(six.with_metaclass(ModelMeta)):
         return json.dumps(self.serialize(primitive=True), *args, **kwargs)
 
 
+@six.python_2_unicode_compatible
 class ModelList(MutableSequence):
     """Wrapper around a list of Models objects to facilitate operations on all at once."""
 
@@ -277,6 +285,12 @@ class ModelList(MutableSequence):
 
     def __len__(self):
         return len(self.models)
+
+    def __repr__(self):
+        return self.models.__repr__()
+
+    def __str__(self):
+        return self.models.__str__()
 
     def insert(self, index, value):
         self.models.insert(index, value)
