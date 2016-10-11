@@ -1,6 +1,15 @@
 ChemDataExtractor
 =================
 
+.. image:: http://img.shields.io/pypi/v/ChemDataExtractor.svg?style=flat-square
+    :target: https://pypi.python.org/pypi/ChemDataExtractor
+
+.. image:: http://img.shields.io/pypi/l/ChemDataExtractor.svg?style=flat-square
+    :target: https://github.com/mcs07/ChemDataExtractor/blob/master/LICENSE
+
+.. image:: http://img.shields.io/travis/mcs07/ChemDataExtractor.svg?style=flat-square
+    :target: https://travis-ci.org/mcs07/ChemDataExtractor
+
 ChemDataExtractor is a toolkit for extracting chemical information from the scientific literature.
 
 
