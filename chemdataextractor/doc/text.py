@@ -40,6 +40,7 @@ from .element import BaseElement
 log = logging.getLogger(__name__)
 
 
+@six.python_2_unicode_compatible
 class BaseText(BaseElement):
     """Abstract base class for a text Document Element."""
 

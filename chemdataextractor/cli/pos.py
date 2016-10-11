@@ -254,7 +254,7 @@ def evaluate_perceptron(ctx, model, corpus):
 
 @pos_cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.argument('input', type=click.File('rb'), default=sys.stdin)
 @click.pass_obj
 def tag(ctx, input, output):
     """Output POS-tagged tokens."""

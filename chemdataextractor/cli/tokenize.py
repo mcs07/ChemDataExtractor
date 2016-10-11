@@ -66,7 +66,7 @@ def train_punkt(ctx, input, output, abbr, colloc):
 
 @tokenize_cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.argument('input', type=click.File('rb'), default=sys.stdin)
 @click.pass_obj
 def sentences(ctx, input, output):
     """Read input document, and output sentences."""
@@ -82,7 +82,7 @@ def sentences(ctx, input, output):
 
 @tokenize_cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.argument('input', type=click.File('rb'), default=sys.stdin)
 @click.pass_obj
 def words(ctx, input, output):
     """Read input document, and output words."""

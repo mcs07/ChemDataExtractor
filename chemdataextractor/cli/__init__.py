@@ -44,7 +44,7 @@ def cli(ctx, verbose):
 
 @cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.argument('input', type=click.File('rb'), default=sys.stdin)
 @click.pass_obj
 def extract(ctx, input, output):
     """Run ChemDataExtractor on a document."""
@@ -52,13 +52,13 @@ def extract(ctx, input, output):
     log.info('Reading %s' % input.name)
     doc = Document.from_file(input, fname=input.name)
     records = [record.serialize(primitive=True) for record in doc.records]
-    jsonstring = json.dumps(records, indent=2, ensure_ascii=False).decode('utf-8')
+    jsonstring = json.dumps(records, indent=2, ensure_ascii=False)
     output.write(jsonstring)
 
 
 @cli.command()
 @click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('r', encoding='utf8'), default=sys.stdin)
+@click.argument('input', type=click.File('rb'), default=sys.stdin)
 @click.pass_obj
 def read(ctx, input, output):
     """Output processed document elements."""

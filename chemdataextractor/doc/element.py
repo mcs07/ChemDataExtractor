@@ -31,10 +31,10 @@ class BaseElement(six.with_metaclass(ABCMeta)):
         self.references = references if references is not None else []
 
     def __repr__(self):
-        return '<%s: %r>' % (self.__class__.__name__, self.id.encode('utf8'))
+        return '<%s>' % (self.__class__.__name__,)
 
     def __str__(self):
-        return '<%s: %r>' % (self.__class__.__name__, self.id.encode('utf8'))
+        return '<%s>' % (self.__class__.__name__,)
 
     @property
     def document(self):
@@ -65,6 +65,7 @@ class BaseElement(six.with_metaclass(ABCMeta)):
         return json.dumps(self.serialize(), *args, **kwargs)
 
 
+@six.python_2_unicode_compatible
 class CaptionedElement(BaseElement):
     """Document Element with a caption."""
 
