@@ -21,5 +21,6 @@ install:
   - pip install dawg
   - source activate cde
   - python setup.py install
+  - cde data download
 script:
   - pytest
