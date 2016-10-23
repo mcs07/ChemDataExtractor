@@ -1,0 +1,2135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE us-patent-grant SYSTEM "us-patent-grant-v40-2004-12-02.dtd" [ ]>
+<us-patent-grant lang="EN" dtd-version="v40 2004-12-02" file="US06840965-20050111.XML" status="SAMPLE-DATA" id="us-patent-grant" country="US" date-produced="20041228" date-publ="20050111">
+<us-bibliographic-data-grant>
+<publication-reference>
+<document-id>
+<country>US</country>
+<doc-number>06840965</doc-number>
+<kind>B2</kind>
+<date>20050111</date>
+</document-id>
+</publication-reference>
+<application-reference appl-type="utility">
+<document-id>
+<country>US</country>
+<doc-number>10030468</doc-number>
+<date>20010309</date>
+</document-id>
+</application-reference>
+<us-application-series-code>10</us-application-series-code>
+<priority-claims>
+<priority-claim sequence="01" kind="national">
+<country>DE</country>
+<doc-number>100 22 828</doc-number>
+<date>20000510</date>
+</priority-claim>
+</priority-claims>
+<us-term-of-grant>
+<us-term-extension>320</us-term-extension>
+</us-term-of-grant>
+<classification-ipc>
+<edition>7</edition>
+<main-classification>A61K  713</main-classification>
+</classification-ipc>
+<classification-national>
+<country>US</country>
+<main-classification>  8405</main-classification>
+<further-classification>  8409</further-classification>
+<further-classification>  8412</further-classification>
+<further-classification>  8423</further-classification>
+<further-classification>  8408</further-classification>
+<further-classification>548400</further-classification>
+<further-classification>549415</further-classification>
+<further-classification>549476</further-classification>
+<further-classification>549478</further-classification>
+<further-classification>549479</further-classification>
+<further-classification>549480</further-classification>
+<further-classification>549497</further-classification>
+<further-classification>549502</further-classification>
+<further-classification>549504</further-classification>
+<further-classification>549 61</further-classification>
+<further-classification>549 62</further-classification>
+<further-classification>549 63</further-classification>
+<further-classification>549 68</further-classification>
+<further-classification>549 75</further-classification>
+</classification-national>
+<invention-title id="d0e71">P-aminophenols and colorants containing said compounds</invention-title>
+<references-cited>
+<citation>
+<patcit num="00001">
+<document-id>
+<country>DE</country>
+<doc-number>196 07 751</doc-number>
+<kind>A1</kind>
+<date>19970900</date>
+</document-id>
+</patcit>
+<category>cited by other</category>
+</citation>
+<citation>
+<nplcit num="00002">
+<othercit>Anna Maria Almerico et al. Polycondensed Nitrogen Heterocycles. (J. Heterocyclic Chem., 31, 193 (1994).</othercit>
+</nplcit>
+<category>cited by examiner</category>
+</citation>
+</references-cited>
+<number-of-claims>10</number-of-claims>
+<us-exemplary-claim>1</us-exemplary-claim>
+<field-of-search>
+<classification-national>
+<country>US</country>
+<main-classification>  8405</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>  8409</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>  8412</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>  8421</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>  8423</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>548400</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549476</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549475</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549478</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549479</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549480</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549497</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549502</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549504</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549 61</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549 62</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549 63</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549 68</main-classification>
+</classification-national>
+<classification-national>
+<country>US</country>
+<main-classification>549 75</main-classification>
+</classification-national>
+</field-of-search>
+<figures>
+<number-of-drawing-sheets>0</number-of-drawing-sheets>
+<number-of-figures>0</number-of-figures>
+</figures>
+<us-related-documents>
+<related-publication>
+<document-id>
+<country>US</country>
+<doc-number>20030110577</doc-number>
+<kind>A1</kind>
+<date>20030619</date>
+</document-id>
+</related-publication>
+</us-related-documents>
+<parties>
+<applicants>
+<applicant sequence="001" app-type="applicant-inventor" designation="us-only">
+<addressbook>
+<last-name>Chassot</last-name>
+<first-name>Laurent</first-name>
+<address>
+<city>Praroman</city>
+<country>CH</country>
+</address>
+</addressbook>
+<nationality>
+<country>CH</country>
+</nationality>
+<residence>
+<country>CH</country>
+</residence>
+</applicant>
+<applicant sequence="002" app-type="applicant-inventor" designation="us-only">
+<addressbook>
+<last-name>Braun</last-name>
+<first-name>Hans-Juergen</first-name>
+<address>
+<city>Ueberstorf</city>
+<country>CH</country>
+</address>
+</addressbook>
+<nationality>
+<country>CH</country>
+</nationality>
+<residence>
+<country>CH</country>
+</residence>
+</applicant>
+</applicants>
+<agents>
+<agent sequence="01" rep-type="attorney">
+<addressbook>
+<last-name>Striker</last-name>
+<first-name>Michael J.</first-name>
+<address>
+<country>unknown</country>
+</address>
+</addressbook>
+</agent>
+</agents>
+</parties>
+<assignees>
+<assignee>
+<addressbook>
+<orgname>Wella Aktiengesellschaft</orgname>
+<role>03</role>
+<address>
+<city>Darmstadt</city>
+<country>DE</country>
+</address>
+</addressbook>
+</assignee>
+</assignees>
+<examiners>
+<primary-examiner>
+<last-name>Gupta</last-name>
+<first-name>Yogendra N.</first-name>
+<department>1751</department>
+</primary-examiner>
+<assistant-examiner>
+<last-name>Elhilo</last-name>
+<first-name>Elisa</first-name>
+</assistant-examiner>
+</examiners>
+<pct-or-regional-filing-data>
+<document-id>
+<country>WO</country>
+<doc-number>PCTEP01/02686</doc-number>
+<kind>00</kind>
+<date>20010309</date>
+</document-id>
+<us-371c124-date>
+<date>20020108</date>
+</us-371c124-date>
+</pct-or-regional-filing-data>
+<pct-or-regional-publishing-data>
+<document-id>
+<country>WO</country>
+<doc-number>WO0185683</doc-number>
+<kind>A </kind>
+<date>20011115</date>
+</document-id>
+</pct-or-regional-publishing-data>
+</us-bibliographic-data-grant>
+<abstract id="abstract">
+<p id="P-00001" num="00001">The object of the invention are p-aminophenol derivatives of general formula (I) or physiologically tolerated, water-soluble salts thereof 
+<chemistry id="CHEM-US-00001" num="00001">
+<img id="EMI-C00001" he="31.50mm" wi="54.78mm" file="US06840965-20050111-C00001.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+and oxidative coloring preparations based on a developer-coupler combination containing at least one p-aminophenol derivative of formula (I).
+</p>
+</abstract>
+<description id="description">
+<?BRFSUM description="Brief Summary" end="lead"?>
+<p id="P-00003" num="00003">The invention relates to novel p-aminophenol derivatives substituted in the 2-position and to coloring preparations for dyeing keratin fibers, particularly human hair, and containing these compounds.</p>
+<p id="P-00004" num="00004">In the area of keratin fiber dyeing, particularly hair dyeing, oxidation dyes have attained substantial importance. In this case, the coloration is produced by reaction of certain developers with certain couplers in the presence of an appropriate oxidant. Suitable developers are, in particular, 2,5-diaminotoluene, 2,5-diaminophenylethyl alcohol, p-aminophenol and 1,4-diaminobenzene, and suitable couplers are, for example, resorcinol, 4-chlororesorcinol, 1-naphthol, 3-aminophenol, 5-amino-2-methylphenol and derivatives of m-phenylenediamine. The oxidation dyes used for dyeing human hair must meet numerous requirements in addition to that of being able to produce colorations of the desired intensity. For example, these dyes must be harmless from a toxicological and dermatological standpoint, and the obtained hair colorations must have good light fastness, resistance to permanent waving, acid fastness and rubbing fastness. In any case, however, such colorations must remain stable over a period of at least 4 to 6 weeks in the absence of exposure to light, rubbing and chemical agents. Moreover, by combination of appropriate developers and couplers, it must be possible to create a wide range of color shades. To achieve natural and especially stylish shades in the red range, p-aminophenol, alone or in admixture with other developers, in particular, is used in combination with appropriate couplers. Attempts have already been made to improve the properties of p-aminophenols by introducing substituents. In this regard, the reader is referred to German Unexamined Patent Application [DE-OS] 196 07 751 in which are also described colorants, among others, containing as developers special p-aminophenols substituted in the 2-position.</p>
+<p id="P-00005" num="00005">Currently known colorants, however, do not meet in all respects the requirements placed on colorants. Hence, there continues to exist a need for novel developers capable of meeting the aforesaid requirements to a very high degree.</p>
+<p id="P-00006" num="00006">Surprisingly, in this regard, we have now found that novel p-aminophenol derivatives of general formula (I) meet the requirements placed on developers to a particularly high degree. For example, the use of these developers in combination with most known couplers produces intense color shades that are unusually light-fast and wash-fast.</p>
+<p id="P-00007" num="00007">The object of the present invention are therefore p-aminophenol derivatives of general formula (I) or physiologically tolerated, water-soluble salts thereof 
+<chemistry id="CHEM-US-00002" num="00002">
+<img id="EMI-C00002" he="31.50mm" wi="54.78mm" file="US06840965-20050111-C00002.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+wherein
+<ul id="ul100001" list-style="none">
+    <li id="ul100002-li00002">
+    <ul id="ul100002" list-style="none">
+        <li id="ul100002-p00009" num="00009">X denotes oxygen, sulfur or NR5;</li>
+        <li id="ul100002-p00010" num="00010">R1 denotes hydrogen, a halogen atom, a C<sub>1</sub>-C<sub>4</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group or a C<sub>1</sub>-C<sub>4</sub>-alkoxy group;</li>
+        <li id="ul100002-p00011" num="00011">R2 and R4 independently of each other denote hydrogen, a hydroxyl group, a halogen atom, a cyano group, a C<sub>1</sub>-C<sub>4</sub>-alkoxy group, a C<sub>1</sub>-C<sub>6</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-alkyl thioether group, a mercapto group, a nitro group, an amino group, a C<sub>1</sub>-C<sub>6</sub>-alkylamino group, a (C<sub>1</sub>-C<sub>6</sub>)-dialkylamino group, a &#x2014;C(OH) group, a &#x2014;C(O)CH<sub>3 </sub>group, a &#x2014;C(O)CF<sub>3 </sub>group, an &#x2014;Si(CH<sub>3</sub>)<sub>3 </sub>group, a C<sub>1</sub>C<sub>4</sub>-hydroxyalkyl group, a C<sub>3</sub>-C<sub>4</sub>-dihydroxyyalkyl group, a &#x2014;CH&#x2550;CHR6 group, a &#x2014;(CH<sub>2</sub>)<sub>p</sub>&#x2014;CO<sub>2</sub>R7 group, a &#x2014;(CH<sub>2</sub>)<sub>p</sub>&#x2014;R8 group (with p=1,2, 3 or 4), a &#x2014;C(R9)&#x2550;NR10 group or a C(R11)H&#x2014;NR12R13 group;</li>
+        <li id="ul100002-p00012" num="00012">R3 denotes hydrogen, a halogen atom, a C<sub>1</sub>-C<sub>6</sub>-alkyl group or a &#x2014;C(O)H group;</li>
+        <li id="ul100002-p00013" num="00013">R5 denotes hydrogen, a C<sub>1</sub>-C<sub>8</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group, a phenyl group or an acetyl group;</li>
+        <li id="ul100002-p00014" num="00014">R6 denotes hydrogen, a hydroxyl group, a nitro group, an amino group, a &#x2014;CO<sub>2</sub>R7 group or a &#x2014;C(O)CH<sub>3 </sub>group;</li>
+        <li id="ul100002-p00015" num="00015">R7, R9 and R11 independently of each other denote hydrogen or a C<sub>1</sub>-C<sub>4</sub>-alkyl group;</li>
+        <li id="ul100002-p00016" num="00016">R8 denotes an amino group or a nitrile group;</li>
+        <li id="ul100002-p00017" num="00017">R10, R12 and R13 independently of each other denote hydrogen, a hydroxyl group, a C<sub>1</sub>-C<sub>4</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group, a C<sub>3</sub>-C<sub>4</sub>-dihydroxyalkyl group or a radical of formula (II) 
+<chemistry id="CHEM-US-00003" num="00003">
+<img id="EMI-C00003" he="12.78mm" wi="50.80mm" file="US06840965-20050111-C00003.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+and
+</li>
+        <li id="ul100002-p00019" num="00019">R14 denotes hydrogen, an amino group or a hydroxyl group.</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="P-00020" num="00020">Suitable compounds of formula (I) are, in particular: 4-amino-2-(3-thienyl)phenol; 4-amino-2-(3-furyl)phenol; 4-amino-2-(pyrrol-3-yl)phenol; 4-amino-2-(1-methyl-1H-pyrrol-3-yl)phenol; 4-amino-3-chloro-2-(3-thienyl)phenol; 4-amino-3-methyl-2-(3-thienyl)-phenol; 4-amino-5-chloro-2-(3-thienyl)phenol; 4-amino-5-methyl-2-(3-thienyl)phenol; 4-amino-6-chloro-2-(3-thienyl)phenol; 4-amino-6-methyl-2-(3-thienyl)phenol; 4-amino-2-(2-acetyl-3-thienyl)phenol; 4-amino-2-(2-chloro-3-thienyl)-phenol; 4-amino-2-(2-formyl-3-thienyl)-phenol; 4-amino-2-(2-methyl-3-thienyl)phenol; 4-amino-2-(4-acetyl-3-thienyl)phenol; 4-amino-2-(4-chloro-3-thienyl)phenol; 4-amino-2-(4-formyl-3-thienyl)phenol; 4-amino-2-(4-methyl-3-thienyl)phenol; 4-amino-2-(5-acetyl-3-thienyl)phenol; 4-amino-2-(5-chloro-3-thienyl)phenol; 4-amino-2-(5-methyl-3-thienyl)phenol or physiologically tolerated salts thereof.</p>
+<p id="P-00021" num="00021">Preferred compounds of formula (I) are those wherein (i) R1 denotes hydrogen and/or (ii) at least one of groups R2, R3 and R4 denotes hydrogen or a methyl group and/or (iii) X denotes sulfur or oxygen.</p>
+<p id="P-00022" num="00022">Particularly preferred p-aminophenol derivatives of formula (I) are 4-amino-2-(3-thienyl)phenol; 4-amino-2-(4-methyl-3-thienyl)phenol and 4-amino-2-(2-chloro-3-thienyl)phenol and physiologically tolerated salts thereof.</p>
+<p id="P-00023" num="00023">The compounds of formula (I) can be used as free bases and in the form of their physiologically tolerated salts of inorganic or organic acids, for example hydrochloric, sulfuric, phosphoric, acetic, propionic, lactic or citric acid.</p>
+<p id="P-00024" num="00024">The aminophenol derivatives of the invention of formula (I) can be prepared by synthesis methods known from the literature, for example by palladium(O)-catalyzed coupling of a substituted benzene of formula (II) 
+<chemistry id="CHEM-US-00004" num="00004">
+<img id="EMI-C00004" he="29.80mm" wi="50.55mm" file="US06840965-20050111-C00004.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+and a heteroaryl compound of formula (III) 
+<chemistry id="CHEM-US-00005" num="00005">
+<img id="EMI-C00005" he="17.95mm" wi="50.04mm" file="US06840965-20050111-C00005.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+<br/>
+followed by elimination of the protective group, optionally followed by reduction of the nitro group, the remaining groups in formulas (II) and (III) having the following meaning:
+<ul id="ul100003" list-style="none">
+    <li id="ul100004-li00004">
+    <ul id="ul100004" list-style="none">
+        <li id="ul100002-p00027" num="00027">Ra denotes a protective group&#x2014;for example one described in the chapter on &#x201c;Protective Groups&#x201d; in Organic Synthesis, chapter 7, Wiley Interscience, 1991,&#x2014;and Rb denotes an NHRa group or a nitro group; one of the two Rc and Rd groups denotes a halogen group while the other denotes a B(OH) group, and X, R1, R2, R3 and R4 have the same meanings as in formula (I).</li>
+    </ul>
+    </li>
+</ul>
+</p>
+<p id="P-00028" num="00028">In particular, the compounds can be used as developers in oxidative colorants and provide a wide range of different color shades extending from blond to brown, purple, violet and even blue and black.</p>
+<p id="P-00029" num="00029">Another object of the present invention are therefore preparations for oxidative dyeing of keratin fibers, for example hair, furs, feathers or wool, particularly human hair, based on a developer-coupler combination, containing as developer at least one p-aminophenol derivative of formula (I).</p>
+<p id="P-00030" num="00030">The aminophenol derivative of formula (I) is contained in the colorant of the invention in an amount from about 0.005 to 20 wt. %, an amount from about 0.01 to 5.0 and particularly from 0.1 to 2.5 wt. % being especially preferred.</p>
+<p id="P-00031" num="00031">Preferred couplers are 2,6-diaminopyridine, 2-amino-[(2-hydroxyethyl)amino]anisole, 2,4-diamino-1-fluoro-5-methylbenzene, 2,4-diamino-1-methoxy-5-methylbenzene, 2,4-diamino-1-ethoxy-5-meth-ylbenzene, 2,4-diamino-1-(2-hydroxyethoxy)-5-methylbenzene, 2,4-di-[(2-hydroxyethyl)amino]-1,5-dimethoxybenzene, 2,3-diamino-6-methoxypyridine, 3-amino-6-methoxy-2-(methylamino)pyridine, 2,6-diamino-3,5-dimethoxypyridine, 3,5-diamino-2,6-dimethoxypyridine, 1,3-diaminobenzene, 2,4-diamino-1-(2-hydroxyethoxy)benzene, 2,4-diamino-1,5-di-(2-hydroxyethoxy)benzene, 1-(2-amino-ethoxy)-2,4-diaminobenzene, 2-amino-1-(2-hydroxyethoxy)-4-methylaminobenzene, 2,4-diamino-phenoxyacetic acid, 3-[di-(2-hydroxyethyl)amino]aniline, 4-amino-2-di-[(2-hydroxyethyl)amino]-1-ethoxybenzene, 5-methyl-2-(1-methylethyl)phenol, 3-[(2-hydroxyethyl)amino]aniline, 3-[(2-amino-ethyl)amino]aniline, 1,3-di-(2,4-diaminophenoxy)propane, di-(2,4-diaminophenoxy)methane, 1,3-di-amino-2,4-dimethoxybenzene, 2,6-bis-(2-hydroxyethyl)aminotoluene, 4-hydroxyindole, 3-dimethylaminophenol, 3-diethylaminophenol, 5-amino-2-methylphenol, 5-amino-4-fluoro-2-methylphenol, 5-amino-4-methoxy-2-methylphenol, 5-amino-4-ethoxy-2-methylphenol, 3-amino-2,4-dichlorophenol, 5-amino-2,4-dichlorophenol, 3-amino-2-methylphenol, 3-amino-2-chloro-6-methylphenol, 3-aminophenol, 2-[(3-hydroxyphenyl)amino]acetamide, 5-[(2-hydroxyethyl)amino]-2-methylphenol, 3-[(2-hydroxyethyl)amino]phenol, 3-[(2-methoxyethyl)amino]phenol, 5-amino-2-ethylphenol, 2-(4-amino-2-hydroxyphenoxy)ethanol, 5-[(3-hydroxypropyl)amino]-2-methylphenol, 3-[(2,3-dihydroxypropyl)amino]-2-methylphenol, 3-[(2-hydroxyethyl)amino]-2-methylphenol, 2-amino-3-hydroxypyridine, 5-amino-4-chloro-2-methylphenol, 1-naphthol, 1,5-dihydroxynaphthalene, 1,7-dihydroxynaphthalene, 2,3-dihydroxynaphthalene, 2,7-dihydroxynaphthalene, 2-methyl-1-naphthol acetate, 1,3-dihydroxybenzene, 1-chloro-2,4-dihydroxybenzene, 2-chloro-1,3-dihydroxybenzene, 1,2-dichloro-3,5-dihydroxy-4-methylbenzene, 1,5-dichloro-2,4-dihydroxybenzene, 1,3-dihydroxy-2-methylbenzene, 3,4-methylenedioxyphenol, 3,4-methylenedioxyaniline, 5-[(2-hy-droxyethyl)amino]-1,3-benzodioxol, 6-bromo-1-hydroxy-3,4-methylenedioxybenzene, 3,4-diaminobenzoic acid, 3,4-dihydro-6-hydroxy-1,4(2H)-benzoxazine, 6-amino-3,4-dihydro-1,4(2H)benzoxazine, 3-methyl-1-phenyl-5-pyrazolone, 5,6-dihydroxyindole, 5,6-dihydroxyindoline, 5-hydroxyindole, 6-hydroxyindole, 7-hydroxyindole and 2,3-indolinedione.</p>
+<p id="P-00032" num="00032">Although the advantageous properties of the aminophenol derivatives of formula (I) described here suggest that said derivatives should be used as the only developers, it is, of course, also possible to use the aminophenol derivatives of formula (I) together with known developers such as, for example, 1,4-diaminobenzene, 2,5-diaminotoluene, 2,5-diaminophenylethyl alcohol, N,N-bis-(2&#x2032;-hydroxyethyl)-1,4-diaminobenzene, 4-aminophenol and the derivatives thereof, for example 4-amino-3-methylphenol, 4,5-diamino-1-(2-hydroxyethyl)pyrazole, or tetraaminopyrimidines.</p>
+<p id="P-00033" num="00033">The couplers and developers can be contained in the colorants of the invention either alone or in admixture with each other, the total amount of couplers and developers in the colorants of the invention (based on the total amount of colorant) being in all cases from about 0.005 to 20 wt. %, preferably from about 0.01 to 5.0 wt. % and particularly from 0.1 to 2.5 wt. %.</p>
+<p id="P-00034" num="00034">The total amount of developer-coupler combination contained in the colorants described herein is preferably from about 0.01 to 20 wt. %, an amount from about 0.02 to 10 wt. % and particularly from 0.2 to 6.0 wt. % being especially preferred. In general, the developers and couplers are used in approximately equimolor amounts. It is not disadvantageous in this respect, however, if the developers are present in a certain excess or deficiency.</p>
+<p id="P-00035" num="00035">Moreover, the colorants of the invention can additionally contain other dyes, for example 6-amino-2-methylphenol and 2-amino-5-methylphenol, as well as other common direct dyes, for example triphen-ylmethane dyes such as 4-[(4&#x2032;-aminophenyl)-(4&#x2032;-imino-2&#x2033;,5&#x2033;-cyclohexodien-1&#x2033;-ylidene)methyl]-2-methylaminobenzene monohydrochlorlde (C.I.<sup>1 </sup>42 510) and 4-[(4&#x2032;-amino-3&#x2032;-methylphenyl)-(4&#x2033;-imino-3&#x2033;-methyl-2&#x2033;,5&#x2033;-cyclohexadien-1&#x2033;-ylidene)methyl]-2-methylaminobenzene monohydrochloride (C.I. 42 520), aromatic nitro dyes such as 4-(2&#x2032;-hydroxyethyl)aminonitrotoluene, 2-amino-4,6-dinitrophenol, 2-amino-5-(2&#x2032;-hydroxyethyl)aminonitrobenzene, 2-chloro-6-(ethylamino)-4-nitrophenol, 4-chloro-N-(2-hydroxyethyl)-2-nitroaniline, 5-chloro-2-hydroxy-4-nitroaniline, 2-amino-4-chloro-6-nitrophenol and 1-[(2&#x2032;-ureidoethyl)amino]-4nitrobenzene, azo dyes such as sodium 6-[(4&#x2032;-aminophenyl)azo]-5-hydro-xynaphthalene-1-sulfonate (C.I. 14 805) and disperse dyes, for example 1,4-diaminoanthraquinone and 1,4,5,8-tetraaminoanthraquinone or cationic dyes.</p>
+<p id="P-00036" num="00036"><sup>1</sup>C.I.=Color Index&#x2014;Translator </p>
+<p id="P-00037" num="00037">The colorants can contain these dyes in an amount from about 0.1 to 4.0 wt. %.</p>
+<p id="P-00038" num="00038">Naturally, the couplers and developers and the other dyes, as long as they are bases, can also be used in the form of physiologically tolerated salts of organic or inorganic acids, for example hydrochloric acid or sulfuric acid or&#x2014;providing that they contain aromatic OH groups&#x2014;in the form of salts of bases, for example as alkali metal phenoxides.</p>
+<p id="P-00039" num="00039">Moreover, if the colorants are to be used for coloring hair, they can contain other common cosmetic additives, for example antioxidants such as ascorbic acid, thioglycolic acid or sodium sulfite, as well as perfume oils, complexing agents, wetting agents, emulsifiers, thickeners and hair-care agents. The colorant of the invention can be a solution, particularly as an aqueous or aqueous-alcoholic solution.</p>
+<p id="P-00040" num="00040">A particularly preferred formulation form, however, is a cream, gel or emulsion. Such a composition consists of a mixture of the dye components and the usual additives employed for such compositions.</p>
+<p id="P-00041" num="00041">Common additives to solutions, creams, emulsions or gels are, for example solvents such as water, lower aliphatic alcohols, for example ethanol, propanol or isopropanol, glycerol or glycols such as 1,2-propylene glycol, moreover wetting agents or emulsifiers from the classes of anionic, cationic, amphoteric or nonionic surface-active agents, for example fatty alcohol sulfates, ethoxylated fatty alcohol sulfates. alkylsulfonates, alkylbenzenesulfonates, alkyltrimethylammonium salts, alkylbetaines, ethoxylated fatty alcohols, ethoxylated nonylphenols, fatty acid alkanolamides and ethoxylated fatty esters, furthermore thickeners such as the higher fatty alcohols, starch, cellulose derivatives, petrolatum, paraffin oil and fatty acids, also hair-care agents such as cationic resins, lanolin derivatives, cholesterol, pantothenic acid and betaine. The cited constituents are used in amounts commonly employed for such purposes, for example the wetting agents and emulsifiers at a concentration of about 0.5 to 30 wt. %, the thickeners in an amount from about 0.1 to 25 wt. % and the hair-care agents at a concentration from about 0.1 to 5.0 wt. %.</p>
+<p id="P-00042" num="00042">Depending on the composition, the colorants of the invention can be weakly acidic, neutral or alkaline. In particular, they have a pH of about 6.5 to 11.5. Adjustment to a basic pH is preferably done with ammonia, but it can also be done with an organic amine, for example monoethanolamine and triethanolamine, or with an inorganic base such as sodium hydroxide or potassium hydroxide. Suitable for adjustment to an acidic pH are inorganic or organic acids, for example phosphoric acid, acetic acid, citric acid or tartaric acid.</p>
+<p id="P-00043" num="00043">For oxidative dyeing of hair, the afore-described colorants are mixed with an oxidant just before use, and the resulting mixture is applied to hair in an amount sufficient for the hair-dyeing treatment in general about 60 to 200 grams, depending on the hair fullness.</p>
+<p id="P-00044" num="00044">Suitable oxidants for developing the hair coloration are mainly hydrogen peroxide or its products of addition to urea, melamine, sodium borate or sodium carbonate, in the form of a 3-12%, preferably 6% aqueous solution, atmospheric oxygen also being suitable. When a 6% hydrogen peroxide solution is used as oxidant, the weight ratio of hair colorant to oxidant is from 5:1 to 1:2, but preferably 1:1. Larger amounts of oxidant are used primarily at higher dye concentrations in the hair colorant or when strong bleaching of the hair is wanted at the same time. The mixture is allowed to act on the hair at 15 to 50&#xb0; C. for about 10 to 45 min, preferably 30 min, after which the hair is rinsed with water and dried. Optionally, following this rinsing, the hair is washed with a shampoo and optionally post-rinsed with a weak organic acid, for example citric acid or tartaric acid. The hair is then dried.</p>
+<p id="P-00045" num="00045">The colorants of the invention containing a p-aminophenol derivative of formula (I) as developer give hair colorations of excellent color fastness, particularly in terms of light fastness, wash fastness and rubbing fastness. As far as the dyeing properties are concerned, the hair colorants of the invention provide a wide range of different color shades from blond to brown, purple, violet and even blue and black, depending on the type and composition of the dye components. Such color shades are characterized by unusual color intensity and good color balancing of damaged and undamaged hair. The very good coloring properties of the hair colorant of the present invention also manifest themselves in that these colorants make it possible to dye graying hair, chemically not previously damaged, without any problems and with good covering power.</p>
+<p id="P-00046" num="00046">Preferred couplers are 2,6-diaminopyridine, 2-amino-[(2-hydroxyethyl)amino]anisole, 2,4-diamino-1-fluoro-5-methylbenzene, 2,4-diamino-1-methoxy-5-methylbenzene, 2,4-diamino-1-ethoxy-5-meth-ylbenzene, 2,4-diamino-1-(2-hydroxyethoxy)-5-methylbenzene, 2,4-di-[(2-hydroxyethyl)amino]-1,5-dimethoxybenzene, 2,3-diamino-6-methoxypyridine, 3-amino-6-methoxy-2-(methylamino)pyridine, 2,6-diamino-3,5-dimethoxypyridine, 3,5-diamino-2,6-dimethoxypyridine, 1,3-diaminobenzene, 2,4-diamino-1-(2-hydroxyethoxy)benzene, 2,4-diamino-1,5-di-(2-hydroxyethoxy)benzene, 1-(2-amino-ethoxy)-2,4-diaminobenzene, 2-amino-1-(2-hydroxyethoxy)-4-methylaminobenzene, 2,4-diamino-phenoxyacetic acid, 3-[di-(2-hydroxyethyl)amino]aniline, 4-amino-2-di-[(2-hydroxyethyl)amino]-1-ethoxybenzene, 5-methyl-2-(1-methylethyl)phenol,3-[(2-hydroxyethyl)amino]aniline, 3-[(2-amino-ethyl)amino]aniline,1,3-di-(2,4-diaminophenoxy)propane, di-(2,4-diaminophenoxy)methane, 1,3-di-amino-2,4-dimethoxybenzene, 2,6-bis-(2-hydroxyethyl)aminotoluene, 4-hydroxyindole, 3-dimeth-ylaminophenol, 3-diethylaminophenol, 5-amino-2-methylphenol, 5-amino-4-fluoro-2-methylphenol, 5-amino-4-methoxy-2-methylphenol, 5-amino-4-ethoxy-2-methylphenol, 3-amino-2,4-dichlorophenol, 5-amino-2,4-dichlorophenol, 3-amino-2-methylphenol, 3-amino-2-chloro-6-methylphenol, 3-aminophenol, 2-[(3-hydroxyphenyl)amino]acetamide, 5-[(2-hydroxyethyl)amino]-2-methylphenol, 3-[(2-hydroxyethyl)amino]phenol, 3-[(2-methoxyethyl)amino]phenol, 5-amino-2-ethylphenol, 2-(4-amino-2-hydroxyphenoxy)ethanol, 5-[(3-hydroxypropyl)amino]-2-methylphenol, 3-[(2,3-dihydroxypropyl)amino]-2-methylphenol, 3-[(2-hydroxyethyl)amino]-2-methylphenol, 2-amino-3-hydroxypyridine, 5-amino-4-chloro-2-methylphenol, 1-naphthol, 1,5-dihydroxynaphthalene, 1,7-dihydroxynaphthalene, 2,3-dihydroxynaphthalene, 2,7-dihydroxynaphthalene, 2-methyl-1-naphthol acetate, 1,3-dihydroxybenzene, 1-chloro-2,4-dihydroxybenzene, 2-chloro-1,3-dihydroxybenzene, 1,2-dichloro-3,5-dihydroxy-4-methylbenzene, 1,5-dichloro-2,4-dihydroxybenzene, 1,3-dihydroxy-2-methylbenzene, 3,4-methylenedioxyphenol, 3,4-methylenedioxyaniline, 5-[(2-hy-droxyethyl)amino]-1,3-benzodioxol, 6-bromo-1-hydroxy-3,4-methylenedioxybenzene, 3,4-diaminobenzoic acid, 3,4-dihydro-6-hydroxy-1,4(2H)-benzoxazine, 6-amino-3,4-dihydro-1,4(2H)benzoxazine, 3-methyl-1-phenyl-5-pyrazolone, 5,6-dihydroxyindole, 5,6-dihydroxyindoline, 5-hydroxyindole, 6-hydroxyindole, 7-hydroxyindole and 2,3-indolinedione.</p>
+<p id="P-00047" num="00047">Although the advantageous properties of the aminophenol derivatives of formula (I) described here suggest that said derivatives should be used as the only developers, it is, of course, also possible to use the aminophenol derivatives of formula (I) together with known developers such as, for example, 1,4-diaminobenzenes, 2,5-diaminotoluene, 2,5-diaminophenylethyl alcohol, N,N-bis-(2&#x2032;-hydroxyethyl)-1,4-diaminobenzene, 4-aminophenol and the derivatives thereof, for example 4-amino-3-methylphenol, mixture was poured into 100 mL of ethyl acetate. The organic phase was extracted with dilute sodium hydroxide solution and then dried with magnesium sulfate. The solvent was distilled off in a rotary evaporator, and the residue was purified on silica gel with petroleum ether/ethyl acetate (9:1). The resulting product was heated to 50&#xb0; C. in a mixture of 40 mL of ethanol and 15 mL of 2.9 M ethanolic hydrochloric acid solution. After neutralization with NaOH, the solvent was distilled off in a rotary evaporator, and the residue was purified by vacuum distillation.</p>
+<p id="P-00048" num="00048">This gave 4.0 g (83% of the theoretical) of 4-nitro-2-(3-thienyl)phenol with a melting point of 130&#xb0; C.</p>
+<p id="P-00049" num="heading-00049">D. Synthesis of 4-Amino-2-(3-thienyl)phenol Hydrochloride</p>
+<p id="P-00050" num="00050">3 g (13.5 mmoles) of 4-nitro-2-(3-thienyl)phenol was dissolved in 40 mL of ethanol and hydrogenated at 25&#xb0; C. in the presence of 600 mg of a palladium&#x2014;active carbon catalyst (10%). After the theoretically required amount of hydrogen had been absorbed, the catalyst was filtered off. Following concentration in a rotary evaporator, the reaction mixture was poured onto 20 mL of cold diethyl ether. The precipitated product was filtered off and dried.</p>
+<p id="P-00051" num="00051">This gave 1.95 g (75% of the theoretical) of 4-amino-2-(3-thienyl)phenol hydrochloride with a melting point of 130-132&#xb0; C.</p>
+<p id="P-d0e1131" num="00002">
+<tables id="TABLE-US-00001" num="00001">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>CHN Analysis</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="63pt" align="left"/>
+<colspec colname="2" colwidth="21pt" align="center"/>
+<colspec colname="3" colwidth="49pt" align="center"/>
+<colspec colname="4" colwidth="21pt" align="center"/>
+<colspec colname="5" colwidth="49pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>(C<sub>10</sub>H<sub>10</sub>NOSCl)</entry>
+<entry>% C</entry>
+<entry>% H</entry>
+<entry>% N</entry>
+<entry>% Cl</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="5" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="63pt" align="left"/>
+<colspec colname="2" colwidth="21pt" align="char" char="."/>
+<colspec colname="3" colwidth="49pt" align="char" char="."/>
+<colspec colname="4" colwidth="21pt" align="char" char="."/>
+<colspec colname="5" colwidth="49pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Calculated</entry>
+<entry>52.75</entry>
+<entry>4.43</entry>
+<entry>6.15</entry>
+<entry>15.57</entry>
+</row>
+<row>
+<entry/>
+<entry>Found:</entry>
+<entry>52.87</entry>
+<entry>4.75</entry>
+<entry>5.77</entry>
+<entry>15.10</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="5" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<?BRFSUM description="Brief Summary" end="tail"?>
+<?DETDESC description="Detailed Description" end="lead"?>
+<heading id="heading-d0e1322" level="1">EXAMPLE 2</heading>
+<heading id="heading-d0e1327" level="1">Synthesis of 4-Amino-2-(3-heteroaryl)phenol Derivatives of Formula (I)</heading>
+<heading id="heading-d0e1332" level="1">(General Method of Synthesis)</heading>
+<p id="P-00052" num="heading-00052">A. Synthesis of tert.Butyl N-(3-bromo-4-hydroxyphenyl)carbamate</p>
+<p id="P-00053" num="00053">A solution of 9.4 g (52.8 mmoles) of N-bromosuccinimide in 450 mL of chloroform was added dropwise to a suspension of tert.butyl N-(4-hydroxyphenyl)carbamate (10 g, 47.8 mmoles) in chloroform (100 mL) at 0&#xb0; C. over a period of 2 hours. The reaction mixture was then stirred for an additional 15 min and then washed twice with water (first with 400 mL, then with 200 mL), dried with magnesium sulfate, filtered and partly evaporated. Hexane was then added to the residue with stirring which caused the formation of a precipitate. The precipitate was filtered off and washed with hexane.</p>
+<p id="P-00054" num="00054">This gave 9.7 g (70% of the theoretical) of tert.butyl N-(3-bromo-4-hydroxyphenyl)carbamate.</p>
+<p id="P-00055" num="00055"><sup>1</sup>H-NMR (300 MHz, CDCl<sub>3</sub>):&#x3b4;=7.68(br s, 1H); 7.05 (dd, 1H); 6.93 (d, 1H); 6.37 (br s; 2H); 5.39 (s, 1H); 1.51 (s, 9H).</p>
+<p id="P-00056" num="heading-00056">B. Synthesis of tert.Butyl N-(3-Bromo-4-ethoxymethoxyphenyl)carbamate</p>
+<p id="P-00057" num="00057">0.76 g (17.4 mmoles) of a sodium hydride dispersion (55% in oil) was added portionwise at 0&#xb0; C. to a solution of 5 g (17.4 mmoles) of tert.butyl N-(3-bromo-4-hydroxyphenyl)carbamate in 60 mL of tetrahydrofuran. The mixture was then stirred for 50 min at 0&#xb0; C. after which 1.83 g (19.4 mmoles) of chloromethyl ethyl ether was added. The mixture was stirred for an additional hour at 0&#xb0; C. It was then poured onto ice and extracted with ethyl acetate, and the organic phase was washed with a saturated sodium chloride solution, dried over Na<sub>2</sub>SO<sub>4</sub>, filtered and concentrated. The residue was purified on silica gel with petroleum ether/ethyl acetate (9:1).</p>
+<p id="P-00058" num="00058">This gave 4.8 g (80% of the theoretical) of tert.butyl N-(3-bromo-4-hydroxyphenyl)carbamate.</p>
+<p id="P-00059" num="00059"><sup>1</sup>H-NMR (300 MHz, CDCl<sub>3</sub>):&#x3b4;=7.66 (d, 1H); 7.16 (dd, 1H); 7.08 (d, 1H); 5.23 (s, 2H); 3.77 (q, 2H); 1.51 (s, 9H); 1.22 (t, 3H).</p>
+<p id="P-00060" num="heading-00060">C. Synthesis of tert.Butyl N-{4-ethoxymethoxy-3-(4,4,5,5-tetramethyl[1,3,2]dioxaborolan-2-yl)phenyl}carbamate</p>
+<p id="P-00061" num="00061">210 mL of degassed dioxane was added under argon to a mixture of 7.0 g (20.2 mmoles) of tert.butyl N-(3-bromo-4-ethoxymethoxyphenyl)carbamate, 12.8 g (50.6 mmoles) of diboronpinacol ester, 2.0 g (2.9 mmoles) of dichloro-1,1&#x2032;-bis-[diphenylphosphino)ferrocene]palladium [PdCl<sub>2</sub>(dppf)] and 6.2 g (63.2 mmoles) of potassium acetate. The mixture was then stirred 26 hours at 80&#xb0; C. after which to it was added a mixture of 4.2 g (16.9 mmoles) of diboronpinacol ester and 0.7 g (0.95 mmole) of PdCl<sub>2</sub>(dppf). The mixture was then stirred at 80&#xb0; C. for an additional 14 hours. The reaction mixture was then poured into water and extracted with ethyl acetate, and the organic phase was washed with a saturated sodium chloride solution, dried over Na<sub>2</sub>SO<sub>4 </sub>and after filtration concentrated. Finally, the crude product was purified on deactivated silica gel with hexane/ethyl acetate.</p>
+<p id="P-00062" num="00062">This gave 5.30 g (61% of the theoretical) of tert.butyl N-{4-ethoxymethoxy-3-(4,4,5,5-tetramethyl-[1,3,2]dioxaborolan-2yl)phenyl}carbamate.</p>
+<p id="P-00063" num="heading-00063">D. Synthesis of 4-Amino-2-(3-heteroaryl)phenols</p>
+<p id="P-00064" num="00064">0.036 g (0.1 mmole) of tert.butyl N-[4-ethoxymethoxy-3-(4,4,5,5-tetramethyl[1,3,2]dioxaborolan-2-yl)phenyl]carbamate and 0.013 mole of the corresponding bromo derivative were dissolved in 70 mL of 1,2-dimethoxyethane under argon. Then, 0.5 g (0.5 mmole) of tetrakis-(triphenylphosphine)palladium and 13 mL of a 2 N potassium carbonate solution were added, and the reaction mixture was heated to 80&#xb0; C. At the end of the reaction, the reaction mixture was poured into 100 mL of ethyl acetate, and the organic phase was extracted with diluted sodium hydroxide solution and then dried with magnesium sulfate. The solvent was distilled off in a rotary evaporator, and the residue was purified on silica gel with petroleum ether/ethyl acetate (9:1). The resulting product was heated to 50&#xb0; C. in 40 mL of ethanol. To prepare the hydrochloride, 15 mL of 2.9 M ethanolic hydrochloric acid was then added dropwise. The precipitate was filtered off, washed twice with 10 mL of ethanol and dried.</p>
+<p id="P-d0e1458" num="00002">
+<tables id="TABLE-US-00002" num="00002">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="203pt" align="left"/>
+<thead>
+<row>
+<entry/>
+<entry namest="offset" nameend="1" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>a. 4-Amino-2-(4-methylthiophen-3-yl)phenol hydrochloride</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="91pt" align="left"/>
+<colspec colname="2" colwidth="112pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Bromo derivative used:</entry>
+<entry>3-bromo-4-methylthiophene</entry>
+</row>
+<row>
+<entry/>
+<entry>Yield:</entry>
+<entry>0.02 g (90% of the theoretical)</entry>
+</row>
+<row>
+<entry/>
+<entry>Mass spectrum:</entry>
+<entry>MH<sup>+</sup> 206 (100)</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="203pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>b. 4-Amino-2-(2-chlorothiophen-3-yl)phenol hydrochloride</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="91pt" align="left"/>
+<colspec colname="2" colwidth="112pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Bromo derivative used:</entry>
+<entry>3-bromo-2-chlorothiophene</entry>
+</row>
+<row>
+<entry/>
+<entry>Yield:</entry>
+<entry>0.025 g (93% of the theoretical)</entry>
+</row>
+<row>
+<entry/>
+<entry>Mass spectrum:</entry>
+<entry>M<sup>+</sup> 225 (100) [sic - Translator]</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="203pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>c. 4-Amino-2-furan-3-ylphenol hydrochloride</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="91pt" align="left"/>
+<colspec colname="2" colwidth="112pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Bromo derivative used:</entry>
+<entry>3-bromofuran</entry>
+</row>
+<row>
+<entry/>
+<entry>Yield:</entry>
+<entry>0.012 g (53% of the theoretical)</entry>
+</row>
+<row>
+<entry/>
+<entry>Mass spectrum:</entry>
+<entry>MH<sup>+</sup> 176 (100)</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<heading id="heading-d0e1736" level="1">EXAMPLES 3 TO 18</heading>
+<heading id="heading-d0e1741" level="1">Hair Colorants</heading>
+<p id="P-00065" num="00065">Hair colorant solutions having the following composition were prepared:</p>
+<p id="P-d0e1751" num="00002">
+<tables id="TABLE-US-00003" num="00003">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="35pt" align="right"/>
+<colspec colname="2" colwidth="35pt" align="left"/>
+<colspec colname="3" colwidth="147pt" align="left"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>1.25</entry>
+<entry>mmoles</entry>
+<entry>of developer of formula (I) according to Table 1</entry>
+</row>
+<row>
+<entry>1.25</entry>
+<entry>mmoles</entry>
+<entry>of coupler according to Table 1</entry>
+</row>
+<row>
+<entry>1.0</entry>
+<entry>g</entry>
+<entry>of potassium oleate (8% aqueous solution)</entry>
+</row>
+<row>
+<entry>1.0</entry>
+<entry>g</entry>
+<entry>of ammonia (22% aqueous solution)</entry>
+</row>
+<row>
+<entry>1.0</entry>
+<entry>g</entry>
+<entry>of ethanol</entry>
+</row>
+<row>
+<entry>0.3</entry>
+<entry>g</entry>
+<entry>of ascorbic acid</entry>
+</row>
+<row>
+<entry>to 100.0</entry>
+<entry>g</entry>
+<entry>water</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-00066" num="00066">Immediately before use, 30 g of the foregoing coloring solution was mixed with 30 g of a 6% aqueous solution of hydrogen peroxide. The mixture was then applied to bleached hair. After an exposure time of 30 min at 40&#xb0; C., the hair was rinsed with water, washed with a commercial shampoo and dried. The coloring results are presented in Table 1.</p>
+<p id="P-d0e1919" num="00002">
+<tables id="TABLE-US-00004" num="00004">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="42pt" align="left"/>
+<colspec colname="2" colwidth="91pt" align="left"/>
+<colspec colname="3" colwidth="84pt" align="left"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" rowsep="1">TABLE 1</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Example/</entry>
+<entry/>
+<entry/>
+</row>
+<row>
+<entry>shade</entry>
+<entry>Developer of Formula (I)</entry>
+<entry>Coupler</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>&#x2002;3</entry>
+<entry>4-amino-2-(3-thienyl)phenol</entry>
+<entry>1,3-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>light-blond</entry>
+</row>
+<row>
+<entry>&#x2002;4</entry>
+<entry>4-amino-2-(5-methylthiophen-</entry>
+<entry>1,3-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>light-blond</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>&#x2002;5</entry>
+<entry>4-amino-2-(5-nitrothiophen-</entry>
+<entry>1,3-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>light-blond</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>&#x2002;6</entry>
+<entry>4-amino-2-furan-3-ylphenol</entry>
+<entry>1,3-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>light-blond</entry>
+<entry>hydrochloride</entry>
+</row>
+<row>
+<entry>&#x2002;7</entry>
+<entry>4-amino-2-(3-thienyl)phenol</entry>
+<entry>1,3-diamino-4-(2&#x2032;-hydroxy-</entry>
+</row>
+<row>
+<entry>red-violet</entry>
+<entry/>
+<entry>ethoxy)benzene sulfate</entry>
+</row>
+<row>
+<entry>&#x2002;8</entry>
+<entry>4-amino-2-(5-methylthiophen-</entry>
+<entry>1,3-diamino-4-(2&#x2032;-hydroxy-</entry>
+</row>
+<row>
+<entry>red-violet</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+<entry>ethoxy)benzene sulfate</entry>
+</row>
+<row>
+<entry>&#x2002;9</entry>
+<entry>4-amino-2-(5-nitrothiophen-</entry>
+<entry>1,3-diamino-4-(2&#x2032;-hydroxy-</entry>
+</row>
+<row>
+<entry>red-violet</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+<entry>ethoxy)benzene sulfate</entry>
+</row>
+<row>
+<entry>10</entry>
+<entry>4-amino-2-furan-3-ylphenol</entry>
+<entry>1,3-diamino-4-(2&#x2032;-hydroxy-</entry>
+</row>
+<row>
+<entry>red-violet</entry>
+<entry>hydrochloride</entry>
+<entry>ethoxy)benzene sulfate</entry>
+</row>
+<row>
+<entry>11</entry>
+<entry>4-amino-2-(3-thienyl)phenol</entry>
+<entry>5-amino-2-methylphenol</entry>
+</row>
+<row>
+<entry>red-orange</entry>
+</row>
+<row>
+<entry>12</entry>
+<entry>4-amino-2-(5-methylthiophen-</entry>
+<entry>5-amino-2-methylphenol</entry>
+</row>
+<row>
+<entry>red-orange</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>13</entry>
+<entry>4-amino-2-(5-nitrothiophen-</entry>
+<entry>5-amino-2-methylphenol</entry>
+</row>
+<row>
+<entry>red-orange</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>14</entry>
+<entry>4-amino-2-furan-3-ylphenol</entry>
+<entry>5-amino-2-methylphenol</entry>
+</row>
+<row>
+<entry>red-orange</entry>
+<entry>hydrochloride</entry>
+</row>
+<row>
+<entry>15</entry>
+<entry>4-amino-2-(3-thienyl)phenol</entry>
+<entry>1-naphthol</entry>
+</row>
+<row>
+<entry>violet</entry>
+</row>
+<row>
+<entry>16</entry>
+<entry>4-amino-2-(5-methylthiophen-</entry>
+<entry>1-naphthol</entry>
+</row>
+<row>
+<entry>violet</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>17</entry>
+<entry>4-amino-2-(5-nitrothiophen-</entry>
+<entry>1-naphthol</entry>
+</row>
+<row>
+<entry>violet</entry>
+<entry>3-yl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry>18</entry>
+<entry>4-amino-2-furan-3-ylphenol</entry>
+<entry>1-naphthol</entry>
+</row>
+<row>
+<entry>violet</entry>
+<entry>hydrochloride</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<heading id="heading-d0e2497" level="1">EXAMPLES 19 TO 34</heading>
+<heading id="heading-d0e2502" level="1">Hair Colorants</heading>
+<p id="P-00067" num="00067">Hair colorant solutions having the following composition were prepared:</p>
+<p id="P-d0e2512" num="00002">
+<tables id="TABLE-US-00005" num="00005">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="35pt" align="right"/>
+<colspec colname="2" colwidth="21pt" align="left"/>
+<colspec colname="3" colwidth="161pt" align="left"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>X</entry>
+<entry>g</entry>
+<entry>of developer E1 of formula (I) according to Table 3</entry>
+</row>
+<row>
+<entry>U</entry>
+<entry>g</entry>
+<entry>of developer E2 to E9 according to Table 3</entry>
+</row>
+<row>
+<entry>Y</entry>
+<entry>g</entry>
+<entry>of coupler K11 to K36 according to Table 4</entry>
+</row>
+<row>
+<entry>Z</entry>
+<entry>g</entry>
+<entry>of direct dye D1 to D3 according to Table 2</entry>
+</row>
+<row>
+<entry>10.0</entry>
+<entry>g</entry>
+<entry>of potassium oleate (8% aqueous solution)</entry>
+</row>
+<row>
+<entry>10.0</entry>
+<entry>g</entry>
+<entry>of ammonia (22% aqueous solution)</entry>
+</row>
+<row>
+<entry>10.0</entry>
+<entry>g</entry>
+<entry>of ethanol</entry>
+</row>
+<row>
+<entry>&#x2002;0.3</entry>
+<entry>g</entry>
+<entry>of ascorbic acid</entry>
+</row>
+<row>
+<entry>to 100.0</entry>
+<entry>g</entry>
+<entry>water</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-00068" num="00068">Immediately before use, 30 g of the foregoing coloring solution was mixed with 30 g of a 6% aqueous solution of hydrogen peroxide. The mixture was then applied to bleached hair. After an exposure time of 30 min at 40&#xb0; C., the hair was rinsed with water, washed with a commercial shampoo and dried. The coloring results are presented in Table 5.</p>
+<heading id="heading-d0e2716" level="1">EXAMPLES 35 TO 40</heading>
+<heading id="heading-d0e2721" level="1">Hair Colorants</heading>
+<p id="P-00069" num="00069">Dye carriers in cream form and having the following composition were prepared:</p>
+<p id="P-d0e2731" num="00002">
+<tables id="TABLE-US-00006" num="00006">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="1" colwidth="28pt" align="right"/>
+<colspec colname="2" colwidth="21pt" align="left"/>
+<colspec colname="3" colwidth="168pt" align="left"/>
+<thead>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry>X</entry>
+<entry>g</entry>
+<entry>of developer E1 of formula (I) according to Table 3</entry>
+</row>
+<row>
+<entry>Y</entry>
+<entry>g</entry>
+<entry>of coupler K11 to K36 according to Table 4</entry>
+</row>
+<row>
+<entry>Z</entry>
+<entry>g</entry>
+<entry>of direct dye D1 to D3 according to Table 2</entry>
+</row>
+<row>
+<entry>15.0</entry>
+<entry>g</entry>
+<entry>of cetyl alcohol</entry>
+</row>
+<row>
+<entry>&#x2002;0.3</entry>
+<entry>g</entry>
+<entry>of ascorbic acid</entry>
+</row>
+<row>
+<entry>&#x2002;3.5</entry>
+<entry>g</entry>
+<entry>of sodium lauryl alcohol diethylene glycol ether sulfate,</entry>
+</row>
+<row>
+<entry/>
+<entry/>
+<entry>28% aqueous solution</entry>
+</row>
+<row>
+<entry>&#x2002;3.0</entry>
+<entry>g</entry>
+<entry>of ammonia, 22% aqueous solution</entry>
+</row>
+<row>
+<entry>&#x2002;0.3</entry>
+<entry>g</entry>
+<entry>of sodium sulfite, anhydrous</entry>
+</row>
+<row>
+<entry>to 100</entry>
+<entry>g</entry>
+<entry>water</entry>
+</row>
+<row>
+<entry namest="1" nameend="3" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-00070" num="00070">Immediately before use, 30 g of the foregoing coloring cream was mixed with 30 g of a 6% aqueous solution of hydrogen peroxide. The mixture was then applied to the hair. After an exposure time of 30 min, the hair was rinsed with water, washed with a commercial shampoo and dried. The coloring results are presented in the following Table 6.</p>
+<p id="P-d0e2947" num="00002">
+<tables id="TABLE-US-00007" num="00007">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 2</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Direct Dyes</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="21pt" align="left"/>
+<colspec colname="1" colwidth="42pt" align="left"/>
+<colspec colname="2" colwidth="154pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>D1</entry>
+<entry>2,6-Diamino-3-[(pyridin-3-yl)azo]pyridine</entry>
+</row>
+<row>
+<entry/>
+<entry>D2</entry>
+<entry>6-Chloro-2-ethylamino-4-nitrophenol</entry>
+</row>
+<row>
+<entry/>
+<entry>D3</entry>
+<entry>2-Amino-6-chloro-4-nitrophenol</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-d0e3067" num="00002">
+<tables id="TABLE-US-00008" num="00008">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 3</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Developers</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="14pt" align="left"/>
+<colspec colname="1" colwidth="28pt" align="center"/>
+<colspec colname="2" colwidth="175pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>E1</entry>
+<entry>4-Amino-2-(3-thienyl)phenol hydrochloride</entry>
+</row>
+<row>
+<entry/>
+<entry/>
+<entry>(according to Example 1D)</entry>
+</row>
+<row>
+<entry/>
+<entry>E2</entry>
+<entry>1,4-Diaminobenzene</entry>
+</row>
+<row>
+<entry/>
+<entry>E3</entry>
+<entry>2,5-Diaminophenylethanol sulfate</entry>
+</row>
+<row>
+<entry/>
+<entry>E4</entry>
+<entry>3-Methyl-4-aminophenol</entry>
+</row>
+<row>
+<entry/>
+<entry>E5</entry>
+<entry>4-Amino-2-aminomethylphenol dihydrochloride</entry>
+</row>
+<row>
+<entry/>
+<entry>E6</entry>
+<entry>4-Aminophenol</entry>
+</row>
+<row>
+<entry/>
+<entry>E7</entry>
+<entry>N,N,-Bis-(2&#x2032;-hydroxyethyl)-p-phenylenediamine sulfate</entry>
+</row>
+<row>
+<entry/>
+<entry>E8</entry>
+<entry>4,5-Diamino-1-(2&#x2032;-hydroxyethyl)pyrazole sulfate</entry>
+</row>
+<row>
+<entry/>
+<entry>E9</entry>
+<entry>2,5-Diaminotoluene sulfate</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-d0e3289" num="00002">
+<tables id="TABLE-US-00009" num="00009">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 4</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Couplers</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="1" colwidth="28pt" align="left"/>
+<colspec colname="2" colwidth="189pt" align="left"/>
+<tbody valign="top">
+<row>
+<entry>K11</entry>
+<entry>1,3-Diaminobenzene</entry>
+</row>
+<row>
+<entry>K12</entry>
+<entry>2-Amino-4-(2&#x2032;-hydroxyethyl)aminoanisole sulfate</entry>
+</row>
+<row>
+<entry>K13</entry>
+<entry>1,3-Diamino-4-(2&#x2032;-hydroxyethoxy)benzene sulfate</entry>
+</row>
+<row>
+<entry>K14</entry>
+<entry>2,4-Diamino-5-fluorotoluene sulfate</entry>
+</row>
+<row>
+<entry>K15</entry>
+<entry>3-Amino-2-methylamino-6-methoxypyridine</entry>
+</row>
+<row>
+<entry>K16</entry>
+<entry>3,5-Diamino-2,6-dimethoxypyridine dihydrochloride</entry>
+</row>
+<row>
+<entry>K17</entry>
+<entry>2,4-Diamino-5-ethoxytoluene sulfate</entry>
+</row>
+<row>
+<entry>K18</entry>
+<entry>N-(3-Dimethylamino)phenylurea</entry>
+</row>
+<row>
+<entry>K19</entry>
+<entry>1,3-Bis-(2,4-diaminophenoxy)propane tetrahydrochloride</entry>
+</row>
+<row>
+<entry>K21</entry>
+<entry>3-Aminophenol</entry>
+</row>
+<row>
+<entry>K22</entry>
+<entry>5-Amino-2-methylphenol</entry>
+</row>
+<row>
+<entry>K23</entry>
+<entry>3-Amino-2-chloro-6-methylphenol</entry>
+</row>
+<row>
+<entry>K24</entry>
+<entry>5-Amino-4-fluoro-2-methylphenol sulfate</entry>
+</row>
+<row>
+<entry>K25</entry>
+<entry>1-Naphthol</entry>
+</row>
+<row>
+<entry>K26</entry>
+<entry>1-Acetoxy-2-methylnaphthalene</entry>
+</row>
+<row>
+<entry>K31</entry>
+<entry>1,3-Dihydroxybenzene</entry>
+</row>
+<row>
+<entry>K32</entry>
+<entry>2-Methyl-1,3-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>K33</entry>
+<entry>1-Chloro-2,4-dihydroxybenzene</entry>
+</row>
+<row>
+<entry>K34</entry>
+<entry>4-(2&#x2032;-Hydroxyethyl)amino-1,2-methylenedioxybenzene hydro-</entry>
+</row>
+<row>
+<entry/>
+<entry>chloride</entry>
+</row>
+<row>
+<entry>K35</entry>
+<entry>3,4-Methylenedioxyphenol</entry>
+</row>
+<row>
+<entry>K36</entry>
+<entry>2-Amino-5-methylphenol</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-d0e3643" num="00002">
+<tables id="TABLE-US-00010" num="00010">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">TABLE 5</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Hair Colorants</entry>
+</row>
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="35pt" align="left"/>
+<colspec colname="1" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Example</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="center"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<colspec colname="4" colwidth="28pt" align="center"/>
+<colspec colname="5" colwidth="28pt" align="center"/>
+<colspec colname="6" colwidth="28pt" align="center"/>
+<colspec colname="7" colwidth="35pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>19</entry>
+<entry>20</entry>
+<entry>21</entry>
+<entry>22</entry>
+<entry>23</entry>
+<entry>24</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Dye</entry>
+<entry>(Quantity of dye in grams)</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="char" char="."/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<colspec colname="4" colwidth="28pt" align="char" char="."/>
+<colspec colname="5" colwidth="28pt" align="char" char="."/>
+<colspec colname="6" colwidth="28pt" align="char" char="."/>
+<colspec colname="7" colwidth="35pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>E1</entry>
+<entry>0.096</entry>
+<entry>0.24</entry>
+<entry>0.3</entry>
+<entry>0.04</entry>
+<entry>0.01</entry>
+<entry>0.7</entry>
+</row>
+<row>
+<entry>E2</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.9</entry>
+</row>
+<row>
+<entry>E5</entry>
+</row>
+<row>
+<entry>E6</entry>
+</row>
+<row>
+<entry>E9</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.096</entry>
+<entry>1.8</entry>
+</row>
+<row>
+<entry>K12</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.01</entry>
+</row>
+<row>
+<entry>K18</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>K21</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.02</entry>
+<entry>0.06</entry>
+</row>
+<row>
+<entry>K22</entry>
+<entry>0.08</entry>
+<entry>0.2</entry>
+<entry>0.25</entry>
+<entry>0.056</entry>
+<entry/>
+<entry>0.58</entry>
+</row>
+<row>
+<entry>K25</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>K31</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.2</entry>
+<entry/>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>K32</entry>
+<entry/>
+<entry>0.03</entry>
+<entry>0.05</entry>
+<entry>0.316</entry>
+</row>
+<row>
+<entry>K35</entry>
+<entry>0.018</entry>
+</row>
+<row>
+<entry>K36</entry>
+<entry/>
+<entry>0.03</entry>
+<entry>0.05</entry>
+<entry>0.01</entry>
+</row>
+<row>
+<entry>K26</entry>
+</row>
+<row>
+<entry>D1</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.01</entry>
+</row>
+<row>
+<entry>D3</entry>
+<entry>0.04</entry>
+<entry>0.06</entry>
+<entry>0.025</entry>
+</row>
+<row>
+<entry>Shade</entry>
+<entry>light-</entry>
+<entry>coppe</entry>
+<entry>light</entry>
+<entry>purple-</entry>
+<entry>silver-</entry>
+<entry>dark</entry>
+</row>
+<row>
+<entry/>
+<entry>blond</entry>
+<entry>gold</entry>
+<entry>copper</entry>
+<entry>brown</entry>
+<entry>blond</entry>
+<entry>mahogany</entry>
+</row>
+<row>
+<entry/>
+<entry>copper-</entry>
+<entry/>
+<entry>tones</entry>
+</row>
+<row>
+<entry/>
+<entry>gold</entry>
+</row>
+<row>
+<entry namest="1" nameend="7" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="35pt" align="left"/>
+<colspec colname="1" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Example</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="center"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<colspec colname="4" colwidth="28pt" align="center"/>
+<colspec colname="5" colwidth="28pt" align="center"/>
+<colspec colname="6" colwidth="28pt" align="center"/>
+<colspec colname="7" colwidth="35pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>25</entry>
+<entry>26</entry>
+<entry>27</entry>
+<entry>28</entry>
+<entry>29</entry>
+<entry>30</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Dye</entry>
+<entry>(Quantity of dye in grams)</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="char" char="."/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<colspec colname="4" colwidth="28pt" align="char" char="."/>
+<colspec colname="5" colwidth="28pt" align="char" char="."/>
+<colspec colname="6" colwidth="28pt" align="char" char="."/>
+<colspec colname="7" colwidth="35pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>E1</entry>
+<entry>0.01</entry>
+<entry>0.6</entry>
+<entry>1</entry>
+<entry>0.2</entry>
+<entry>0.8</entry>
+<entry>0.6</entry>
+</row>
+<row>
+<entry>E2</entry>
+<entry>2.0</entry>
+<entry/>
+<entry/>
+<entry>1.9</entry>
+</row>
+<row>
+<entry>E3</entry>
+<entry/>
+<entry>0.05</entry>
+</row>
+<row>
+<entry>E8</entry>
+<entry/>
+<entry/>
+<entry>1</entry>
+</row>
+<row>
+<entry>E9</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>1</entry>
+<entry>0.7</entry>
+</row>
+<row>
+<entry>K12</entry>
+<entry/>
+<entry/>
+<entry>1.1</entry>
+</row>
+<row>
+<entry>K13</entry>
+<entry>0.07</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>K16</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>1.0</entry>
+</row>
+<row>
+<entry>K17</entry>
+<entry/>
+<entry/>
+<entry>1.1</entry>
+</row>
+<row>
+<entry>K18</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>1.25</entry>
+</row>
+<row>
+<entry>K21</entry>
+<entry>0.4</entry>
+<entry/>
+<entry/>
+<entry>0.28</entry>
+</row>
+<row>
+<entry>K22</entry>
+<entry>0.08</entry>
+<entry>0.5</entry>
+</row>
+<row>
+<entry>K25</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>K31</entry>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>K32</entry>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>K33</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.75</entry>
+</row>
+<row>
+<entry>K36</entry>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>D1</entry>
+<entry/>
+<entry>0.25</entry>
+</row>
+<row>
+<entry>D3</entry>
+<entry/>
+<entry>0.15</entry>
+</row>
+<row>
+<entry>Shade</entry>
+<entry>black-</entry>
+<entry>orange</entry>
+<entry>blue-</entry>
+<entry>blue-</entry>
+<entry>pink</entry>
+<entry>Bordeaux</entry>
+</row>
+<row>
+<entry/>
+<entry>brown</entry>
+<entry/>
+<entry>violet</entry>
+<entry>red</entry>
+<entry/>
+<entry>tones</entry>
+</row>
+<row>
+<entry namest="1" nameend="7" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="105pt" align="left"/>
+<colspec colname="1" colwidth="112pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Example</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="offset" colwidth="77pt" align="left"/>
+<colspec colname="1" colwidth="28pt" align="left"/>
+<colspec colname="2" colwidth="28pt" align="center"/>
+<colspec colname="3" colwidth="28pt" align="center"/>
+<colspec colname="4" colwidth="28pt" align="center"/>
+<colspec colname="5" colwidth="28pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry/>
+<entry>31</entry>
+<entry>32</entry>
+<entry>33</entry>
+<entry>34</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="3">
+<colspec colname="offset" colwidth="77pt" align="left"/>
+<colspec colname="1" colwidth="28pt" align="left"/>
+<colspec colname="2" colwidth="112pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Dye</entry>
+<entry>(Quantity of dye in grams)</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="6">
+<colspec colname="offset" colwidth="77pt" align="left"/>
+<colspec colname="1" colwidth="28pt" align="left"/>
+<colspec colname="2" colwidth="28pt" align="char" char="."/>
+<colspec colname="3" colwidth="28pt" align="char" char="."/>
+<colspec colname="4" colwidth="28pt" align="char" char="."/>
+<colspec colname="5" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>E1</entry>
+<entry>0.01</entry>
+<entry>0.01</entry>
+<entry>0.05</entry>
+<entry>0.6</entry>
+</row>
+<row>
+<entry/>
+<entry>E3</entry>
+<entry>1.4</entry>
+<entry>4.5</entry>
+</row>
+<row>
+<entry/>
+<entry>E5</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.25</entry>
+</row>
+<row>
+<entry/>
+<entry>E6</entry>
+<entry/>
+<entry/>
+<entry>0.1</entry>
+</row>
+<row>
+<entry/>
+<entry>E8</entry>
+<entry/>
+<entry>0.8</entry>
+<entry>0.5</entry>
+<entry>0.01</entry>
+</row>
+<row>
+<entry/>
+<entry>E9</entry>
+<entry>2.5</entry>
+</row>
+<row>
+<entry/>
+<entry>K12</entry>
+<entry>0.6</entry>
+</row>
+<row>
+<entry/>
+<entry>K13</entry>
+<entry>0.2</entry>
+<entry/>
+<entry/>
+<entry>0.8</entry>
+</row>
+<row>
+<entry/>
+<entry>K14</entry>
+<entry/>
+<entry>0.25</entry>
+</row>
+<row>
+<entry/>
+<entry>K16</entry>
+<entry>0.01</entry>
+</row>
+<row>
+<entry/>
+<entry>K18</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>1.25</entry>
+</row>
+<row>
+<entry/>
+<entry>K19</entry>
+<entry>0.8</entry>
+</row>
+<row>
+<entry/>
+<entry>K21</entry>
+<entry>0.3</entry>
+<entry/>
+<entry/>
+<entry>0.28</entry>
+</row>
+<row>
+<entry/>
+<entry>K22</entry>
+<entry/>
+<entry>5.0</entry>
+</row>
+<row>
+<entry/>
+<entry>K25</entry>
+<entry/>
+<entry>0.4</entry>
+</row>
+<row>
+<entry/>
+<entry>K23</entry>
+<entry/>
+<entry/>
+<entry>0.6</entry>
+</row>
+<row>
+<entry/>
+<entry>K31</entry>
+<entry>1.1</entry>
+</row>
+<row>
+<entry/>
+<entry>K32</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.33</entry>
+</row>
+<row>
+<entry/>
+<entry>K36</entry>
+<entry/>
+<entry/>
+<entry>0.19</entry>
+</row>
+<row>
+<entry/>
+<entry>D2</entry>
+<entry/>
+<entry/>
+<entry>0.5</entry>
+</row>
+<row>
+<entry/>
+<entry>Shade</entry>
+<entry>black</entry>
+<entry>red-</entry>
+<entry>red-</entry>
+<entry>warm</entry>
+</row>
+<row>
+<entry/>
+<entry/>
+<entry/>
+<entry>violet</entry>
+<entry>orange</entry>
+<entry>yellow</entry>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="5" align="center" rowsep="1"/>
+</row>
+<row>
+<entry/>
+<entry namest="offset" nameend="5" align="left">In material reproduced from the German document, commas denote decimal points - Translator </entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<p id="P-d0e5441" num="00002">
+<tables id="TABLE-US-00011" num="00011">
+<table frame="none" colsep="0" rowsep="0">
+<tgroup align="left" colsep="0" rowsep="0" cols="1">
+<colspec colname="1" colwidth="217pt" align="center"/>
+<thead>
+<row>
+<entry namest="1" nameend="1" rowsep="1">Table 6</entry>
+</row>
+</thead>
+<tbody valign="top">
+<row>
+<entry namest="1" nameend="1" align="center" rowsep="1"/>
+</row>
+<row>
+<entry>Hair Colorants</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="offset" colwidth="35pt" align="left"/>
+<colspec colname="1" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>Example</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="center"/>
+<colspec colname="3" colwidth="35pt" align="center"/>
+<colspec colname="4" colwidth="28pt" align="center"/>
+<colspec colname="5" colwidth="28pt" align="center"/>
+<colspec colname="6" colwidth="28pt" align="center"/>
+<colspec colname="7" colwidth="28pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry/>
+<entry>35</entry>
+<entry>36</entry>
+<entry>37</entry>
+<entry>38</entry>
+<entry>39</entry>
+<entry>40</entry>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="2">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="182pt" align="center"/>
+<tbody valign="top">
+<row>
+<entry>Dye</entry>
+<entry>(Quantity of dye in grams)</entry>
+</row>
+<row>
+<entry namest="1" nameend="2" align="center" rowsep="1"/>
+</row>
+</tbody>
+</tgroup>
+<tgroup align="left" colsep="0" rowsep="0" cols="7">
+<colspec colname="1" colwidth="35pt" align="left"/>
+<colspec colname="2" colwidth="35pt" align="char" char="."/>
+<colspec colname="3" colwidth="35pt" align="char" char="."/>
+<colspec colname="4" colwidth="28pt" align="char" char="."/>
+<colspec colname="5" colwidth="28pt" align="char" char="."/>
+<colspec colname="6" colwidth="28pt" align="char" char="."/>
+<colspec colname="7" colwidth="28pt" align="char" char="."/>
+<tbody valign="top">
+<row>
+<entry>E1</entry>
+<entry>0.1</entry>
+<entry>0.2</entry>
+<entry>0.01</entry>
+<entry>2.0</entry>
+<entry>0.5</entry>
+<entry>0.7</entry>
+</row>
+<row>
+<entry>E4</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>1.6</entry>
+</row>
+<row>
+<entry>E8</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.25</entry>
+<entry>0.8</entry>
+<entry>0.2</entry>
+</row>
+<row>
+<entry>E9</entry>
+<entry>3.2</entry>
+<entry>1.71</entry>
+<entry>0.02</entry>
+<entry/>
+<entry/>
+<entry>1.8</entry>
+</row>
+<row>
+<entry>K13</entry>
+<entry>0.23</entry>
+<entry>0.1</entry>
+<entry/>
+<entry/>
+<entry>1.3</entry>
+</row>
+<row>
+<entry>K14</entry>
+<entry>0.2</entry>
+</row>
+<row>
+<entry>K16</entry>
+<entry/>
+<entry/>
+<entry>0.015</entry>
+</row>
+<row>
+<entry>K21</entry>
+<entry>0.4</entry>
+<entry>0.8</entry>
+<entry/>
+<entry/>
+<entry>0.02</entry>
+</row>
+<row>
+<entry>K22</entry>
+<entry>0.08</entry>
+<entry/>
+<entry>0.25</entry>
+<entry>1.8</entry>
+<entry/>
+<entry>4.5</entry>
+</row>
+<row>
+<entry>K23</entry>
+<entry/>
+<entry>0.2</entry>
+<entry/>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>K31</entry>
+<entry>1.05</entry>
+<entry>0.135</entry>
+<entry>0.02</entry>
+<entry>0.25</entry>
+<entry/>
+<entry>0.8</entry>
+</row>
+<row>
+<entry>K25</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>0.55</entry>
+</row>
+<row>
+<entry>K26</entry>
+<entry/>
+<entry/>
+<entry>0.03</entry>
+</row>
+<row>
+<entry>K19</entry>
+<entry/>
+<entry/>
+<entry/>
+<entry/>
+<entry>1.7</entry>
+</row>
+<row>
+<entry>K36</entry>
+<entry/>
+<entry>0.27</entry>
+</row>
+<row>
+<entry>D2</entry>
+<entry/>
+<entry>0.01</entry>
+</row>
+<row>
+<entry>Shade</entry>
+<entry>dark-</entry>
+<entry>choco-</entry>
+<entry>silver</entry>
+<entry>orange</entry>
+<entry>blue-</entry>
+<entry>red-</entry>
+</row>
+<row>
+<entry/>
+<entry>brown</entry>
+<entry>late</entry>
+<entry>blond</entry>
+<entry>tones</entry>
+<entry>violet</entry>
+<entry>violet</entry>
+</row>
+<row>
+<entry/>
+<entry/>
+<entry>brown</entry>
+</row>
+<row>
+<entry namest="1" nameend="7" align="center" rowsep="1"/>
+</row>
+<row>
+<entry namest="1" nameend="7" align="left">Unless otherwise indicated, all percentages given in the present patent application are by weight. </entry>
+</row>
+</tbody>
+</tgroup>
+</table>
+</tables>
+</p>
+<?DETDESC description="Detailed Description" end="tail"?>
+</description>
+<us-chemistry idref="CHEM-US-00001" cdx-file="US06840965-20050111-C00001.CDX" mol-file="US06840965-20050111-C00001.MOL"/>
+<us-chemistry idref="CHEM-US-00002" cdx-file="US06840965-20050111-C00002.CDX" mol-file="US06840965-20050111-C00002.MOL"/>
+<us-chemistry idref="CHEM-US-00003" cdx-file="US06840965-20050111-C00003.CDX" mol-file="US06840965-20050111-C00003.MOL"/>
+<us-chemistry idref="CHEM-US-00004" cdx-file="US06840965-20050111-C00004.CDX" mol-file="US06840965-20050111-C00004.MOL"/>
+<us-chemistry idref="CHEM-US-00005" cdx-file="US06840965-20050111-C00005.CDX" mol-file="US06840965-20050111-C00005.MOL"/>
+<us-chemistry idref="CHEM-US-00006" cdx-file="US06840965-20050111-C00006.CDX" mol-file="US06840965-20050111-C00006.MOL"/>
+<us-chemistry idref="CHEM-US-00007" cdx-file="US06840965-20050111-C00007.CDX" mol-file="US06840965-20050111-C00007.MOL"/>
+<claims id="claims">
+<claim id="CLM-00001" num="00001">
+<claim-text>1. p-Aminophenol derivatives of general formula (I) or physiologically tolerated, water-soluble salts thereof 
+<chemistry id="CHEM-US-00006" num="00006">
+<img id="EMI-C00006" he="31.50mm" wi="54.78mm" file="US06840965-20050111-C00006.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</claim-text>
+<claim-text>wherein
+<claim-text>X denotes oxygen or sulfur, </claim-text>
+<claim-text>R1 denotes hydrogen, a halogen atom, a C<sub>1</sub>-C<sub>4</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group or a C<sub>1</sub>-C<sub>4</sub>-alkoxy group; </claim-text>
+<claim-text>R2 and R4 independently of each other denote hydrogen, a hydroxyl group, a halogen atom, a cyano group, a C<sub>1</sub>-C<sub>4</sub>-alkoxy group, a C<sub>1</sub>-C<sub>6</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-alkyl thioether group, a mercapto group, a nitro group, an amino group, a C<sub>1</sub>-C<sub>6</sub>-alkylamino group, a (C<sub>1</sub>-C<sub>8</sub>)-dialkylamino group, a &#x2014;C(OH) group, a &#x2014;C(O)CH<sub>3 </sub>group, a &#x2014;C(O)CF<sub>3 </sub>group, an &#x2014;Si(CH<sub>3</sub>)<sub>3 </sub>group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group, a C<sub>3</sub>-C<sub>4</sub>-dihy-droxyalkyl group, a &#x2014;CH&#x2550;CHR6 group, a &#x2014;(CH<sub>2</sub>)<sub>p</sub>&#x2014;CO<sub>2</sub>R7 group or a &#x2014;(CH<sub>2</sub>)<sub>p</sub>&#x2014;R8 group (with p&#x2550;1,2, 3 or 4), a &#x2014;C(R9)&#x2550;NR10 group or a C(R11)H-NR12R13 group; </claim-text>
+<claim-text>R3 denotes hydrogen, a halogen atom, a C<sub>1</sub>-C<sub>8</sub>-alkyl group or a &#x2014;C(O)H group; </claim-text>
+<claim-text>R6 denotes hydrogen, a hydroxyl group, a nitro group, an amino group, a &#x2014;CO<sub>2</sub>R7 group or a &#x2014;C(O)CH<sub>3 </sub>group; </claim-text>
+<claim-text>R7, R9 and R11 independently of each other denote hydrogen or a C<sub>1</sub>-C<sub>4</sub>-alkyl group; </claim-text>
+<claim-text>R8 denotes an amino group or a nitrile group; </claim-text>
+<claim-text>R10, R12 and R13 independently of each other denote hydrogen, a hydroxyl group, a C<sub>1</sub>-C<sub>4</sub>-alkyl group, a C<sub>1</sub>-C<sub>4</sub>-hydroxyalkyl group, a C<sub>3</sub>-C<sub>4</sub>-dihydroxyalkyl group or a radical of formula (II) 
+<chemistry id="CHEM-US-00007" num="00007">
+<img id="EMI-C00007" he="12.78mm" wi="50.80mm" file="US06840965-20050111-C00007.TIF" alt="embedded image" img-content="chem" img-format="tif"/>
+</chemistry>
+</claim-text>
+</claim-text>
+<claim-text>and
+<claim-text>R14 denotes hydrogen, an amino group or a hydroxyl group. </claim-text>
+</claim-text>
+</claim>
+<claim id="CLM-00002" num="00002">
+<claim-text>2. p-Aminophenol derivative according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, characterized in that it is selected from the (group consisting of 4-amino-2-(3-thienyl)phenol; 4-amino-2-(3-furyl)phenol; 4-amino-2-(pyrrol-3-yl)-phenol; 4-amino-2-(1-methyl-1H-pyrrol-3-yl)phenol; 4-amino-3-chloro-2-(3-thienyl)phenol, 4-amino-3-methyl-2-(3-thienyl)phenol; 4-amino-5-chloro-2-(3-thienyl)phenol; 4-amino-5-methyl-2-(3-thienyl)-phenol; 4-amino-6-chloro-2-(3-thienyl)phenol; 4-amino-6-methyl-2-(3-thienyl)phenol; 4-amino-2-(2-acetyl-3-thienyl)phenol; 4-amino-2-(2-chloro-3-thienyl)phenol; 4-amino-2-(2-formyl-3-thienyl)-phenol; 4-amino-2-(2-methyl-3-thienyl)phenol; 4-amino-2-(4-acetyl-3-thienyl)phenol; 4-amino-2-(4-chloro-3-thienyl)phenol; 4-amino-2-(4-formyl-3-thienyl)phenol; 4-amino-2-(4-methyl-3-thienyl)phenol; 4-amino-2-(5-acetyl-3-thienyl)phenol; 4-amino-2-(5-chloro-3-thienyl)phenol; 4-amino-2-(5-methyl-3-thienyl)phenol and the physiologically tolerated salts thereof.</claim-text>
+</claim>
+<claim id="CLM-00003" num="00003">
+<claim-text>3. p-Aminophenol derivative according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, characterized in that in formula (I) (i) R1 denotes hydrogen and/or (ii) at least one of groups R2, R3 and R4 denotes hydrogen or a methyl group and/or (iii) X denotes sulfur or oxygen.</claim-text>
+</claim>
+<claim id="CLM-00004" num="00004">
+<claim-text>4. p-Aminophenol derivative according to <claim-ref idref="CLM-00001">claim 1</claim-ref>, characterized in that it is selected from the group consisting of 4-amino-2-(3-thienyl)phenol; 4-amino-2-(4-methyl-3-thienyl)phenol and 4-amino-2-(2-chloro-3-thienyl)phenol and physiologically tolerated salts thereof.</claim-text>
+</claim>
+<claim id="CLM-00005" num="00005">
+<claim-text>5. Preparation for oxidative dyeing of keratin fibers based on a developer-coupler combination, characterized in that said preparation contains as the developer at least one p-aminophenol derivative of formula (I) according to <claim-ref idref="CLM-00001">claim 1</claim-ref>.</claim-text>
+</claim>
+<claim id="CLM-00006" num="00006">
+<claim-text>6. Preparation according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, characterized in that it contains the p-aminophenol derivative of formula (I) in an amount from 0.005 to 20.0 wt.%.</claim-text>
+</claim>
+<claim id="CLM-00007" num="00007">
+<claim-text>7. Preparation according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, characterized in that the coupler is selected from the group consisting of 2,6-diaminopyridine, 2-amino-4-[(2-hydroxyethyl)amino]anisole, 2,4-diamino-1-flouro-5-methylbenzene, 2,4-diamino-1-methoxy-5-methylbenzene, 2,4-diamino-1-ethoxy-5-methyl-benezene, 2,4-diamino-1-(2-hydroxyethoxy)-5-methylbenzene, 2,4-di[(2-hydroxyethyl)amino]-1,5-dimeth-oxybenzene, 2,3-diamino-6-methoxypyridine, 3-amino-6-methoxy-2-(methylamino)pyridine, 2,6-diamino-3,5-dimethoxypyridine, 3,5-diamino-2,6-dimethoxypyridine, 1,3-diaminobenzene, 2,4-diamino-1-(2-hydroxyethoxy)benzene, 2,4-diamino-1,5-di-(2-hydroxyethoxy)benzene, 1-(2-aminoethoxy)-2,4-diaminobenzene, 2-amino-1-(2-hydroxyethoxy)-4-methylaminobenzene, 2,4-diaminophenoxyacetic acid, 3-[di-(2-hydroxyethyl)amino]aniline, 4-amino-2-di-[2-hydroxyethyl)amino]-1-ethoxybenzene, 5-methyl-2-(1-methylethyl)phenol, 3-[(2-hydroxyethyl)amino]aniline, 3[(2-aminoethyl)amino]aniline, 1,3-di-(2,4-diaminophenoxy)propane, di-(2,4-diaminophenoxy)methane, 1,3-diamino-2,4-dimethoxy-benzene, 2,6-bis-(2-hydroxyethyl)aminotoluene, 4-hydroxyindole, 3-dimethylaminophenol, 3-diethyl-aminophenol, 5-amino-2-methylphenol, 5-amino-4-fluoro-2-methylphenol, 5-amino-4-methoxy-2-methylphenol, 5-amino-4-ethoxy-2-methylphenol, 3-amino-2,4-dichlorophenol, 5-amino-2,4-dichlorophenol, 3-amino-2-methylphenol, 3-amino-2-chloro-6-methylphenol, 3-aminophenol, 2-[(3-hydroxyphenyl)amino]acetamide, 5-[(2-hydroxyethyl)amino]-2-methylphenol, 3-[(2-hydro-xyethyl)amino]phenol, 3-[(2-methoxyethyl)amino]phenol, 5-amino-2-ethylphenol, 2-(4-amino-2-hydroxyphenoxy)ethanol, 5-[(3-hydroxypropyl)amino]-2-methylphenol, 3-[(2,3-dihydroxypropyl)-amino]-2-methylphenol, 3-[(2-hydroxyethyl)amino]-2-methylphenol, 2-amino-3-hydroxypyridine, 5-amino-4-chloro-2-methylphenol, 1-naphthol, 1,5-dihydroxynaphthalene, 1,7-dihydroxynaphthalene, 2,3-dihydroxynaphthalene, 2,7-dihydroxynaphthalene, 2-methyl-1-naphthol acetate, 1,3-dihy-droxybenzene, 1-chloro-2,4-dihydroxybenzene, 2-chloro-1,3-dihydroxybenzene, 1,2-dichloro-3,5-dihydroxy-4-methylbenzene, 1,5-dichloro-2,4-dihydroxybenzene, 1,3-dihydroxy-2-methylbenzene, 3,4-methylenedioxyphenol, 3,4-methylenedioxyaniline, 5-[(2-hydroxyethyl)amino]-1,3-benzodioxol, 6-bromo-1-hydroxy-3,4-methylenedioxybenzene, 3,4-diaminobenzoic acid, 3,4-dihydro-6-hydroxy-1,4(2)-benzoxazine, 6-amino-3,4-dihydro-1,4(2H)benzoxazine, 3-methyl-1-phenyl-5-pyrazolone, 5,6-dihydroxyindole, 5,6-dihydroxyindoline, 5-hydroxyindole, 6-hydroxyindole, 7-hydroxyindole and 2,3-indolinedione.</claim-text>
+</claim>
+<claim id="CLM-00008" num="00008">
+<claim-text>8. Preparation according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, characterized in that it contains the developers and couplers in a total amount of 0.005 to 20 wt. %, based on the total amount of colorant.</claim-text>
+</claim>
+<claim id="CLM-00009" num="00009">
+<claim-text>9. Preparation according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, characterized in that it contains additionally at least one direct dye.</claim-text>
+</claim>
+<claim id="CLM-00010" num="00010">
+<claim-text>10. Preparation according to <claim-ref idref="CLM-00005">claim 5</claim-ref>, characterized in that it is a hair colorant.</claim-text>
+</claim>
+</claims>
+</us-patent-grant>
