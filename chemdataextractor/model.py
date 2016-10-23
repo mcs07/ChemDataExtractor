@@ -22,6 +22,8 @@ import logging
 
 import six
 
+from .utils import python_2_unicode_compatible
+
 
 log = logging.getLogger(__name__)
 
@@ -144,7 +146,7 @@ class ModelMeta(ABCMeta):
         return super(ModelMeta, cls).__setattr__(key, value)
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class BaseModel(six.with_metaclass(ModelMeta)):
     """"""
 
@@ -267,7 +269,7 @@ class BaseModel(six.with_metaclass(ModelMeta)):
         return json.dumps(self.serialize(primitive=True), *args, **kwargs)
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class ModelList(MutableSequence):
     """Wrapper around a list of Models objects to facilitate operations on all at once."""
 

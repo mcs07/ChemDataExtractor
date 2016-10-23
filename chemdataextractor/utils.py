@@ -53,6 +53,8 @@ def python_2_unicode_compatible(klass):
     if six.PY2:
         if '__str__' not in klass.__dict__:
             raise ValueError("Define __str__() on %s to use @python_2_unicode_compatible" % klass.__name__)
+        if '__repr__' not in klass.__dict__:
+            raise ValueError("Define __repr__() on %s to use @python_2_unicode_compatible" % klass.__name__)
         klass.__unicode__ = klass.__str__
         klass._unicode_repr = klass.__repr__
         klass.__str__ = lambda self: self.__unicode__().encode('utf-8')

@@ -22,6 +22,7 @@ import logging
 
 import six
 
+from ..utils import python_2_unicode_compatible
 from .text import Paragraph, Citation, Footnote, Heading, Title
 from .table import Table
 from .figure import Figure
@@ -33,7 +34,7 @@ from ..text import get_encoding
 log = logging.getLogger(__name__)
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class BaseDocument(six.with_metaclass(ABCMeta, collections.Sequence)):
     """Abstract base class for a Document."""
 

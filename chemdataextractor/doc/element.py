@@ -18,8 +18,10 @@ import json
 
 import six
 
+from ..utils import python_2_unicode_compatible
 
-@six.python_2_unicode_compatible
+
+@python_2_unicode_compatible
 class BaseElement(six.with_metaclass(ABCMeta)):
     """Abstract base class for a Document Element."""
 
@@ -65,7 +67,7 @@ class BaseElement(six.with_metaclass(ABCMeta)):
         return json.dumps(self.serialize(), *args, **kwargs)
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class CaptionedElement(BaseElement):
     """Document Element with a caption."""
 
@@ -76,7 +78,7 @@ class CaptionedElement(BaseElement):
         self.label = label
 
     def __repr__(self):
-        return '%s(id=%r, references=%r, caption=%r)' % (self.__class__.__name__, self.id, self.references, self.caption.text.encode('utf8'))
+        return '%s(id=%r, references=%r, caption=%r)' % (self.__class__.__name__, self.id, self.references, self.caption.text)
 
     def __str__(self):
         return self.caption.text

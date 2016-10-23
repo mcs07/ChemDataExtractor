@@ -14,6 +14,7 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 from abc import abstractproperty
+import collections
 import logging
 import re
 
@@ -34,14 +35,14 @@ from ..nlp.tag import NoneTagger
 from ..nlp.pos import ChemCrfPosTagger
 from ..nlp.tokenize import ChemSentenceTokenizer, ChemWordTokenizer, regex_span_tokenize
 from ..text import CONTROL_RE
-from ..utils import memoized_property
+from ..utils import memoized_property, python_2_unicode_compatible
 from .element import BaseElement
 
 
 log = logging.getLogger(__name__)
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class BaseText(BaseElement):
     """Abstract base class for a text Document Element."""
 
@@ -59,7 +60,7 @@ class BaseText(BaseElement):
         self.parsers = parsers if parsers is not None else self.parsers
 
     def __repr__(self):
-        return '%s(id=%r, references=%r, text=%r)' % (self.__class__.__name__, self.id, self.references, self._text.encode('utf8'))
+        return '%s(id=%r, references=%r, text=%r)' % (self.__class__.__name__, self.id, self.references, self._text)
 
     def __str__(self):
         return self._text
@@ -113,7 +114,7 @@ class BaseText(BaseElement):
         return self.text
 
 
-class Text(BaseText):
+class Text(collections.Sequence, BaseText):
     """A passage of text, comprising one or more sentences."""
 
     sentence_tokenizer = ChemSentenceTokenizer()
@@ -128,6 +129,12 @@ class Text(BaseText):
         """"""
         super(Text, self).__init__(text, word_tokenizer=word_tokenizer, lexicon=lexicon, abbreviation_detector=abbreviation_detector, pos_tagger=pos_tagger, ner_tagger=ner_tagger, parsers=None, **kwargs)
         self.sentence_tokenizer = sentence_tokenizer if sentence_tokenizer is not None else self.sentence_tokenizer
+
+    def __getitem__(self, index):
+        return self.sentences[index]
+
+    def __len__(self):
+        return len(self.sentences)
 
     @memoized_property
     def sentences(self):
@@ -310,7 +317,7 @@ class Sentence(BaseText):
         self.end = end if end is not None else len(text)
 
     def __repr__(self):
-        return '%s(%r, %r, %r)' % (self.__class__.__name__, self._text.encode('utf8'), self.start, self.end)
+        return '%s(%r, %r, %r)' % (self.__class__.__name__, self._text, self.start, self.end)
 
     @memoized_property
     def tokens(self):
@@ -532,7 +539,7 @@ class Sentence(BaseText):
         return NotImplemented
 
 
-@six.python_2_unicode_compatible
+@python_2_unicode_compatible
 class Span(object):
     """A text span within a sentence."""
 
@@ -545,7 +552,7 @@ class Span(object):
         """The end offset of this token in the original text."""
 
     def __repr__(self):
-        return '%s(%r, %r, %r)' % (self.__class__.__name__, self.text.encode('utf8'), self.start, self.end)
+        return '%s(%r, %r, %r)' % (self.__class__.__name__, self.text, self.start, self.end)
 
     def __str__(self):
         return self.text
