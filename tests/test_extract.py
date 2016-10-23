@@ -50,6 +50,15 @@ class TestExtract(unittest.TestCase):
         ]
         self.assertEqual(expected, d.records.serialize())
 
+    def test_parse_control_character(self):
+        """Test control character in text is handled correctly."""
+        # The parser doesn't like controls because it uses LXML model so must be XML compatible.
+        d = Document(Paragraph('Yielding 2,4,6-trinitrotoluene,\n m.p. 20 \x0eC.'))
+        expected = [{'names': ['2,4,6-trinitrotoluene']}]
+        self.assertEqual(expected, d.records.serialize())
+
+
+
 
 if __name__ == '__main__':
     unittest.main()

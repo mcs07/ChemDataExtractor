@@ -20,7 +20,13 @@ from bs4 import UnicodeDammit
 
 
 #: Control characters.
-CONTROLS = {'\u0001', '\u0002', '\u0003', '\u0004', '\u0005', '\u0006', '\u0007', '\u0008'}
+CONTROLS = {
+    '\u0001', '\u0002', '\u0003', '\u0004', '\u0005', '\u0006', '\u0007', '\u0008', '\u000e', '\u000f', '\u0011',
+    '\u0012', '\u0013', '\u0014', '\u0015', '\u0016', '\u0017', '\u0018', '\u0019', '\u001a', '\u001b',
+}
+# There are further control characters, but they are instead replaced with a space by unicode normalization
+# '\u0009', '\u000a', '\u000b', '\u000c', '\u000d', '\u001c',  '\u001d', '\u001e', '\u001f'
+
 
 #: Hyphen and dash characters.
 HYPHENS = {
@@ -210,6 +216,8 @@ EMAIL_RE = re.compile(r'([\w\-\.\+%]+@(\w[\w\-]+\.)+[\w\-]+)', re.I | re.U)
 DOI_RE = re.compile(r'^10\.\d{4,9}/[-\._;()/:A-Z0-9]+$', re.U)
 #: Regular expression that matches ISSNs.
 ISSN_RE = re.compile(r'^\d{4}-\d{3}[\dX]$', re.U)
+#: Regular expression that matches control characters not allowed in XML.
+CONTROL_RE = re.compile('[^\u0020-\uD7FF\u0009\u000A\u000D\uE000-\uFFFD\u10000-\u10FFFF]+')
 
 
 def get_encoding(input_string, guesses=None, is_html=False):

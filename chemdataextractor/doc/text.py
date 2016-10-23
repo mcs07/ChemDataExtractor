@@ -33,6 +33,7 @@ from ..nlp.abbrev import ChemAbbreviationDetector
 from ..nlp.tag import NoneTagger
 from ..nlp.pos import ChemCrfPosTagger
 from ..nlp.tokenize import ChemSentenceTokenizer, ChemWordTokenizer, regex_span_tokenize
+from ..text import CONTROL_RE
 from ..utils import memoized_property
 from .element import BaseElement
 
@@ -495,8 +496,10 @@ class Sentence(BaseText):
         """Return a list of records for this sentence."""
         compounds = ModelList()
         seen_labels = set()
+        # Ensure no control characters are sent to a parser (need to be XML compatible)
+        tagged_tokens = [(CONTROL_RE.sub('', token), tag) for token, tag in self.tagged_tokens]
         for parser in self.parsers:
-            for record in parser.parse(self.tagged_tokens):
+            for record in parser.parse(tagged_tokens):
                 p = record.serialize()
                 if not p:  # TODO: Potential performance issues?
                     continue

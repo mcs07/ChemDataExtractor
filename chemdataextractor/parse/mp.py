@@ -30,6 +30,7 @@ prefix = Optional(I('a')).hide() + (R('^m\.?pt?\.?$', re.I) | I('melting') + Opt
 
 delim = R('^[:;\.,]$')
 
+# TODO: Consider allowing degree symbol to be optional. The prefix should be restrictive enough to stop false positives.
 units = (W('°') + Optional(R('^[CFK]\.?$')) | W('K\.?'))('units').add_action(merge)
 
 joined_range = R('^[\+\-–−]?\d+(\.\d+)?[\-–−~∼˜]\d+(\.\d+)?$')('value').add_action(merge)
