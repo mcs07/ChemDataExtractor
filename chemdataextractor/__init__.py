@@ -15,7 +15,7 @@ import logging
 
 
 __title__ = 'ChemDataExtractor'
-__version__ = '1.2.0'
+__version__ = '1.2.1'
 __author__ = 'Matt Swain'
 __email__ = 'm.swain@me.com'
 __license__ = 'MIT'
