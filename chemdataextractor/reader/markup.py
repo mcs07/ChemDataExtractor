@@ -165,13 +165,14 @@ class LxmlReader(six.with_metaclass(ABCMeta, BaseReader)):
     def _parse_reference(self, el):
         """Return reference ID from href or text content."""
         if el.get('href', '').startswith('#'):
+            # TODO: Get anchor from href with absolute url, e.g. http://pubs.acs.org/doi/full/10.1021/acs.jmedchem.6b01195#cor1
             return [el.get('href')[1:]]
         elif 'rid' in el.attrib:
             return [el.attrib['rid']]
         elif 'idref' in el.attrib:
             return [el.attrib['idref']]
         else:
-            return [el.text.strip()]
+            return [''.join(el.itertext()).strip()]
 
     def _parse_table(self, el, refs, specials):
         caps = self._css(self.table_caption_css, el)
