@@ -16,7 +16,7 @@ from __future__ import unicode_literals
 
 import copy
 from abc import ABCMeta
-from collections import Sequence, MutableSequence
+from collections import MutableSequence
 import json
 import logging
 
@@ -77,7 +77,10 @@ class BaseType(six.with_metaclass(ABCMeta)):
 
 class StringType(BaseType):
     """"""
-    pass
+
+    def process(self, value):
+        """Convert value to a unicode string. Useful in case lxml _ElementUnicodeResult are passed from parser."""
+        return six.text_type(value) if value is not None else None
 
 
 class FloatType(BaseType):
@@ -118,6 +121,11 @@ class ListType(BaseType):
     #     if value in [None, '', []]:
     #         return self.default if self.default is not None else []
     #     return value
+
+    def __set__(self, instance, value):
+        """Descriptor for assigning a value to a ListField in a Model."""
+        # Run process for the nested field type for each value in list
+        instance._values[self.name] = [self.field.process(v) for v in value]
 
     def serialize(self, value, primitive=False):
         """Serialize this field."""
