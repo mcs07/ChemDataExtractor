@@ -778,6 +778,10 @@ class TestChemTokenizer(unittest.TestCase):
         self.assertEqual(['7.95', '(', 's', ',', '4H', ')'], self.t.tokenize('7.95(s, 4H)'))
         self.assertEqual(['In', 'Fig.', '5', '(', 'a', ',', 'b', ')'], self.t.tokenize('In Fig. 5(a, b)'))
 
+    def test_quote_colon(self):
+        """Test the word tokenizer quote followed by colon followed by digit (IndexError bugfix)."""
+        self.assertEqual(['\'', ':', '1'], self.t.tokenize('\':1'))
+
     def test_chemtext_sentence(self):
         """Test tokenization through the Text and Sentence API."""
         t = Text('Hi, my name is Matt. What is your name?')
