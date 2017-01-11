@@ -31,6 +31,10 @@ To install ChemDataExtractor, simply run::
 
     pip install chemdataextractor
 
+Or if you are an Anaconda user, run::
+
+    conda install -c chemdataextractor chemdataextractor
+
 Alternatively, try one of the other `installation options`_.
 
 
