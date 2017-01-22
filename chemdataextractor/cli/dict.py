@@ -15,6 +15,12 @@ from __future__ import print_function
 import re
 import sys
 
+#HTMLParser is called html.parser in Python 3.X
+if (sys.version_info[0]<3):
+    import HTMLParser
+else:
+    import html.parser as HTMLParser
+
 import click
 from ..nlp.lexicon import ChemLexicon
 from ..nlp.tokenize import ChemWordTokenizer
