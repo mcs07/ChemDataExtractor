@@ -1,0 +1,13 @@
+appdirs>=1.4.0
+beautifulsoup4>=4.5.3
+click>=6.7
+cssselect>=1.0.1
+DAWG>=0.7.8
+lxml>=3.7.2
+nltk>=3.2.2
+pdfminer.six>=20160614
+python-crfsuite>=0.9.1
+python-dateutil>=2.6.0
+PyYAML>=3.12
+requests>=2.12.5
+six>=1.10.0
