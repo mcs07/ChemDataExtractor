@@ -451,6 +451,10 @@ class Sentence(BaseText):
                             end -= 1
                             break
 
+            # If entity has been reduced to nothing by adjusting boundaries, skip it
+            if start >= end:
+                continue
+
             currenttext = self.text[start-self.start:end-self.start]
 
             # Do splits
@@ -556,6 +560,18 @@ class Span(object):
 
     def __str__(self):
         return self.text
+
+    def __eq__(self, other):
+        """Span objects are equal if the source text is equal, and the start and end indices are equal."""
+        if not isinstance(other, self.__class__):
+            return False
+        return self.text == other.text and self.start == other.start and self.end == other.end
+
+    def __ne__(self, other):
+        return not self == other
+
+    def __hash__(self):
+        return hash((self.text, self.start, self.end))
 
     @property
     def length(self):

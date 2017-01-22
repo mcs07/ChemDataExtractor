@@ -16,6 +16,8 @@ from __future__ import unicode_literals
 import logging
 import re
 
+import six
+
 from ..text import bracket_level
 from .lexicon import ChemLexicon
 from .tag import BaseTagger, CrfTagger, DictionaryTagger
@@ -517,12 +519,24 @@ class CemTagger(BaseTagger):
 
     def _in_stoplist(self, entity):
         """Return True if the entity is in the stoplist."""
-        for suffix in IGNORE_SUFFIX:
-            if entity.endswith(suffix):
-                entity = entity[:-len(suffix)]
+        start = 0
+        end = len(entity)
+        # Adjust boundaries to exclude disallowed prefixes/suffixes
         for prefix in IGNORE_PREFIX:
             if entity.startswith(prefix):
-                entity = entity[len(prefix):]
+                # print('%s removing %s' % (currenttext, prefix))
+                start += len(prefix)
+                break
+        for suffix in IGNORE_SUFFIX:
+            if entity.endswith(suffix):
+                # print('%s removing %s' % (currenttext, suffix))
+                end -= len(suffix)
+                break
+        # Return True if entity has been reduced to nothing by adjusting boundaries
+        if start >= end:
+            return True
+        # Return True if adjusted entity is in the literal stoplist
+        entity = entity[start:end]
         if entity in STOPLIST:
             return True
         # log.debug('Entity: %s', entity)
@@ -598,5 +612,5 @@ class CemTagger(BaseTagger):
                             if re.match('^(\d{1,2}[A-Za-z]?|I|II|III|IV|V|VI|VII|VIII|IX)$', entity_tokens[-2]):
                                 log.debug('Removing %s from end of CEM', entity_tokens[-2])
                                 tags[end_i-3:end_i] = [None, None, None]
-        tokentags = zip(tokens, tags)
+        tokentags = list(six.moves.zip(tokens, tags))
         return tokentags
