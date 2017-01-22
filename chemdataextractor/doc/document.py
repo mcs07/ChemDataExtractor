@@ -62,10 +62,15 @@ class BaseDocument(six.with_metaclass(ABCMeta, collections.Sequence)):
 
 
 class Document(BaseDocument):
-    """"""
+    """A document to extract data from. Contains a list of document elements."""
 
     def __init__(self, *elements):
-        """"""
+        """Initialize a Document manually by passing one or more Document elements (Paragraph, Heading, Table, etc.)
+
+        Strings that are passed to this constructor are automatically wrapped into Paragraph elements.
+
+        :param list[chemdataextractor.doc.element.BaseElement|string] elements: Elements in this Document.
+        """
         self._elements = []
         for element in elements:
             # Convert raw text to Paragraph elements
@@ -74,7 +79,7 @@ class Document(BaseDocument):
             elif isinstance(element, six.binary_type):
                 # Try guess encoding if byte string
                 encoding = get_encoding(element)
-                log.warn('Guessed bytestring encoding as %s. Use unicode strings to avoid this warning.', encoding)
+                log.warning('Guessed bytestring encoding as %s. Use unicode strings to avoid this warning.', encoding)
                 element = Paragraph(element.decode(encoding))
             element.document = self
             self._elements.append(element)
@@ -82,6 +87,21 @@ class Document(BaseDocument):
 
     @classmethod
     def from_file(cls, f, fname=None, readers=None):
+        """Create a Document from a file.
+
+        Usage::
+
+            with open('paper.html', 'rb') as f:
+                doc = Document.from_file(f)
+
+        .. note::
+
+            Always open files in binary mode by using the 'rb' parameter.
+
+        :param file|string f: A file-like object or path to a file.
+        :param string fname: (Optional) The filename. Used to help determine file format.
+        :param list[chemdataextractor.reader.base.BaseReader] readers: (Optional) List of readers to use.
+        """
         if isinstance(f, six.string_types):
             f = io.open(f, 'rb')
         if not fname and hasattr(f, 'name'):
@@ -90,9 +110,28 @@ class Document(BaseDocument):
 
     @classmethod
     def from_string(cls, fstring, fname=None, readers=None):
+        """Create a Document from a byte string containing the contents of a file.
+
+        Usage::
+
+            contents = open('paper.html', 'rb').read()
+            doc = Document.from_string(contents)
+
+        .. note::
+
+            This method expects a byte string, not a unicode string (in contrast to most methods in ChemDataExtractor).
+
+        :param bytes fstring: A byte string containing the contents of a file.
+        :param string fname: (Optional) The filename. Used to help determine file format.
+        :param list[chemdataextractor.reader.base.BaseReader] readers: (Optional) List of readers to use.
+        """
         if readers is None:
             from ..reader import DEFAULT_READERS
             readers = DEFAULT_READERS
+
+        if isinstance(fstring, six.text_type):
+            raise ReaderError('from_string expects a byte string, not a unicode string')
+
         for reader in readers:
             # Skip reader if we don't think it can read file
             if not reader.detect(fstring, fname=fname):
@@ -113,6 +152,7 @@ class Document(BaseDocument):
     # TODO: memoized_property?
     @property
     def records(self):
+        """Return chemical records extracted from this document."""
         records = ModelList()
         contextual_records = []
         head_def_record = None
