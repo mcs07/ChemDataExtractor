@@ -17,16 +17,17 @@ import logging
 import re
 
 from chemdataextractor.parse.cem import cem, chemical_label, lenient_chemical_label, solvent_name
-from chemdataextractor.parse.common import lbrct, dt, rbrct
+from chemdataextractor.parse.common import lbrct, dt, rbrct, hyphen
 from ..utils import first
-from ..model import Compound, MeltingPoint
+from ..model import Compound, GlassTransition 
 from .actions import merge, join
 from .base import BaseParser
 from .elements import W, I, R, Optional, Any, OneOrMore, Not, ZeroOrMore
 
 log = logging.getLogger(__name__)
 
-prefix = Optional(I('a')).hide() + (Optional(lbrct) + W('Tm') + Optional(rbrct)| R('^m\.?pt?\.?$', re.I) | I('melting') + Optional((I('point') | I('temperature')| I('range'))) | R('^m\.?$', re.I) + R('^pt?\.?$', re.I)).hide() + Optional(lbrct + W('Tm') + rbrct) + Optional(W('=') | I('of') | I('was') | I('is') | I('at')).hide() + Optional(I('in') + I('the') + I('range') + Optional(I('of')) | I('about')).hide()
+prefix = Optional(I('a')).hide() + (Optional(lbrct) + W('Tg') + Optional(rbrct) | I('glass') + Optional(I('transition')) + Optional((I('temperature') | I('range') | I('temp.'))) | W('transition') + Optional((I('temperature') | I('range') | I('temp.')))).hide() + Optional(lbrct + W('Tg') + rbrct) +  Optional(W('=') | I('of') | I('was') | I('is') | I('at')).hide() + Optional(I('in') + I('the') + I('range') + Optional(I('of')) | I('about') | ('around') | I('ca') | I('ca.')).hide()
+#prefix = Optional(I('a')).hide() + (Optional(lbrct) + W('Tg') + Optional(rbrct) | I('glass') + Optional(I('transition')) + Optional((I('temperature') | I('range') | I('temp.')))).hide() + Optional(lbrct + W('Tg') + rbrct) +  Optional(W('=') | I('of') | I('was') | I('is') | I('at')).hide() + Optional(I('in') + I('the') + I('range') + Optional(I('of')) | I('about') | ('around') | I('ca') | I('ca.')).hide()
 
 delim = R('^[:;\.,]$')
 
@@ -40,28 +41,30 @@ temp_range = (Optional(R('^[\-–−]$')) + (joined_range | spaced_range | to_ra
 temp_value = (Optional(R('^[~∼˜\<\>]$')) + Optional(R('^[\-–−]$')) + R('^[\+\-–−]?\d+(\.\d+)?$'))('value').add_action(merge)
 temp = Optional(lbrct).hide() + (temp_range | temp_value)('value') + Optional(rbrct).hide()
 
-mp = (prefix + Optional(delim).hide() + temp + units)('mp')
+tg = (prefix + Optional(delim).hide() + temp + units)('tg')
+
+bracket_any = lbrct + OneOrMore(Not(tg) + Not(rbrct) + Any()) + rbrct
+
+cem_tg_phrase = (Optional(cem) + Optional(I('having')).hide() + Optional(delim).hide() + Optional(bracket_any).hide() + Optional(delim).hide() + Optional(lbrct) + tg + Optional(rbrct))('tg_phrase')
+
+obtained_tg_phrase = ((cem | chemical_label) + (I('is') | I('are') | I('was')).hide() + (I('measured') | I('obtained') | I('yielded')).hide() + ZeroOrMore(Not(tg) + Not(cem) + Any()).hide() + tg)('tg_phrase')
+
+#tg_phrase = cem_tg_phrase | method1_phrase | method2_phrase | method3_phrase | obtained_tg_phrase
+tg_phrase = cem_tg_phrase | obtained_tg_phrase
 
 
-bracket_any = lbrct + OneOrMore(Not(mp) + Not(rbrct) + Any()) + rbrct
-
-solvent_phrase = (R('^(re)?crystalli[sz](ation|ed)$', re.I) + (I('with') | I('from')) + cem | solvent_name)
-cem_mp_phrase = (Optional(solvent_phrase).hide() + Optional(cem) + Optional(I('having')).hide() + Optional(delim).hide() + Optional(bracket_any).hide() + Optional(delim).hide() + Optional(lbrct) + mp + Optional(rbrct))('mp_phrase')
-to_give_mp_phrase = ((I('to') + (I('give') | I('afford') | I('yield') | I('obtain')) | I('affording') | I('afforded') | I('gave') | I('yielded')).hide() + Optional(dt).hide() + (cem | chemical_label | lenient_chemical_label) + ZeroOrMore(Not(mp) + Not(cem) + Any()).hide() + mp)('mp_phrase')
-obtained_mp_phrase = ((cem | chemical_label) + (I('is') | I('are') | I('was')).hide() + (I('afforded') | I('obtained') | I('yielded')).hide() + ZeroOrMore(Not(mp) + Not(cem) + Any()).hide() + mp)('mp_phrase')
-
-mp_phrase = cem_mp_phrase | to_give_mp_phrase | obtained_mp_phrase
-
-class MpParser(BaseParser):
+class TgParser(BaseParser):
     """"""
-    root = mp_phrase
+    root = tg_phrase
+
+    #print ('outside parser', tg_phrase, type(tg_phrase))
 
     def interpret(self, result, start, end):
         compound = Compound(
-            melting_points=[
-                MeltingPoint(
-                    value=first(result.xpath('./mp/value/text()')),
-                    units=first(result.xpath('./mp/units/text()'))
+            glass_transitions=[
+                GlassTransition(
+                    value=first(result.xpath('./tg/value/text()')),
+                    units=first(result.xpath('./tg/units/text()'))
                 )
             ]
         )
@@ -70,3 +73,4 @@ class MpParser(BaseParser):
             compound.names = cem_el.xpath('./name/text()')
             compound.labels = cem_el.xpath('./label/text()')
         yield compound
+

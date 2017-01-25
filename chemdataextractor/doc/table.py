@@ -22,7 +22,7 @@ from ..parse.table import CompoundHeadingParser, CompoundCellParser, UvvisAbsHea
     ExtinctionHeadingParser, FluorescenceLifetimeHeadingParser, FluorescenceLifetimeCellParser, \
     ElectrochemicalPotentialHeadingParser, ElectrochemicalPotentialCellParser, IrHeadingParser, IrCellParser, \
     SolventCellParser, SolventHeadingParser, SolventInHeadingParser, UvvisAbsEmiQuantumYieldHeadingParser, \
-    UvvisAbsEmiQuantumYieldCellParser, MeltingPointHeadingParser, MeltingPointCellParser, TempInHeadingParser, \
+    UvvisAbsEmiQuantumYieldCellParser, MeltingPointHeadingParser, MeltingPointCellParser, GlassTransitionHeadingParser, GlassTransitionCellParser, TempInHeadingParser, \
     UvvisAbsDisallowedHeadingParser, UvvisEmiQuantumYieldHeadingParser, UvvisEmiQuantumYieldCellParser
 # TODO: Sort out the above import... import module instead
 from ..nlp.tag import NoneTagger
@@ -50,6 +50,7 @@ class Table(CaptionedElement):
         (FluorescenceLifetimeHeadingParser(), FluorescenceLifetimeCellParser()),
         (ElectrochemicalPotentialHeadingParser(), ElectrochemicalPotentialCellParser()),
         (MeltingPointHeadingParser(), MeltingPointCellParser()),
+        (GlassTransitionHeadingParser(), GlassTransitionCellParser()),
         (SolventHeadingParser(), SolventCellParser()),
         (SolventInHeadingParser(),),
         (TempInHeadingParser(),)

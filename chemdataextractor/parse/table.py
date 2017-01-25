@@ -19,7 +19,7 @@ from lxml.builder import E
 
 from .common import delim
 from ..utils import first
-from ..model import Compound, UvvisSpectrum, UvvisPeak, QuantumYield, FluorescenceLifetime, MeltingPoint
+from ..model import Compound, UvvisSpectrum, UvvisPeak, QuantumYield, FluorescenceLifetime, MeltingPoint, GlassTransition
 from ..model import ElectrochemicalPotential, IrSpectrum, IrPeak
 from .actions import join, merge, fix_whitespace
 from .base import BaseParser
@@ -201,6 +201,12 @@ melting_point_cell = (
     temp_with_optional_units + ZeroOrMore(delims.hide() + temp_with_optional_units)
 )('melting_point_cell')
 
+glass_transition_title = R('^T(g\.)$', re.I) | W('T') + R('^(g\.)?$')
+glass_transition_heading = (glass_transition_title.hide() + delims.hide() + Optional(temp_units))('glass_transition_heading')
+glass_transition_cell = (
+    temp_with_optional_units + ZeroOrMore(delims.hide() + temp_with_optional_units)
+)('glass_transition_cell')
+
 caption_context = Group(subject_phrase | solvent_phrase | temp_phrase)('caption_context')
 
 
@@ -241,11 +247,12 @@ class SolventInHeadingParser(BaseParser):
         solvent = first(result.xpath('./name/text()'))
         if solvent is not None:
             context = {'solvent': solvent}
-            c.melting_points = [MeltingPoint(context)]
-            c.quantum_yields = [QuantumYield(context)]
-            c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
-            c.electrochemical_potentials = [ElectrochemicalPotential(context)]
-            c.uvvis_spectra = [UvvisSpectrum(context)]
+            c.melting_points = [MeltingPoint(**context)]
+            c.glass_transitions = [GlassTransition(**context)]
+            c.quantum_yields = [QuantumYield(**context)]
+            c.fluorescence_lifetimes = [FluorescenceLifetime(**context)]
+            c.electrochemical_potentials = [ElectrochemicalPotential(**context)]
+            c.uvvis_spectra = [UvvisSpectrum(**context)]
         if c.serialize():
             yield c
 
@@ -261,10 +268,11 @@ class TempInHeadingParser(BaseParser):
             'temperature': first(result.xpath('./value/text()')),
             'temperature_units': first(result.xpath('./units/text()'))
         }
-        c.quantum_yields = [QuantumYield(context)]
-        c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
-        c.electrochemical_potentials = [ElectrochemicalPotential(context)]
-        c.uvvis_spectra = [UvvisSpectrum(context)]
+	# RBT Same problem as before missing **?
+        c.quantum_yields = [QuantumYield(**context)]
+        c.fluorescence_lifetimes = [FluorescenceLifetime(**context)]
+        c.electrochemical_potentials = [ElectrochemicalPotential(**context)]
+        c.uvvis_spectra = [UvvisSpectrum(**context)]
         yield c
 
 
@@ -278,11 +286,13 @@ class SolventCellParser(BaseParser):
         solvent = first(result.xpath('./name/text()'))
         if solvent is not None:
             context = {'solvent': solvent}
-            c.melting_points = [MeltingPoint(context)]
-            c.quantum_yields = [QuantumYield(context)]
-            c.fluorescence_lifetimes = [FluorescenceLifetime(context)]
-            c.electrochemical_potentials = [ElectrochemicalPotential(context)]
-            c.uvvis_spectra = [UvvisSpectrum(context)]
+	    # RBT (Added ** to context)
+            c.melting_points = [MeltingPoint(**context)]
+            c.glass_transitions = [GlassTransition(**context)]
+            c.quantum_yields = [QuantumYield(**context)]
+            c.fluorescence_lifetimes = [FluorescenceLifetime(**context)]
+            c.electrochemical_potentials = [ElectrochemicalPotential(**context)]
+            c.uvvis_spectra = [UvvisSpectrum(**context)]
         if c.serialize():
             yield c
 
@@ -597,6 +607,37 @@ class MeltingPointCellParser(BaseParser):
             yield c
 
 
+class GlassTransitionHeadingParser(BaseParser):
+    """"""
+    root = glass_transition_heading
+
+    def interpret(self, result, start, end):
+        """"""
+        glass_transition_units = first(result.xpath('./units/text()'))
+        c = Compound()
+        if glass_transition_units:
+            c.glass_transitions.append(
+                GlassTransition(units=glass_transition_units)
+            )
+        yield c
+
+class GlassTransitionCellParser(BaseParser):
+    """"""
+    root = glass_transition_cell
+
+    def interpret(self, result, start, end):
+        """"""
+        c = Compound()
+        for tg in result.xpath('./temp'):
+            c.glass_transitions.append(
+                GlassTransition(
+                    value=first(mp.xpath('./value/text()')),
+                    units=first(mp.xpath('./units/text()'))
+                )
+            )
+        if c.glass_transition:
+            yield c
+
 class ElectrochemicalPotentialHeadingParser(BaseParser):
     """"""
     root = electrochemical_potential_heading
@@ -649,6 +690,13 @@ class CaptionContextParser(BaseParser):
         # Melting point shouldn't have contextual temperature
         if context:
             c.melting_points = [MeltingPoint(**context)]
+        temp = first(result.xpath('./temp_phrase'))
+        if temp is not None:
+            context['temperature'] = first(temp.xpath('./temp/value/text()'))
+            context['temperature_units'] = first(temp.xpath('./temp/units/text()'))
+        # Glass transition temperature shouldn't have contextual temperature
+        if context:
+            c.glass_transitions = [GlassTransition(**context)]
         temp = first(result.xpath('./temp_phrase'))
         if temp is not None:
             context['temperature'] = first(temp.xpath('./temp/value/text()'))
