@@ -5,8 +5,6 @@ chemdataextractor.nlp.cem
 
 Named entity recognition (NER) for Chemical entity mentions (CEM).
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

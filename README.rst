@@ -47,7 +47,8 @@ Full documentation is available at http://chemdataextractor.org/docs
 License
 -------
 
-ChemDataExtractor is licensed under the `MIT license`_.
+ChemDataExtractor is licensed under the `MIT license`_, a permissive, business-friendly license for open source
+software.
 
 
 .. _`installation options`: http://chemdataextractor.org/docs/install

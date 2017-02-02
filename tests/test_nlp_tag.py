@@ -1,13 +1,11 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """
-test_nlp_ner
+test_nlp_tag
 ~~~~~~~~~~~~
 
-Unit tests for named entity recognition.
+Unit tests for taggers.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

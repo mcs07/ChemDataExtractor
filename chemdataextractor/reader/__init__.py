@@ -5,8 +5,6 @@ chemdataextractor.reader
 
 Reader classes that read a file and produce a ChemDataExtractor Document object.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

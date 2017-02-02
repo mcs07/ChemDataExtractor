@@ -5,8 +5,6 @@ test_doc_table
 
 Test the Table Document element.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

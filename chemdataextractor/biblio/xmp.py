@@ -11,8 +11,6 @@ More information is available on the Adobe website:
 
     http://www.adobe.com/products/xmp/index.html
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

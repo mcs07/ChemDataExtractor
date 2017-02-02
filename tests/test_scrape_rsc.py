@@ -5,8 +5,6 @@ test_scrape_rsc
 
 Test scraping documents from the Royal Society of Chemistry.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

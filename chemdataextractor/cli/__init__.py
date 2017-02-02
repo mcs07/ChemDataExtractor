@@ -7,8 +7,6 @@ ChemDataExtractor command line interface.
 
 Once installed, ChemDataExtractor provides a command-line tool that can be used by typing 'cde' in a terminal.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

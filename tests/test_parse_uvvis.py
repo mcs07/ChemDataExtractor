@@ -3,10 +3,8 @@
 test_parse_uvvis
 ~~~~~~~~~~~~~~~~
 
+Test UV-vis parser.
 
-
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Unit tests for tokenization."""
+"""
+test_nlp_tokenize
+~~~~~~~~~~~~~~~~~
+
+Tests for tokenization.
+
+"""
 
 from __future__ import absolute_import
 from __future__ import division

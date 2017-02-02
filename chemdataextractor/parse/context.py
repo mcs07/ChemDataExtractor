@@ -5,8 +5,6 @@ chemdataextractor.parse.context
 
 Parser for sentences that provide contextual information, such as apparatus, solvent, and temperature.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

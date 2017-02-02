@@ -3,8 +3,6 @@
 ChemDataExtractor
 ~~~~~~~~~~~~~~~~~
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import
@@ -19,7 +17,7 @@ __version__ = '1.2.3'
 __author__ = 'Matt Swain'
 __email__ = 'm.swain@me.com'
 __license__ = 'MIT'
-__copyright__ = 'Copyright 2016 Matt Swain'
+__copyright__ = 'Copyright 2017 Matt Swain and contributors'
 
 log = logging.getLogger(__name__)
 log.addHandler(logging.NullHandler())

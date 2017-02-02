@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Unit tests for sentence tokenization."""
+"""
+test_nlp_sentence
+~~~~~~~~~~~~~~~~~
+
+Tests for sentence tokenization.
+
+"""
 
 from __future__ import absolute_import
 from __future__ import division

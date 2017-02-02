@@ -1,12 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-chemdataextractor.nlp.abbreviations
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+chemdataextractor.nlp.abbrev
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Abbreviation detection.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

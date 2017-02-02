@@ -5,8 +5,6 @@ chemdataextractor.cli.chemdner
 
 Command line tools for dealing with CHEMDNER corpus.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

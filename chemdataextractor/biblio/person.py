@@ -5,8 +5,6 @@ chemdataextractor.biblio.person
 
 Tools for parsing people's names from strings into various name components.
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

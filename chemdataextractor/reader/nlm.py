@@ -5,8 +5,6 @@ chemdataextractor.reader.nlm
 
 Readers for NLM Journal Archiving and Interchange DTD XML files. (i.e. from PubMed Central)
 
-:copyright: Copyright 2016 by Matt Swain.
-:license: MIT, see LICENSE file for more details.
 """
 
 from __future__ import absolute_import

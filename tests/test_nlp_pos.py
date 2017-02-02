@@ -1,6 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Unit tests for tagging."""
+"""
+test_nlp_pos
+~~~~~~~~~~~~
+
+Tests for part-of-speech tagging.
+
+"""
 
 from __future__ import absolute_import
 from __future__ import division
