@@ -203,6 +203,11 @@ class TestParseMp(unittest.TestCase):
         expected = '<mp_phrase><cem><name>3-Cyano-2H-chromene</name><label>B1</label></cem><mp><value>44-45</value><units>\xb0C.</units></mp></mp_phrase>'
         self.do_parse(s, expected)
 
+    def test_tm0(self):
+        s = 'A copolymer with 8% mole percent of MeDX units exhibits a Tm of 95.5 °C, which is about 15° lower than PDX homopolymer.'
+        expected = '<mp_phrase><mp><value>95.5</value><units>°C</units></mp></mp_phrase>'
+        self.do_parse(s, expected)
+
 
 class TestParseMpCompound(unittest.TestCase):
 

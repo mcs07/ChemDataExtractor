@@ -19,7 +19,7 @@ import re
 from .common import optdelim, hyphen, slash
 from ..utils import first
 from ..parse.base import BaseParser
-from ..model import Compound, QuantumYield, NmrSpectrum, UvvisSpectrum, IrSpectrum, MeltingPoint, FluorescenceLifetime
+from ..model import Compound, QuantumYield, NmrSpectrum, UvvisSpectrum, IrSpectrum, MeltingPoint, GlassTransition, FluorescenceLifetime
 from .actions import join, merge, fix_whitespace
 from .cem import chemical_name
 from .elements import I, T, R, W, ZeroOrMore, Optional, Group, OneOrMore, Any, Not
@@ -33,12 +33,16 @@ nmr = (W('NMR') | (I('nuclear') + I('magnetic') + I('resonance')) | W('1H') | W(
 uvvis = (I('UV') + (hyphen | slash) + R('^vis(ible)?$', re.I) + Optional(R('^abs(or[bp]tion)?$')))('uvvis').add_action(join).add_action(fix_whitespace)
 ir = (R('^(FT-?)?IR|FT-?IS$'))('ir').add_action(join)
 mp = (I('melting') + I('points'))('melting_point').add_action(join)
+tg = (I('glass') + I('transition') + I('temperature'))('glass_transition').add_action(join)
 pp = (I('photophysical') + (I('measurements') | I('properties')))('photophysical_properties').add_action(join)
-measurement = Group(quantum_yield | nmr | uvvis | ir | mp | pp)('measurement')
+measurement = Group(quantum_yield | nmr | uvvis | ir | mp | tg | pp)('measurement')
 
 result_noun = I('data') | I('results') | I('experiments') | I('spectra')
 
 verb = W('measured') | W('recorded') | W('collected') | W('taken') | W('acquired') | W('obtained') | W('run') | (W('carried') + W('out') | W('performed')) # | T('VBN')
+
+
+method = I('DSC') | I('TMA') | I('DTA') + I('RTL') | I('DMA') + I('DMTA') | I('dilatometer') | I('dilatometry') | I('PALS')
 
 apparatus_type = R('^\d{2,}$') + W('MHz')
 brands = I('HORIBA') + I('Jobin') + I('Yvon') | I('Hitachi') | I('Bruker') | I('Cary') | I('Jeol') | I('PerkinElmer') | I('Agilent') | I('Shimadzu') | I('Varian')
@@ -60,7 +64,7 @@ solvent_phrase = (I('in').hide() + chemical_name)('solvent')
 standard = (ZeroOrMore(T('JJ')) + OneOrMore(T('NNP') | T('NN') | T('HYPH') | T('CD') | T('B-CM') | T('I-CM')))('standard').add_action(join).add_action(fix_whitespace)
 standard_phrase = (W('with') | W('using')).hide() + Optional(dt).hide() + standard + (ZeroOrMore(W('as') | dt) + Optional(T('JJ')) + I('standard')).hide()
 
-context_phrase = Group(measurement + optdelim + Optional(result_noun).hide() + Optional(T('VBD')).hide() + ZeroOrMore(Not(verb) + Any()).hide() + verb.hide() + OneOrMore(standard_phrase | apparatus_phrase | temperature_phrase | solvent_phrase | Any().hide()))('context_phrase')
+context_phrase = Group(measurement + optdelim + Optional(result_noun).hide() + Optional(T('VBD')).hide() + ZeroOrMore(Not(verb) + Any()).hide() + verb.hide() + OneOrMore(standard_phrase | apparatus_phrase | temperature_phrase | solvent_phrase | method | Any().hide()))('context_phrase')
 
 # TODO: Multiple measurements, multiple apparatus.
 # TODO: 'respectively' phrase
@@ -81,9 +85,10 @@ class ContextParser(BaseParser):
         }
         measurement = result.xpath('./measurement/*[1]')[0]
 
-        if not measurement.tag == 'melting_point':
+        if not measurement.tag == 'melting_point' and not measurement.tag =='glass_transition':
             context['temperature'] = first(result.xpath('./temperature/value/text()'))
             context['temperature_units'] = first(result.xpath('./temperature/units/text()'))
+
 
         if measurement.tag == 'photophysical_properties':
             c.quantum_yields.append(QuantumYield(**context))
@@ -93,6 +98,8 @@ class ContextParser(BaseParser):
             c.quantum_yields.append(QuantumYield(**context))
         if measurement.tag == 'melting_point':
             c.melting_points.append(MeltingPoint(**context))
+        if measurement.tag == 'glass_transition':
+            c.glass_transitions.append(GlassTransition(**context))
         if measurement.tag == 'nmr':
             c.nmr_spectra.append(NmrSpectrum(**context))
         if measurement.tag == 'uvvis':

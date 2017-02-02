@@ -26,6 +26,7 @@ from ..parse.cem import ChemicalLabelParser, CompoundHeadingParser, CompoundPars
 from ..parse.table import CaptionContextParser
 from ..parse.ir import IrParser
 from ..parse.mp import MpParser
+from ..parse.tg import TgParser
 from ..parse.nmr import NmrParser
 from ..parse.uvvis import UvvisParser
 from ..nlp.lexicon import ChemLexicon
@@ -267,7 +268,7 @@ class Heading(Text):
 
 class Paragraph(Text):
 
-    parsers = [CompoundParser(), ChemicalLabelParser(), NmrParser(), IrParser(), UvvisParser(), MpParser(), ContextParser()]
+    parsers = [CompoundParser(), ChemicalLabelParser(), NmrParser(), IrParser(), UvvisParser(), MpParser(), TgParser(), ContextParser()]
 
     def _repr_html_(self):
         return '<p class="cde-paragraph">' + self.text + '</p>'
