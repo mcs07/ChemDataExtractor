@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 """
-chemdataextractor.parse.nmr
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+chemdataextractor.parse.tg
+~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-NMR text parser.
+Glass transition temperature parser.
 
 :copyright: Copyright 2016 by Matt Swain.
 :license: MIT, see LICENSE file for more details.

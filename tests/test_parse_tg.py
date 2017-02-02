@@ -1,8 +1,10 @@
 # -*- coding: utf-8 -*-
 """
-test_parsetg_
+test_parse_tg
 ~~~~~~~~~~~~~
+
 Test glass transition parser.
+
 :copyright: Copyright 2016 by Matt Swain.
 :license: MIT, see LICENSE file for more details.
 """
@@ -16,7 +18,7 @@ import unittest
 
 from lxml import etree
 
-from chemdataextractor.doc.text import Sentence, Paragraph
+from chemdataextractor.doc.text import Sentence
 from chemdataextractor.parse.tg import tg_phrase
 
 
@@ -81,7 +83,7 @@ class TestParseTg(unittest.TestCase):
         self.do_parse(s, expected)
 
     def test_tg8(self):
-	s= 'DSC experiments revealed that PGFDTDPP has a high glass-transition temperature at 150 °C compared with 90 °C for PGFDTDPP.'
+        s= 'DSC experiments revealed that PGFDTDPP has a high glass-transition temperature at 150 °C compared with 90 °C for PGFDTDPP.'
         expected = '<tg_phrase><tg><value>150</value><units>\xb0C</units></tg></tg_phrase>'
         self.do_parse(s, expected)
 

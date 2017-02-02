@@ -469,13 +469,9 @@ class Compound(BaseModel):
             for item in self[k]:
                 # print('item: %s' % item)
                 for other_item in other.get(k, []):
-		    #RBT Problem with doi: ma301230y. Had to add following check
-		    if (isinstance(other_item,unicode) == True):
-		        continue
-                    # if k in {'names', 'labels'}:
-                    #     # TODO: Warn attempting to merge a contextual other that contains names/labels
-                    #     continue
-                    # print('other_item: %s' % other_item)
+                    # Skip text properties (don't merge names, labels, roles)
+                    if isinstance(other_item, six.text_type):
+                        continue
                     for otherk in other_item.keys():
                         if isinstance(other_item[otherk], list):
                             if len(other_item[otherk]) > 0 and len(item[otherk]) > 0:

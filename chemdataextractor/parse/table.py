@@ -268,7 +268,6 @@ class TempInHeadingParser(BaseParser):
             'temperature': first(result.xpath('./value/text()')),
             'temperature_units': first(result.xpath('./units/text()'))
         }
-	# RBT Same problem as before missing **?
         c.quantum_yields = [QuantumYield(**context)]
         c.fluorescence_lifetimes = [FluorescenceLifetime(**context)]
         c.electrochemical_potentials = [ElectrochemicalPotential(**context)]
@@ -286,7 +285,6 @@ class SolventCellParser(BaseParser):
         solvent = first(result.xpath('./name/text()'))
         if solvent is not None:
             context = {'solvent': solvent}
-	    # RBT (Added ** to context)
             c.melting_points = [MeltingPoint(**context)]
             c.glass_transitions = [GlassTransition(**context)]
             c.quantum_yields = [QuantumYield(**context)]
