@@ -13,7 +13,7 @@ import logging
 
 
 __title__ = 'ChemDataExtractor'
-__version__ = '1.2.3'
+__version__ = '1.3.0'
 __author__ = 'Matt Swain'
 __email__ = 'm.swain@me.com'
 __license__ = 'MIT'
