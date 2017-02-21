@@ -3,15 +3,15 @@ platform:
 
 environment:
   matrix:
-    - PYTHON_VERSION: 2.7
-      MINICONDA: C:\\Miniconda-x64
-    - PYTHON_VERSION: 3.5
-      MINICONDA: C:\\Miniconda35-x64
-    - PYTHON_VERSION: 3.6
-      MINICONDA: C:\\Miniconda36-x64
+    - CONDA_PY: 27
+      CONDA_INSTALL_LOCN: C:\\Miniconda-x64
+    - CONDA_PY: 35
+      CONDA_INSTALL_LOCN: C:\\Miniconda35-x64
+    - CONDA_PY: 36
+      CONDA_INSTALL_LOCN: C:\\Miniconda36-x64
 
 install:
-  - cmd: call %MINICONDA%\Scripts\activate.bat
+  - cmd: call %CONDA_INSTALL_LOCN%\Scripts\activate.bat
   - cmd: conda config --set always_yes yes --set changeps1 no
   - cmd: conda update -q conda
   - cmd: conda config --add channels chemdataextractor
