@@ -24,5 +24,7 @@ install:
   - cmd: python setup.py install
   - cmd: cde data download
 
+build: false
+
 test_script:
   - pytest
