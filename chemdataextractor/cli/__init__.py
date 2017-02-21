@@ -15,7 +15,6 @@ from __future__ import print_function
 
 import json
 import logging
-import sys
 
 import click
 import six
@@ -41,8 +40,8 @@ def cli(ctx, verbose):
 
 
 @cli.command()
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('rb'), default=sys.stdin)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
+@click.argument('input', type=click.File('rb'), default=click.get_binary_stream('stdin'))
 @click.pass_obj
 def extract(ctx, input, output):
     """Run ChemDataExtractor on a document."""
@@ -55,8 +54,8 @@ def extract(ctx, input, output):
 
 
 @cli.command()
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('rb'), default=sys.stdin)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
+@click.argument('input', type=click.File('rb'), default=click.get_binary_stream('stdin'))
 @click.pass_obj
 def read(ctx, input, output):
     """Output processed document elements."""
@@ -64,7 +63,7 @@ def read(ctx, input, output):
     log.info('Reading %s' % input.name)
     doc = Document.from_file(input)
     for element in doc.elements:
-        output.write('%s : %s\n=====\n' % (element.__class__.__name__, six.text_type(element)))
+        output.write(u'%s : %s\n=====\n' % (element.__class__.__name__, six.text_type(element)))
 
 
 from . import cluster, config, data, tokenize, pos, chemdner, cem, dict, evaluate
