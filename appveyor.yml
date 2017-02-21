@@ -10,9 +10,6 @@ environment:
     - PYTHON_VERSION: 3.6
       MINICONDA: C:\\Miniconda36-x64
 
-init:
-  - "ECHO %PYTHON_VERSION% %MINICONDA%"
-
 install:
   - cmd: call %MINICONDA%\Scripts\activate.bat
   - cmd: conda config --set always_yes yes --set changeps1 no
