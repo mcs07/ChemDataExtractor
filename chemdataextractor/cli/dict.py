@@ -11,7 +11,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import re
-import sys
 
 import click
 from ..nlp.lexicon import ChemLexicon
@@ -272,8 +271,8 @@ def _make_tokens(name):
 
 @dict_cli.command()
 @click.argument('jochem', type=click.File('r', encoding='utf8'))
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Dictionary file.', default=sys.stdout)
-@click.option('--csoutput', '-c', type=click.File('w', encoding='utf8'), help='Case-sensitive dictionary file.', default=sys.stdout)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Dictionary file.', default=click.get_text_stream('stdout'))
+@click.option('--csoutput', '-c', type=click.File('w', encoding='utf8'), help='Case-sensitive dictionary file.', default=click.get_text_stream('stdout'))
 @click.pass_obj
 def prepare_jochem(ctx, jochem, output, csoutput):
     """Process and filter jochem file to produce list of names for dictionary."""
@@ -293,7 +292,7 @@ def prepare_jochem(ctx, jochem, output, csoutput):
 
 @dict_cli.command()
 @click.argument('include', type=click.File('r', encoding='utf8'))
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
 @click.pass_obj
 def prepare_include(ctx, include, output):
     """Process and filter include file to produce list of names for dictionary."""
@@ -301,8 +300,8 @@ def prepare_include(ctx, include, output):
     for i, line in enumerate(include):
         print('IN%s' % i)
         for tokens in _make_tokens(line.strip()):
-            output.write(' '.join(tokens))
-            output.write('\n')
+            output.write(u' '.join(tokens))
+            output.write(u'\n')
 
 
 @dict_cli.command()
@@ -327,7 +326,7 @@ def build(ctx, inputs, output, cs):
 @click.argument('model', required=True)
 @click.option('--cs/--no-cs', default=False)
 @click.option('--corpus', '-c', type=click.File('r', encoding='utf8'), required=True)
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
 @click.pass_obj
 def tag(ctx, model, cs, corpus, output):
     """Tag chemical entities and write CHEMDNER annotations predictions file."""
@@ -337,18 +336,18 @@ def tag(ctx, model, cs, corpus, output):
         sentence = []
         goldsentence = []
         for t in line.split():
-            token, tag = t.rsplit('/', 1)
+            token, tag = t.rsplit(u'/', 1)
             goldsentence.append((token, tag))
             sentence.append(token)
         if sentence:
             tokentags = tagger.tag(sentence)
             for i, tokentag in enumerate(tokentags):
                 goldtokentag = goldsentence[i]
-                if goldtokentag[1] not in {'B-CM', 'I-CM'} and tokentag[1] in {'B-CM', 'I-CM'}:
+                if goldtokentag[1] not in {u'B-CM', u'I-CM'} and tokentag[1] in {u'B-CM', u'I-CM'}:
                     print(line)
                     print(tokentag[0])
 
-            output.write(' '.join('/'.join(tokentag) for tokentag in tagger.tag(sentence)))
-            output.write('\n')
+            output.write(u' '.join(u'/'.join(tokentag) for tokentag in tagger.tag(sentence)))
+            output.write(u'\n')
         else:
-            output.write('\n')
+            output.write(u'\n')

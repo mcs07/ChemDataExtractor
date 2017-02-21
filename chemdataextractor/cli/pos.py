@@ -11,7 +11,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 import logging
-import sys
 
 import click
 
@@ -232,17 +231,17 @@ def evaluate_perceptron(ctx, model, corpus):
         evaluation = wsj_evaluation
         sents = list(evaluation.tagged_sents())
         for i, wsj_sent in enumerate(sents):
-            sents[i] = [t for t in wsj_sent if not t[1] == '-NONE-']
+            sents[i] = [t for t in wsj_sent if not t[1] == u'-NONE-']
     elif corpus == 'genia':
         evaluation = genia_evaluation
         sents = list(evaluation.tagged_sents())
         # Translate GENIA bracket tags
         for i, genia_sent in enumerate(sents):
             for j, (token, tag) in enumerate(genia_sent):
-                if tag == '(':
-                    sents[i][j] = (token, '-LRB-')
-                elif tag == ')':
-                    sents[i][j] = (token, '-RRB-')
+                if tag == u'(':
+                    sents[i][j] = (token, u'-LRB-')
+                elif tag == u')':
+                    sents[i][j] = (token, u'-RRB-')
     else:
         raise click.ClickException('Invalid corpus')
     tagger = ChemApPosTagger(model=model)
@@ -251,8 +250,8 @@ def evaluate_perceptron(ctx, model, corpus):
 
 
 @pos_cli.command()
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
-@click.argument('input', type=click.File('rb'), default=sys.stdin)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
+@click.argument('input', type=click.File('rb'), default=click.get_binary_stream('stdin'))
 @click.pass_obj
 def tag(ctx, input, output):
     """Output POS-tagged tokens."""
@@ -262,5 +261,5 @@ def tag(ctx, input, output):
     for element in doc.elements:
         if isinstance(element, Text):
             for sentence in element.sentences:
-                output.write(' '.join('/'.join([token, tag]) for token, tag in sentence.pos_tagged_tokens))
-                output.write('\n')
+                output.write(u' '.join(u'/'.join([token, tag]) for token, tag in sentence.pos_tagged_tokens))
+                output.write(u'\n')

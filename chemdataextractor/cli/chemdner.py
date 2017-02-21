@@ -11,7 +11,6 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from collections import defaultdict
-import sys
 
 import click
 import six
@@ -56,12 +55,12 @@ def prepare_tokens(ctx, input, annotations, tout, lout):
     # Process the corpus
     for line in input:
         pmid, title, abstract = line.strip().split(u'\t')
-        for t, section, anns in [(Title(title), 'T', anndict.get((pmid, 'T'), [])), (Paragraph(abstract), 'A', anndict.get((pmid, 'A'), []))]:
+        for t, section, anns in [(Title(title), 'T', anndict.get((pmid, u'T'), [])), (Paragraph(abstract), u'A', anndict.get((pmid, u'A'), []))]:
             # Write our tokens with POS and IOB tags
             tagged = _prep_tags(t, anns)
             for i, sentence in enumerate(tagged):
-                tout.write(u' '.join(['/'.join([token, tag, label]) for token, tag, label in sentence]))
-                lout.write(u' '.join(['/'.join([token, label]) for token, tag, label in sentence]))
+                tout.write(u' '.join([u'/'.join([token, tag, label]) for token, tag, label in sentence]))
+                lout.write(u' '.join([u'/'.join([token, label]) for token, tag, label in sentence]))
                 tout.write(u'\n')
                 lout.write(u'\n')
             tout.write(u'\n')
@@ -85,7 +84,7 @@ def _prep_tags(t, annotations):
 
 @chemdner_cli.command()
 @click.option('--corpus', '-c', type=click.File('r', encoding='utf8'), required=True)
-@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=sys.stdout)
+@click.option('--output', '-o', type=click.File('w', encoding='utf8'), help='Output file.', default=click.get_text_stream('stdout'))
 @click.pass_obj
 def tag(ctx, corpus, output):
     """Tag chemical entities and write CHEMDNER annotations predictions file."""
@@ -95,9 +94,9 @@ def tag(ctx, corpus, output):
         # print(pmid)
         counter = 1
         d = Document(Title(title), Paragraph(abstract))
-        for t, section in [(d.elements[0], 'T'), (d.elements[1], 'A')]:
+        for t, section in [(d.elements[0], u'T'), (d.elements[1], u'A')]:
             for cem in t.cems:
                 code = u'%s:%s:%s' % (section, cem.start, cem.end)
-                output.write(u'\t'.join([pmid, code, six.text_type(counter), '1']))
+                output.write(u'\t'.join([pmid, code, six.text_type(counter), u'1']))
                 output.write(u'\n')
                 counter += 1
