@@ -14,7 +14,7 @@ init:
   - "ECHO %PYTHON_VERSION% %MINICONDA%"
 
 install:
-  - cmd: set "PATH=%MINICONDA%;%MINICONDA%\\Scripts;%PATH%"
+  - cmd: call %MINICONDA%\Scripts\activate.bat
   - cmd: conda config --set always_yes yes --set changeps1 no
   - cmd: conda update -q conda
   - cmd: conda config --add channels chemdataextractor
