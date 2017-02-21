@@ -11,6 +11,9 @@ environment:
       CONDA_INSTALL_LOCN: C:\\Miniconda36-x64
 
 install:
+  - cmd: echo %CONDA_INSTALL_LOCN%
+  - cmd: echo %CONDA_PY%
+  - cmd: echo %CONDA_INSTALL_LOCN%\Scripts\activate.bat
   - cmd: call %CONDA_INSTALL_LOCN%\Scripts\activate.bat
   - cmd: conda config --set always_yes yes --set changeps1 no
   - cmd: conda update -q conda
