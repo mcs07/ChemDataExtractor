@@ -7,10 +7,10 @@ Declarative scraping framework for extracting structured data from HTML and XML 
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 #: Block level HTML elements
 BLOCK_ELEMENTS = {

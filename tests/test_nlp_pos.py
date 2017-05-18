@@ -8,10 +8,10 @@ Tests for part-of-speech tagging.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -41,7 +41,7 @@ class TestApPosTagger(unittest.TestCase):
         """Test tagging through the Text and Sentence API."""
         t = Text('And now for something completely different', pos_tagger=ApPosTagger())
         self.assertEqual(
-            [[(u'And', u'CC'), (u'now', u'RB'), (u'for', u'IN'), (u'something', u'NN'), (u'completely', u'RB'), (u'different', u'JJ')]],
+            [[('And', 'CC'), ('now', 'RB'), ('for', 'IN'), ('something', 'NN'), ('completely', 'RB'), ('different', 'JJ')]],
             t.pos_tagged_tokens
         )
 
@@ -64,7 +64,7 @@ class TestChemApPosTagger(unittest.TestCase):
         """Test tagging through the Text and Sentence API."""
         t = Text('And now for something completely different')
         self.assertEqual(
-            [[(u'And', u'CC'), (u'now', u'RB'), (u'for', u'IN'), (u'something', u'NN'), (u'completely', u'RB'), (u'different', u'JJ')]],
+            [[('And', 'CC'), ('now', 'RB'), ('for', 'IN'), ('something', 'NN'), ('completely', 'RB'), ('different', 'JJ')]],
             t.pos_tagged_tokens
         )
 

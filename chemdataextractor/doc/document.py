@@ -7,10 +7,10 @@ Document model.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 from abc import ABCMeta, abstractproperty
 import collections
@@ -262,9 +262,9 @@ class Document(BaseDocument):
                 record.merge_contextual(contextual_record)
 
         for record in records:
-            for short, long, entity in self.abbreviation_definitions:
+            for short, int, entity in self.abbreviation_definitions:
                 if entity == 'CM':
-                    name = ' '.join(long)
+                    name = ' '.join(int)
                     abbrev = ' '.join(short)
                     if name in record.names and not abbrev in record.names:
                         record.names.append(abbrev)

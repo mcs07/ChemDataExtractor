@@ -7,10 +7,10 @@ Table document elements.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 from collections import defaultdict
 
@@ -114,7 +114,7 @@ class Table(CaptionedElement):
         seen_compound_col = False
         log.debug('Parsing table headers')
 
-        for i, col_headings in enumerate(zip(*self.headings)):
+        for i, col_headings in enumerate(list(zip(*self.headings))):
             # log.info('Considering column %s' % i)
             for parsers in self.parsers:
                 log.debug(parsers)

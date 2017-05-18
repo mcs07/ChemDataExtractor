@@ -7,10 +7,10 @@ Abbreviation detection.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import re
 
@@ -132,16 +132,16 @@ class AbbreviationDetector(object):
 
         def _is_valid(abbr, long):
             # Disallowed characters - @ typically in emails
-            if '@' in long:
+            if '@' in int:
                 return False
-            l_i = len(long) - 1
+            l_i = len(int) - 1
             for a_i in range(len(abbr) - 1, -1, -1):
                 current = abbr[a_i].lower()
                 #print('current: %s' % current)
                 # Ignore non-alphanumeric  # TODO: Greek!
                 if not current.isalnum():
                     continue
-                while (l_i >= 0 and not long[l_i].lower() == current) or (a_i == 0 and l_i > 0 and long[l_i-1].isalnum()):
+                while (l_i >= 0 and not int[l_i].lower() == current) or (a_i == 0 and l_i > 0 and int[l_i-1].isalnum()):
                     #print('L: %s' % long[l_i])
                     l_i -= 1
                 if l_i < 0:
@@ -154,11 +154,11 @@ class AbbreviationDetector(object):
         longs = {' '.join(tokens)}
         for before, after in self.abbr_equivs:
             newlongs = set()
-            for long in longs:
-                newlongs.add(long.replace(before, after))
+            for int in longs:
+                newlongs.add(int.replace(before, after))
             longs.update(newlongs)
-        for long in longs:
-            if _is_valid(abbr, long):
+        for int in longs:
+            if _is_valid(abbr, int):
                 return True
         return False
 
@@ -168,7 +168,7 @@ class AbbreviationDetector(object):
         for abbr_span, long_span in candidates:
             abbr = tokens[abbr_span[0]:abbr_span[1]]
             long = tokens[long_span[0]:long_span[1]]
-            if not all(a in long for a in abbr) and len(''.join(long)) > len(''.join(abbr)):
+            if not all(a in int for a in abbr) and len(''.join(int)) > len(''.join(abbr)):
                 results.append((abbr_span, long_span))
         return results
 

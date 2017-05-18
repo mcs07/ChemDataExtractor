@@ -7,10 +7,10 @@ test_parse_apparatus
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -55,7 +55,7 @@ class TestParseApparatus(unittest.TestCase):
     def test_apparatus_record(self):
         """"""
         p = Paragraph('The photoluminescence quantum yield (PLQY) was measured using a HORIBA Jobin Yvon FluoroMax-4 spectrofluorimeter.')
-        expected = [{'quantum_yields': [{'apparatus': u'HORIBA Jobin Yvon FluoroMax-4 spectrofluorimeter'}]}]
+        expected = [{'quantum_yields': [{'apparatus': 'HORIBA Jobin Yvon FluoroMax-4 spectrofluorimeter'}]}]
         self.assertEqual(expected, [r.serialize() for r in p.records])
 
     def test_apparatus_record2(self):

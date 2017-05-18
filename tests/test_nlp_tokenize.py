@@ -8,10 +8,10 @@ Tests for tokenization.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -585,8 +585,8 @@ class TestChemTokenizer(unittest.TestCase):
         self.assertEqual(['((1→2)-α-D-galacto)-(1→4)-β-D-Glucan'], self.t.tokenize('((1→2)-α-D-galacto)-(1→4)-β-D-Glucan'))
 
     def test_polymer(self):
-        self.assertEqual([u"poly(2,2'-diamino-5-hexadecylbiphenyl-3,3'-diyl)"],
-                         self.t.tokenize(u"poly(2,2'-diamino-5-hexadecylbiphenyl-3,3'-diyl)"))
+        self.assertEqual(["poly(2,2'-diamino-5-hexadecylbiphenyl-3,3'-diyl)"],
+                         self.t.tokenize("poly(2,2'-diamino-5-hexadecylbiphenyl-3,3'-diyl)"))
 
     def test_operators(self):
         self.assertEqual(['J', '=', '8.8'], self.t.tokenize('J=8.8'))
@@ -773,7 +773,7 @@ class TestChemTokenizer(unittest.TestCase):
     def test_nmr_whitespace_error(self):
         """Test the word tokenizer on NMR isotope missing preceding whitespace."""
         self.assertEqual(['726.1520', '.', '1H', 'NMR'], self.t.tokenize('726.1520.1H NMR'))
-        self.assertEqual(['intermediate', '.', '1H', u'NMR'], self.t.tokenize('intermediate.1H NMR'))
+        self.assertEqual(['intermediate', '.', '1H', 'NMR'], self.t.tokenize('intermediate.1H NMR'))
 
     def test_ir_whitespace_error(self):
         """Test things like IR(KBr)."""

@@ -7,10 +7,10 @@ Tools for parsing people's names from strings into various name components.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import re
 import string
 
@@ -244,7 +244,7 @@ class PersonName(dict):
                 if token[0] in QUOTES:
                     for j, token2 in enumerate(tokens[i:]):
                         if token2[-1] in QUOTES:
-                            nicki = range(i, i+j+1)
+                            nicki = list(range(i, i+j+1))
                             break
             if nicki:
                 self['nickname'] = self._clean(' '.join(tokens[nicki[0]:nicki[-1]+1]).strip(''.join(QUOTES)),

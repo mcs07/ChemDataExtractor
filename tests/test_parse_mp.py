@@ -7,10 +7,10 @@ Test melting point parser.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -220,16 +220,16 @@ class TestParseMpCompound(unittest.TestCase):
     def test_mpc1(self):
         s = '4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid (Compound 67): mp 163-164° C.'
         expected = [
-            {'labels': [u'67'], 'names': [u'4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid']},
-            {'labels': ['67'], 'melting_points': [{'units': u'\xb0C', 'value': u'163-164'}], 'names': ['4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid']}
+            {'labels': ['67'], 'names': ['4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid']},
+            {'labels': ['67'], 'melting_points': [{'units': '\xb0C', 'value': '163-164'}], 'names': ['4-Amino-3-chloro-6-(2,3,4-trifluorophenyl)pyridine-2-carboxylic acid']}
         ]
         self.do_parse(s, expected)
 
     def test_mpc2(self):
         s = '3-Bromo-2,6-dichloroaniline: mp 71-72° C.'
         expected = [
-            {'names': [u'3-Bromo-2,6-dichloroaniline']},
-            {'melting_points': [{'units': u'\xb0C', 'value': u'71-72'}], 'names': ['3-Bromo-2,6-dichloroaniline']}
+            {'names': ['3-Bromo-2,6-dichloroaniline']},
+            {'melting_points': [{'units': '\xb0C', 'value': '71-72'}], 'names': ['3-Bromo-2,6-dichloroaniline']}
         ]
         self.do_parse(s, expected)
 

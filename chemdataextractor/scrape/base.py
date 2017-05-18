@@ -7,10 +7,10 @@ Abstract base classes that define the interface for Scrapers, Fields, Crawlers, 
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 from abc import ABCMeta, abstractproperty, abstractmethod
 import logging
 

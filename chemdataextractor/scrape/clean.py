@@ -7,10 +7,10 @@ Tools for cleaning up XML/HTML by removing tags entirely or replacing with their
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import copy
 import logging
 import re
@@ -74,7 +74,7 @@ class Cleaner(object):
         :param dict namespaces: Namespace prefixes to register for the XPaths.
         """
         # TODO: This is weird. Why don't we change to proper individual keyword arguments with class attribs as default
-        for name, value in kwargs.items():
+        for name, value in list(kwargs.items()):
             if not hasattr(self, name):
                 raise TypeError('Unknown parameter: %s=%r' % (name, value))
             setattr(self, name, value)

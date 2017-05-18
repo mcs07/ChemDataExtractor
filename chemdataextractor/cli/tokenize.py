@@ -7,9 +7,9 @@ Tokenizer command line interface.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 import logging
 
 import click
@@ -74,7 +74,7 @@ def sentences(ctx, input, output):
         if isinstance(element, Text):
             for raw_sentence in element.raw_sentences:
                 output.write(raw_sentence.strip())
-                output.write(u'\n')
+                output.write('\n')
 
 
 @tokenize_cli.command()
@@ -89,5 +89,5 @@ def words(ctx, input, output):
     for element in doc.elements:
         if isinstance(element, Text):
             for sentence in element.sentences:
-                output.write(u' '.join(sentence.raw_tokens))
-                output.write(u'\n')
+                output.write(' '.join(sentence.raw_tokens))
+                output.write('\n')

@@ -7,9 +7,9 @@ chemdataextractor.nlp.tag
 Tagger implementations. Used for part-of-speech tagging and named entity recognition.
 
 """
-from __future__ import print_function
-from __future__ import unicode_literals
-from __future__ import division
+
+
+
 from abc import ABCMeta, abstractmethod
 from collections import defaultdict
 import io
@@ -145,7 +145,7 @@ class AveragedPerceptron(object):
             if feat not in self.weights:
                 continue
             weights = self.weights[feat]
-            for label, weight in weights.items():
+            for label, weight in list(weights.items()):
                 scores[label] += weight
         # Do a secondary alphabetic sort, for stability
         return max(self.classes, key=lambda label: (scores[label], label))
@@ -169,9 +169,9 @@ class AveragedPerceptron(object):
 
     def average_weights(self):
         """Average weights from all iterations."""
-        for feat, weights in self.weights.items():
+        for feat, weights in list(self.weights.items()):
             new_feat_weights = {}
-            for clas, weight in weights.items():
+            for clas, weight in list(weights.items()):
                 param = (feat, clas)
                 total = self._totals[param]
                 total += (self.i - self._tstamps[param]) * weight
@@ -283,8 +283,8 @@ class ApTagger(six.with_metaclass(ABCMeta, BaseTagger)):
                 self.classes.add(tag)
         freq_thresh = 20
         ambiguity_thresh = 0.97
-        for word, tag_freqs in counts.items():
-            tag, mode = max(tag_freqs.items(), key=lambda item: item[1])
+        for word, tag_freqs in list(counts.items()):
+            tag, mode = max(list(tag_freqs.items()), key=lambda item: item[1])
             n = sum(tag_freqs.values())
             # Don't add rare words to the tag dictionary, only add quite unambiguous words
             if n >= freq_thresh and (float(mode) / n) >= ambiguity_thresh:
@@ -341,7 +341,7 @@ class CrfTagger(BaseTagger):
         trainer = pycrfsuite.Trainer(verbose=True)
         trainer.set_params(self.params)
         for sentence in sentences:
-            tokens, labels = zip(*sentence)
+            tokens, labels = list(zip(*sentence))
             features = [self._get_features(tokens, i) for i in range(len(tokens))]
             trainer.append(features, labels)
         trainer.train(model)
@@ -438,7 +438,7 @@ class DictionaryTagger(BaseTagger):
             end_i = start_i + 1
             next_start = end_i
         # Apply matches as tags to the relevant tokens
-        for start_i, end_i, current in matches.values():
+        for start_i, end_i, current in list(matches.values()):
             start_token = token_at_index[start_i]
             end_token = token_at_index[end_i]
             # Possible for match to start in 'I' token from prev match. Merge matches by not overwriting to 'B'.

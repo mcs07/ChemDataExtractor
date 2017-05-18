@@ -7,10 +7,10 @@ Text processors.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 from abc import ABCMeta, abstractmethod
 import logging
 import re
@@ -158,7 +158,7 @@ class Substitutor(object):
 
 def extract_emails(text):
     """Return a list of email addresses extracted from the string."""
-    text = text.replace(u'\u2024', '.')
+    text = text.replace('\u2024', '.')
     emails = []
     for m in EMAIL_RE.findall(text):
         emails.append(m[0])

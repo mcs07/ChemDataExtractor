@@ -7,10 +7,10 @@ Parser elements.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import collections
 import copy
 import logging
@@ -311,7 +311,7 @@ class ParseExpression(BaseParserElement):
             self.exprs = [Word(exprs)]
         elif isinstance(exprs, collections.Sequence):
             if all(isinstance(expr, six.text_type) for expr in exprs):
-                exprs = map(Word, exprs)
+                exprs = list(map(Word, exprs))
             self.exprs = list(exprs)
         # else:
         #     try:
