@@ -7,10 +7,10 @@ Test scraping using different field classes.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import datetime
 import logging
 import unittest
@@ -87,8 +87,8 @@ class TestFieldScrape(unittest.TestCase):
     def test_serialize(self):
         """Test serialization to python dictionary."""
         self.assertEqual(self.scraped.serialize(), {
-            'book': u'Book Title',
-            'next_url': u'chapter3.html',
+            'book': 'Book Title',
+            'next_url': 'chapter3.html',
             'number': 2,
             'price': 2.99,
             'public': True,

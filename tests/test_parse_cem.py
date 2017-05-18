@@ -7,10 +7,10 @@ test_parse_cem
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 from lxml import etree
@@ -47,7 +47,7 @@ class TestParseCem(unittest.TestCase):
 
     def test_without_tags(self):
         """Test on input where the CEM tagger has missed some obvious chemical entities."""
-        tagged_tokens = [(u'A', u'DT'), (u'sample', u'NN'), (u'of', u'IN'), (u'aspartic', u'NN'), (u'acid', u'NN'), (u'with', u'IN'), (u'Ala-Arg-Val', u'NN'), (u'.', u'.')]
+        tagged_tokens = [('A', 'DT'), ('sample', 'NN'), ('of', 'IN'), ('aspartic', 'NN'), ('acid', 'NN'), ('with', 'IN'), ('Ala-Arg-Val', 'NN'), ('.', '.')]
         expected = [
             '<cem_phrase><cem><name>aspartic acid</name></cem></cem_phrase>',
             '<cem_phrase><cem><name>Ala-Arg-Val</name></cem></cem_phrase>'
@@ -265,13 +265,13 @@ class TestParseHeading(unittest.TestCase):
     def test_cas(self):
         """"""
         s = 'CAS 1242336-53-3'
-        expected = [{'names': [u'CAS 1242336-53-3']}]
+        expected = [{'names': ['CAS 1242336-53-3']}]
         self.do_parse(s, expected)
 
     def test_section_numeral(self):
         """"""
         s = '(vii) 1,3,5-Tricyano-2,4,6-tris[4-(p-diphenylaminostyryl)styryl]benzene (3j)'
-        expected = [{'labels': [u'3j'], 'names': [u'1,3,5-Tricyano-2,4,6-tris[4-(p-diphenylaminostyryl)styryl]benzene']}]
+        expected = [{'labels': ['3j'], 'names': ['1,3,5-Tricyano-2,4,6-tris[4-(p-diphenylaminostyryl)styryl]benzene']}]
         self.do_parse(s, expected)
 
     def test_fluorescent_nano_beads(self):
@@ -289,49 +289,49 @@ class TestParseHeading(unittest.TestCase):
     def test_example_colon(self):
         """"""
         s = 'EXAMPLE: 3'
-        expected = [{'labels': [u'3'], 'roles': ['example']}]
+        expected = [{'labels': ['3'], 'roles': ['example']}]
         self.do_parse(s, expected)
 
     def test_comparative_example(self):
         """"""
         s = 'Comparative example 14'
-        expected = [{'labels': [u'14'], 'roles': ['comparative example']}]
+        expected = [{'labels': ['14'], 'roles': ['comparative example']}]
         self.do_parse(s, expected)
 
     def test_reference_example(self):
         """"""
         s = 'Reference example IV'
-        expected = [{'labels': [u'IV'], 'roles': ['reference example']}]
+        expected = [{'labels': ['IV'], 'roles': ['reference example']}]
         self.do_parse(s, expected)
 
     def test_step(self):
         """Test synthesis step."""
         s = 'Step B: 7-Fluoro-4H-1,2,4-benzothiadiazine 1,1-dioxide'
-        expected = [{'names': [u'7-Fluoro-4H-1,2,4-benzothiadiazine 1,1-dioxide']}]
+        expected = [{'names': ['7-Fluoro-4H-1,2,4-benzothiadiazine 1,1-dioxide']}]
         self.do_parse(s, expected)
 
     def test_label_14(self):
         """"""
         s = '1-(3,4-Dibenzyloxycinnamoyl)-3,4′-dibenzyloxyresveratrol (14):'
-        expected = [{'labels': [u'14'], 'names': [u'1-(3,4-Dibenzyloxycinnamoyl)-3,4\u2032-dibenzyloxyresveratrol']}]
+        expected = [{'labels': ['14'], 'names': ['1-(3,4-Dibenzyloxycinnamoyl)-3,4\u2032-dibenzyloxyresveratrol']}]
         self.do_parse(s, expected)
 
     def test_section_decimal(self):
         """"""
         s = '3.2 [3-(2-p-Tolylimidazo[1,2-a]pyridin-6-yl)phenyl]methanol'
-        expected = [{'names': [u'[3-(2-p-Tolylimidazo[1,2-a]pyridin-6-yl)phenyl]methanol']}]
+        expected = [{'names': ['[3-(2-p-Tolylimidazo[1,2-a]pyridin-6-yl)phenyl]methanol']}]
         self.do_parse(s, expected)
 
     def test_prep_label(self):
         """"""
         s = 'Preparation of (E)-1-(4-(benzyloxy)phenyl)-2-(3,5-bis(benzyloxy)phenyl)ethene (I)'
-        expected = [{'labels': [u'I'], 'names': [u'(E)-1-(4-(benzyloxy)phenyl)-2-(3,5-bis(benzyloxy)phenyl)ethene'], 'roles': ['product']}]
+        expected = [{'labels': ['I'], 'names': ['(E)-1-(4-(benzyloxy)phenyl)-2-(3,5-bis(benzyloxy)phenyl)ethene'], 'roles': ['product']}]
         self.do_parse(s, expected)
 
     def test_comma_label(self):
         """"""
         s = 'Preparation of 2-(10-bromoanthracene-9-yl)thiophene, 11'
-        expected = [{'labels': [u'11'], 'names': [u'2-(10-bromoanthracene-9-yl)thiophene'], 'roles': [u'product']}]
+        expected = [{'labels': ['11'], 'names': ['2-(10-bromoanthracene-9-yl)thiophene'], 'roles': ['product']}]
         self.do_parse(s, expected)
 
 
@@ -394,7 +394,7 @@ class TestParseDocument(unittest.TestCase):
             Paragraph('The solid is suspended in hexanes, stirred and filtered to give the product as a bright yellow solid. (MP 93-94\xc2\xb0 C.).')
         )
         results = [r.serialize() for r in d.records]
-        self.assertEqual(results, [{'names': [u'hexanes']}, {'labels': [u'3'], 'names': [u'2-Amino-3-methoxy-5-chloropyridine'], 'roles': ['product', 'example']}])
+        self.assertEqual(results, [{'names': ['hexanes']}, {'labels': ['3'], 'names': ['2-Amino-3-methoxy-5-chloropyridine'], 'roles': ['product', 'example']}])
 
     def test_consecutive_headings2(self):
         d = Document(
@@ -404,9 +404,9 @@ class TestParseDocument(unittest.TestCase):
         )
         results = [r.serialize() for r in d.records]
         self.assertEqual(results, [
-            {'labels': [u'VII'], 'roles': [u'formula']},
-            {'melting_points': [{'units': u'\xb0C.', 'value': u'70-75'}],
-             'names': [u'5-Bromo-6-pentadecyl-2-hydroxybenzoic acid', u'DBAA'], 'roles': ['product']}])  # example-3?
+            {'labels': ['VII'], 'roles': ['formula']},
+            {'melting_points': [{'units': '\xb0C.', 'value': '70-75'}],
+             'names': ['5-Bromo-6-pentadecyl-2-hydroxybenzoic acid', 'DBAA'], 'roles': ['product']}])  # example-3?
 
 
 if __name__ == '__main__':

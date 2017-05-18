@@ -7,10 +7,10 @@ BibTeX parser.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 from collections import OrderedDict
 import json
 import re
@@ -52,14 +52,14 @@ class BibtexParser(object):
 
         # Key name normalizations
         self.keynorms = {
-            u'keyw': u'keyword',
-            u'keywords': u'keyword',
-            u'authors': u'author',
-            u'editors': u'editor',
-            u'url': u'link',
-            u'urls': u'link',
-            u'links': u'link',
-            u'subjects': u'subject'
+            'keyw': 'keyword',
+            'keywords': 'keyword',
+            'authors': 'author',
+            'editors': 'editor',
+            'url': 'link',
+            'urls': 'link',
+            'links': 'link',
+            'subjects': 'subject'
         }
 
     def _next_token(self, skipws=True):
@@ -97,8 +97,8 @@ class BibtexParser(object):
         if self._next_token() in ['{', '(']:
             key = self._next_token()
             self.records[key] = {
-                u'id': key,
-                u'type': record_type.lower()
+                'id': key,
+                'type': record_type.lower()
             }
             if self._next_token() == ',':
                 while True:
@@ -187,14 +187,14 @@ class BibtexParser(object):
     @property
     def metadata(self):
         """Return metadata for the parsed collection of records."""
-        auto = {u'records': self.size}
+        auto = {'records': self.size}
         auto.update(self.meta)
         return auto
 
     @property
     def json(self):
         """Return a list of records as a JSON string. Follows the BibJSON convention."""
-        return json.dumps(OrderedDict([('metadata', self.metadata), ('records', self.records.values())]))
+        return json.dumps(OrderedDict([('metadata', self.metadata), ('records', list(self.records.values()))]))
 
 
 def parse_bibtex(data):

@@ -7,10 +7,10 @@ Tools for processing text.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import re
 import unicodedata
 
@@ -189,7 +189,7 @@ SMALL = {
 
 #: Words that should not be capitalized in names.
 NAME_SMALL = {
-    'abu', 'bon', 'bin', 'da', 'dal', 'de', 'del', 'der', 'de', 'di', u'dí', 'ibn', 'la', 'le', 'san', 'st', 'ste',
+    'abu', 'bon', 'bin', 'da', 'dal', 'de', 'del', 'der', 'de', 'di', 'dí', 'ibn', 'la', 'le', 'san', 'st', 'ste',
     'van', 'vel', 'von', 'y'
 }
 

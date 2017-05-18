@@ -9,9 +9,9 @@ Once installed, ChemDataExtractor provides a command-line tool that can be used 
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 
 import json
 import logging
@@ -63,7 +63,7 @@ def read(ctx, input, output):
     log.info('Reading %s' % input.name)
     doc = Document.from_file(input)
     for element in doc.elements:
-        output.write(u'%s : %s\n=====\n' % (element.__class__.__name__, six.text_type(element)))
+        output.write('%s : %s\n=====\n' % (element.__class__.__name__, six.text_type(element)))
 
 
 from . import cluster, config, data, tokenize, pos, chemdner, cem, dict, evaluate

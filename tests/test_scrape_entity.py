@@ -7,10 +7,10 @@ Test scraping using Entity class directly.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -127,9 +127,9 @@ class TestMultiScrape(unittest.TestCase):
     def test_serialize(self):
         """Test serialization of results to a list of dictionaries."""
         self.assertEqual(self.blogs.serialize(), [
-            {'content': [u'First para', u'Second para'], 'title': u'First article'},
-            {'content': [u'Para 1', u'Para 2'], 'title': u'Second article'},
-            {'content': [u'Thing one', u'Thing two'], 'title': u'Third article'}
+            {'content': ['First para', 'Second para'], 'title': 'First article'},
+            {'content': ['Para 1', 'Para 2'], 'title': 'Second article'},
+            {'content': ['Thing one', 'Thing two'], 'title': 'Third article'}
         ])
 
 
@@ -179,9 +179,9 @@ class TestComplexScrape(unittest.TestCase):
     def test_serialize(self):
         """Test serialization of results to a list of dictionaries."""
         self.assertEqual(self.scrapes.serialize(), [
-            {'content': [u'First para', u'Second para'], 'title': u'First article', 'authors': [{'lastname': u'Swain', 'firstname': u'Matt'}]},
-            {'content': [u'Para 1', u'Para 2'], 'title': u'Second article', 'authors': [{'lastname': u'Smith', 'firstname': u'John'}]},
-            {'content': [u'Thing one', u'Thing two'], 'title': u'Third article', 'authors': [{'lastname': u'Bond', 'firstname': u'James'}]}
+            {'content': ['First para', 'Second para'], 'title': 'First article', 'authors': [{'lastname': 'Swain', 'firstname': 'Matt'}]},
+            {'content': ['Para 1', 'Para 2'], 'title': 'Second article', 'authors': [{'lastname': 'Smith', 'firstname': 'John'}]},
+            {'content': ['Thing one', 'Thing two'], 'title': 'Third article', 'authors': [{'lastname': 'Bond', 'firstname': 'James'}]}
         ])
 
 
@@ -220,9 +220,9 @@ class TestCssScrape(unittest.TestCase):
     def test_serialize(self):
         """Test serialization of results to a list of dictionaries."""
         self.assertEqual(self.scrapes.serialize(), [
-            {'content': [u'First para', u'Second para'], 'title': u'First article', 'authors': [{'lastname': u'Swain', 'firstname': u'Matt'}]},
-            {'content': [u'Para 1', u'Para 2'], 'title': u'Second article', 'authors': [{'lastname': u'Smith', 'firstname': u'John'}]},
-            {'content': [u'Thing one', u'Thing two'], 'title': u'Third article', 'authors': [{'lastname': u'Bond', 'firstname': u'James'}]}
+            {'content': ['First para', 'Second para'], 'title': 'First article', 'authors': [{'lastname': 'Swain', 'firstname': 'Matt'}]},
+            {'content': ['Para 1', 'Para 2'], 'title': 'Second article', 'authors': [{'lastname': 'Smith', 'firstname': 'John'}]},
+            {'content': ['Thing one', 'Thing two'], 'title': 'Third article', 'authors': [{'lastname': 'Bond', 'firstname': 'James'}]}
         ])
 
 

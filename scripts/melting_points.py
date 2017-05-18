@@ -7,10 +7,10 @@ Patent melting points evaluation.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import copy
 from collections import defaultdict
 import gzip
@@ -356,7 +356,7 @@ def compare():
     my_melting_points = set()
     my_values = []
     my_smiles = []
-    for inchikey, results in my_results_by_inchikey.items():
+    for inchikey, results in list(my_results_by_inchikey.items()):
         if len(results) == 1:
             chosen = results[0]
         elif len(results) == 2:
@@ -381,7 +381,7 @@ def compare():
     tetko_melting_points = set()
     tetko_values = []
     tetko_smiles = []
-    for inchikey, results in tetko_results_by_inchikey.items():
+    for inchikey, results in list(tetko_results_by_inchikey.items()):
         tetko_melting_points.add((inchikey, results[0]['float_value']))
         tetko_values.append(results[0]['float_value'])
         tetko_smiles.append(results[0]['smiles'])
@@ -389,7 +389,7 @@ def compare():
     tetko_lenient_melting_points = set()
     tetko_lenient_values = []
     tetko_lenient_smiles = []
-    for inchikey, results in tetko_lenient_results_by_inchikey.items():
+    for inchikey, results in list(tetko_lenient_results_by_inchikey.items()):
         tetko_lenient_melting_points.add((inchikey, results[0]['float_value']))
         tetko_lenient_values.append(results[0]['float_value'])
         tetko_lenient_smiles.append(results[0]['smiles'])
@@ -508,7 +508,7 @@ def compare():
     #
     #
     #
-    binrange = range(0, 400, 10)
+    binrange = list(range(0, 400, 10))
     mn, mbins, mpatches = plt.hist(my_values, binrange, normed=1)
     tn, tbins, tpatches = plt.hist(tetko_values, binrange, normed=1, facecolor='green')
     tan, tabins, tapatches = plt.hist(tetko_all_values, binrange, normed=1, facecolor='green')

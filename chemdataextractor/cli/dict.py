@@ -7,9 +7,9 @@ Commands for building a dictionary-based chemical named entity recognizer.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 import re
 
 import click
@@ -109,9 +109,9 @@ UNAMBIGUOUS_GREEK_WORDS = {
     'omega': 'ω',  # \u03c9
 }
 
-DOT_GREEK_RE = re.compile('\.(%s)\.' % '|'.join(re.escape(s) for s in GREEK_WORDS.keys()), re.U)
-GREEK_RE = re.compile('([\daA\W]|^)(%s)([\d\W]|$)' % '|'.join(re.escape(s) for s in GREEK_WORDS.keys()), re.U)
-UNAMBIGUOUS_GREEK_RE = re.compile('(%s)' % '|'.join(re.escape(s) for s in UNAMBIGUOUS_GREEK_WORDS.keys()), re.U)
+DOT_GREEK_RE = re.compile('\.(%s)\.' % '|'.join(re.escape(s) for s in list(GREEK_WORDS.keys())), re.U)
+GREEK_RE = re.compile('([\daA\W]|^)(%s)([\d\W]|$)' % '|'.join(re.escape(s) for s in list(GREEK_WORDS.keys())), re.U)
+UNAMBIGUOUS_GREEK_RE = re.compile('(%s)' % '|'.join(re.escape(s) for s in list(UNAMBIGUOUS_GREEK_WORDS.keys())), re.U)
 
 
 @click.group(name='dict')
@@ -300,8 +300,8 @@ def prepare_include(ctx, include, output):
     for i, line in enumerate(include):
         print('IN%s' % i)
         for tokens in _make_tokens(line.strip()):
-            output.write(u' '.join(tokens))
-            output.write(u'\n')
+            output.write(' '.join(tokens))
+            output.write('\n')
 
 
 @dict_cli.command()
@@ -336,18 +336,18 @@ def tag(ctx, model, cs, corpus, output):
         sentence = []
         goldsentence = []
         for t in line.split():
-            token, tag = t.rsplit(u'/', 1)
+            token, tag = t.rsplit('/', 1)
             goldsentence.append((token, tag))
             sentence.append(token)
         if sentence:
             tokentags = tagger.tag(sentence)
             for i, tokentag in enumerate(tokentags):
                 goldtokentag = goldsentence[i]
-                if goldtokentag[1] not in {u'B-CM', u'I-CM'} and tokentag[1] in {u'B-CM', u'I-CM'}:
+                if goldtokentag[1] not in {'B-CM', 'I-CM'} and tokentag[1] in {'B-CM', 'I-CM'}:
                     print(line)
                     print(tokentag[0])
 
-            output.write(u' '.join(u'/'.join(tokentag) for tokentag in tagger.tag(sentence)))
-            output.write(u'\n')
+            output.write(' '.join('/'.join(tokentag) for tokentag in tagger.tag(sentence)))
+            output.write('\n')
         else:
-            output.write(u'\n')
+            output.write('\n')

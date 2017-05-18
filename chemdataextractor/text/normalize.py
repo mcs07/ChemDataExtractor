@@ -7,10 +7,10 @@ Tools for normalizing text.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 from abc import ABCMeta, abstractmethod
 import re
 import unicodedata
@@ -88,7 +88,7 @@ class Normalizer(BaseNormalizer):
             text = text.replace(control, '')
 
         # Normalize unusual whitespace not caught by unicodedata
-        text = text.replace('\u000b', ' ').replace('\u000c', ' ').replace(u'\u0085', ' ')
+        text = text.replace('\u000b', ' ').replace('\u000c', ' ').replace('\u0085', ' ')
         text = text.replace('\u2028', '\n').replace('\u2029', '\n').replace('\r\n', '\n').replace('\r', '\n')
 
         # Normalize all hyphens, minuses and dashes to ascii hyphen-minus and remove soft hyphen entirely

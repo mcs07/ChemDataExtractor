@@ -7,9 +7,9 @@ Commands for running evaluations.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 import copy
 import json
 import logging
@@ -46,7 +46,7 @@ def run(input):
     doc = reader.read(input)
     # Serialize all records apart from those that are just chemical names or just labels
     records = [record.serialize(primitive=True) for record in doc.records]
-    records = [record for record in records if not record.keys() == ['names'] and not record.keys() == ['labels']]
+    records = [record for record in records if not list(record.keys()) == ['names'] and not list(record.keys()) == ['labels']]
     with open('%s-out.json' % os.path.splitext(input.name)[0], 'w') as outf:
         json.dump(records, outf, indent=2)
 

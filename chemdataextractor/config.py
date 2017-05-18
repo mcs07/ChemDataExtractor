@@ -7,10 +7,10 @@ Config file reader/writer.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import io
 import os
 from collections import MutableMapping
@@ -25,7 +25,7 @@ def construct_yaml_str(self, node):
     return self.construct_scalar(node)
 
 
-SafeLoader.add_constructor(u'tag:yaml.org,2002:str', construct_yaml_str)
+SafeLoader.add_constructor('tag:yaml.org,2002:str', construct_yaml_str)
 
 
 class Config(MutableMapping):

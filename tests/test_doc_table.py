@@ -7,10 +7,10 @@ Test the Table Document element.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -64,27 +64,27 @@ class TestTable(unittest.TestCase):
         )
 
         gold = [
-            {'labels': [u'5a'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'40100', 'value': u'273.5'}]}], 'quantum_yields': [{'value': u'0.77'}]},
-            {'labels': [u'5b'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'36700', 'value': u'268.5'}]}], 'quantum_yields': [{'value': u'0.77'}]},
-            {'names': [u'Coumarin 343'], 'quantum_yields': [{'value': u'0.67'}], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'38400', 'value': u'263.0'}]}]},
-            {'labels': [u'5d'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'34200', 'value': u'281.0'}]}], 'quantum_yields': [{'value': u'0.97'}]},
-            {'labels': [u'5e'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'44000', 'value': u'285.0'}]}], 'quantum_yields': [{'value': u'0.35'}]},
-            {'labels': [u'5f'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'43300', 'value': u'289.0'}]}], 'quantum_yields': [{'value': u'0.80'}]},
-            {'labels': [u'5g'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'42000', 'value': u'285.0'}]}], 'quantum_yields': [{'value': u'0.86'}]},
-            {'labels': [u'6a'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'35600', 'value': u'283.5'}]}], 'quantum_yields': [{'value': u'0.49'}]},
-            {'labels': [u'6b'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'35800', 'value': u'267.5'}]}], 'quantum_yields': [{'value': u'0.83'}]},
-            {'labels': [u'6c'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'33000', 'value': u'286.0'}]}], 'quantum_yields': [{'value': u'0.27'}]},
-            {'labels': [u'6d'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'36600', 'value': u'306.5'}]}], 'quantum_yields': [{'value': u'0.10'}]},
-            {'labels': [u'7'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'62500', 'value': u'288.5'}]}], 'quantum_yields': [{'value': u'0.07'}]},
-            {'labels': [u'8a'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'36300', 'value': u'257.0'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'shape': u'sh', 'extinction': u'25000', 'value': u'293.0'}]}], 'quantum_yields': [{'value': u'0.41'}]},
-            {'labels': [u'8b'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'32000', 'value': u'257.0'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'shape': u'sh', 'extinction': u'23000', 'value': u'296.0'}]}], 'quantum_yields': [{'value': u'0.33'}]},
-            {'labels': [u'8c'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'27400', 'value': u'257.0'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'18900', 'value': u'307.5'}]}], 'quantum_yields': [{'value': u'0.12'}]},
-            {'labels': [u'8d'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'29500', 'value': u'268.5'}]}], 'quantum_yields': [{'value': u'0.29'}]},
-            {'labels': [u'8e'], 'quantum_yields': [{'value': u'0.37'}], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'39900', 'value': u'261.5'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'shape': u'sh', 'extinction': u'29600', 'value': u'288.0'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'shape': u'sh', 'extinction': u'20500', 'value': u'311.0'}]}]},
-            {'labels': [u'8f'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'27260', 'value': u'256.5'}, {'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'28404', 'value': u'296.0'}]}], 'quantum_yields': [{'value': u'0.35'}]},
-            {'labels': [u'8g'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'39600', 'value': u'272.5'}]}], 'quantum_yields': [{'value': u'0.30'}]},
-            {'labels': [u'8h'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'22900', 'value': u'286.0'}]}], 'quantum_yields': [{'value': u'0.33'}]},
-            {'labels': [u'9'], 'uvvis_spectra': [{'peaks': [{'units': u'nm', 'extinction_units': u'L cm \u2212 1 mol \u2212 1', 'extinction': u'28800', 'value': u'254.0'}]}], 'quantum_yields': [{'value': u'0.40'}]},
+            {'labels': ['5a'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '40100', 'value': '273.5'}]}], 'quantum_yields': [{'value': '0.77'}]},
+            {'labels': ['5b'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '36700', 'value': '268.5'}]}], 'quantum_yields': [{'value': '0.77'}]},
+            {'names': ['Coumarin 343'], 'quantum_yields': [{'value': '0.67'}], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '38400', 'value': '263.0'}]}]},
+            {'labels': ['5d'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '34200', 'value': '281.0'}]}], 'quantum_yields': [{'value': '0.97'}]},
+            {'labels': ['5e'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '44000', 'value': '285.0'}]}], 'quantum_yields': [{'value': '0.35'}]},
+            {'labels': ['5f'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '43300', 'value': '289.0'}]}], 'quantum_yields': [{'value': '0.80'}]},
+            {'labels': ['5g'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '42000', 'value': '285.0'}]}], 'quantum_yields': [{'value': '0.86'}]},
+            {'labels': ['6a'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '35600', 'value': '283.5'}]}], 'quantum_yields': [{'value': '0.49'}]},
+            {'labels': ['6b'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '35800', 'value': '267.5'}]}], 'quantum_yields': [{'value': '0.83'}]},
+            {'labels': ['6c'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '33000', 'value': '286.0'}]}], 'quantum_yields': [{'value': '0.27'}]},
+            {'labels': ['6d'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '36600', 'value': '306.5'}]}], 'quantum_yields': [{'value': '0.10'}]},
+            {'labels': ['7'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '62500', 'value': '288.5'}]}], 'quantum_yields': [{'value': '0.07'}]},
+            {'labels': ['8a'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '36300', 'value': '257.0'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'shape': 'sh', 'extinction': '25000', 'value': '293.0'}]}], 'quantum_yields': [{'value': '0.41'}]},
+            {'labels': ['8b'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '32000', 'value': '257.0'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'shape': 'sh', 'extinction': '23000', 'value': '296.0'}]}], 'quantum_yields': [{'value': '0.33'}]},
+            {'labels': ['8c'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '27400', 'value': '257.0'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '18900', 'value': '307.5'}]}], 'quantum_yields': [{'value': '0.12'}]},
+            {'labels': ['8d'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '29500', 'value': '268.5'}]}], 'quantum_yields': [{'value': '0.29'}]},
+            {'labels': ['8e'], 'quantum_yields': [{'value': '0.37'}], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '39900', 'value': '261.5'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'shape': 'sh', 'extinction': '29600', 'value': '288.0'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'shape': 'sh', 'extinction': '20500', 'value': '311.0'}]}]},
+            {'labels': ['8f'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '27260', 'value': '256.5'}, {'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '28404', 'value': '296.0'}]}], 'quantum_yields': [{'value': '0.35'}]},
+            {'labels': ['8g'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '39600', 'value': '272.5'}]}], 'quantum_yields': [{'value': '0.30'}]},
+            {'labels': ['8h'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '22900', 'value': '286.0'}]}], 'quantum_yields': [{'value': '0.33'}]},
+            {'labels': ['9'], 'uvvis_spectra': [{'peaks': [{'units': 'nm', 'extinction_units': 'L cm \u2212 1 mol \u2212 1', 'extinction': '28800', 'value': '254.0'}]}], 'quantum_yields': [{'value': '0.40'}]},
         ]
 
         for record in t.records:

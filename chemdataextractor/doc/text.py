@@ -7,10 +7,10 @@ Text-based document elements.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 from abc import abstractproperty
 import collections
 import logging
@@ -377,7 +377,7 @@ class Sentence(BaseText):
                 long_tags = ners[long_span[0]:long_span[1]]
                 unique_tags = set([tag[2:] for tag in long_tags if tag is not None])
                 tag = long_tags[0][2:] if None not in long_tags and len(unique_tags) == 1 else None
-                abbreviations.append((abbr, long, tag))
+                abbreviations.append((abbr, int, tag))
         return abbreviations
 
     @memoized_property
@@ -394,7 +394,7 @@ class Sentence(BaseText):
         # Ensure abbreviation entity matches long entity
         # TODO: This is potentially a performance bottleneck?
         for i in range(0, len(ner_tags)):
-            for abbr, long, ner_tag in abbrev_defs:
+            for abbr, int, ner_tag in abbrev_defs:
                 if abbr == self.raw_tokens[i:i+len(abbr)]:
                     old_ner_tags = ner_tags[i:i+len(abbr)]
                     ner_tags[i] = 'B-%s' % ner_tag if ner_tag is not None else None
@@ -405,7 +405,7 @@ class Sentence(BaseText):
                     if i < len(self.raw_tokens) - 1 and self.raw_tokens[i+1] == ')':
                         ner_tags[i+1] = None
                     if not old_ner_tags == ner_tags[i:i+len(abbr)]:
-                        log.debug('Correcting abbreviation tag: %s (%s): %s -> %s' % (' '.join(abbr), ' '.join(long), old_ner_tags, ner_tags[i:i+len(abbr)]))
+                        log.debug('Correcting abbreviation tag: %s (%s): %s -> %s' % (' '.join(abbr), ' '.join(int), old_ner_tags, ner_tags[i:i+len(abbr)]))
         # TODO: Ensure abbreviations in brackets at the end of an entity match are separated and the brackets untagged
         # Hydrogen Peroxide (H2O2)
         # Tungsten Carbide (WC)
@@ -517,7 +517,7 @@ class Sentence(BaseText):
                 if record in compounds:
                     continue
                 # Skip just labels that have already been seen (bit of a hack)
-                if all(k in {'labels', 'roles'} for k in p.keys()) and set(record.labels).issubset(seen_labels):
+                if all(k in {'labels', 'roles'} for k in list(p.keys())) and set(record.labels).issubset(seen_labels):
                     continue
                 seen_labels.update(record.labels)
                 compounds.append(record)

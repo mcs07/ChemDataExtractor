@@ -7,10 +7,10 @@ Data model for extracted information.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 import copy
 from abc import ABCMeta
@@ -451,7 +451,7 @@ class Compound(BaseModel):
     def merge(self, other):
         """Merge data from another Compound into this Compound."""
         log.debug('Merging: %s and %s' % (self.serialize(), other.serialize()))
-        for k in self.keys():
+        for k in list(self.keys()):
             for new_item in other[k]:
                 if new_item not in self[k]:
                     self[k].append(new_item)
@@ -462,7 +462,7 @@ class Compound(BaseModel):
         """Merge in contextual info from a template Compound."""
         # TODO: This is currently dependent on our data model? Make more robust to schema changes
         # Currently we assume all lists at Compound level, with 1 further potential nested level of lists
-        for k in self.keys():
+        for k in list(self.keys()):
             # print('key: %s' % k)
             for item in self[k]:
                 # print('item: %s' % item)
@@ -470,11 +470,11 @@ class Compound(BaseModel):
                     # Skip text properties (don't merge names, labels, roles)
                     if isinstance(other_item, six.text_type):
                         continue
-                    for otherk in other_item.keys():
+                    for otherk in list(other_item.keys()):
                         if isinstance(other_item[otherk], list):
                             if len(other_item[otherk]) > 0 and len(item[otherk]) > 0:
                                 other_nested_item = other_item[otherk][0]
-                                for othernestedk in other_nested_item.keys():
+                                for othernestedk in list(other_nested_item.keys()):
                                     for nested_item in item[otherk]:
                                         if not nested_item[othernestedk]:
                                             nested_item[othernestedk] = other_nested_item[othernestedk]
@@ -501,7 +501,7 @@ class Compound(BaseModel):
     @property
     def is_id_only(self):
         """Return True if identifier information only."""
-        for key, value in self.items():
+        for key, value in list(self.items()):
             if key not in {'names', 'labels', 'roles'} and value:
                 return False
         if self.names or self.labels:

@@ -8,10 +8,10 @@ Unit tests for named entity recognition.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -58,11 +58,11 @@ class TestCemDictionaryTagger(unittest.TestCase):
              """
             dt = CiDictCemTagger()
             self.assertEqual(
-                [(u'Novel', None),
-                 (u'imidazo\xfd1,2-a\xa8pyridine', u'B-CM'),
-                 (u'and', None),
-                 (u'imidazo\xfd1,2-b\xa8pyridazine', u'B-CM'),
-                 (u'derivatives', None)],
+                [('Novel', None),
+                 ('imidazo\xfd1,2-a\xa8pyridine', 'B-CM'),
+                 ('and', None),
+                 ('imidazo\xfd1,2-b\xa8pyridazine', 'B-CM'),
+                 ('derivatives', None)],
                 dt.tag(['Novel', 'imidazo\xfd1,2-a\xa8pyridine', 'and', 'imidazo\xfd1,2-b\xa8pyridazine', 'derivatives'])
             )
 

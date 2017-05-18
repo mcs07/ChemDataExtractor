@@ -7,9 +7,9 @@ Command line tools for dealing with CHEMDNER corpus.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 from collections import defaultdict
 
 import click
@@ -54,17 +54,17 @@ def prepare_tokens(ctx, input, annotations, tout, lout):
         anndict[(pmid, ta)].append((int(start), int(end), text))
     # Process the corpus
     for line in input:
-        pmid, title, abstract = line.strip().split(u'\t')
-        for t, section, anns in [(Title(title), 'T', anndict.get((pmid, u'T'), [])), (Paragraph(abstract), u'A', anndict.get((pmid, u'A'), []))]:
+        pmid, title, abstract = line.strip().split('\t')
+        for t, section, anns in [(Title(title), 'T', anndict.get((pmid, 'T'), [])), (Paragraph(abstract), 'A', anndict.get((pmid, 'A'), []))]:
             # Write our tokens with POS and IOB tags
             tagged = _prep_tags(t, anns)
             for i, sentence in enumerate(tagged):
-                tout.write(u' '.join([u'/'.join([token, tag, label]) for token, tag, label in sentence]))
-                lout.write(u' '.join([u'/'.join([token, label]) for token, tag, label in sentence]))
-                tout.write(u'\n')
-                lout.write(u'\n')
-            tout.write(u'\n')
-            lout.write(u'\n')
+                tout.write(' '.join(['/'.join([token, tag, label]) for token, tag, label in sentence]))
+                lout.write(' '.join(['/'.join([token, label]) for token, tag, label in sentence]))
+                tout.write('\n')
+                lout.write('\n')
+            tout.write('\n')
+            lout.write('\n')
 
 
 def _prep_tags(t, annotations):
@@ -90,13 +90,13 @@ def tag(ctx, corpus, output):
     """Tag chemical entities and write CHEMDNER annotations predictions file."""
     click.echo('chemdataextractor.chemdner.tag')
     for line in corpus:
-        pmid, title, abstract = line.strip().split(u'\t')
+        pmid, title, abstract = line.strip().split('\t')
         # print(pmid)
         counter = 1
         d = Document(Title(title), Paragraph(abstract))
-        for t, section in [(d.elements[0], u'T'), (d.elements[1], u'A')]:
+        for t, section in [(d.elements[0], 'T'), (d.elements[1], 'A')]:
             for cem in t.cems:
-                code = u'%s:%s:%s' % (section, cem.start, cem.end)
-                output.write(u'\t'.join([pmid, code, six.text_type(counter), u'1']))
-                output.write(u'\n')
+                code = '%s:%s:%s' % (section, cem.start, cem.end)
+                output.write('\t'.join([pmid, code, six.text_type(counter), '1']))
+                output.write('\n')
                 counter += 1

@@ -7,9 +7,9 @@ Part of speech tagging commands.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
+
+
+
 import logging
 
 import click
@@ -231,17 +231,17 @@ def evaluate_perceptron(ctx, model, corpus):
         evaluation = wsj_evaluation
         sents = list(evaluation.tagged_sents())
         for i, wsj_sent in enumerate(sents):
-            sents[i] = [t for t in wsj_sent if not t[1] == u'-NONE-']
+            sents[i] = [t for t in wsj_sent if not t[1] == '-NONE-']
     elif corpus == 'genia':
         evaluation = genia_evaluation
         sents = list(evaluation.tagged_sents())
         # Translate GENIA bracket tags
         for i, genia_sent in enumerate(sents):
             for j, (token, tag) in enumerate(genia_sent):
-                if tag == u'(':
-                    sents[i][j] = (token, u'-LRB-')
-                elif tag == u')':
-                    sents[i][j] = (token, u'-RRB-')
+                if tag == '(':
+                    sents[i][j] = (token, '-LRB-')
+                elif tag == ')':
+                    sents[i][j] = (token, '-RRB-')
     else:
         raise click.ClickException('Invalid corpus')
     tagger = ChemApPosTagger(model=model)
@@ -261,5 +261,5 @@ def tag(ctx, input, output):
     for element in doc.elements:
         if isinstance(element, Text):
             for sentence in element.sentences:
-                output.write(u' '.join(u'/'.join([token, tag]) for token, tag in sentence.pos_tagged_tokens))
-                output.write(u'\n')
+                output.write(' '.join('/'.join([token, tag]) for token, tag in sentence.pos_tagged_tokens))
+                output.write('\n')

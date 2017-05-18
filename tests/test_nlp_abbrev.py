@@ -8,10 +8,10 @@ Test abbreviation detector.
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 import logging
 import unittest
 
@@ -30,7 +30,7 @@ class TestChemAbbreviationDetector(unittest.TestCase):
         """Test the ChemAbbreviationDetector on a simple sentence."""
         ad = ChemAbbreviationDetector()
         self.assertEqual(
-            [([u'HDAC'], [u'histone', u'deacetylase'])],
+            [(['HDAC'], ['histone', 'deacetylase'])],
             ad.detect(['as', 'histone', 'deacetylase', '(', 'HDAC', ')', 'inhibitor'])
         )
 
@@ -38,7 +38,7 @@ class TestChemAbbreviationDetector(unittest.TestCase):
         """Test the ChemAbbreviationDetector on a simple sentence."""
         ad = ChemAbbreviationDetector()
         self.assertEqual(
-            [([u'VPA'], [u'valproic', u'acid'])],
+            [(['VPA'], ['valproic', 'acid'])],
             ad.detect(['The', 'aim', 'of', 'this', 'study', 'was', 'to', 'identify', 'valproic', 'acid', '(', 'VPA', ')'])
         )
 
@@ -125,7 +125,7 @@ class TestChemAbbreviationDetector(unittest.TestCase):
                          of pollutants to biofilms may be exacerbated following a drought.''')
         ]
         d = Document(*elements)
-        self.assertEqual(d.abbreviation_definitions, [([u'TCS'], [u'triclosan'], u'CM')])
+        self.assertEqual(d.abbreviation_definitions, [(['TCS'], ['triclosan'], 'CM')])
 
 
 if __name__ == '__main__':

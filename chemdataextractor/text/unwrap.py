@@ -7,10 +7,10 @@ Tools for unwrapping hard-wrapped text. Most useful for text extracted from PDFs
 
 """
 
-from __future__ import absolute_import
-from __future__ import division
-from __future__ import print_function
-from __future__ import unicode_literals
+
+
+
+
 
 
 # TODO: Need to revisit this. Would be better to have an algorithm that does unsupervised training.
