@@ -1,1 +1,1 @@
-import REG_EXP
+from .REG_EXP import *
