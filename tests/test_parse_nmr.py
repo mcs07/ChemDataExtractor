@@ -124,6 +124,12 @@ class TestParseNmr(unittest.TestCase):
         expected = '<nmr><nucleus>1H</nucleus><solvent>CDCl3</solvent><peaks><peak><shift>0.16-0.51</shift><multiplicity>t</multiplicity><number>12H</number></peak><peak><shift>1.75-2.21</shift><multiplicity>m</multiplicity><number>8H</number></peak><peak><shift>5.16</shift><multiplicity>s</multiplicity><number>2H</number></peak><peak><shift>7.00-8.21</shift></peak></peaks></nmr>'
         self.do_parse(s, expected)
 
+    def test_nmr14(self):
+        """"""
+        s = '1H-NMR (400 MHz,DMSO-d6), δ (ppm): 9.73 (s,1H), 4.39 (t, J = 3.6 Hz,4H) 2.36 (t, J = 3.6,2H).'
+        expected = '<nmr><nucleus>1H</nucleus><frequency><value>400</value><units>MHz</units></frequency><solvent>DMSO-d6</solvent><peaks><peak><shift>9.73</shift><multiplicity>s</multiplicity><number>1H</number></peak><peak><shift>4.39</shift><multiplicity>t</multiplicity><coupling><value>3.6</value><units>Hz</units></coupling><number>4H</number></peak><peak><shift>2.36</shift><multiplicity>t</multiplicity><coupling><value>3.6</value></coupling><number>2H</number></peak></peaks></nmr>'
+        self.do_parse(s, expected)
+
 
 if __name__ == '__main__':
     unittest.main()

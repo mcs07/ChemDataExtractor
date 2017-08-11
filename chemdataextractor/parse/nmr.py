@@ -24,6 +24,7 @@ from .base import BaseParser
 from .common import cc, equals
 from .cem import chemical_name, nmr_solvent
 from .elements import W, I, T, R, Optional, ZeroOrMore, SkipTo, OneOrMore, Not, Group
+from common import REG_EXP
 
 log = logging.getLogger(__name__)
 
@@ -80,7 +81,7 @@ shift_value = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d
 shift_error = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d+)?,\d+(\.+\d+)?\.?$'))('shift').add_action(merge)
 shift = (shift_range | shift_value | shift_error).add_action(strip_stop).add_action(strip_delta)
 
-split = R('^(br?)?(s|S|d|D|t|T|q|Q|quint|sept|m|M|dd|ddd|dt|td|tt|br|bs|sb|h|ABq|broad|singlet|doublet|triplet|qua(rtet)?|quintet|septet|multiplet|multiple|peaks)$')
+split = R(REG_EXP.MULTIPLICITY)
 multiplicity = (OneOrMore(split) + Optional(W('of') + split))('multiplicity').add_action(join)
 
 coupling_value = (number + ZeroOrMore(R('^[,;&]$') + number + Not(W('H'))))('value').add_action(join)

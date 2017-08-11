@@ -14,12 +14,11 @@ from __future__ import unicode_literals
 from abc import ABCMeta, abstractmethod
 import logging
 import re
-
 import six
 
 from ..text import bracket_level, GREEK
 from ..data import load_model
-
+from common import REG_EXP
 
 log = logging.getLogger(__name__)
 
@@ -447,6 +446,8 @@ class ChemWordTokenizer(WordTokenizer):
     NO_SPLIT_PREFIX_ENDING = re.compile('(^\(.*\)|^[\d,\'"“”„‟‘’‚‛`´′″‴‵‶‷⁗Α-Ωα-ω]+|ano|ato|azo|boc|bromo|cbz|chloro|eno|fluoro|fmoc|ido|ino|io|iodo|mercapto|nitro|ono|oso|oxalo|oxo|oxy|phospho|telluro|tms|yl|ylen|ylene|yliden|ylidene|ylidyn|ylidyne)$', re.U)
     #: Don't split on hyphen if prefix or suffix match this regular expression
     NO_SPLIT_CHEM = re.compile('([\-α-ω]|\d+,\d+|\d+[A-Z]|^d\d\d?$|acetic|acetyl|acid|acyl|anol|azo|benz|bromo|carb|cbz|chlor|cyclo|ethan|ethyl|fluoro|fmoc|gluc|hydro|idyl|indol|iene|ione|iodo|mercapto|n,n|nitro|noic|o,o|oxalo|oxo|oxy|oyl|onyl|phen|phth|phospho|pyrid|telluro|tetra|tms|ylen|yli|zole|alpha|beta|gamma|delta|epsilon|theta|kappa|lambda|sigma|omega)', re.U | re.I)
+
+    INSIDE_PEAK = re.compile(REG_EXP.MULTIPLICITY + '|^(M?Hz|\d+\.\d+)$')
     #: Don't split on hyphen if the prefix is one of these sequences
     NO_SPLIT_PREFIX = {
         'e', 'a', 'u', 'x', 'agro', 'ante', 'anti', 'arch', 'be', 'bi', 'bio', 'co', 'counter', 'cross', 'cyber',
@@ -656,6 +657,9 @@ class ChemWordTokenizer(WordTokenizer):
             if char in {':', ';'}:
                 # Split around colon unless it looks like we're in a chemical name
                 if not (before and after and after[0].isdigit() and before.rstrip('′\'')[-1:].isdigit() and '-' in after) and not (self.NO_SPLIT_CHEM.search(before) and self.NO_SPLIT_CHEM.search(after)):
+                    return self._split_span(span, i, 1)
+            elif char == ',':
+                if not (self.NO_SPLIT_CHEM.search(before) and self.NO_SPLIT_CHEM.search(after)) and (self.INSIDE_PEAK.search(before) or self.INSIDE_PEAK.search(after)):
                     return self._split_span(span, i, 1)
             elif char in {'x', '+', '−'}:
                 # Split around x, +, − (\u2212 minus) between two numbers or at start followed by numbers
