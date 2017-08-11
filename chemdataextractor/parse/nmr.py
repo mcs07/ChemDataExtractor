@@ -24,7 +24,7 @@ from .base import BaseParser
 from .common import cc, equals
 from .cem import chemical_name, nmr_solvent
 from .elements import W, I, T, R, Optional, ZeroOrMore, SkipTo, OneOrMore, Not, Group
-from common import REG_EXP
+from ..common import REG_EXP
 
 log = logging.getLogger(__name__)
 

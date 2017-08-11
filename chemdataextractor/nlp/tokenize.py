@@ -18,7 +18,7 @@ import six
 
 from ..text import bracket_level, GREEK
 from ..data import load_model
-from common import REG_EXP
+from ..common import REG_EXP
 
 log = logging.getLogger(__name__)
 
