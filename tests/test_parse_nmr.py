@@ -126,8 +126,8 @@ class TestParseNmr(unittest.TestCase):
 
     def test_nmr14(self):
         """"""
-        s = '1H-NMR (400 MHz,DMSO-d6), δ (ppm): 9.73 (s,1H), 4.39 (t, J = 3.6 Hz,4H), 2.36 (t, J = 3.6,2H), 2.15 (dd, J = 1.2 and J = 3.6 Hz, 1H).'
-        expected = '<nmr><nucleus>1H</nucleus><frequency><value>400</value><units>MHz</units></frequency><solvent>DMSO-d6</solvent><peaks><peak><shift>9.73</shift><multiplicity>s</multiplicity><number>1H</number></peak><peak><shift>4.39</shift><multiplicity>t</multiplicity><coupling><value>3.6</value><units>Hz</units></coupling><number>4H</number></peak><peak><shift>2.36</shift><multiplicity>t</multiplicity><coupling><value>3.6</value></coupling><number>2H</number></peak><peak><shift>2.15</shift><multiplicity>dd</multiplicity><coupling><value>1.2,3.6</value><units>Hz</units></coupling><number>1H</number></peak></peaks></nmr>'
+        s = '1H-NMR (400 MHz,DMSO-d6), δ (ppm):10.63 (br. s), 9.73 (s,1H), 4.39 (t, J = 3.6 Hz,4H), 2.36 (t, J = 3.6,2H), 2.15 (dd, J = 1.2 and J = 3.6 Hz, 1H).'
+        expected = '<nmr><nucleus>1H</nucleus><frequency><value>400</value><units>MHz</units></frequency><solvent>DMSO-d6</solvent><peaks><peak><shift>10.63</shift><multiplicity>br. s</multiplicity></peak><peak><shift>9.73</shift><multiplicity>s</multiplicity><number>1H</number></peak><peak><shift>4.39</shift><multiplicity>t</multiplicity><coupling><value>3.6</value><units>Hz</units></coupling><number>4H</number></peak><peak><shift>2.36</shift><multiplicity>t</multiplicity><coupling><value>3.6</value></coupling><number>2H</number></peak><peak><shift>2.15</shift><multiplicity>dd</multiplicity><coupling><value>1.2,3.6</value><units>Hz</units></coupling><number>1H</number></peak></peaks></nmr>'
         self.do_parse(s, expected)
 
 

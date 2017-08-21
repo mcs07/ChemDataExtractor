@@ -272,6 +272,13 @@ class Document(BaseDocument):
                         record.names.append(name)
 
         # Merge records with any shared name/label
+        # TODO: merging labels into a single record because of an 'and' is not a good idea (this must be done in other part of the code)
+        temp_record = []
+        for record in records:
+            if len(record.labels) <= 1:
+                temp_record.append(record)
+
+        records.models = temp_record
         len_l = len(records)
         i = 0
         while i < (len_l - 1):
