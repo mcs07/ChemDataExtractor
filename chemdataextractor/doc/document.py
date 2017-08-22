@@ -185,7 +185,7 @@ class Document(BaseDocument):
                     sent_record = first_sent_records[0]
                     if sent_record.labels or (sent_record.names and len(sent_record.names[0]) > len(el.sentences[0].text) / 2):
                         head_def_record = sent_record
-                        head_def_record_i = i
+                        head_def_record_i = i - 1 # fix error related with cem that contains nmr that sometimes doesn't detect it well
 
             for record in el.records:
                 # Keep track of the most recent record with labels
