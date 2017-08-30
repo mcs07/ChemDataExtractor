@@ -5,7 +5,7 @@ from __future__ import unicode_literals
 
 from .base import BaseParser
 from .elements import W, R, Optional
-from ..model import StringType, Compound
+from ..model import Compound
 from .actions import merge
 
 

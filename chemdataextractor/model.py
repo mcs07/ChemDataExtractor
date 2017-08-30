@@ -372,6 +372,16 @@ class NmrSpectrum(BaseModel):
     peaks = ListType(ModelType(NmrPeak))
 
 
+class HRMS(BaseModel):
+    """High Resolution Mass Spectrometry"""
+    theoretical_value = StringType()
+    experimental_value = StringType()
+    chem_structure = StringType(contextual=True)
+    compound = StringType(contextual=True)
+    charge = StringType(contextual=True)
+    technique = StringType(contextual=True)
+
+
 class MeltingPoint(BaseModel):
     """A melting point measurement."""
     value = StringType()
