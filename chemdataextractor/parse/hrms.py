@@ -37,12 +37,7 @@ class HRMSParser(BaseParser):
 
     def interpret(self, result, start, end):
         h = HRMS(
-            experimental=first('./experimental/mass/text()'),
-            theoretical=first('./theoretical/mass/text()'),
-            compound=first('./theoretical/compound/text()'),
-            charge=first('./theoretical/charge/text()'),
-            chemical_structure=first('./theoretical/structure/text()'),
-            technique=first('./technique/text()')
+            chemical_structure=first('./structure/text()'),
         )
         c = Compound(
             hrms=h
