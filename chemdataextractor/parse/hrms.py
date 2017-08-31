@@ -18,7 +18,7 @@ separator = '[\.;,]'
 # number = R('^\d+(\.\d+)?$')
 # obtained from https://stackoverflow.com/questions/23602175/regex-for-parsing-chemical-formulas
 chemical_structure_start = (Optional(R('[\(\[]')) + R('^(calcd|calculated)' + separator + '?', flags=re.IGNORECASE) | R('^for' + separator + '?', flags=re.IGNORECASE))
-chemical_structure = (OneOrMore(chemical_structure_start + R(not_separator)).hide() + R('([A-Z][a-z]?\d*|\((?:[^()]*(?:\(.*\))?[^()]*)+\)\d+)+')('structure'))
+chemical_structure = (OneOrMore(chemical_structure_start + R(not_separator)).hide() + R('([A-Z][a-z]?\d*|\((?:[^()]*(?:\(.*\))?[^()]*)+\)\d+)+')('chemical_structure'))
 # compound = (R('^\[') + ZeroOrMore(R('\.+')) + R('\]')).add_action(merge)('compound')
 
 # theoretical = (Optional(W('calcd') + W('for')).hide() + number('mass') + compound)('theoretical')
@@ -37,10 +37,9 @@ class HRMSParser(BaseParser):
 
     def interpret(self, result, start, end):
         h = HRMS(
-            chemical_structure=first('./structure/text()'),
+            chemical_structure=first(result.xpath('./chemical_structure/text()'))
         )
-        c = Compound(
-            hrms=h
-        )
+        c = Compound()
+        c.hrms.append(h)
 
         yield c

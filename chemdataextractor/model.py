@@ -374,7 +374,7 @@ class NmrSpectrum(BaseModel):
 
 class HRMS(BaseModel):
     """High Resolution Mass Spectrometry"""
-    chem_structure = StringType(contextual=True)
+    chemical_structure = StringType()
 
 
 class MeltingPoint(BaseModel):
@@ -442,6 +442,7 @@ class Compound(BaseModel):
     labels = ListType(StringType())
     roles = ListType(StringType())
     doi = ListType(StringType())
+    hrms = ListType(ModelType(HRMS))
     nmr_spectra = ListType(ModelType(NmrSpectrum))
     ir_spectra = ListType(ModelType(IrSpectrum))
     uvvis_spectra = ListType(ModelType(UvvisSpectrum))

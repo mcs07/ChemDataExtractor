@@ -36,7 +36,7 @@ class TestParseHRMS(unittest.TestCase):
 
     def test_hrms1(self):
         s = 'HRMS (ESI) calcd for C34H28N4OP 539.1995 [M + H]+, found 539.1997.'
-        output = '<hrms><structure>C34H28N4OP</structure></hrms>'
+        output = '<hrms><chemical_structure>C34H28N4OP</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms2(self):
@@ -46,30 +46,35 @@ class TestParseHRMS(unittest.TestCase):
 
     def test_hrms3(self):
         s = 'HRMS-ESI (m/z): calcd. for C42H52NO9 [M + NH4]+ 714.3637, found 714.3633.'
-        output = '<hrms><structure>C42H52NO9</structure></hrms>'
+        output = '<hrms><chemical_structure>C42H52NO9</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms4(self):
         s = 'MALDI-HRMS (matrix: HCCA) Calculated for C32H48N4O6: [M + H]+ m/z 585.3607, Found 585.3636.'
-        output = '<hrms><structure>C32H48N4O6</structure></hrms>'
+        output = '<hrms><chemical_structure>C32H48N4O6</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms5(self):
         s = 'HRMS (m/z): 827.6005 [M+Na]+ (calcd. for C48H84O9Na: 827.6013). '
-        output = '<hrms><structure>C48H84O9Na</structure></hrms>'
+        output = '<hrms><chemical_structure>C48H84O9Na</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms6(self):
         s = 'HRMS [M−H]+ m/z calcd. for C24H32N9+ 446.2781, found 446.2775.'
-        output = '<hrms><structure>C24H32N9+</structure></hrms>'
+        output = '<hrms><chemical_structure>C24H32N9+</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms7(self):
         s = 'DCI-HRMS: m/z 289.0916 [M+H]+; (Calcd for C12H16O8, 288.0845)'
-        output = '<hrms><structure>C12H16O8</structure></hrms>'
+        output = '<hrms><chemical_structure>C12H16O8</chemical_structure></hrms>'
         self.do_parse(s, output)
 
     def test_hrms8(self):
         s = 'ES-HRMS: m/z 115.0393 [M−H]−; (Calcd for C5H7O3, 116.0473).'
-        output = '<hrms><structure>C5H7O3</structure></hrms>'
+        output = '<hrms><chemical_structure>C5H7O3</chemical_structure></hrms>'
+        self.do_parse(s, output)
+
+    def test_hrms9(self):
+        s = 'HRMS (ESI) calcd for C27H24N4P 435.1733 [M + H]+, found 435.1738.'
+        output = '<hrms><chemical_structure>C27H24N4P</chemical_structure></hrms>'
         self.do_parse(s, output)
