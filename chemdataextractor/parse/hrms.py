@@ -13,7 +13,7 @@ from ..model import Compound, HRMS
 from ..utils import first
 from .actions import merge
 
-not_separator = '[^\.;,]'
+not_separator = '[^\.;,]$'
 separator = '[\.;,]'
 # number = R('^\d+(\.\d+)?$')
 # obtained from https://stackoverflow.com/questions/23602175/regex-for-parsing-chemical-formulas
