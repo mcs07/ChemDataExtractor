@@ -218,7 +218,7 @@ class Document(BaseDocument):
                         # We have property values but no names or labels... try merge those from previous
                         if isinstance(el, Paragraph) and (head_def_record or last_product_record or last_id_record or title_record):
                             # head_def_record from heading takes priority if the heading directly precedes the paragraph ( NOPE: or the last_id_record has no name)
-                            if head_def_record_i and head_def_record_i + 1 == i: # or (last_id_record and not last_id_record.names)):
+                            if not last_id_record and head_def_record_i and head_def_record_i + 1 == i: # or (last_id_record and not last_id_record.names)):
                                 if head_def_record:
                                     record.names = head_def_record.names
                                     record.labels = head_def_record.labels
