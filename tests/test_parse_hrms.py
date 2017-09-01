@@ -78,3 +78,8 @@ class TestParseHRMS(unittest.TestCase):
         s = 'HRMS (ESI) calcd for C27H24N4P 435.1733 [M + H]+, found 435.1738.'
         output = '<hrms><chemical_structure>C27H24N4P</chemical_structure></hrms>'
         self.do_parse(s, output)
+
+    def test_hrms10(self):
+        s = 'HRMS (ESI): [M − H]−, found 344.8591. C11H5Br2O3− requires 344.8585.'
+        output = '<hrms><chemical_structure>C11H5Br2O3−</chemical_structure></hrms>'
+        self.do_parse(s, output)
