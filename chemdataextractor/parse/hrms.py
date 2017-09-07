@@ -42,5 +42,10 @@ class HRMSParser(BaseParser):
         c = Compound(
             hrms=h
         )
+<<<<<<< HEAD
+=======
+        c = Compound()
+        c.hrms.append(h)
+>>>>>>> 54ed784... fix last_id_record to check name
 
         yield c
