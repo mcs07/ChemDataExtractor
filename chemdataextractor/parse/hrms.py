@@ -41,7 +41,6 @@ class HRMSParser(BaseParser):
         h = HRMS(
             chemical_structure=first(result.xpath('./chemical_structure/text()'))
         )
-        print()
         c = Compound()
         c.hrms.append(h)
 
