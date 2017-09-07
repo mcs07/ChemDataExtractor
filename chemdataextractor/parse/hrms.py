@@ -27,7 +27,7 @@ chemical_structure = (ZeroOrMore(chemical_structure_start + R(not_separator)).hi
 # experimental = (Optional(W('found')).hide() + number('mass'))('experimental')
 exceptions = ((number | R(chem_sign + '$') | R(u'((^found|^\d+)' + separator + '?)$', flags=re.IGNORECASE)) + Optional(R(separator))).hide()
 
-hrms = (R('HRMS').hide() + ZeroOrMore(chemical_structure | exceptions | R(not_separator).hide()))('hrms')
+hrms = (R('^.*H.*R.*M.*S.*$').hide() + ZeroOrMore(chemical_structure | exceptions | R(not_separator).hide()))('hrms')
 
 
 class HRMSParser(BaseParser):
