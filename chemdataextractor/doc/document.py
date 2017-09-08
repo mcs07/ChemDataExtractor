@@ -185,7 +185,7 @@ class Document(BaseDocument):
                     sent_record = first_sent_records[0]
                     if sent_record.labels or (sent_record.names and len(sent_record.names[0]) > len(el.sentences[0].text) / 2):
                         head_def_record = sent_record
-                        head_def_record_i = i
+                        head_def_record_i = i - 1 # fix error related with cem that contains nmr that sometimes doesn't detect it well
 
             for record in el.records:
                 # Keep track of the most recent record with labels
@@ -215,10 +215,11 @@ class Document(BaseDocument):
                         continue
                     else:
                         # print(record.serialize())
+                        # TODO: check the names and labels, not the whole record
                         # We have property values but no names or labels... try merge those from previous
                         if isinstance(el, Paragraph) and (head_def_record or last_product_record or last_id_record or title_record):
                             # head_def_record from heading takes priority if the heading directly precedes the paragraph ( NOPE: or the last_id_record has no name)
-                            if head_def_record_i and head_def_record_i + 1 == i: # or (last_id_record and not last_id_record.names)):
+                            if last_id_record and not last_id_record.names and head_def_record_i is not None and head_def_record_i + 1 == i: # or (last_id_record and not last_id_record.names)):
                                 if head_def_record:
                                     record.names = head_def_record.names
                                     record.labels = head_def_record.labels
@@ -272,6 +273,13 @@ class Document(BaseDocument):
                         record.names.append(name)
 
         # Merge records with any shared name/label
+        temp_record = []
+        for record in records:
+            if len(record.labels) <= 1:
+                temp_record.append(record)
+
+        records.models = temp_record
+
         len_l = len(records)
         i = 0
         while i < (len_l - 1):
