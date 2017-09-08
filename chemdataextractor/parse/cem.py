@@ -53,7 +53,7 @@ to_give = (I('to') + (I('give') | I('yield') | I('afford')) | I('afforded') | I(
 
 label_blacklist = R('^(31P|[12]H|[23]D|15N|14C|[4567890]\d+)$')
 
-prefixed_label = R('^(cis|trans)-((d-)?(\d{1,2}[A-Za-z]{0,2}[′″‴‶‷⁗]?)(-d)?|[LS]\d\d?)$')
+prefixed_label = R('^(trans|[A-Za-z]{,3})-((d-)?(\d{1,2}[A-Za-z]{0,2}[′″‴‶‷⁗]?)(-d)?|[LS]\d\d?)$')
 
 #: Chemical label. Very permissive - must be used in context to avoid false positives.
 strict_chemical_label = Not(label_blacklist) + (alphanumeric | roman_numeral | letter_number | prefixed_label)('label')

@@ -170,6 +170,18 @@ class TestParseCem(unittest.TestCase):
         ]
         self.do_parse(s, expected)
 
+    def test_label_start(self):
+        s = ['1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene (Leu-07)',
+             '1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene (hi-07)',
+             '1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene (hife-07)']
+        expected = [
+            ['<cem_phrase><cem><name>1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene</name><label>Leu-07</label></cem></cem_phrase>'],
+            ['<cem_phrase><cem><name>1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene</name><label>hi-07</label></cem></cem_phrase>'],
+            ['<cem_phrase><cem><name>1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene</name></cem></cem_phrase>']
+        ]
+        for s_elem, expected_elem in zip(s, expected):
+            self.do_parse(s_elem, expected_elem)
+
 
 class TestParseCemHeading(unittest.TestCase):
 
