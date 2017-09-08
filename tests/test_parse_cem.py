@@ -170,6 +170,11 @@ class TestParseCem(unittest.TestCase):
         ]
         self.do_parse(s, expected)
 
+    def test_label_start(self):
+        s = '1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene (Leu-07)'
+        expected = ['<cem_phrase><cem><name>1,3,5-Tricyano-2,4,6-tris(2-dimethylaminovinyl)benzene</name><label>Leu-07</label></cem></cem_phrase>']
+        self.do_parse(s, expected)
+
 
 class TestParseCemHeading(unittest.TestCase):
 
@@ -403,6 +408,11 @@ class TestParseDocument(unittest.TestCase):
             Paragraph('The product had a melting point of 70-75° C. and has structural formula VII.')
         )
         results = [r.serialize() for r in d.records]
+        print(results)
+        print([
+            {'names': [u'5-Bromo-6-pentadecyl-2-hydroxybenzoic acid', u'DBAA'], 'roles': ['product']},
+            {'melting_points': [{'units': u'\xb0C.', 'value': u'70-75'}], 'labels': [u'VII'], 'roles': [u'formula']}
+        ])
         self.assertEqual(results, [
             {'labels': [u'VII'], 'roles': [u'formula']},
             {'melting_points': [{'units': u'\xb0C.', 'value': u'70-75'}],

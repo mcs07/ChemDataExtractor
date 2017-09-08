@@ -257,7 +257,7 @@ class IWord(Word):
 class Regex(BaseParserElement):
     """Match token text with regular expression."""
 
-    def __init__(self, pattern, flags=0, group=None):
+    def __init__(self, pattern, flags=0, group=None, min_size=None, max_size=None):
         super(Regex, self).__init__()
         if isinstance(pattern, six.string_types):
             self.regex = re.compile(pattern, flags)
@@ -266,9 +266,16 @@ class Regex(BaseParserElement):
             self.regex = pattern
             self.pattern = pattern.pattern
         self.group = group
+        self.min_size = 0 if min_size is None else min_size
+        self.max_size = float('inf') if max_size is None else min_size
 
     def _parse_tokens(self, tokens, i, actions=True):
         token_text = tokens[i][0]
+        token_size = len(token_text)
+
+        if not (self.min_size <= token_size < self.max_size):
+            raise ParseException(tokens, i, 'Expected %s, got %s' % (self.pattern, token_text), self)
+
         result = self.regex.search(token_text)
         if result:
             text = tokens[i][0] if self.group is None else result.group(self.group)

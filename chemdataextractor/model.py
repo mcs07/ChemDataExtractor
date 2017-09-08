@@ -22,12 +22,10 @@ import six
 
 from .utils import python_2_unicode_compatible
 
-
 log = logging.getLogger(__name__)
 
 
 class BaseType(six.with_metaclass(ABCMeta)):
-
     # This is assigned by ModelMeta to match the attribute on the Model
     name = None
 
@@ -90,7 +88,6 @@ class FloatType(BaseType):
 
 
 class ModelType(BaseType):
-
     def __init__(self, model, **kwargs):
         self.model_class = model
         self.model_name = self.model_class.__name__
@@ -102,7 +99,6 @@ class ModelType(BaseType):
 
 
 class ListType(BaseType):
-
     def __init__(self, field, default=None, **kwargs):
         super(ListType, self).__init__(**kwargs)
         self.field = field
@@ -376,6 +372,11 @@ class NmrSpectrum(BaseModel):
     peaks = ListType(ModelType(NmrPeak))
 
 
+class HRMS(BaseModel):
+    """High Resolution Mass Spectrometry"""
+    chemical_structure = StringType()
+
+
 class MeltingPoint(BaseModel):
     """A melting point measurement."""
     value = StringType()
@@ -393,6 +394,7 @@ class GlassTransition(BaseModel):
     method = StringType(contextual=True)
     concentration = StringType(contextual=True)
     concentration_units = StringType(contextual=True)
+
 
 class QuantumYield(BaseModel):
     """A quantum yield measurement."""
@@ -439,6 +441,8 @@ class Compound(BaseModel):
     names = ListType(StringType())
     labels = ListType(StringType())
     roles = ListType(StringType())
+    doi = ListType(StringType())
+    hrms = ListType(ModelType(HRMS))
     nmr_spectra = ListType(ModelType(NmrSpectrum))
     ir_spectra = ListType(ModelType(IrSpectrum))
     uvvis_spectra = ListType(ModelType(UvvisSpectrum))
@@ -502,8 +506,8 @@ class Compound(BaseModel):
     def is_id_only(self):
         """Return True if identifier information only."""
         for key, value in self.items():
-            if key not in {'names', 'labels', 'roles'} and value:
+            if key not in {'names', 'labels', 'roles', 'doi'} and value:
                 return False
-        if self.names or self.labels:
+        if self.names or self.labels or self.doi:
             return True
         return False

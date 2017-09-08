@@ -26,7 +26,9 @@ from ..parse.ir import IrParser
 from ..parse.mp import MpParser
 from ..parse.tg import TgParser
 from ..parse.nmr import NmrParser
+from ..parse.doi import DoiParser
 from ..parse.uvvis import UvvisParser
+from ..parse.hrms import HRMSParser
 from ..nlp.lexicon import ChemLexicon
 from ..nlp.cem import CemTagger, IGNORE_PREFIX, IGNORE_SUFFIX, SPECIALS, SPLITS
 from ..nlp.abbrev import ChemAbbreviationDetector
@@ -266,7 +268,8 @@ class Heading(Text):
 
 class Paragraph(Text):
 
-    parsers = [CompoundParser(), ChemicalLabelParser(), NmrParser(), IrParser(), UvvisParser(), MpParser(), TgParser(), ContextParser()]
+    parsers = [CompoundParser(), ChemicalLabelParser(), NmrParser(), IrParser(), UvvisParser(), MpParser(), TgParser(),
+               ContextParser(), DoiParser(), HRMSParser()]
 
     def _repr_html_(self):
         return '<p class="cde-paragraph">' + self.text + '</p>'
@@ -510,6 +513,7 @@ class Sentence(BaseText):
         tagged_tokens = [(CONTROL_RE.sub('', token), tag) for token, tag in self.tagged_tokens]
         for parser in self.parsers:
             for record in parser.parse(tagged_tokens):
+                # print(record)
                 p = record.serialize()
                 if not p:  # TODO: Potential performance issues?
                     continue

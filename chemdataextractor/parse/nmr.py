@@ -19,11 +19,12 @@ import re
 
 from ..model import Compound, NmrSpectrum, NmrPeak
 from ..utils import first
-from .actions import join, merge, strip_stop, fix_whitespace
+from .actions import join, merge, strip_stop, fix_whitespace, join_comma
 from .base import BaseParser
 from .common import cc, equals
 from .cem import chemical_name, nmr_solvent
 from .elements import W, I, T, R, Optional, ZeroOrMore, SkipTo, OneOrMore, Not, Group
+from ..common import REG_EXP
 
 log = logging.getLogger(__name__)
 
@@ -80,11 +81,14 @@ shift_value = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d
 shift_error = (Optional(R('^[\-–−‒]$')) + R('^δ?[\+\-–−‒]?\d+(\.+\d+)?,\d+(\.+\d+)?\.?$'))('shift').add_action(merge)
 shift = (shift_range | shift_value | shift_error).add_action(strip_stop).add_action(strip_delta)
 
-split = R('^(br?)?(s|S|d|D|t|T|q|Q|quint|sept|m|M|dd|ddd|dt|td|tt|br|bs|sb|h|ABq|broad|singlet|doublet|triplet|qua(rtet)?|quintet|septet|multiplet|multiple|peaks)$')
+split = R(REG_EXP.MULTIPLICITY)
 multiplicity = (OneOrMore(split) + Optional(W('of') + split))('multiplicity').add_action(join)
 
-coupling_value = (number + ZeroOrMore(R('^[,;&]$') + number + Not(W('H'))))('value').add_action(join)
-coupling = ((R('^\d?J([HCNPFD\d,]*|cis|trans)$') + Optional(R('^[\-–−‒]$') + R('^[HCNPF\d]$')) + Optional('=')).hide() + coupling_value + Optional(W('Hz')('units')) + ZeroOrMore(R('^[,;&]$').hide() + coupling_value + W('Hz')('units')))('coupling')
+coupling_separator = '^[,;&]|and$'
+coupling_signature = R('^\d?J([HCNPFD\d,]*|cis|trans)$') + Optional(R('^[\-–−‒]$') + R('^[HCNPF\d]$')) + Optional('=')
+coupling_value = (number + ZeroOrMore((Optional(W('Hz')) + R(coupling_separator) + Optional(coupling_signature)).hide() + number + Not(W('H'))))('value').add_action(join_comma)
+coupling = (coupling_signature.hide() + coupling_value + Optional(W('Hz')('units')) + ZeroOrMore(R(
+    coupling_separator).hide() + coupling_value + W('Hz')('units')))('coupling')
 
 number = (R('^\d+(\.\d+)?[HCNPF]\.?$') | (R('^\d+(\.\d+)?$') + R('^[HCNPF]\.?$')))('number').add_action(merge)
 

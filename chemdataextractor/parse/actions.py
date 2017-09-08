@@ -19,7 +19,6 @@ from lxml.etree import strip_tags
 
 from ..text import HYPHENS
 
-
 log = logging.getLogger(__name__)
 
 
@@ -30,7 +29,7 @@ def flatten(tokens, start, result):
     return result
 
 
-def join(tokens, start, result):
+def join(tokens, start, result, separator=' '):
     """Join tokens into a single string with spaces between."""
     texts = []
     if len(result) > 0:
@@ -38,7 +37,11 @@ def join(tokens, start, result):
             for child in e.iter():
                 if child.text is not None:
                     texts.append(child.text)
-        return [E(result[0].tag, ' '.join(texts))]
+        return [E(result[0].tag, separator.join(texts))]
+
+
+def join_comma(tokens, start, result):
+    return join(tokens, start, result, separator=',')
 
 
 def merge(tokens, start, result):

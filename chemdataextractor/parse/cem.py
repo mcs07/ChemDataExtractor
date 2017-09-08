@@ -53,7 +53,7 @@ to_give = (I('to') + (I('give') | I('yield') | I('afford')) | I('afforded') | I(
 
 label_blacklist = R('^(31P|[12]H|[23]D|15N|14C|[4567890]\d+)$')
 
-prefixed_label = R('^(cis|trans)-((d-)?(\d{1,2}[A-Za-z]{0,2}[′″‴‶‷⁗]?)(-d)?|[LS]\d\d?)$')
+prefixed_label = R('^(cis|trans|[A-Za-z]{,3})-((d-)?(\d{1,2}[A-Za-z]{0,2}[′″‴‶‷⁗]?)(-d)?|[LS]\d\d?)$')
 
 #: Chemical label. Very permissive - must be used in context to avoid false positives.
 strict_chemical_label = Not(label_blacklist) + (alphanumeric | roman_numeral | letter_number | prefixed_label)('label')
@@ -124,7 +124,8 @@ nmr_solvent = (
     I('acetone-d6') | I('d6-acetone') | I('chloroform-d') | I('d-chloroform') | I('methanol-d4') | I('d4-methanol') |
     I('pyridine-d5') | I('d5-pyridine') | I('DMSO-d6') | I('d6-DMSO') | I('dimethylsulfoxide-d6') | W('C7D8') |
     I('d6-dimethylsulfoxide') | W('MeOH-d4') | W('d4-MeOH') | I('DMSO') | I('benzene-d6') | I('d6-benzene') |
-    I('1,1,2,2-tetrachloroethane-d2') | I('tetrachloroethane-d2') | I('d2-tetrachloroethane')
+    I('1,1,2,2-tetrachloroethane-d2') | I('tetrachloroethane-d2') | I('d2-tetrachloroethane') | I('MeOD-d4') |
+    I('d4-MeOD')
 
 )
 
