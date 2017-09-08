@@ -130,6 +130,17 @@ class TestParseNmr(unittest.TestCase):
         expected = '<nmr><nucleus>1H</nucleus><frequency><value>400</value><units>MHz</units></frequency><solvent>DMSO-d6</solvent><peaks><peak><shift>10.63</shift><multiplicity>br. s</multiplicity></peak><peak><shift>9.73</shift><multiplicity>s</multiplicity><number>1H</number></peak><peak><shift>4.39</shift><multiplicity>t</multiplicity><coupling><value>3.6</value><units>Hz</units></coupling><number>4H</number></peak><peak><shift>2.36</shift><multiplicity>t</multiplicity><coupling><value>3.6</value></coupling><number>2H</number></peak><peak><shift>2.15</shift><multiplicity>dd</multiplicity><coupling><value>1.2,3.6</value><units>Hz</units></coupling><number>1H</number></peak></peaks></nmr>'
         self.do_parse(s, expected)
 
+    def test_nmr15(self):
+        """"""
+        s = '1H-NMR (600 MHz, MeOD-d4) δ: 7.57 (d, J = 9.4 Hz, 1H), 7.54 (d, J = 9.4 Hz, 1H), 7.38 (d, J = 8.2 Hz, 1H), 7.24 (s, 1H), 7.18 (d, J = 1.0 Hz, 1H), 7.13 (d, J = 7.8 Hz, 1H), 7.08 (d, J = 8.2 Hz, 1H), 6.81 (d, J = 8.1 Hz, 1H), 6.68 (d, J = 15.8 Hz, 1H), 6.61 (d, J = 15.8 Hz, 1H), 3.89 (d, J = 7.4 Hz, 6H);'
+        expected = '<nmr><nucleus>1H</nucleus><frequency><value>600</value><units>MHz</units></frequency><solvent>MeOD-d4</solvent><peaks><peak><shift>7.57</shift><multiplicity>d</multiplicity><coupling><value>9.4</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>7.54</shift><multiplicity>d</multiplicity><coupling><value>9.4</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>7.38</shift><multiplicity>d</multiplicity><coupling><value>8.2</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>7.24</shift><multiplicity>s</multiplicity><number>1H</number></peak><peak><shift>7.18</shift><multiplicity>d</multiplicity><coupling><value>1.0</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>7.13</shift><multiplicity>d</multiplicity><coupling><value>7.8</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>7.08</shift><multiplicity>d</multiplicity><coupling><value>8.2</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>6.81</shift><multiplicity>d</multiplicity><coupling><value>8.1</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>6.68</shift><multiplicity>d</multiplicity><coupling><value>15.8</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>6.61</shift><multiplicity>d</multiplicity><coupling><value>15.8</value><units>Hz</units></coupling><number>1H</number></peak><peak><shift>3.89</shift><multiplicity>d</multiplicity><coupling><value>7.4</value><units>Hz</units></coupling><number>6H</number></peak></peaks></nmr>'
+        self.do_parse(s, expected)
+
+    def test_nmr16(self):
+        """"""
+        s = '31P-NMR (243 MHz, MeOD-d4) δ:−4.31 (1P)'
+        expected = '<nmr><nucleus>31P</nucleus><frequency><value>243</value><units>MHz</units></frequency><solvent>MeOD-d4</solvent><peaks><peak><shift>\u22124.31</shift><number>1P</number></peak></peaks></nmr>'
+        self.do_parse(s, expected)
 
 if __name__ == '__main__':
     unittest.main()
