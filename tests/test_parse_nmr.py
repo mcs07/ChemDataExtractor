@@ -33,7 +33,7 @@ class TestParseNmr(unittest.TestCase):
         log.debug(s.tagged_tokens)
         result = next(nmr.scan(s.tagged_tokens))[0]
         log.debug(etree.tostring(result, pretty_print=True, encoding='unicode'))
-        self.assertEqual(expected, etree.tostring(result, encoding='unicode'))
+        self.assertEqual(etree.tostring(result, encoding='unicode'), expected)
 
     def test_nmr1(self):
         s = '1H NMR (300 MHz, CDCl3), 1.00 (t, J = 7.3 Hz, 3H), 1.50 (m, 2H), 1.77 (m, 2H), 2.42 (s, 3H), ' \
