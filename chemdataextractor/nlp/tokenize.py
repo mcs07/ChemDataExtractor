@@ -442,7 +442,7 @@ class ChemWordTokenizer(WordTokenizer):
     #: Don't split around slash when both preceded and followed by these characters
     NO_SPLIT_SLASH = ['+', '-', '−']
     #: Regular expression that matches a numeric quantity with units
-    QUANTITY_RE = re.compile(r'^((\d\d\d)g|([-−]?\d+\.\d+|10[-−]\d+)(g|s|m|N|V)([-−]?[1-4])?|(\d*[-−]?\d+\.?\d*)([pnµμm]A|[µμmk]g|[kM]J|m[lL]|[nµμm]?M|[nµμmc]m|kN|[mk]V|[mkMG]?W|[mnpμµ]s|Hz|[Mm][Oo][Ll](e|ar)?s?|k?Pa|ppm|min)([-−]?[1-4])?)$')
+    QUANTITY_RE = re.compile(r'^((\d\d\d)g|([-−]?\d+\.\d+|10[-−]\d+)(g|s|m|N|V)([-−]?[1-4])?|(\d*[-−]?\d+\.?\d*)([pnµμm]A|[µμmk]g|[kM]J|m[lL]|[nµμm]?M|[nµμmc]m|kN|[emk]V|[mkMG]?W|[mnpμµ]s|Hz|[Mm][Oo][Ll](e|ar)?s?|k?Pa|ppm|min)([-−]?[1-4])?)$')
     #: Don't split on hyphen if the prefix matches this regular expression
     NO_SPLIT_PREFIX_ENDING = re.compile('(^\(.*\)|^[\d,\'"“”„‟‘’‚‛`´′″‴‵‶‷⁗Α-Ωα-ω]+|ano|ato|azo|boc|bromo|cbz|chloro|eno|fluoro|fmoc|ido|ino|io|iodo|mercapto|nitro|ono|oso|oxalo|oxo|oxy|phospho|telluro|tms|yl|ylen|ylene|yliden|ylidene|ylidyn|ylidyne)$', re.U)
     #: Don't split on hyphen if prefix or suffix match this regular expression
