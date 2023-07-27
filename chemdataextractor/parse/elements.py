@@ -11,10 +11,14 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
-from collections.abc import Sequence
 import copy
 import logging
 import re
+
+try:
+    from collections.abc import Sequence
+except ImportError:
+    from collections import Sequence
 
 from lxml.builder import E
 import six

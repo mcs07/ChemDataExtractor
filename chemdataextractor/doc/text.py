@@ -12,9 +12,13 @@ from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
 from abc import abstractproperty
-from collections.abc import Sequence
 import logging
 import re
+
+try:
+    from collections.abc import Sequence
+except ImportError:
+    from collections import Sequence
 
 import six
 

@@ -13,10 +13,14 @@ from __future__ import print_function
 from __future__ import unicode_literals
 
 from abc import ABCMeta, abstractproperty
-from collections.abc import Sequence
 import io
 import json
 import logging
+
+try:
+    from collections.abc import Sequence
+except ImportError:
+    from collections import Sequence
 
 import six
 

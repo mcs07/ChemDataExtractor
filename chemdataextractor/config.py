@@ -13,7 +13,11 @@ from __future__ import print_function
 from __future__ import unicode_literals
 import io
 import os
-from collections.abc import MutableMapping
+
+try:
+    from collections.abc import MutableMapping
+except ImportError:
+    from collections import MutableMapping
 
 import appdirs
 import yaml

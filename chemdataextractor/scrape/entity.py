@@ -11,9 +11,13 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
-from collections.abc import Sequence
 import json
 import logging
+
+try:
+    from collections.abc import Sequence
+except ImportError:
+    from collections import Sequence
 
 import six
 
