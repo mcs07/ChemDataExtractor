@@ -11,7 +11,7 @@ from __future__ import absolute_import
 from __future__ import division
 from __future__ import print_function
 from __future__ import unicode_literals
-import collections
+from collections.abc import Sequence
 import copy
 import logging
 import re
@@ -309,7 +309,7 @@ class ParseExpression(BaseParserElement):
             exprs = list(exprs)
         if isinstance(exprs, six.text_type):
             self.exprs = [Word(exprs)]
-        elif isinstance(exprs, collections.Sequence):
+        elif isinstance(exprs, Sequence):
             if all(isinstance(expr, six.text_type) for expr in exprs):
                 exprs = map(Word, exprs)
             self.exprs = list(exprs)

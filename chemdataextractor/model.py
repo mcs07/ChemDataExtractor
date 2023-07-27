@@ -14,7 +14,7 @@ from __future__ import unicode_literals
 
 import copy
 from abc import ABCMeta
-from collections import MutableSequence
+from collections.abc import MutableSequence
 import json
 import logging
 
